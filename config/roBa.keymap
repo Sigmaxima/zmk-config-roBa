@@ -87,10 +87,10 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION  &kp LS(N2)  &kp HASH  &kp DOLLAR  &kp PERCENT                                     &kp LS(N7)         &kp LS(N8)        &kp LS(N9)       &kp MINUS  &kp BACKSPACE
-&kp TAB          &trans      &trans    &trans      &kp LS(N6)   &trans            &kp INSERT       &kp EXCLAMATION    &kp LEFT_BRACKET  &kp SEMICOLON    &kp SQT    &kp INT_YEN
-&trans           &trans      &trans    &trans      &trans       &kp CAPSLOCK      &kp PRINTSCREEN  &kp RIGHT_BRACKET  &kp SLASH         &kp RIGHT_BRACE  &kp PIPE   &kp INT1
-&trans           &trans      &trans    &trans      &trans       &trans            &trans           &trans                                                           &kp CARET
+&kp EXCLAMATION  &kp LS(N2)  &kp HASH  &kp DOLLAR  &kp PERCENT                              &kp LS(N7)         &kp LS(N7)        &kp LS(N8)       &kp LS(N9)  &kp MINUS
+&kp TAB          &kt CAPS    &trans    &trans      &kp PRINTSCREEN  &trans      &kp INSERT  &kp EXCLAMATION    &kp LEFT_BRACKET  &kp SEMICOLON    &kp SQT     &kp INT_YEN
+&trans           &trans      &trans    &trans      &trans           &trans      &trans      &kp RIGHT_BRACKET  &kp SLASH         &kp RIGHT_BRACE  &kp PIPE    &kp INT1
+&trans           &trans      &trans    &trans      &trans           &trans      &trans      &trans                                                            &kp CARET
             >;
         };
 
