@@ -19,26 +19,21 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
-        };
-
-        escape {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-        };
-
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <42 33>;
+            key-positions = <9 21>;
             layers = <0>;
         };
 
-        back {
+        backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <9 8>;
             layers = <0>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <8 7>;
         };
     };
 
