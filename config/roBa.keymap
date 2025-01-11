@@ -68,7 +68,7 @@
         default_layer {
             bindings = <
 &mt ESCAPE Q      &kp W         &kp E         &kp R                  &kp T                                              &kp Y  &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                  &kp G        &trans                &kp MINUS       &kp H  &kp J  &kp K      &kp L    &kp ENTER
+&kp A             &kp S         &kp D         &kp F                  &kp G        &none                 &kp MINUS       &kp H  &kp J  &kp K      &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                  &kp B        &kp DELETE            &kp BACKSPACE   &kp N  &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt RIGHT_CONTROL TAB  &lt 2 SPACE  &kp INT_MUHENKAN      &kp INT_HENKAN  &mo 3                             &mo 4
             >;
@@ -109,7 +109,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                         &kp F5    &kp LC(PAGE_UP)  &mo 5     &kp LC(PAGE_DOWN)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &kp RC(W)  &trans    &mkp MB1         &mkp MB3  &mkp MB2           &kp RCTRL
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &mkp MB5  &mkp MB4         &trans    &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans     &mkp MB5  &mkp MB4         &trans    &trans             &kp RIGHT_SHIFT
 &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans                                                  &trans
             >;
 
