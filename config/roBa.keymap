@@ -110,19 +110,23 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                         &kp F5    &kp LC(PAGE_UP)  &mo 5     &kp LC(PAGE_DOWN)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp RC(W)  &trans    &mkp MB1         &mkp MB3  &mkp MB2           &kp RCTRL
+&trans  &trans  &trans  &trans  &trans  &trans      &kp RC(W)  &mkp MB4  &mkp MB1         &mkp MB3  &mkp MB2           &kp RCTRL
 &trans  &trans  &trans  &trans  &trans  &trans      &trans     &mkp MB5  &mkp MB4         &trans    &trans             &kp RIGHT_SHIFT
 &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans                                                  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         SCROLL {
             bindings = <
-&trans            &trans  &trans  &trans  &trans                      &trans    &kp LC(PAGE_UP)  &trans    &kp LC(PAGE_DOWN)  &trans
-&trans            &trans  &trans  &trans  &trans  &trans      &trans  &trans    &mkp MB1         &mkp MB3  &mkp MB2           &kp RIGHT_CONTROL
-&trans            &trans  &trans  &trans  &trans  &trans      &mo 6   &mkp MB5  &mkp MB4         &trans    &trans             &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                  &trans
+&trans            &trans  &trans  &trans  &trans                         &kp F5    &kp LC(PAGE_UP)  &trans    &kp LC(PAGE_DOWN)  &trans
+&trans            &trans  &trans  &trans  &trans  &trans      &kp LC(W)  &mkp MB4  &mkp MB1         &mkp MB3  &mkp MB2           &kp RIGHT_CONTROL
+&trans            &trans  &trans  &trans  &trans  &trans      &mo 6      &mkp MB5  &mkp MB4         &trans    &trans             &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans      &trans     &trans                                                  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
         };
 
         layer_6 {
