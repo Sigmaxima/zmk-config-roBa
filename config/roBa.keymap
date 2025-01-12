@@ -64,6 +64,16 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
+
+        Inpt_two_axis: Inpt_two_axis {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "INPT_TWO_AXIS";
+            #binding-cells = <1>;
+            x-input-code = <2>;
+            y-input-code = <2>;
+            acceleration-exponent = <2>;
+            time-to-max-speed-ms = <200>;
+        };
     };
 
     keymap {
@@ -74,7 +84,7 @@
 &mt ESCAPE Q      &kp W         &kp E         &kp R          &kp T                                                                                   &kp Y                   &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F          &kp G                   &none                              &lt_to_layer_0 1 F6          &kp H                   &kp J  &kp K      &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &kp B                   &kp DELETE                         &kp BACKSPACE                &kp N                   &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL TAB  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 2 INT_MUHENKAN      &lt_to_layer_0 3 INT_HENKAN  &lt_to_layer_0 3 SPACE                             &lt_to_layer_0 7 INT1
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL TAB  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 2 INT_MUHENKAN      &lt_to_layer_0 3 INT_HENKAN  &lt_to_layer_0 3 SPACE                             &lt_to_layer_0 4 INT1
             >;
 
             sensor-bindings = <&scroll_up_down>;
