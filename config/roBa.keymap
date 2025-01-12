@@ -64,16 +64,6 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
-
-        Inpt_two_axis: Inpt_two_axis {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "INPT_TWO_AXIS";
-            #binding-cells = <1>;
-            x-input-code = <2>;
-            y-input-code = <2>;
-            acceleration-exponent = <2>;
-            time-to-max-speed-ms = <200>;
-        };
     };
 
     keymap {
@@ -102,9 +92,9 @@
         NUM {
             bindings = <
 &kp EXCLAMATION  &kp LS(N2)  &kp HASH  &kp DOLLAR  &kp PERCENT                              &kp LS(N7)         &kp LS(N7)        &kp LS(N8)       &kp LS(N9)  &kp MINUS
-&kp TAB          &kt CAPS    &trans    &trans      &kp PRINTSCREEN  &trans      &kp INSERT  &kp EXCLAMATION    &kp LEFT_BRACKET  &kp SEMICOLON    &kp SQT     &kp INT_YEN
-&trans           &trans      &trans    &trans      &trans           &trans      &trans      &kp RIGHT_BRACKET  &kp SLASH         &kp RIGHT_BRACE  &kp PIPE    &kp INT1
-&trans           &trans      &trans    &trans      &trans           &trans      &trans      &trans                                                            &kp CARET
+&kp TAB          &kt CAPS    &trans    &trans      &kp PRINTSCREEN  &trans      &kp INSERT  &kp EXCLAMATION    &kp LEFT_BRACKET  &kp SEMICOLON    &kp SQT     &kp CARET
+&trans           &trans      &trans    &trans      &trans           &trans      &trans      &kp RIGHT_BRACKET  &kp SLASH         &kp RIGHT_BRACE  &kp PIPE    &kp INTERNATIONAL_3
+&trans           &trans      &trans    &trans      &trans           &trans      &trans      &trans                                                            &kp INT1
             >;
         };
 
