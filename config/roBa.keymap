@@ -17,10 +17,10 @@
     quick-tap-ms = <0>;
 };
 
-&trackpad_listener {
-    scroller {
+&mkp_input_listener {
+    xy_scaler {
         layers = <7>;
-    input-processors = <&zip_xy_scaler 3 1>;
+        input-processors = <&zip_xy_scaler 3 1>;
     };
 };
 
