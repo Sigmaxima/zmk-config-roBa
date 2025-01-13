@@ -17,6 +17,11 @@
     quick-tap-ms = <0>;
 };
 
+&mmv {
+    acceleration-exponent = <3>;
+    delay-ms = <0>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
