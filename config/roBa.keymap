@@ -76,10 +76,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &kp W         &kp E         &kp R          &kp T                                                                                      &kp Y                   &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F          &kp G                   &none                                 &lt_to_layer_0 1 F6          &kp H                   &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &kp B                   &kp DELETE                            &kp BACKSPACE                &kp N                   &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL TAB  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 2 INTERNATIONAL_5      &lt_to_layer_0 3 INT_HENKAN  &lt_to_layer_0 3 SPACE                             &lt_to_layer_0 4 INT1
+&mt ESCAPE Q      &kp W         &kp E         &kp R          &kp T                                                                                      &kp Y                   &kp U  &lt 5 I    &mt MINUS O  &kp P
+&kp A             &kp S         &kp D         &kp F          &kp G                   &none                                 &lt_to_layer_0 1 F6          &kp H                   &kp J  &lt 5 K    &kp L        &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &kp B                   &kp DELETE                            &kp BACKSPACE                &kp N                   &kp M  &kp COMMA  &kp DOT      &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL TAB  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 2 INTERNATIONAL_5      &lt_to_layer_0 3 INT_HENKAN  &lt_to_layer_0 3 SPACE                                 &lt_to_layer_0 4 INT1
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
@@ -114,10 +114,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &kp F5    &kp LC(PAGE_UP)  &mo 5     &kp LC(PAGE_DOWN)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp RC(W)  &mkp MB4  &mkp MB1         &mkp MB3  &mkp MB2           &kp RCTRL
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &mkp MB5  &mkp MB4         &trans    &trans             &kp RIGHT_SHIFT
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans                                                  &trans
+&trans  &trans  &trans  &trans  &trans                      &kp F5     &kp LC(PAGE_UP)  &mkp MB3  &kp LC(PAGE_DOWN)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB4   &mkp MB1         &mo 5     &mkp MB2           &kp RCTRL
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LC(W)  &mkp MB4         &trans    &mkp MB5           &kp RIGHT_SHIFT
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
@@ -125,10 +125,10 @@
 
         SCROLL {
             bindings = <
-&trans            &trans  &trans  &trans  &trans                         &kp F5    &kp LC(PAGE_UP)  &trans    &kp LC(PAGE_DOWN)  &trans
-&trans            &trans  &trans  &trans  &trans  &trans      &kp LC(W)  &mkp MB4  &mkp MB1         &mkp MB3  &mkp MB2           &kp RIGHT_CONTROL
-&trans            &trans  &trans  &trans  &trans  &trans      &mo 6      &mkp MB5  &mkp MB4         &trans    &trans             &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans      &trans     &trans                                                  &trans
+&trans            &trans  &trans  &trans  &trans                      &kp F5     &kp LC(PAGE_UP)  &mkp MB3  &kp LC(PAGE_DOWN)  &trans
+&trans            &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB4   &mkp MB1         &trans    &mkp MB2           &kp RIGHT_CONTROL
+&trans            &trans  &trans  &trans  &trans  &trans      &mo 6   &kp LC(W)  &mkp MB4         &trans    &mkp MB5           &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
