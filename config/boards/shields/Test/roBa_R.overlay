@@ -14,17 +14,6 @@
             ;
 };
 
-&mmv_input_listener {
-  warp {
-    layers = <7>;
-    input-processors = <&zip_xy_scaler 3 1>;
-  };
-  precision {
-    layers = <8>;
-    input-processors = <&zip_xy_scaler 1 2>;
-  };
-};
-
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
