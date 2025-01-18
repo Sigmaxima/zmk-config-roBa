@@ -18,7 +18,7 @@
     combos {
         compatible = "zmk,combos";
 
-        delete {
+        delete2 {
             bindings = <&kp DELETE>;
             key-positions = <9 21>;
             layers = <0>;
@@ -43,6 +43,11 @@
         mouse {
             bindings = <&tog 4>;
             key-positions = <31 32>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <21 20>;
         };
     };
 
