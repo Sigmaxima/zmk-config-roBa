@@ -35,12 +35,12 @@
             key-positions = <8 7>;
         };
 
-        minus2 {
+        MB2 {
             bindings = <&mkp MB2>;
             key-positions = <20 19>;
         };
 
-        Mouse_layer {
+        MouseLayer {
             bindings = <&tog 4>;
             key-positions = <31 32>;
         };
