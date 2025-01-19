@@ -36,11 +36,11 @@
         };
 
         minus2 {
-            bindings = <&kp MINUS>;
+            bindings = <&mkp MB2>;
             key-positions = <20 19>;
         };
 
-        mouse {
+        Mouse_layer {
             bindings = <&tog 4>;
             key-positions = <31 32>;
         };
@@ -48,6 +48,11 @@
         delete {
             bindings = <&kp DELETE>;
             key-positions = <21 20>;
+        };
+
+        MB1 {
+            bindings = <&mkp MB1>;
+            key-positions = <18 19>;
         };
     };
 
