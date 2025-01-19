@@ -137,7 +137,7 @@
 
         SCROLL {
             bindings = <
-&trans            &trans  &trans  &trans  &trans                      &kp F5    &kp LC(PAGE_UP)  &mkp MB3   &kp LC(PAGE_DOWN)  &kp LC(F4)
+&trans            &trans  &trans  &trans  &trans                      &kp F5    &kp LC(PAGE_UP)  &mkp MB3   &kp LC(PAGE_DOWN)  &none
 &trans            &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB4  &mkp MB1         &trans     &mkp MB2           &kp RIGHT_CONTROL
 &trans            &trans  &trans  &trans  &trans  &trans      &mo 6   &trans    &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
 &kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                   &trans
