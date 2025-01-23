@@ -46,14 +46,14 @@
             key-positions = <30 31>;
         };
 
-                mousebutton2 {
-            bindings = <&mkp MB2>;
-            key-positions = <20 19>;
-        };
-
         mousebutton1 {
             bindings = <&mkp MB1>;
             key-positions = <18 19>;
+        };
+
+        mousebutton2 {
+            bindings = <&mkp MB2>;
+            key-positions = <20 19>;
         };
 
         mouselayer {
