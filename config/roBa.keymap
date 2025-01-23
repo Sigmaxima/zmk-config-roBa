@@ -63,12 +63,27 @@
 
         henkan {
             bindings = <&kp INTERNATIONAL_4>;
-            key-positions = <17 18>;
+            key-positions = <18 19 20>;
         };
 
         muhenkan {
             bindings = <&kp INT_MUHENKAN>;
-            key-positions = <14 13>;
+            key-positions = <13 12 11>;
+        };
+
+        tenkeyslayer {
+            bindings = <&tog 7>;
+            key-positions = <23 24>;
+        };
+
+        backspace2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <6 7 8>;
+        };
+
+        delete2 {
+            bindings = <&kp DELETE>;
+            key-positions = <1 2 3>;
         };
     };
 
@@ -173,10 +188,10 @@
 
         TEN_KEYS {
             bindings = <
-&trans  &trans          &kp UP          &trans     &trans                      &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans      &trans  &kp APOS  &kp N4  &kp N5  &kp N7  &kp SEMI
-&trans  &trans          &trans          &trans     &trans  &trans      &trans  &kp N0    &kp N1  &kp N2  &kp N3  &kp ENTER
-&trans  &trans          &trans          &trans     &trans  &trans      &trans  &kp N0                            &kp DOT
+&trans  &trans          &kp UP          &trans     &trans                      &kp FSLH      &kp N7  &kp N8  &kp N9  &kp MINUS
+&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans      &trans  &kp LS(APOS)  &kp N4  &kp N5  &kp N7  &kp LS(SEMI)
+&trans  &trans          &trans          &trans     &trans  &trans      &trans  &kp N0        &kp N1  &kp N2  &kp N3  &kp ENTER
+&trans  &trans          &trans          &trans     &trans  &trans      &trans  &kp N0                                &kp DOT
             >;
         };
     };
