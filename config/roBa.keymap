@@ -25,30 +25,15 @@
             timeout-ms = <70>;
         };
 
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <8 7>;
-        };
-
-        mousebutton2 {
-            bindings = <&mkp MB2>;
-            key-positions = <20 19>;
-        };
-
-        mouselayer {
-            bindings = <&tog 4>;
-            key-positions = <31 32>;
-        };
-
         delete {
             bindings = <&kp DELETE>;
             key-positions = <33 32>;
             timeout-ms = <70>;
         };
 
-        mousebutton1 {
-            bindings = <&mkp MB1>;
-            key-positions = <18 19>;
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <8 7>;
         };
 
         bracket {
@@ -59,6 +44,21 @@
         rightbacket {
             bindings = <&kp NUHS>;
             key-positions = <30 31>;
+        };
+
+                mousebutton2 {
+            bindings = <&mkp MB2>;
+            key-positions = <20 19>;
+        };
+
+        mousebutton1 {
+            bindings = <&mkp MB1>;
+            key-positions = <18 19>;
+        };
+
+        mouselayer {
+            bindings = <&tog 4>;
+            key-positions = <31 32>;
         };
     };
 
