@@ -85,6 +85,21 @@
             bindings = <&kp DELETE>;
             key-positions = <1 2 3>;
         };
+
+        f2 {
+            bindings = <&kp F2>;
+            key-positions = <1 2>;
+        };
+
+        f4 {
+            bindings = <&kp F4>;
+            key-positions = <3 4>;
+        };
+
+        f6 {
+            bindings = <&kp F6>;
+            key-positions = <5 6>;
+        };
     };
 
     macros {
@@ -139,7 +154,7 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION  &kp LS(N2)       &kp HASH  &kp DOLLAR  &kp PERCENT                                         &kp LS(N7)         &kp LS(N7)   &kp LS(N8)       &kp LS(N9)  &kp EQUAL
+&kp EXCLAMATION  &kp LS(N2)       &kp HASH  &kp DOLLAR  &kp PERCENT                                         &kp LS(NUMBER_6)   &kp LS(N7)   &kp LS(N8)       &kp LS(N9)  &kp EQUAL
 &kp TAB          &kt CAPS         &trans    &trans      &kp LS(EQUAL)         &trans      &kp MINUS         &kp LS(SEMI)       &kp LS(SQT)  &kp SEMICOLON    &kp SQT     &kp INTERNATIONAL_3
 &trans           &kp PRINTSCREEN  &trans    &trans      &kp LS(LEFT_BRACKET)  &trans      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NUHS     &kp RIGHT_BRACE  &kp PIPE    &kp SLASH
 &trans           &trans           &trans    &trans      &trans                &trans      &trans            &trans                                                       &kp INT1
