@@ -128,6 +128,16 @@
             bindings = <&kp LS(N8)>;
             key-positions = <6 7>;
         };
+
+        space {
+            bindings = <&kp SPACE>;
+            key-positions = <24 25 23>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <30 31 32>;
+        };
     };
 
     macros {
