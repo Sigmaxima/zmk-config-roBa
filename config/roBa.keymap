@@ -37,18 +37,6 @@
             layers = <0>;
         };
 
-        bracket {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <6 7>;
-            layers = <0>;
-        };
-
-        rightbacket {
-            bindings = <&kp NUHS>;
-            key-positions = <30 31>;
-            layers = <0>;
-        };
-
         mousebutton1 {
             bindings = <&mkp MB1>;
             key-positions = <18 19>;
@@ -65,12 +53,12 @@
         };
 
         henkan {
-            bindings = <&kp INTERNATIONAL_4>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <18 19 20>;
         };
 
         muhenkan {
-            bindings = <&kp INT_MUHENKAN>;
+            bindings = <&kp DELETE>;
             key-positions = <13 12 11>;
         };
 
@@ -108,15 +96,37 @@
         };
 
         leftparenthesis {
-            bindings = <&kp LS(N8)>;
-            key-positions = <14 13>;
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <25 24>;
             layers = <0>;
         };
 
         rightparenthesis {
-            bindings = <&kp LS(N9)>;
+            bindings = <&kp NUHS>;
+            key-positions = <30 31>;
+            layers = <0>;
+        };
+
+        leftbrace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <14 13>;
+            layers = <0>;
+        };
+
+        rightbrace {
+            bindings = <&kp PIPE>;
             key-positions = <17 18>;
             layers = <0>;
+        };
+
+        leftbracket {
+            bindings = <&kp LS(N7)>;
+            key-positions = <2 3>;
+        };
+
+        rightbracket {
+            bindings = <&kp LS(N8)>;
+            key-positions = <6 7>;
         };
     };
 
@@ -152,10 +162,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &kp W             &kp E           &kp R                 &kp T                                                                                      &kp Y                       &kp U        &lt 5 I    &mt MINUS O        &mt BACKSPACE P
-&mt TAB A         &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LCTRL F           &kp G                   &none                                 &lt_to_layer_0 1 F6          &kp H                       &mt RCTRL J  &lt 5 K    &mt RIGHT_SHIFT L  &kp ENTER
-&mt LEFT_SHIFT Z  &kp X             &kp C           &kp V                 &kp B                   &kp SEMICOLON                         &kp SQT                      &kp N                       &kp M        &kp COMMA  &kp DOT            &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT    &lt_to_layer_0 2 TAB  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 2 INTERNATIONAL_5      &lt_to_layer_0 3 INT_HENKAN  &lt_to_layer_0 3 BACKSPACE                                             &mt RCTRL INT1
+&mt ESCAPE Q      &kp W             &kp E           &kp R                 &kp T                                                                                  &kp Y                             &kp U        &lt 5 I    &mt MINUS O        &mt BACKSPACE P
+&mt TAB A         &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LCTRL F           &kp G                          &none                       &lt_to_layer_0 1 F6         &kp H                             &mt RCTRL J  &lt 5 K    &mt RIGHT_SHIFT L  &kp ENTER
+&mt LEFT_SHIFT Z  &kp X             &kp C           &kp V                 &kp B                          &kp SEMICOLON               &kp SQT                     &kp N                             &kp M        &kp COMMA  &kp DOT            &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT    &lt_to_layer_0 2 TAB  &lt_to_layer_0 2 INT_MUHENKAN  &lt_to_layer_0 2 SPACE      &lt_to_layer_0 3 BACKSPACE  &lt_to_layer_0 3 INTERNATIONAL_4                                             &mt RCTRL INT1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
