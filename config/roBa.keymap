@@ -120,12 +120,12 @@
         };
 
         leftbracket {
-            bindings = <&kp LS(N7)>;
+            bindings = <&kp LS(N8)>;
             key-positions = <2 3>;
         };
 
         rightbracket {
-            bindings = <&kp LS(N8)>;
+            bindings = <&kp LS(N9)>;
             key-positions = <6 7>;
         };
 
