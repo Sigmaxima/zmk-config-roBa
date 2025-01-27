@@ -138,6 +138,16 @@
             bindings = <&kp ENTER>;
             key-positions = <30 31 32>;
         };
+
+        space2 {
+            bindings = <&kp SPACE>;
+            key-positions = <13 12>;
+        };
+
+        enter2 {
+            bindings = <&kp ENTER>;
+            key-positions = <12 11>;
+        };
     };
 
     macros {
