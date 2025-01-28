@@ -138,13 +138,13 @@
         };
 
         space {
-            bindings = <&kp SPACE>;
+            bindings = <&kp INT_MUHENKAN>;
             key-positions = <24 25 23>;
             layers = <0>;
         };
 
         enter {
-            bindings = <&kp ENTER>;
+            bindings = <&kp INT_HENKAN>;
             key-positions = <30 31 32>;
             layers = <0>;
         };
