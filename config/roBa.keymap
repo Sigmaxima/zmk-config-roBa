@@ -49,32 +49,38 @@
 
         mouselayer {
             bindings = <&tog 4>;
-            key-positions = <31 32>;
+            key-positions = <32 31>;
+            layers = <0>;
         };
 
         henkan {
             bindings = <&kp INTERNATIONAL_4>;
             key-positions = <6 7 8>;
+            layers = <0>;
         };
 
         muhenkan {
             bindings = <&kp INT_MUHENKAN>;
             key-positions = <1 2 3>;
+            layers = <0>;
         };
 
         tenkeyslayer {
             bindings = <&tog 7>;
             key-positions = <23 24>;
+            layers = <0>;
         };
 
         backspace2 {
             bindings = <&kp BACKSPACE>;
             key-positions = <18 19 20>;
+            layers = <0>;
         };
 
         delete2 {
             bindings = <&kp DELETE>;
             key-positions = <13 12 11>;
+            layers = <0>;
         };
 
         f2 {
@@ -122,31 +128,37 @@
         leftbracket {
             bindings = <&kp LS(N8)>;
             key-positions = <2 3>;
+            layers = <0>;
         };
 
         rightbracket {
             bindings = <&kp LS(N9)>;
             key-positions = <6 7>;
+            layers = <0>;
         };
 
         space {
             bindings = <&kp SPACE>;
             key-positions = <24 25 23>;
+            layers = <0>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <30 31 32>;
+            layers = <0>;
         };
 
         space2 {
             bindings = <&kp SPACE>;
             key-positions = <13 12>;
+            layers = <0>;
         };
 
         enter2 {
             bindings = <&kp ENTER>;
             key-positions = <12 11>;
+            layers = <0>;
         };
     };
 
