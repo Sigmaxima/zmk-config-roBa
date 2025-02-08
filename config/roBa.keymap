@@ -216,11 +216,13 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION       &kp LS(N2)  &kp HASH       &kp DOLLAR     &kp PERCENT                                                 &kp LS(NUMBER_6)   &kp LS(N7)  &kp LS(N8)       &kp LS(N9)  &kp EQUAL
-&kp LC(A)             &kp LC(S)   &kp LS(MINUS)  &kp SLASH      &kp LS(SQT)           &trans             &mt CAPS LS(CAPS)  &kp LS(SEMI)       &kp MINUS   &kp SEMICOLON    &kp SQT     &kp INTERNATIONAL_3
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)      &kp LS(EQUAL)  &kp LS(LEFT_BRACKET)  &kp LS(LC(M))      &kp PRINTSCREEN    &kp RIGHT_BRACKET  &kp NUHS    &kp RIGHT_BRACE  &kp PIPE    &kp SLASH
-&trans                &trans      &trans         &trans         &trans                &kp LS(LC(M))      &trans             &kp BACKSPACE                                               &kp INT1
+&kp EXCLAMATION       &kp LS(N2)            &kp HASH                &kp DOLLAR       &kp PERCENT                                                    &kp LS(NUMBER_6)   &kp LS(N7)  &kp LS(N8)       &kp LS(N9)  &kp EQUAL
+&kp LC(A)             &mt LEFT_SHIFT LC(S)  &mt LEFT_ALT LS(MINUS)  &mt LCTRL SLASH  &kp LS(SQT)           &trans             &kp LS(LEFT_BRACKET)  &kp LS(SEMI)       &kp MINUS   &kp SEMICOLON    &kp SQT     &kp INTERNATIONAL_3
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)             &kp LC(C)               &kp LC(V)        &kp LG(LEFT_BRACKET)  &kp LS(LC(M))      &kp LS(EQUAL)         &kp RIGHT_BRACKET  &kp NUHS    &kp RIGHT_BRACE  &kp PIPE    &kp SLASH
+&trans                &trans                &trans                  &kp PRINTSCREEN  &trans                &kp LS(LC(M))      &kp CAPS              &kp LC(LS(X))                                               &kp INT1
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         ARROW {
