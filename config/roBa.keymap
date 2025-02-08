@@ -20,14 +20,14 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <9 8>;
+            key-positions = <>;
             layers = <0>;
             timeout-ms = <70>;
         };
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <21 20>;
+            key-positions = <>;
             timeout-ms = <70>;
         };
 
@@ -48,12 +48,6 @@
             key-positions = <20 19>;
         };
 
-        mouselayer {
-            bindings = <&tog 4>;
-            key-positions = <>;
-            layers = <0>;
-        };
-
         henkan {
             bindings = <&kp INTERNATIONAL_4>;
             key-positions = <6 7 8>;
@@ -69,19 +63,7 @@
 
         tenkeyslayer {
             bindings = <&tog 7>;
-            key-positions = <>;
-            layers = <0>;
-        };
-
-        backspace2 {
-            bindings = <&kp BACKSPACE>;
             key-positions = <18 19 20>;
-            layers = <0>;
-        };
-
-        delete2 {
-            bindings = <&kp DELETE>;
-            key-positions = <13 12 11>;
             layers = <0>;
         };
 
@@ -94,14 +76,14 @@
 
         f4 {
             bindings = <&kp F4>;
-            key-positions = <3 4>;
+            key-positions = <11 12>;
             layers = <0>;
             timeout-ms = <30>;
         };
 
         f6 {
             bindings = <&kp F6>;
-            key-positions = <5 6>;
+            key-positions = <23 24>;
             layers = <0>;
             timeout-ms = <30>;
         };
@@ -148,28 +130,24 @@
             timeout-ms = <40>;
         };
 
-        space {
-            bindings = <&kp INT_MUHENKAN>;
-            key-positions = <24 25 23>;
-            layers = <0>;
+        f1 {
+            bindings = <&kp F1>;
+            key-positions = <0 1>;
         };
 
-        enter {
-            bindings = <&kp INT_HENKAN>;
-            key-positions = <30 31 32>;
-            layers = <0>;
+        f3 {
+            bindings = <&kp F3>;
+            key-positions = <10 11>;
         };
 
-        space2 {
-            bindings = <&kp SPACE>;
-            key-positions = <>;
-            layers = <0>;
+        f5 {
+            bindings = <&kp F5>;
+            key-positions = <22 23>;
         };
 
-        enter2 {
-            bindings = <&kp ENTER>;
-            key-positions = <>;
-            layers = <0>;
+        f11 {
+            bindings = <&kp F11>;
+            key-positions = <23 24>;
         };
     };
 
@@ -215,9 +193,9 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &kp W             &kp E           &kp R                             &kp T                                                                           &kp Y                 &kp U        &lt 5 I    &mt MINUS O        &mt BACKSPACE P
+&mt ESCAPE Q      &kp W             &kp E           &kp R                             &kp T                                                                           &kp Y                 &kp U        &lt 5 I    &mt MINUS O        &kp P
 &mt TAB A         &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LCTRL F                       &kp G                   &none                                 &kt LEFT_BRACKET  &kp H                 &mt RCTRL J  &lt 5 K    &mt RIGHT_SHIFT L  &kp MINUS
-&mt LEFT_SHIFT Z  &kp X             &kp C           &kp V                             &kp B                   &kp TAB                               &tog 7            &kp N                 &kp M        &kp COMMA  &kp DOT            &mt RIGHT_SHIFT SLASH
+&mt LEFT_SHIFT Z  &kp X             &kp C           &kp V                             &kp B                   &kp TAB                               &kp DELETE        &kp N                 &kp M        &kp COMMA  &kp DOT            &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT    &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                                             &mt RCTRL INT1
             >;
 
