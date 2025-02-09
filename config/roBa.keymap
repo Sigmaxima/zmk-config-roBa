@@ -256,7 +256,7 @@
 &trans                &trans                &trans                  &kp PRINTSCREEN  &trans       &kp LS(LC(M))      &kp LS(CAPS)          &kp LC(LS(X))                                                        &kp INT1
             >;
 
-            sensor-bindings = <&scroll_up_down SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
         };
 
         ARROW {
@@ -267,7 +267,7 @@
 &trans                    &trans           &trans        &trans       &trans   &trans             &trans         &trans                                                                 &kp DELETE
             >;
 
-            sensor-bindings = <&scroll_up_down SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
         };
 
         MOUSE {
@@ -299,6 +299,8 @@
 &trans  &trans          &trans          &trans     &trans  &trans      &kp TAB        &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT
 &trans  &trans          &trans          &trans     &trans  &trans      &trans         &kp N0                                &kp RETURN
             >;
+
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         CONFIG {
