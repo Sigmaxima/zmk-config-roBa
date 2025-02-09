@@ -205,6 +205,15 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
         };
+
+        tap_and_hold: tap_and_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_AND_HOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -213,7 +222,7 @@
         default_layer {
             bindings = <
 &mt ESCAPE Q      &kp W             &kp E           &kp R                             &kp T                                                                           &kp Y                 &kp U        &lt 5 I    &mt MINUS O        &kp P
-&kp A             &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LCTRL F                       &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &mt RCTRL J  &lt 5 K    &mt RIGHT_SHIFT L  &kp MINUS
+&kp A             &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LCTRL F                       &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &mt RCTRL J  &lt 5 K    &mt RIGHT_SHIFT L  &tap_and_hold ENTER MINUS
 &mt LEFT_SHIFT Z  &kp X             &kp C           &kp V                             &kp B                   &kp TAB                               &kp DELETE        &kp N                 &kp M        &kp COMMA  &kp DOT            &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT    &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                                             &mt RCTRL INT1
             >;
