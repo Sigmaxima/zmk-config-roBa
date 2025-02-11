@@ -252,7 +252,18 @@
             label = "APP_EDGE";
         };
 
-        app_firefox: app_firefox {
+        app_powerpoint: app_firefox {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 20>,
+                <&kp P &kp O &kp W &kp E &kp R &kp P &kp N &kp T &kp ENTER>;
+
+            label = "APP_FIREFOX";
+        };
+
+        app_firefox: app_powerpnt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -260,7 +271,18 @@
                 <&macro_wait_time 20>,
                 <&kp F &kp I &kp R &kp E &kp F &kp O &kp X &kp ENTER>;
 
-            label = "APP_FIREFOX";
+            label = "APP_POWERPNT";
+        };
+
+        app_outlook: app_outlook {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 20>,
+                <&kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp ENTER>;
+
+            label = "APP_OUTLOOK";
         };
     };
 
@@ -325,7 +347,7 @@
         default_layer {
             bindings = <
 &mt ESCAPE Q      &kp W             &kp E           &kp R                             &kp T                                                                           &kp Y                 &kp U        &lt 5 I    &mt MINUS O        &kp P
-&kp A             &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LCTRL F                       &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &mt RCTRL J  &lt 5 K    &mt RIGHT_SHIFT L  &tap_and_hold ENTER MINUS
+&kp A             &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LCTRL F                       &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &mt RCTRL J  &lt 5 K    &mt RIGHT_SHIFT L  &tap_and_hold MINUS ENTER
 &mt LEFT_SHIFT Z  &kp X             &kp C           &kp V                             &kp B                   &kp TAB                               &kp DELETE        &kp N                 &kp M        &kp COMMA  &kp DOT            &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT    &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                                             &mt RCTRL INT1
             >;
@@ -335,10 +357,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                               &app_explorer  &app_teams       &app_onenote        &app_word   &app_excel
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp C_PREVIOUS  &kp C_REWIND   &kp C_PP         &kp C_FAST_FORWARD  &kp C_NEXT  &kp C_MUTE
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans          &app_explorer  &app_calculator  &app_firefox        &app_edge   &trans
-&trans   &trans   &trans   &trans  &trans   &trans      &trans          &trans                                                          &trans
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                               &app_calculator  &app_explorer  &caps_word          &app_excel    &app_powerpoint
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp C_PREVIOUS  &kp C_REWIND     &kp C_PP       &kp C_FAST_FORWARD  &kp C_NEXT    &kp C_MUTE
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans          &app_onenote     &app_teams     &app_outlook        &app_firefox  &app_edge
+&trans   &trans   &trans   &trans  &trans   &trans      &trans          &trans                                                            &trans
             >;
         };
 
