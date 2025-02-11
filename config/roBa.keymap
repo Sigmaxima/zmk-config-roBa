@@ -203,7 +203,7 @@
             bindings =
                 <&kp LG(R)>,
                 <&macro_wait_time 20>,
-                <&kp W &kp O &kp R &kp D &kp ENTER>;
+                <&kp W &kp I &kp N &kp W &kp O &kp R &kp D &kp ENTER>;
 
             label = "APP_WORD";
         };
@@ -225,7 +225,7 @@
             bindings =
                 <&kp LG(R)>,
                 <&macro_wait_time 20>,
-                <&kp C &kp A &kp L &kp C &kp U &kp L &kp A &kp T &kp O &kp R &kp ENTER>;
+                <&kp C &kp A &kp L &kp C &kp ENTER>;
 
             label = "APP_ONENOTE";
         };
@@ -247,7 +247,7 @@
             bindings =
                 <&kp LG(R)>,
                 <&macro_wait_time 20>,
-                <&kp E &kp D &kp G &kp E &kp ENTER>;
+                <&kp M &kp S &kp E &kp D &kp G &kp E &kp ENTER>;
 
             label = "APP_EDGE";
         };
