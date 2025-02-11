@@ -156,7 +156,7 @@
         quit {
             bindings = <&kp LA(F4)>;
             key-positions = <11 12>;
-            layers = <5>;
+            layers = <2>;
         };
     };
 
@@ -192,7 +192,7 @@
             bindings =
                 <&kp LG(R)>,
                 <&macro_wait_time 20>,
-                <&kp T &kp E &kp A &kp M &kp S &kp ENTER>;
+                <&kp M &kp S &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
 
             label = "APP_TEAMS";
         };
@@ -357,7 +357,7 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                               &app_calculator  &app_explorer  &caps_word          &app_excel    &app_powerpoint
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                               &app_calculator  &app_explorer  &app_word           &app_excel    &app_powerpoint
 &kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp C_PREVIOUS  &kp C_REWIND     &kp C_PP       &kp C_FAST_FORWARD  &kp C_NEXT    &kp C_MUTE
 &kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans          &app_onenote     &app_teams     &app_outlook        &app_firefox  &app_edge
 &trans   &trans   &trans   &trans  &trans   &trans      &trans          &trans                                                            &trans
