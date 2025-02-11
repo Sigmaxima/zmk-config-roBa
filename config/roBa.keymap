@@ -178,22 +178,81 @@
         app_explorer: app_explorer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp E &kp X &kp P &kp L &kp O &kp R &kp E &kp R &kp ENTER>;
+            bindings =
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 20>,
+                <&kp E &kp X &kp P &kp L &kp O &kp R &kp E &kp R &kp ENTER>;
+
             label = "APP_EXPLORER";
         };
 
         app_teams: app_teams {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
+            bindings =
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 20>,
+                <&kp T &kp E &kp A &kp M &kp S &kp ENTER>;
+
             label = "APP_TEAMS";
         };
 
         app_word: app_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp W &kp O &kp R &kp D &kp ENTER>;
+            bindings =
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 20>,
+                <&kp W &kp O &kp R &kp D &kp ENTER>;
+
             label = "APP_WORD";
+        };
+
+        app_excel: app_excel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "APP_EXCEL";
+        };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
+
+        app_excel: app_excel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 20>,
+                <&kp E &kp X &kp C &kp E &kp L &kp ENTER>;
+
+            label = "APP_EXCEL";
+        };
+
+        app_onenote: app_onenote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 20>,
+                <&kp C &kp A &kp L &kp C &kp U &kp L &kp A &kp T &kp O &kp R &kp ENTER>;
+
+            label = "APP_ONENOTE";
+        };
+
+        app_calculator: app_calculator {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 20>,
+                <&kp O &kp N &kp E &kp N &kp O &kp T &kp E &kp ENTER>;
+
+            label = "APP_CALCULATOR";
         };
     };
 
