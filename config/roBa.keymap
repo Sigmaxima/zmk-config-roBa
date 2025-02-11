@@ -335,10 +335,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                        &app_explorer  &app_teams  &app_word  &app_excel  &app_excel
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp F13  &kp F6         &kp F7      &kp F8     &kp F9      &kp F10
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans   &trans         &trans      &trans     &trans      &kp F11
-&trans   &trans   &trans   &trans  &trans   &trans      &trans   &trans                                            &kp F12
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                &app_explorer  &app_teams    &app_onenote  &app_word  &app_excel
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &app_calculator  &app_edge      &app_firefox  &trans        &trans     &trans
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans           &trans         &trans        &trans        &trans     &trans
+&trans   &trans   &trans   &trans  &trans   &trans      &trans           &trans                                                &trans
             >;
         };
 
