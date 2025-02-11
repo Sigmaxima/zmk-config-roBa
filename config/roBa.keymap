@@ -211,20 +211,6 @@
         app_excel: app_excel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
-            label = "APP_EXCEL";
-        };
-
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "NEW_MACRO";
-        };
-
-        app_excel: app_excel {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
             bindings =
                 <&kp LEFT_WIN>,
                 <&macro_wait_time 20>,
@@ -233,7 +219,7 @@
             label = "APP_EXCEL";
         };
 
-        app_onenote: app_onenote {
+        app_calculator: app_onenote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -244,7 +230,7 @@
             label = "APP_ONENOTE";
         };
 
-        app_calculator: app_calculator {
+        app_onenote: app_calculator {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -253,6 +239,28 @@
                 <&kp O &kp N &kp E &kp N &kp O &kp T &kp E &kp ENTER>;
 
             label = "APP_CALCULATOR";
+        };
+
+        app_edge: app_edge {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 20>,
+                <&kp E &kp D &kp G &kp E &kp ENTER>;
+
+            label = "APP_EDGE";
+        };
+
+        app_firefox: app_firefox {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 20>,
+                <&kp F &kp I &kp R &kp E &kp F &kp O &kp X &kp ENTER>;
+
+            label = "APP_FIREFOX";
         };
     };
 
@@ -327,10 +335,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                        &app_explorer  &app_teams  &app_word  &kp F4  &kp F5
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp F13  &kp F6         &kp F7      &kp F8     &kp F9  &kp F10
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans   &trans         &trans      &trans     &trans  &kp F11
-&trans   &trans   &trans   &trans  &trans   &trans      &trans   &trans                                        &kp F12
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                        &app_explorer  &app_teams  &app_word  &app_excel  &app_excel
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp F13  &kp F6         &kp F7      &kp F8     &kp F9      &kp F10
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans   &trans         &trans      &trans     &trans      &kp F11
+&trans   &trans   &trans   &trans  &trans   &trans      &trans   &trans                                            &kp F12
             >;
         };
 
