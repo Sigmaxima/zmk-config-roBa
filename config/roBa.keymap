@@ -179,7 +179,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_WIN>,
+                <&kp LG(R)>,
                 <&macro_wait_time 20>,
                 <&kp E &kp X &kp P &kp L &kp O &kp R &kp E &kp R &kp ENTER>;
 
@@ -190,7 +190,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_WIN>,
+                <&kp LG(R)>,
                 <&macro_wait_time 20>,
                 <&kp T &kp E &kp A &kp M &kp S &kp ENTER>;
 
@@ -201,7 +201,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_WIN>,
+                <&kp LG(R)>,
                 <&macro_wait_time 20>,
                 <&kp W &kp O &kp R &kp D &kp ENTER>;
 
@@ -212,7 +212,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_WIN>,
+                <&kp LG(R)>,
                 <&macro_wait_time 20>,
                 <&kp E &kp X &kp C &kp E &kp L &kp ENTER>;
 
@@ -223,7 +223,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_WIN>,
+                <&kp LG(R)>,
                 <&macro_wait_time 20>,
                 <&kp C &kp A &kp L &kp C &kp U &kp L &kp A &kp T &kp O &kp R &kp ENTER>;
 
@@ -234,7 +234,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_WIN>,
+                <&kp LG(R)>,
                 <&macro_wait_time 20>,
                 <&kp O &kp N &kp E &kp N &kp O &kp T &kp E &kp ENTER>;
 
@@ -245,7 +245,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_WIN>,
+                <&kp LG(R)>,
                 <&macro_wait_time 20>,
                 <&kp E &kp D &kp G &kp E &kp ENTER>;
 
@@ -256,7 +256,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_WIN>,
+                <&kp LG(R)>,
                 <&macro_wait_time 20>,
                 <&kp F &kp I &kp R &kp E &kp F &kp O &kp X &kp ENTER>;
 
@@ -335,10 +335,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                &app_explorer  &app_teams    &app_onenote  &app_word  &app_excel
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &app_calculator  &app_edge      &app_firefox  &trans        &trans     &trans
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans           &trans         &trans        &trans        &trans     &trans
-&trans   &trans   &trans   &trans  &trans   &trans      &trans           &trans                                                &trans
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                               &app_explorer  &app_teams       &app_onenote        &app_word   &app_excel
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp C_PREVIOUS  &kp C_REWIND   &kp C_PP         &kp C_FAST_FORWARD  &kp C_NEXT  &kp C_MUTE
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans          &app_explorer  &app_calculator  &app_firefox        &app_edge   &trans
+&trans   &trans   &trans   &trans  &trans   &trans      &trans          &trans                                                          &trans
             >;
         };
 
