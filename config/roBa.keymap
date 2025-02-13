@@ -70,42 +70,42 @@
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <25 24>;
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <20>;
         };
 
         rightparenthesis {
             bindings = <&kp NUHS>;
             key-positions = <25 26>;
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <20>;
         };
 
         leftbrace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <2 3>;
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <20>;
         };
 
         rightbrace {
             bindings = <&kp PIPE>;
             key-positions = <3 4>;
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <20>;
         };
 
         leftbracket {
             bindings = <&kp LS(N8)>;
             key-positions = <12 13>;
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <20>;
         };
 
         rightbracket {
             bindings = <&kp LS(N9)>;
             key-positions = <13 14>;
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <20>;
         };
 
         f1 {
