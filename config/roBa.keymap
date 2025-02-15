@@ -295,10 +295,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &kp W         &kp E         &kp R                             &kp T                                                                           &kp Y                 &kp U  &kp I      &mt MINUS O  &kp P
-&kp A             &kp S         &kp D         &kp F                             &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &kp J  &lt 5 K    &kp L        &tap_and_hold MINUS ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                             &kp B                   &kp RIGHT_BRACKET                     &kp NUHS          &kp N                 &kp M  &kp COMMA  &kp DOT      &mt_long_press RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                                 &mt_long_press RCTRL INT1
+&mt ESCAPE Q      &kp W         &kp E         &kp R                             &kp T                                                                           &kp Y                 &kp U  &kp I      &kp O    &kp MINUS
+&kp A             &kp S         &kp D         &kp F                             &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &kp J  &lt 5 K    &kp L    &mt_long_press ENTER P
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                             &kp B                   &kp RIGHT_BRACKET                     &kp NUHS          &kp N                 &kp M  &kp COMMA  &kp DOT  &mt_long_press RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                             &mt_long_press RCTRL INT1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -379,7 +379,7 @@
 
         Game {
             bindings = <
-&kp CAPS   &kp Q    &kp W         &kp E  &kp R                                 &trans                &trans  &trans  &kp O   &trans
+&kp CAPS   &kp Q    &kp W         &kp E  &kp R                                 &trans                &trans  &trans  &trans  &trans
 &kp TAB    &kp A    &kp S         &kp D  &kp F      &trans      &trans         &trans                &trans  &kp K   &trans  &trans
 &kp LSHFT  &kp Z    &kp X         &kp C  &kp V      &kp B       &kp DELETE     &trans                &trans  &trans  &trans  &trans
 &kp LCTRL  &kp ESC  &kp LEFT_ALT  &kp G  &kp SPACE  &kp T       &kp BACKSPACE  &lt_to_layer_0 3 RET                          &trans
