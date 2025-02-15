@@ -9,10 +9,7 @@
 #define SCROLL 5
 #define NUM 6
 
-&mt {
-    flavor = "balanced";
-    quick-tap-ms = <300>;
-};
+&mt { quick-tap-ms = <300>; };
 
 / {
     combos {
@@ -82,81 +79,36 @@
 
         leftbrace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <2 3>;
+            key-positions = <12 13>;
             layers = <0>;
             timeout-ms = <20>;
         };
 
         rightbrace {
             bindings = <&kp PIPE>;
-            key-positions = <3 4>;
+            key-positions = <13 14>;
             layers = <0>;
             timeout-ms = <20>;
         };
 
         leftbracket {
             bindings = <&kp LS(N8)>;
-            key-positions = <12 13>;
+            key-positions = <2 3>;
             layers = <0>;
             timeout-ms = <20>;
         };
 
         rightbracket {
             bindings = <&kp LS(N9)>;
-            key-positions = <13 14>;
+            key-positions = <4 3>;
             layers = <0>;
             timeout-ms = <20>;
         };
 
-        f1 {
-            bindings = <&kp F1>;
-            key-positions = <0 1>;
-            layers = <0>;
-        };
-
         f2 {
             bindings = <&kp F2>;
-            key-positions = <1 2>;
-            layers = <0>;
-            timeout-ms = <30>;
-        };
-
-        f3 {
-            bindings = <&kp F3>;
-            key-positions = <10 11>;
-            layers = <0>;
-        };
-
-        f4 {
-            bindings = <&kp F4>;
-            key-positions = <11 12>;
-            layers = <0>;
-            timeout-ms = <30>;
-        };
-
-        f5 {
-            bindings = <&kp F5>;
-            key-positions = <22 23>;
-            layers = <0>;
-        };
-
-        f6 {
-            bindings = <&kp F6>;
-            key-positions = <23 24>;
-            layers = <0>;
-            timeout-ms = <30>;
-        };
-
-        f11 {
-            bindings = <&kp F11>;
-            key-positions = <35 36>;
-            layers = <0>;
-        };
-
-        quit {
-            bindings = <&kp LA(F4)>;
-            key-positions = <11 12>;
-            layers = <2>;
+            key-positions = <1 0>;
+            layers = <2 3>;
         };
     };
 
