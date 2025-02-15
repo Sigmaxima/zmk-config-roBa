@@ -19,12 +19,14 @@
             bindings = <&mkp MB1>;
             key-positions = <18 19>;
             timeout-ms = <150>;
+            layers = <0 4 5>;
         };
 
         mousebutton2 {
             bindings = <&mkp MB2>;
             key-positions = <20 19>;
             timeout-ms = <50>;
+            layers = <0 4 5>;
         };
 
         backspace {
@@ -67,42 +69,42 @@
 
         leftparenthesis {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <12 13>;
+            key-positions = <>;
             layers = <0>;
             timeout-ms = <20>;
         };
 
         rightparenthesis {
             bindings = <&kp NUHS>;
-            key-positions = <13 14>;
+            key-positions = <>;
             layers = <0>;
             timeout-ms = <20>;
         };
 
         leftbrace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <24 25>;
+            key-positions = <>;
             layers = <0>;
             timeout-ms = <20>;
         };
 
         rightbrace {
             bindings = <&kp PIPE>;
-            key-positions = <26 25>;
+            key-positions = <>;
             layers = <0>;
             timeout-ms = <20>;
         };
 
         leftbracket {
             bindings = <&kp LS(N8)>;
-            key-positions = <2 3>;
+            key-positions = <>;
             layers = <0>;
             timeout-ms = <20>;
         };
 
         rightbracket {
             bindings = <&kp LS(N9)>;
-            key-positions = <4 3>;
+            key-positions = <>;
             layers = <0>;
             timeout-ms = <20>;
         };
