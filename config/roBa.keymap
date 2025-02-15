@@ -339,7 +339,7 @@
 &mt ESCAPE N1             &kp N2           &kp N3        &kp N4       &kp N5                                        &kp LA(UP_ARROW)  &kp LC(PAGE_UP)  &kp UP_ARROW     &kp LC(PAGE_DOWN)  &kp BACKSPACE
 &kp N6                    &kp N7           &kp N8        &kp N9       &kp N0   &trans                &kt PAGE_UP    &kp LC(LEFT)      &kp LEFT         &kp DOWN         &kp RIGHT          &kp LC(RIGHT)
 &mt LEFT_SHIFT KP_DIVIDE  &kp KP_ASTERISK  &kp KP_MINUS  &kp KP_PLUS  &kp DOT  &kp LS(MINUS)         &kp PAGE_DOWN  &trans            &kp HOME         &kp RIGHT_SHIFT  &kp END            &kp RIGHT_SHIFT
-&trans                    &trans           &trans        &trans       &kp TAB  &kp LS(CAPSLOCK)      &trans         &trans                                                                 &kp DELETE
+&trans                    &trans           &trans        &kp LS(TAB)  &kp TAB  &kp LS(CAPSLOCK)      &trans         &trans                                                                 &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
@@ -389,10 +389,10 @@
 
         Game {
             bindings = <
-&mt ESCAPE Q      &kp W                        &kp E                      &kp R                             &kp T                                                                           &kp Y                 &kp U                   &kp I      &mt MINUS O                   &kp P
-&kp A             &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LCTRL F            &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &mt_long_press RCTRL J  &lt 5 K    &mt_long_press RIGHT_SHIFT L  &tap_and_hold MINUS ENTER
-&mt LEFT_SHIFT Z  &kp X                        &kp C                      &kp V                             &kp B                   &kp LEFT_BRACE                        &kp LEFT_BRACE    &kp N                 &kp M                   &kp COMMA  &kp DOT                       &mt_long_press RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                                                                   &mt_long_press RCTRL INT1
+&kp CAPS   &kp Q    &kp W         &kp E  &kp R                                    &kp Y                 &kp U                   &kp I      &mt MINUS O                   &kp P
+&kp TAB    &kp A    &kp S         &kp D  &kp F      &trans      &kp LEFT_BRACKET  &kp H                 &mt_long_press RCTRL J  &lt 5 K    &mt_long_press RIGHT_SHIFT L  &tap_and_hold MINUS ENTER
+&kp LSHFT  &kp Z    &kp X         &kp C  &kp V      &kp B       &kp DELETE        &kp N                 &kp M                   &kp COMMA  &kp DOT                       &mt_long_press RIGHT_SHIFT SLASH
+&kp LCTRL  &kp ESC  &kp LEFT_ALT  &kp G  &kp SPACE  &kp T       &kp BACKSPACE     &lt_to_layer_0 3 RET                                                                   &mt_long_press RCTRL INT1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
