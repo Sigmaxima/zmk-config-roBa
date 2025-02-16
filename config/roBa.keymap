@@ -315,10 +315,10 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION       &kp LS(N2)  &kp HASH   &kp DOLLAR            &kp PERCENT                                   &kp LS(NUMBER_6)   &kp LS(N7)     &kp LS(N8)                    &kp LS(N9)  &mt PRINTSCREEN EQUAL
-&kp LC(A)             &kp LC(S)   &trans     &kp LS(LEFT_BRACKET)  &kp LS(EQUAL)  &trans             &kp MINUS   &kp LS(SEMICOLON)  &kp SEMICOLON  &macro_emacs 0 RIGHT_BRACKET  &kp NUHS    &kp LS(INTERNATIONAL_3)
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)  &kp LC(V)             &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)        &kp SQT        &kp RIGHT_BRACE               &kp PIPE    &kp LS(SLASH)
-&trans                &trans      &trans     &kp LEFT_SHIFT        &trans         &kp LS(LC(M))      &kp DELETE  &kp LC(LS(X))                                                               &kp LS(INT1)
+&kp EXCLAMATION       &kp LS(N2)  &kp HASH              &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)   &kp LS(N7)     &kp LS(N8)                    &kp LS(N9)  &mt PRINTSCREEN EQUAL
+&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)  &kp LS(LC(F))   &kp LS(EQUAL)  &trans             &kp MINUS   &kp LS(SEMICOLON)  &kp SEMICOLON  &macro_emacs 0 RIGHT_BRACKET  &kp NUHS    &kp LS(INTERNATIONAL_3)
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)             &kp LC(V)       &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)        &kp SQT        &kp RIGHT_BRACE               &kp PIPE    &kp LS(SLASH)
+&trans                &trans      &trans                &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &kp LC(LS(X))                                                               &kp LS(INT1)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
