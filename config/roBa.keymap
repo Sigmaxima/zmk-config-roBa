@@ -277,7 +277,7 @@
             bindings = <
 &mt ESCAPE Q      &kp W         &kp E         &kp R                             &kp T                                                                           &kp Y                 &kp U  &kp I      &kp O    &kp MINUS
 &kp A             &kp S         &kp D         &kp F                             &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &kp J  &lt 5 K    &kp L    &mt_long_press RCTRL P
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                             &kp B                   &kp SEMICOLON                         &kp SQT           &kp N                 &kp M  &kp COMMA  &kp DOT  &mt_long_press RIGHT_SHIFT SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                             &kp B                   &kp LS(N3)                            &kp LS(MINUS)     &kp N                 &kp M  &kp COMMA  &kp DOT  &mt_long_press RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                             &mt_long_press RCTRL INT1
             >;
 
