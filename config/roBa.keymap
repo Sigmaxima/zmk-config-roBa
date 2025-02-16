@@ -29,11 +29,18 @@
             layers = <4 5>;
         };
 
-        kp_minus {
-            bindings = <&kp MINUS>;
-            key-positions = <8 7>;
-            layers = <0>;
-            timeout-ms = <60>;
+        mkp_mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <18 20>;
+            timeout-ms = <150>;
+            layers = <0 4 5>;
+        };
+
+        mkb_mb2_e {
+            bindings = <&mkp MB2>;
+            key-positions = <20 19 21>;
+            timeout-ms = <50>;
+            layers = <4 5>;
         };
 
         tog_tenkeyslayer {
@@ -41,23 +48,29 @@
             key-positions = <18 19 20>;
         };
 
+        tog_game_mode {
+            bindings = <&tog 8>;
+            key-positions = <1 2 3>;
+        };
+
+
+        kp_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <8 7>;
+            layers = <0>;
+            timeout-ms = <60>;
+        };
+
+
+
         kp_f2 {
             bindings = <&kp F2>;
             key-positions = <1 0>;
             layers = <0>;
         };
 
-        tog_game_mode {
-            bindings = <&tog 8>;
-            key-positions = <1 2 3>;
-        };
 
-        mkp_mb3 {
-            bindings = <&mkp MB3>;
-            key-positions = <18 20>;
-            timeout-ms = <150>;
-            layers = <0 4 5>;
-        };
+
 
         kp_f5 {
             bindings = <&kp F5>;
@@ -71,11 +84,7 @@
             layers = <0>;
         };
 
-        quit_apps {
-            bindings = <&kp LA(F4)>;
-            key-positions = <7 40>;
-            layers = <5>;
-        };
+
 
         kp_doublequate {
             bindings = <&kp LS(N2)>;
@@ -89,12 +98,12 @@
             layers = <0>;
         };
 
-        mkb_mb2_e {
-            bindings = <&mkp MB2>;
-            key-positions = <20 19 21>;
-            timeout-ms = <50>;
-            layers = <4 5>;
+        quit_apps {
+            bindings = <&kp LA(F4)>;
+            key-positions = <7 40>;
+            layers = <5>;
         };
+
     };
 
     macros {
@@ -112,6 +121,19 @@
             label = "EMACS_K";
         };
 
+        macro_mb1withctrl: mb1withctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt RCTRL &mkp MB1 &kt RCTRL>;
+            label = "MB1WITHCTRL";
+        };
+
+        macro_mkp_mb2_e: macro_mkp_mb2_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "MACRO_MKP_MB2_E";
+        };
         app_explorer: app_explorer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -222,19 +244,7 @@
             label = "APP_OUTLOOK";
         };
 
-        macro_mb1withctrl: mb1withctrl {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kt RCTRL &mkp MB1 &kt RCTRL>;
-            label = "MB1WITHCTRL";
-        };
 
-        macro_mkp_mb2_e: macro_mkp_mb2_e {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "MACRO_MKP_MB2_E";
-        };
     };
 
     behaviors {
