@@ -55,13 +55,6 @@
             key-positions = <1 2 3>;
         };
 
-        combo_kp_minus {
-            bindings = <&kp MINUS>;
-            key-positions = <8 7>;
-            layers = <0>;
-            timeout-ms = <60>;
-        };
-
         kp_f2 {
             bindings = <&kp F2>;
             key-positions = <1 0>;
