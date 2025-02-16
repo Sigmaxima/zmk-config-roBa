@@ -29,19 +29,6 @@
             layers = <0 4 5>;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <>;
-            layers = <0>;
-            timeout-ms = <70>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <>;
-            timeout-ms = <70>;
-        };
-
         minus {
             bindings = <&kp MINUS>;
             key-positions = <8 7>;
@@ -49,64 +36,9 @@
             timeout-ms = <60>;
         };
 
-        henkan {
-            bindings = <&kp INTERNATIONAL_4>;
-            key-positions = <>;
-            layers = <0>;
-            timeout-ms = <75>;
-        };
-
-        muhenkan {
-            bindings = <&kp INT_MUHENKAN>;
-            key-positions = <>;
-            layers = <0>;
-        };
-
         tenkeyslayer {
             bindings = <&tog 6>;
             key-positions = <18 19 20>;
-        };
-
-        leftparenthesis {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <>;
-            layers = <0>;
-            timeout-ms = <20>;
-        };
-
-        rightparenthesis {
-            bindings = <&kp NUHS>;
-            key-positions = <>;
-            layers = <0>;
-            timeout-ms = <20>;
-        };
-
-        leftbrace {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <>;
-            layers = <0>;
-            timeout-ms = <20>;
-        };
-
-        rightbrace {
-            bindings = <&kp PIPE>;
-            key-positions = <>;
-            layers = <0>;
-            timeout-ms = <20>;
-        };
-
-        leftbracket {
-            bindings = <&kp LS(N8)>;
-            key-positions = <>;
-            layers = <0>;
-            timeout-ms = <20>;
-        };
-
-        rightbracket {
-            bindings = <&kp LS(N9)>;
-            key-positions = <>;
-            layers = <0>;
-            timeout-ms = <20>;
         };
 
         f2 {
@@ -125,6 +57,18 @@
             key-positions = <18 20>;
             timeout-ms = <150>;
             layers = <0 4 5>;
+        };
+
+        f5 {
+            bindings = <&kp F5>;
+            key-positions = <5 6>;
+            layers = <0>;
+        };
+
+        f11 {
+            bindings = <&kp F11>;
+            key-positions = <8 9>;
+            layers = <0>;
         };
     };
 
@@ -366,10 +310,10 @@
 
         SCROLL {
             bindings = <
-&trans  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))  &trans                      &kp LG(UP_ARROW)  &kp LC(PAGE_UP)  &mkp MB3   &kp LC(PAGE_DOWN)  &kp LC(T)
-&trans  &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)      &trans  &trans      &trans  &kp LG(DOWN)      &mkp MB1         &trans     &mkp MB2           &kp RIGHT_CONTROL
-&trans  &trans            &kp LG(TAB)         &trans             &trans  &trans      &mo 7   &kp LG(TAB)       &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
-&trans  &trans            &trans              &trans             &trans  &trans      &trans  &kp LG(TAB)                                                      &trans
+&trans  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))  &trans                             &kp LG(D)     &kp LC(PAGE_UP)  &mkp MB3   &kp LC(PAGE_DOWN)  &kp LC(T)
+&trans  &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)      &trans  &trans      &kp LG(RIGHT)  &kp LG(UP)    &mkp MB1         &trans     &mkp MB2           &kp RIGHT_CONTROL
+&trans  &trans            &kp LG(TAB)         &trans             &trans  &mo 7       &kp LG(LEFT)   &kp LG(DOWN)  &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
+&trans  &trans            &trans              &trans             &trans  &trans      &trans         &kp LG(TAB)                                                  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
