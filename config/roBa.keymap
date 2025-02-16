@@ -15,14 +15,14 @@
     combos {
         compatible = "zmk,combos";
 
-        mousebutton1 {
+        mkp_mb1 {
             bindings = <&mkp MB1>;
             key-positions = <18 19>;
             timeout-ms = <150>;
             layers = <0 4 5>;
         };
 
-        mousebutton2 {
+        mkb_mb2 {
             bindings = <&mkp MB2>;
             key-positions = <20 19>;
             timeout-ms = <50>;
@@ -52,7 +52,7 @@
             key-positions = <1 2 3>;
         };
 
-        mousebotton3 {
+        mkp_mb3 {
             bindings = <&mkp MB3>;
             key-positions = <18 20>;
             timeout-ms = <150>;
@@ -88,6 +88,13 @@
             key-positions = <17 18>;
             layers = <0>;
         };
+
+        mkb_mb2_e {
+            bindings = <&mkp MB2>;
+            key-positions = <20 19 21>;
+            timeout-ms = <50>;
+            layers = <4 5>;
+        };
     };
 
     macros {
@@ -98,7 +105,7 @@
             label = "TO_LAYER_0";
         };
 
-        emacs_k_cut_to_end: emacs_k {
+        macro_emacs_k_cut_to_end: emacs_k {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt LEFT_SHIFT &kp END &kt LEFT_SHIFT &kp LC(X)>;
@@ -215,11 +222,18 @@
             label = "APP_OUTLOOK";
         };
 
-        mb1withctrl: mb1withctrl {
+        macro_mb1withctrl: mb1withctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt RCTRL &mkp MB1 &kt RCTRL>;
             label = "MB1WITHCTRL";
+        };
+
+        macro_mkp_mb2_e: macro_mkp_mb2_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "MACRO_MKP_MB2_E";
         };
     };
 
@@ -236,7 +250,7 @@
         macro_emacs: macro_emacs {
             compatible = "zmk,behavior-hold-tap";
             label = "MACRO_EMACS";
-            bindings = <&emacs_k_cut_to_end>, <&kp>;
+            bindings = <&macro_emacs_k_cut_to_end>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
