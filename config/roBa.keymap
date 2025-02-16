@@ -94,6 +94,13 @@
             layers = <5>;
             timeout-ms = <500>;
         };
+
+        macro_f3 {
+            bindings = <&kp F3>;
+            key-positions = <3 4>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -264,13 +271,15 @@
             bindings = <&msc>, <&msc>;
         };
 
-        tap_and_hold: tap_and_hold {
+        mt_tappref: mt_tappref {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAP_AND_HOLD";
+            label = "MT_TAPPREF";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
         };
 
         mt_long_press: mt_long_press {
@@ -310,10 +319,10 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION       &kp LS(N2)  &kp HASH              &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)   &kp LS(N7)     &kp LS(N8)                    &kp LS(N9)  &mt PRINTSCREEN EQUAL
-&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)  &kp LC(F)       &kp LS(EQUAL)  &trans             &kp MINUS   &kp LS(SEMICOLON)  &kp SEMICOLON  &macro_emacs 0 RIGHT_BRACKET  &kp NUHS    &kp LS(INTERNATIONAL_3)
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)             &kp LC(V)       &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)        &kp SQT        &kp RIGHT_BRACE               &kp PIPE    &kp LS(SLASH)
-&trans                &trans      &trans                &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &kp LC(LS(X))                                                               &kp LS(INT1)
+&kp EXCLAMATION       &kp LS(N2)  &mt_tappref LC(E) HASH  &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)                 &kp LS(N7)     &kp LS(N8)                    &kp LS(N9)  &mt PRINTSCREEN EQUAL
+&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)    &kp LC(F)       &kp LS(EQUAL)  &trans             &kp MINUS   &mt_tappref LC(H) LS(SEMICOLON)  &kp SEMICOLON  &macro_emacs 0 RIGHT_BRACKET  &kp NUHS    &kp LS(INTERNATIONAL_3)
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)               &kp LC(V)       &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)                      &kp SQT        &kp RIGHT_BRACE               &kp PIPE    &kp LS(SLASH)
+&trans                &trans      &trans                  &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &kp LC(LS(X))                                                                             &kp LS(INT1)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
