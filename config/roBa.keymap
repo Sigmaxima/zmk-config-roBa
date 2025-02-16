@@ -119,6 +119,13 @@
             bindings = <&tog 8>;
             key-positions = <1 2 3>;
         };
+
+        mousebotton1withctrl {
+            bindings = <&mb1withctrl>;
+            key-positions = <18 19>;
+            timeout-ms = <150>;
+            layers = <3>;
+        };
     };
 
     macros {
@@ -244,6 +251,13 @@
                 <&kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp ENTER>;
 
             label = "APP_OUTLOOK";
+        };
+
+        mb1withctrl: mb1withctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt RCTRL &mkp MB1 &kt RCTRL>;
+            label = "MB1WITHCTRL";
         };
     };
 
