@@ -94,6 +94,7 @@
             bindings = <&kp LA(F4)>;
             key-positions = <7 40>;
             layers = <5>;
+            timeout-ms = <500>;
         };
     };
 
