@@ -120,11 +120,11 @@
             key-positions = <1 2 3>;
         };
 
-        mousebotton1withctrl {
-            bindings = <&mb1withctrl>;
-            key-positions = <18 19>;
+        mousebotton3 {
+            bindings = <&mkp MB3>;
+            key-positions = <18 20>;
             timeout-ms = <150>;
-            layers = <3>;
+            layers = <0 4 5>;
         };
     };
 
