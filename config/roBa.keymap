@@ -70,6 +70,12 @@
             key-positions = <8 9>;
             layers = <0>;
         };
+
+        quit_apps {
+            bindings = <&kp LA(F4)>;
+            key-positions = <7 40>;
+            layers = <5>;
+        };
     };
 
     macros {
@@ -310,7 +316,7 @@
 
         SCROLL {
             bindings = <
-&trans  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))  &trans                             &kp LG(D)     &kp LC(PAGE_UP)  &mkp MB3   &kp LC(PAGE_DOWN)  &kp LC(T)
+&trans  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))  &trans                             &kp LG(D)     &kp LC(PAGE_UP)  &trans     &kp LC(PAGE_DOWN)  &kp LC(T)
 &trans  &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)      &trans  &trans      &kp LG(RIGHT)  &kp LG(UP)    &mkp MB1         &trans     &mkp MB2           &kp RIGHT_CONTROL
 &trans  &trans            &kp LG(TAB)         &trans             &trans  &mo 7       &kp LG(LEFT)   &kp LG(DOWN)  &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
 &trans  &trans            &trans              &trans             &trans  &trans      &trans         &kp LG(TAB)                                                  &trans
