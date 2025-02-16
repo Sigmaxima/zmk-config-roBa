@@ -15,45 +15,47 @@
     combos {
         compatible = "zmk,combos";
 
-        mkp_mb1 {
+        combo_mkp_mb1 {
             bindings = <&mkp MB1>;
             key-positions = <18 19>;
             timeout-ms = <150>;
             layers = <0 4 5>;
         };
 
-        mkb_mb2 {
+        combo_mkb_mb2 {
             bindings = <&mkp MB2>;
             key-positions = <20 19>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             layers = <4 5 0>;
+            require-prior-idle-ms = <80>;
         };
 
-        mkp_mb3 {
+        combo_mkp_mb3 {
             bindings = <&mkp MB3>;
             key-positions = <18 20>;
             timeout-ms = <150>;
             layers = <0 4 5>;
+            require-prior-idle-ms = <80>;
         };
 
-        mkb_mb2_e {
+        combo_mkb_mb2_e {
             bindings = <&macro_mkp_mb2_e>;
             key-positions = <20 21>;
             timeout-ms = <150>;
             layers = <4 5>;
         };
 
-        tog_tenkeyslayer {
+        combo_tog_tenkeyslayer {
             bindings = <&tog 6>;
             key-positions = <6 7 8>;
         };
 
-        tog_game_mode {
+        combo_tog_game_mode {
             bindings = <&tog 8>;
             key-positions = <1 2 3>;
         };
 
-        kp_minus {
+        combo_kp_minus {
             bindings = <&kp MINUS>;
             key-positions = <8 7>;
             layers = <0>;
@@ -64,33 +66,36 @@
             bindings = <&kp F2>;
             key-positions = <1 0>;
             layers = <0>;
+            require-prior-idle-ms = <80>;
         };
 
-        kp_f5 {
+        combo_kp_f5 {
             bindings = <&kp F5>;
             key-positions = <5 6>;
             layers = <0>;
+            require-prior-idle-ms = <80>;
         };
 
-        kp_f11 {
+        combo_kp_f11 {
             bindings = <&kp F11>;
             key-positions = <8 9>;
             layers = <0>;
+            require-prior-idle-ms = <80>;
         };
 
-        kp_doublequate {
+        combo_kp_doublequate {
             bindings = <&kp LS(N2)>;
             key-positions = <14 13>;
             layers = <0>;
         };
 
-        kp_singlequate {
+        combo_kp_singlequate {
             bindings = <&kp LS(N7)>;
             key-positions = <17 18>;
             layers = <0>;
         };
 
-        kp_quit_apps {
+        combo_kp_quit_apps {
             bindings = <&kp LA(F4)>;
             key-positions = <7 40>;
             layers = <5>;
