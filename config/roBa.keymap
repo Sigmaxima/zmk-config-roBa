@@ -101,6 +101,20 @@
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
+
+        combo_max_windows {
+            bindings = <&kp LG(UP_ARROW)>;
+            key-positions = <21 20>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_min_window {
+            bindings = <&kp LG(DOWN)>;
+            key-positions = <33 32>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -241,6 +255,20 @@
 
             label = "APP_OUTLOOK";
         };
+
+        macro_move_window: macro_move_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(SPACE) &kp M>;
+            label = "MACRO_MOVE_WINDOW";
+        };
+
+        macro_resize_window: macro_resize_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(SPACE) &kp S>;
+            label = "MACRO_RESIZE_WINDOW";
+        };
     };
 
     behaviors {
@@ -310,10 +338,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                               &app_calculator  &app_explorer  &app_word           &app_excel    &app_powerpoint
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp C_PREVIOUS  &kp C_REWIND     &kp C_PP       &kp C_FAST_FORWARD  &kp C_NEXT    &kp C_MUTE
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans          &app_onenote     &app_teams     &app_outlook        &app_firefox  &app_edge
-&trans   &trans   &trans   &trans  &trans   &trans      &trans          &trans                                                            &trans
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                               &app_calculator  &kp LG(E)   &app_word           &app_excel    &app_powerpoint
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp C_PREVIOUS  &kp C_REWIND     &kp C_PP    &kp C_FAST_FORWARD  &kp C_NEXT    &kp C_MUTE
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans          &app_onenote     &app_teams  &app_outlook        &app_firefox  &app_edge
+&trans   &trans   &trans   &trans  &trans   &trans      &trans          &trans                                                         &trans
             >;
         };
 
@@ -352,10 +380,10 @@
 
         SCROLL {
             bindings = <
-&trans  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))  &trans                                      &kp LG(D)        &kp LC(PAGE_UP)  &none      &kp LC(PAGE_DOWN)  &kp LC(T)
-&trans  &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)      &trans  &trans      &kp LG(RIGHT)           &kp LG(UP)       &mkp MB1         &trans     &mkp MB2           &kp RIGHT_CONTROL
-&trans  &trans            &kp LG(TAB)         &trans             &trans  &mo 7       &kp LG(LEFT)            &kp LG(DOWN)     &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
-&trans  &trans            &trans              &trans             &trans  &trans      &kp LS(LG(LEFT_ARROW))  &kp LG(LS(TAB))                                                 &trans
+&kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))  &trans                                      &kp LG(D)           &kp LC(PAGE_UP)  &none      &kp LC(PAGE_DOWN)  &kp LC(T)
+&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)      &trans  &trans      &macro_move_window      &kp LG(RIGHT)       &mkp MB1         &trans     &mkp MB2           &kp RIGHT_CONTROL
+&trans      &trans            &kp LG(TAB)         &trans             &trans  &mo 7       &macro_resize_window    &kp LG(LEFT_ARROW)  &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
+&trans      &trans            &trans              &trans             &trans  &trans      &kp LS(LG(LEFT_ARROW))  &kp LG(LS(TAB))                                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
