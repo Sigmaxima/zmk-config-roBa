@@ -259,15 +259,22 @@
         macro_move_window: macro_move_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &kp M>;
+            bindings = <&kp LA(SPACE) &kp M &kp UP_ARROW &kp DOWN_ARROW>;
             label = "MACRO_MOVE_WINDOW";
         };
 
-        macro_resize_window: macro_resize_window {
+        macro_resize_window_ul: macro_resize_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &kp S>;
+            bindings = <&kp LA(SPACE) &kp S &kp LEFT_ARROW &kp UP_ARROW>;
             label = "MACRO_RESIZE_WINDOW";
+        };
+
+        macro_resize_windows_rd: macro_resize_windows_rd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(SPACE) &kp S &kp RIGHT &kp DOWN_ARROW>;
+            label = "MACRO_RESIZE_WINDOWS_RD";
         };
     };
 
@@ -380,10 +387,10 @@
 
         SCROLL {
             bindings = <
-&kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))  &trans                                      &kp LG(D)           &kp LC(PAGE_UP)  &none      &kp LC(PAGE_DOWN)  &kp LC(T)
-&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)      &trans  &trans      &macro_move_window      &kp LG(RIGHT)       &mkp MB1         &trans     &mkp MB2           &kp RIGHT_CONTROL
-&trans      &trans            &kp LG(TAB)         &trans             &trans  &mo 7       &macro_resize_window    &kp LG(LEFT_ARROW)  &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
-&trans      &trans            &trans              &trans             &trans  &trans      &kp LS(LG(LEFT_ARROW))  &kp LG(LS(TAB))                                                    &trans
+&kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                  &macro_move_window        &kp LC(PAGE_UP)  &none      &kp LC(PAGE_DOWN)  &kp LC(T)
+&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &macro_resize_window_ul  &macro_resize_windows_rd  &mkp MB1         &trans     &mkp MB2           &kp RIGHT_CONTROL
+&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 7                         &kp LG(LEFT_ARROW)       &kp LG(RIGHT)             &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
+&trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))   &kp LC(LA(TAB))                                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
