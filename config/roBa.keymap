@@ -45,7 +45,7 @@
             layers = <4 5>;
         };
 
-        combo_tog_tenkeyslayer {
+        combo_tog_tenkeys {
             bindings = <&tog 6>;
             key-positions = <6 7 8>;
         };
@@ -86,13 +86,6 @@
             bindings = <&kp LS(N7)>;
             key-positions = <17 18>;
             layers = <0>;
-        };
-
-        combo_kp_quit_apps {
-            bindings = <&kp LA(F4)>;
-            key-positions = <7 40>;
-            layers = <5>;
-            timeout-ms = <500>;
         };
 
         macro_f3 {
@@ -146,24 +139,13 @@
             label = "MACRO_MKP_MB2_E";
         };
 
-        app_explorer: app_explorer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 20>,
-                <&kp E &kp X &kp P &kp L &kp O &kp R &kp E &kp R &kp ENTER>;
-
-            label = "APP_EXPLORER";
-        };
-
         app_teams: app_teams {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 20>,
-                <&kp M &kp S &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
+                <&macro_wait_time 80>,
+                <&kp M &kp S &kp MINUS &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
 
             label = "APP_TEAMS";
         };
@@ -173,7 +155,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 80>,
                 <&kp W &kp I &kp N &kp W &kp O &kp R &kp D &kp ENTER>;
 
             label = "APP_WORD";
@@ -184,7 +166,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 80>,
                 <&kp E &kp X &kp C &kp E &kp L &kp ENTER>;
 
             label = "APP_EXCEL";
@@ -195,7 +177,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 80>,
                 <&kp C &kp A &kp L &kp C &kp ENTER>;
 
             label = "APP_ONENOTE";
@@ -206,7 +188,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 80>,
                 <&kp O &kp N &kp E &kp N &kp O &kp T &kp E &kp ENTER>;
 
             label = "APP_CALCULATOR";
@@ -217,7 +199,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 80>,
                 <&kp M &kp S &kp E &kp D &kp G &kp E &kp ENTER>;
 
             label = "APP_EDGE";
@@ -228,7 +210,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 80>,
                 <&kp P &kp O &kp W &kp E &kp R &kp P &kp N &kp T &kp ENTER>;
 
             label = "APP_FIREFOX";
@@ -239,7 +221,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 80>,
                 <&kp F &kp I &kp R &kp E &kp F &kp O &kp X &kp ENTER>;
 
             label = "APP_POWERPNT";
@@ -250,7 +232,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 80>,
                 <&kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp ENTER>;
 
             label = "APP_OUTLOOK";
@@ -259,21 +241,33 @@
         macro_move_window: macro_move_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &kp M &kp UP_ARROW &kp DOWN_ARROW>;
+            bindings =
+                <&kp LA(SPACE)>,
+                <&macro_wait_time 80>,
+                <&kp M &kp UP_ARROW &kp DOWN_ARROW>;
+
             label = "MACRO_MOVE_WINDOW";
         };
 
         macro_resize_window_ul: macro_resize_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &kp S &kp LEFT_ARROW &kp UP_ARROW>;
+            bindings =
+                <&kp LA(SPACE)>,
+                <&macro_wait_time 80>,
+                <&kp S &kp LEFT_ARROW &kp UP_ARROW>;
+
             label = "MACRO_RESIZE_WINDOW";
         };
 
         macro_resize_windows_rd: macro_resize_windows_rd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &kp S &kp RIGHT &kp DOWN_ARROW>;
+            bindings =
+                <&kp LA(SPACE)>,
+                <&macro_wait_time 80>,
+                <&kp S &kp RIGHT &kp DOWN_ARROW>;
+
             label = "MACRO_RESIZE_WINDOWS_RD";
         };
     };
