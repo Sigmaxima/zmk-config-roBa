@@ -243,7 +243,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LA(SPACE)>,
-                <&macro_wait_time 80>,
+                <&macro_wait_time 50>,
                 <&kp M &kp UP_ARROW &kp DOWN_ARROW>;
 
             label = "MACRO_MOVE_WINDOW";
@@ -254,7 +254,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LA(SPACE)>,
-                <&macro_wait_time 80>,
+                <&macro_wait_time 50>,
                 <&kp S &kp LEFT_ARROW &kp UP_ARROW>;
 
             label = "MACRO_RESIZE_WINDOW";
@@ -265,7 +265,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LA(SPACE)>,
-                <&macro_wait_time 80>,
+                <&macro_wait_time 50>,
                 <&kp S &kp RIGHT &kp DOWN_ARROW>;
 
             label = "MACRO_RESIZE_WINDOWS_RD";
