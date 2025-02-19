@@ -283,9 +283,7 @@
             bindings =
                 <&kp LC(C) &kp LG(R)>,
                 <&macro_wait_time 80>,
-                <&kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp ENTER>,
-                <&macro_wait_time 4000>,
-                <&kp LC(V) &kp ENTER>;
+                <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp W &kp W &kp W &kp DOT &kp G &kp O &kp O &kp G &kp L &kp E &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H &kp QMARK &kp Q &kp EQUAL &kp LC(V) &kp ENTER>;
 
             label = "MACRO_COPY_SEARCH";
         };
