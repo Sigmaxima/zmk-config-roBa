@@ -296,9 +296,20 @@
             bindings =
                 <&kp LC(C) &kp LG(R)>,
                 <&macro_wait_time 80>,
-                <&kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp ENTER>;
+                <&kp S &kp N &kp I &kp P &kp P &kp I &kp N &kp G &kp T &kp O &kp O &kp L &kp ENTER>;
 
             label = "MACRO_BROWSER";
+        };
+
+        macro_capture: macro_capture {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LC(C) &kp LG(R)>,
+                <&macro_wait_time 80>,
+                <&kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp ENTER>;
+
+            label = "MACRO_CAPTURE";
         };
     };
 
@@ -352,6 +363,17 @@
             retro-tap;
             require-prior-idle-ms = <80>;
         };
+
+        lt_long_press: lt_long_press {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_LONG_PRESS";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <350>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <80>;
+        };
     };
 
     keymap {
@@ -359,10 +381,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q            &kp W                        &kp E                      &kp R                             &kp T                                                                           &kp Y                 &kp U                           &kp I      &kp O                         &kp MINUS
-&mt_long_press LCTRL A  &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &mt_long_press RIGHT_CONTROL J  &lt 5 K    &mt_long_press RIGHT_SHIFT L  &mt RCTRL P
-&mt LEFT_SHIFT Z        &kp X                        &kp C                      &kp V                             &kp B                   &kp LS(N3)                            &kp LS(MINUS)     &kp N                 &kp M                           &kp COMMA  &kp DOT                       &mt RIGHT_SHIFT SLASH
-&kp LCTRL               &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                                                                           &mt_long_press RCTRL INT1
+&mt ESCAPE Q            &kp W                        &kp E                      &kp R                             &kp T                                                                           &kp Y                 &kp U                           &kp I               &kp O                         &kp MINUS
+&mt_long_press LCTRL A  &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &mt_long_press RIGHT_CONTROL J  &lt_long_press 5 K  &mt_long_press RIGHT_SHIFT L  &mt RCTRL P
+&mt LEFT_SHIFT Z        &kp X                        &kp C                      &kp V                             &kp B                   &kp LS(N3)                            &kp LS(MINUS)     &kp N                 &kp M                           &kp COMMA           &kp DOT                       &mt RIGHT_SHIFT SLASH
+&kp LCTRL               &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                                                                                    &mt_long_press RCTRL INT1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -370,10 +392,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                               &app_calculator  &app_onenote    &app_word           &app_excel    &app_powerpoint
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp C_PREVIOUS  &kp C_REWIND     &kp C_PP        &kp C_FAST_FORWARD  &kp C_NEXT    &kp C_MUTE
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &trans          &kp LG(E)        &macro_browser  &app_teams          &app_outlook  &trans
-&trans   &trans   &trans   &trans  &trans   &trans      &trans          &trans                                                             &trans
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                &app_outlook  &app_onenote    &app_word       &app_excel  &app_powerpoint
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &macro_capture   &kp LG(E)     &kp C_PP        &kp C_PREVIOUS  &kp C_NEXT  &trans
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &app_calculator  &app_teams    &macro_browser  &kt C_STOP      &kp C_MUTE  &trans
+&trans   &trans   &trans   &trans  &trans   &trans      &trans           &trans                                                    &trans
             >;
         };
 
@@ -434,10 +456,10 @@
 
         CONFIG {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                               &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans          &trans       &trans  &trans  &trans  &trans  &trans
-&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &bt BT_CLR      &bootloader  &trans  &trans  &trans  &trans  &bt BT_CLR
-&trans        &trans        &trans        &trans        &trans        &trans          &trans       &trans                          &bt BT_CLR_ALL
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans      &trans       &trans  &trans  &trans  &trans  &trans
+&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans      &bootloader  &trans  &trans  &trans  &trans  &bt BT_CLR
+&trans        &trans        &trans        &trans        &trans        &trans      &trans       &trans                          &bt BT_CLR_ALL
             >;
         };
 
