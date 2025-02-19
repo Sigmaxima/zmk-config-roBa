@@ -51,7 +51,7 @@
         };
 
         combo_tog_game_mode {
-            bindings = <&tog 0>;
+            bindings = <&tog 7>;
             key-positions = <1 2 3>;
         };
 
@@ -112,6 +112,34 @@
         combo_search {
             bindings = <&macro_copy_search>;
             key-positions = <30 32>;
+            layers = <0>;
+        };
+
+        combo_ctrl_z {
+            bindings = <&kp LC(Z)>;
+            key-positions = <22 23>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_ctrl_x {
+            bindings = <&kp LC(X)>;
+            key-positions = <23 24>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_ctrl_c {
+            bindings = <&kp LC(C)>;
+            key-positions = <11 12>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_ctrl_v {
+            bindings = <&kp LC(V)>;
+            key-positions = <12 13>;
+            require-prior-idle-ms = <300>;
             layers = <0>;
         };
     };
