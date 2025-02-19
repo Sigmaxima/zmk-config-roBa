@@ -462,7 +462,7 @@
             bindings = <
 &kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                  &macro_move_window        &kp LC(PAGE_UP)  &none      &kp LC(PAGE_DOWN)  &kp LC(T)
 &trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &macro_resize_window_ul  &macro_resize_windows_rd  &mkp MB1         &trans     &mkp MB2           &kp RIGHT_CONTROL
-&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 7                         &kp LG(LEFT_ARROW)       &kp LG(RIGHT)             &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
+&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 10                        &kp LG(LEFT_ARROW)       &kp LG(RIGHT)             &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
 &trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))   &kp LC(LA(TAB))                                                          &trans
             >;
 
@@ -489,6 +489,24 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+
+        GameShift {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        Apps {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
         };
 
         CONFIG {
