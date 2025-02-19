@@ -339,6 +339,13 @@
 
             label = "MACRO_CAPTURE";
         };
+
+        macro_ascii_type: macro_modtype {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp INT_MUHENKAN &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_MODTYPE";
+        };
     };
 
     behaviors {
@@ -369,9 +376,9 @@
             bindings = <&msc>, <&msc>;
         };
 
-        mt_tappref: mt_tappref {
+        mt_tap_preferred: mt_tap_preferred {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT_TAPPREF";
+            label = "MT_TAP_PREFERRED";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -398,9 +405,20 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <350>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <80>;
+        };
+
+        macro_trance_tap_pref: macro_trance_tap_pref {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MACRO_TRANCE_TAP_PREF";
+            bindings = <&macro_ascii_type>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
         };
     };
 
@@ -429,10 +447,10 @@
 
         SYMBOLS {
             bindings = <
-&kp EXCLAMATION       &kp LS(N2)  &mt_tappref LC(E) HASH  &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)  &kp LS(N7)         &kp LS(N8)           &kp LS(N9)  &mt PRINTSCREEN EQUAL
-&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)    &kp LC(F)       &kp LS(EQUAL)  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &macro_emacs 0 SEMI  &kp SQT     &kp LS(INTERNATIONAL_3)
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)               &kp LC(V)       &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET    &kp NUHS    &mt RIGHT_SHIFT LS(SLASH)
-&trans                &trans      &trans                  &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &kp LC(LS(X))                                                         &kp LS(INT1)
+&kp EXCLAMATION       &kp LS(N2)  &mt_tap_preferred LC(E) HASH  &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)  &kp LS(N7)         &kp LS(N8)           &kp LS(N9)  &mt PRINTSCREEN EQUAL
+&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)          &kp LC(F)       &kp LS(EQUAL)  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &macro_emacs 0 SEMI  &kp SQT     &kp LS(INTERNATIONAL_3)
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)                     &kp LC(V)       &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET    &kp NUHS    &mt RIGHT_SHIFT LS(SLASH)
+&trans                &trans      &trans                        &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &kp LC(LS(X))                                                         &kp LS(INT1)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
