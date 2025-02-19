@@ -296,7 +296,7 @@
             bindings =
                 <&kp LC(C) &kp LG(R)>,
                 <&macro_wait_time 80>,
-                <&kp S &kp N &kp I &kp P &kp P &kp I &kp N &kp G &kp T &kp O &kp O &kp L &kp ENTER>;
+                <&kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp ENTER>;
 
             label = "MACRO_BROWSER";
         };
@@ -307,7 +307,7 @@
             bindings =
                 <&kp LC(C) &kp LG(R)>,
                 <&macro_wait_time 80>,
-                <&kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp ENTER>;
+                <&kp S &kp N &kp I &kp P &kp P &kp I &kp N &kp G &kp T &kp O &kp O &kp L &kp ENTER>;
 
             label = "MACRO_CAPTURE";
         };
