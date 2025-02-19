@@ -142,6 +142,13 @@
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
+
+        combo_win_v {
+            bindings = <&kp LG(V)>;
+            key-positions = <13 14>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
     };
 
     macros {
