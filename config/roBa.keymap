@@ -358,9 +358,9 @@
             tapping-term-ms = <200>;
         };
 
-        macro_emacs: macro_emacs {
+        mat_emacs: mat_emacs {
             compatible = "zmk,behavior-hold-tap";
-            label = "MACRO_EMACS";
+            label = "MAT_EMACS";
             bindings = <&macro_emacs_k_cut_to_end>, <&kp>;
 
             #binding-cells = <2>;
@@ -410,9 +410,9 @@
             require-prior-idle-ms = <80>;
         };
 
-        macro_trance_tap_pref: macro_trance_tap_pref {
+        mat_ascii_type: mat_ascii_type {
             compatible = "zmk,behavior-hold-tap";
-            label = "MACRO_TRANCE_TAP_PREF";
+            label = "MAT_ASCII_TYPE";
             bindings = <&macro_ascii_type>, <&kp>;
 
             #binding-cells = <2>;
@@ -447,10 +447,10 @@
 
         SYMBOLS {
             bindings = <
-&kp EXCLAMATION       &kp LS(N2)  &mt_tap_preferred LC(E) HASH  &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)  &kp LS(N7)         &kp LS(N8)           &kp LS(N9)  &mt PRINTSCREEN EQUAL
-&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)          &kp LC(F)       &kp LS(EQUAL)  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &macro_emacs 0 SEMI  &kp SQT     &kp LS(INTERNATIONAL_3)
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)                     &kp LC(V)       &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET    &kp NUHS    &mt RIGHT_SHIFT LS(SLASH)
-&trans                &trans      &trans                        &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &kp LC(LS(X))                                                         &kp LS(INT1)
+&kp EXCLAMATION       &kp LS(N2)  &mt_tap_preferred LC(E) HASH  &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &mt PRINTSCREEN EQUAL
+&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)          &kp LC(F)       &kp LS(EQUAL)  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_ascii_type SQT SQT        &kp LS(INTERNATIONAL_3)
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)                     &kp LC(V)       &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET              &kp NUHS                       &mt RIGHT_SHIFT LS(SLASH)
+&trans                &trans      &trans                        &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &kp LC(LS(X))                                                                                      &kp LS(INT1)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
