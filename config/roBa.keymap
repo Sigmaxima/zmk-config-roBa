@@ -194,6 +194,13 @@
             key-positions = <20 18 19>;
             layers = <3>;
         };
+
+        combo_search_in_browser {
+            bindings = <&macro_search_in_browser>;
+            key-positions = <30 31>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
     };
 
     macros {
