@@ -48,11 +48,13 @@
         combo_tog_tenkeys {
             bindings = <&tog 6>;
             key-positions = <6 7 8>;
+            layers = <0 6>;
         };
 
         combo_tog_game_mode {
             bindings = <&tog 7>;
             key-positions = <1 2 3>;
+            layers = <0 7>;
         };
 
         kp_f2 {
@@ -155,6 +157,18 @@
             key-positions = <32 42>;
             require-prior-idle-ms = <300>;
             layers = <0>;
+        };
+
+        combo_crtl_left {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <18 19>;
+            layers = <3>;
+        };
+
+        combo_ctrl_right {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <19 20>;
+            layers = <3>;
         };
     };
 
@@ -439,10 +453,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q                 &kp W                        &kp E                      &kp R                             &kp T                                                                           &kp Y                 &kp U                           &kp I               &kp O                         &kp MINUS
-&mt_long_press LCTRL A       &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &mt_long_press RIGHT_CONTROL J  &lt_long_press 5 K  &mt_long_press RIGHT_SHIFT L  &mt_long_press RCTRL P
-&mt_long_press LEFT_SHIFT Z  &kp X                        &kp C                      &kp V                             &kp B                   &kp LS(N3)                            &kp LS(MINUS)     &kp N                 &kp M                           &kp COMMA           &kp DOT                       &mt_long_press RIGHT_SHIFT SLASH
-&kp LCTRL                    &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                                                                                    &mt_long_press RCTRL INT1
+&mt ESCAPE Q            &kp W                        &kp E                      &kp R                             &kp T                                                                           &kp Y                 &kp U                           &kp I               &kp O                         &kp MINUS
+&mt_long_press LCTRL A  &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                   &none                                 &kp LEFT_BRACKET  &kp H                 &mt_long_press RIGHT_CONTROL J  &lt_long_press 5 K  &mt_long_press RIGHT_SHIFT L  &mt_long_press RCTRL P
+&mt LEFT_SHIFT Z        &kp X                        &kp C                      &kp V                             &kp B                   &kp LS(N3)                            &kp LS(MINUS)     &kp N                 &kp M                           &kp COMMA           &kp DOT                       &mt_long_press RIGHT_SHIFT SLASH
+&kp LCTRL               &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &lt_to_layer_0 3 RET                                                                                    &mt_long_press RCTRL INT1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
