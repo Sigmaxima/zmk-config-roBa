@@ -114,7 +114,7 @@
         combo_search {
             bindings = <&macro_copy_search>;
             key-positions = <30 32>;
-            layers = <0>;
+            layers = <3>;
         };
 
         combo_ctrl_z {
@@ -197,9 +197,9 @@
 
         combo_search_in_browser {
             bindings = <&macro_search_in_browser>;
-            key-positions = <30 31>;
+            key-positions = <31 32 30>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <3>;
         };
     };
 
