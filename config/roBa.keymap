@@ -470,10 +470,10 @@
 
         ARROW_NUM {
             bindings = <
-&mt ESCAPE N1             &kp N2           &kp N3        &kp N4       &kp N5                                                  &macro_move_window        &kp LC(PAGE_UP)  &kp UP_ARROW     &kp LC(PAGE_DOWN)  &kp ESC
-&kp N6                    &kp N7           &kp N8        &kp N9       &kp N0   &trans                &macro_resize_window_ul  &macro_resize_windows_rd  &kp LEFT         &kp DOWN         &kp RIGHT          &kp RCTRL
-&mt LEFT_SHIFT KP_DIVIDE  &kp KP_ASTERISK  &kp KP_MINUS  &kp KP_PLUS  &kp DOT  &kp LS(MINUS)         &kp LG(LEFT)             &kp LG(RIGHT)             &kp HOME         &kp RIGHT_SHIFT  &kp END            &kp RIGHT_SHIFT
-&trans                    &trans           &trans        &kp LS(TAB)  &kp TAB  &kp LS(CAPSLOCK)      &kp DELETE               &trans                                                                         &kp DELETE
+&macro_ascii_type N1      &macro_ascii_type N2  &macro_ascii_type N3  &macro_ascii_type N4  &macro_ascii_type N5                                                 &macro_move_window        &kp LC(PAGE_UP)  &kp UP_ARROW     &kp LC(PAGE_DOWN)  &kp ESC
+&macro_ascii_type N6      &macro_ascii_type N7  &macro_ascii_type N8  &macro_ascii_type N9  &macro_ascii_type N0  &trans                &macro_resize_window_ul  &macro_resize_windows_rd  &kp LEFT         &kp DOWN         &kp RIGHT          &kp RCTRL
+&mt LEFT_SHIFT KP_DIVIDE  &kp KP_ASTERISK       &kp KP_MINUS          &kp KP_PLUS           &kp DOT               &kp LS(MINUS)         &kp LG(LEFT)             &kp LG(RIGHT)             &kp HOME         &kp RIGHT_SHIFT  &kp END            &kp RIGHT_SHIFT
+&trans                    &trans                &trans                &kp LS(TAB)           &kp TAB               &kp LS(CAPSLOCK)      &kp DELETE               &trans                                                                         &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
@@ -543,10 +543,10 @@
 
         CONFIG {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans      &trans       &trans  &trans  &trans  &trans  &trans
-&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans      &bootloader  &trans  &trans  &trans  &trans  &bt BT_CLR
-&trans        &trans        &trans        &trans        &trans        &trans      &trans       &trans                          &bt BT_CLR_ALL
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans      &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                          &bt BT_CLR_ALL
             >;
         };
     };
