@@ -190,7 +190,7 @@
         };
 
         combo_toword_down {
-            bindings = <&kp LS(LA(UP_ARROW))>;
+            bindings = <&kp LS(LA(DOWN))>;
             key-positions = <30 31 32>;
             layers = <3>;
         };
