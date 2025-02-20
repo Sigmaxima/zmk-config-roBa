@@ -170,6 +170,18 @@
             key-positions = <19 20>;
             layers = <3>;
         };
+
+        combo_indent {
+            bindings = <&kp LS(LA(RIGHT))>;
+            key-positions = <8 7>;
+            layers = <3>;
+        };
+
+        combo_outdent {
+            bindings = <&kp LS(LA(LEFT))>;
+            key-positions = <7 6>;
+            layers = <3>;
+        };
     };
 
     macros {
