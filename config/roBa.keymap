@@ -191,7 +191,7 @@
 
         combo_toword_down {
             bindings = <&kp LS(LA(DOWN))>;
-            key-positions = <30 31 32>;
+            key-positions = <20 18 19>;
             layers = <3>;
         };
     };
@@ -395,6 +395,13 @@
             #binding-cells = <1>;
             bindings = <&kp INT_MUHENKAN &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MACRO_MODTYPE";
+        };
+
+        macro_search_in_browser: macro_search_in_browser {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C) &kp LC(E) &kp LC(V) &kp ENTER>;
+            label = "MACRO_SEARCH_IN_BROWSER";
         };
     };
 
