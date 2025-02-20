@@ -149,6 +149,13 @@
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
+
+        combo_move_window {
+            bindings = <&macro_move_window>;
+            key-positions = <32 42>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
     };
 
     macros {
