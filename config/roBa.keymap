@@ -18,8 +18,9 @@
         combo_mkp_mb1 {
             bindings = <&mkp MB1>;
             key-positions = <18 19>;
-            timeout-ms = <150>;
+            timeout-ms = <250>;
             layers = <0 4 5>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_mkb_mb2 {
