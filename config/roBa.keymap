@@ -98,6 +98,12 @@
             layers = <0>;
         };
 
+        combo_underscore {
+            bindings = <&kp LS(INTERNATIONAL_1)>;
+            key-positions = <31 32>;
+            layers = <0>;
+        };
+
         combo_max_windows {
             bindings = <&kp LG(UP_ARROW)>;
             key-positions = <21 20>;
@@ -234,11 +240,6 @@
             layers = <3>;
         };
 
-        combo_underscore {
-            bindings = <&kp LS(INTERNATIONAL_1)>;
-            key-positions = <31 32>;
-            layers = <0>;
-        };
     };
 
     macros {
