@@ -198,7 +198,7 @@
         };
 
         combo_search {
-            bindings = <&macro_copy_search>;
+            bindings = <&macro_copy_search_internet>;
             key-positions = <30 32>;
             layers = <3>;
         };
@@ -227,20 +227,8 @@
             layers = <3>;
         };
 
-        combo_toword_up {
-            bindings = <&kp LS(LA(UP_ARROW))>;
-            key-positions = <7 6 8>;
-            layers = <3>;
-        };
-
-        combo_toword_down {
-            bindings = <&kp LS(LA(DOWN))>;
-            key-positions = <20 18 19>;
-            layers = <3>;
-        };
-
         combo_search_in_browser {
-            bindings = <&macro_search_in_browser>;
+            bindings = <&macro_copy_search_in_app>;
             key-positions = <31 32 30>;
             require-prior-idle-ms = <300>;
             layers = <3>;
@@ -368,11 +356,11 @@
             label = "MACRO_CAPTURE";
         };
 
-        macro_search_in_browser: macro_search_in_browser {
+        macro_copy_search_in_app: macro_copy_search_in_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(C) &kp LC(E) &kp LC(V) &kp ENTER>;
-            label = "MACRO_SEARCH_IN_BROWSER";
+            label = "MACRO_COPY_SEARCH_IN_APP";
         };
 
         macro_move_window: macro_move_window {
@@ -408,7 +396,7 @@
             label = "MACRO_RESIZE_WINDOWS_RD";
         };
 
-        macro_copy_search: macro_copy_search {
+        macro_copy_search_internet: macro_copy_search_internet {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -416,7 +404,7 @@
                 <&macro_wait_time 120>,
                 <&kp H &kp T &kp T &kp P &kp S &kp SQT &kp FSLH &kp FSLH &kp G &kp O &kp O &kp G &kp L &kp E &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H &kp LS(SLASH) &kp Q &kp LS(MINUS) &kp LC(V) &kp ENTER>;
 
-            label = "MACRO_COPY_SEARCH";
+            label = "MACRO_COPY_SEARCH_INTERNET";
         };
 
         macro_ascii_type: macro_ascii_type {
