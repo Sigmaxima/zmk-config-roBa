@@ -517,7 +517,7 @@
         mat_resize_window_rd: mat_resize_window_rd {
             compatible = "zmk,behavior-hold-tap";
             label = "MAT_RESIZE_WINDOW_RD";
-            bindings = <&macro_resize_windows_rd>, <&kp>;
+            bindings = <&kp>, <&macro_resize_windows_rd>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
