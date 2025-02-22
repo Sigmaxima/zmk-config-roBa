@@ -202,6 +202,34 @@
             require-prior-idle-ms = <300>;
             layers = <3>;
         };
+
+        combo_capslock {
+            bindings = <&kp LS(CAPS)>;
+            key-positions = <10 21>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_printscreen {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <0 9>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_teams_rich_textbox {
+            bindings = <&kp LC(LS(X))>;
+            key-positions = <22 33>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_teams_mic {
+            bindings = <&kp LS(LC(M))>;
+            key-positions = <34 42>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -512,10 +540,10 @@
 
         SYMBOLS {
             bindings = <
-&kp EXCLAMATION       &kp LS(N2)  &mt_tap_preferred LC(E) HASH  &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &mt PRINTSCREEN EQUAL
+&kp EXCLAMATION       &kp LS(N2)  &mt_tap_preferred LC(E) HASH  &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &kp EQUAL
 &kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)          &kp LC(F)       &kp LS(EQUAL)  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_ascii_type SQT SQT        &kp LS(INTERNATIONAL_3)
 &mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)                     &kp LC(V)       &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET              &kp NUHS                       &mt RIGHT_SHIFT LS(SLASH)
-&trans                &trans      &trans                        &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &kp LC(LS(X))                                                                                      &kp LS(INT1)
+&trans                &trans      &trans                        &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &trans                                                                                             &kp LS(INT1)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
@@ -523,10 +551,10 @@
 
         ARROW_NUM {
             bindings = <
-&macro_ascii_type N1      &macro_ascii_type N2  &macro_ascii_type N3  &macro_ascii_type N4  &macro_ascii_type N5                                                 &macro_move_window        &kp LC(PAGE_UP)  &kp UP_ARROW     &kp LC(PAGE_DOWN)  &kp ESC
-&macro_ascii_type N6      &macro_ascii_type N7  &macro_ascii_type N8  &macro_ascii_type N9  &macro_ascii_type N0  &trans                &macro_resize_window_ul  &macro_resize_windows_rd  &kp LEFT         &kp DOWN         &kp RIGHT          &kp RCTRL
-&mt LEFT_SHIFT KP_DIVIDE  &kp KP_ASTERISK       &kp KP_MINUS          &kp KP_PLUS           &kp DOT               &kp LS(MINUS)         &kp LG(LEFT)             &kp LG(RIGHT)             &kp HOME         &kp RIGHT_SHIFT  &kp END            &kp RIGHT_SHIFT
-&trans                    &trans                &trans                &kp LS(TAB)           &kp TAB               &kp LS(CAPSLOCK)      &kp DELETE               &trans                                                                         &kp DELETE
+&macro_ascii_type N1      &macro_ascii_type N2  &macro_ascii_type N3  &macro_ascii_type N4  &macro_ascii_type N5                                              &macro_move_window        &kp LC(PAGE_UP)  &kp UP_ARROW     &kp LC(PAGE_DOWN)  &kp ESC
+&macro_ascii_type N6      &macro_ascii_type N7  &macro_ascii_type N8  &macro_ascii_type N9  &macro_ascii_type N0  &trans             &macro_resize_window_ul  &macro_resize_windows_rd  &kp LEFT         &kp DOWN         &kp RIGHT          &kp RCTRL
+&mt LEFT_SHIFT KP_DIVIDE  &kp KP_ASTERISK       &kp KP_MINUS          &kp KP_PLUS           &kp DOT               &kp LS(MINUS)      &kp LG(LEFT)             &kp LG(RIGHT)             &kp HOME         &kp RIGHT_SHIFT  &kp END            &kp RIGHT_SHIFT
+&trans                    &trans                &trans                &kp LS(TAB)           &kp TAB               &trans             &kp DELETE               &trans                                                                         &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
