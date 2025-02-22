@@ -302,7 +302,7 @@
             label = "APP_EXCEL";
         };
 
-        app_calculator: app_onenote {
+        app_calculator: app_calculator {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -310,10 +310,10 @@
                 <&macro_wait_time 120>,
                 <&kp C &kp A &kp L &kp C &kp ENTER>;
 
-            label = "APP_ONENOTE";
+            label = "APP_CALCULATOR";
         };
 
-        app_onenote: app_calculator {
+        app_onenote: app_onenote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -321,10 +321,10 @@
                 <&macro_wait_time 120>,
                 <&kp O &kp N &kp E &kp N &kp O &kp T &kp E &kp ENTER>;
 
-            label = "APP_CALCULATOR";
+            label = "APP_ONENOTE";
         };
 
-        app_powerpoint: app_firefox {
+        app_powerpoint: app_powerpoint {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -332,7 +332,7 @@
                 <&macro_wait_time 120>,
                 <&kp P &kp O &kp W &kp E &kp R &kp P &kp N &kp T &kp ENTER>;
 
-            label = "APP_FIREFOX";
+            label = "APP_POWERPOINT";
         };
 
         app_outlook: app_outlook {
@@ -357,7 +357,7 @@
             label = "MACRO_MOVE_WINDOW";
         };
 
-        macro_resize_window_ul: macro_resize_window {
+        macro_resize_window_ul: macro_resize_window_ul {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -365,7 +365,7 @@
                 <&macro_wait_time 80>,
                 <&kp S &kp LEFT_ARROW &kp UP_ARROW>;
 
-            label = "MACRO_RESIZE_WINDOW";
+            label = "MACRO_RESIZE_WINDOW_UL";
         };
 
         macro_resize_windows_rd: macro_resize_windows_rd {
