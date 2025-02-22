@@ -223,14 +223,14 @@
 
         combo_indent {
             bindings = <&kp LS(LA(RIGHT))>;
-            key-positions = <8 7>;
-            layers = <3>;
+            key-positions = <37 25>;
+            layers = <0>;
         };
 
         combo_outdent {
             bindings = <&kp LS(LA(LEFT))>;
-            key-positions = <7 6>;
-            layers = <3>;
+            key-positions = <37 23 23 23 23>;
+            layers = <0>;
         };
 
         combo_search_in_browser {
@@ -307,6 +307,18 @@
             bindings = <&kp LC(LA(N0))>;
             key-positions = <37 14>;
             require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_dot_indent {
+            bindings = <&kp LC(PERIOD)>;
+            key-positions = <37 22>;
+            layers = <0>;
+        };
+
+        combo_num_indent {
+            bindings = <&kp LC(SLASH)>;
+            key-positions = <37 26>;
             layers = <0>;
         };
     };
