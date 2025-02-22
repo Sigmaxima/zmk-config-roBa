@@ -245,8 +245,6 @@
             require-prior-idle-ms = <300>;
             layers = <3>;
         };
-
-
     };
 
     macros {
@@ -262,13 +260,6 @@
             #binding-cells = <0>;
             bindings = <&kt LEFT_SHIFT &kp END &kt LEFT_SHIFT &kp LC(X)>;
             label = "EMACS_K";
-        };
-
-        macro_mb1withctrl: mb1withctrl {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kt RCTRL &mkp MB1 &kt RCTRL>;
-            label = "MB1WITHCTRL";
         };
 
         macro_mkp_mb2_e: macro_mkp_mb2_e {
@@ -333,17 +324,6 @@
             label = "APP_CALCULATOR";
         };
 
-        app_edge: app_edge {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp M &kp S &kp E &kp D &kp G &kp E &kp ENTER>;
-
-            label = "APP_EDGE";
-        };
-
         app_powerpoint: app_firefox {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -353,17 +333,6 @@
                 <&kp P &kp O &kp W &kp E &kp R &kp P &kp N &kp T &kp ENTER>;
 
             label = "APP_FIREFOX";
-        };
-
-        app_firefox: app_powerpnt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp F &kp I &kp R &kp E &kp F &kp O &kp X &kp ENTER>;
-
-            label = "APP_POWERPNT";
         };
 
         app_outlook: app_outlook {
