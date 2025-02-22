@@ -255,11 +255,11 @@
             label = "TO_LAYER_0";
         };
 
-        macro_emacs_k_cut_to_end: emacs_k {
+        macro_emacs_k_cut_to_end: macro_emacs_k_cut_to_end {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt LEFT_SHIFT &kp END &kt LEFT_SHIFT &kp LC(X)>;
-            label = "EMACS_K";
+            label = "MACRO_EMACS_K_CUT_TO_END";
         };
 
         macro_mb2_e: macro_mkp_mb2_e {
@@ -269,7 +269,7 @@
             label = "MACRO_MKP_MB2_E";
         };
 
-        macro_app_teams: app_teams {
+        macro_app_teams: macro_app_teams {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -277,10 +277,10 @@
                 <&macro_wait_time 120>,
                 <&kp M &kp S &kp MINUS &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
 
-            label = "APP_TEAMS";
+            label = "MACRO_APP_TEAMS";
         };
 
-        macro_app_word: app_word {
+        macro_app_word: macro_app_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -288,10 +288,10 @@
                 <&macro_wait_time 120>,
                 <&kp W &kp I &kp N &kp W &kp O &kp R &kp D &kp ENTER>;
 
-            label = "APP_WORD";
+            label = "MACRO_APP_WORD";
         };
 
-        macro_app_excel: app_excel {
+        macro_app_excel: macro_app_excel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -299,7 +299,7 @@
                 <&macro_wait_time 120>,
                 <&kp E &kp X &kp C &kp E &kp L &kp ENTER>;
 
-            label = "APP_EXCEL";
+            label = "MACRO_APP_EXCEL";
         };
 
         macro_app_calculator: app_calculator {
@@ -324,7 +324,7 @@
             label = "MACRO_APP_ONENOTE";
         };
 
-        macro_app_powerpoint: app_powerpoint {
+        macro_app_powerpoint: macro_app_powerpoint {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -332,10 +332,10 @@
                 <&macro_wait_time 120>,
                 <&kp P &kp O &kp W &kp E &kp R &kp P &kp N &kp T &kp ENTER>;
 
-            label = "APP_POWERPOINT";
+            label = "MACRO_APP_POWERPOINT";
         };
 
-        macro_app_outlook: app_outlook {
+        macro_app_outlook: macro_app_outlook {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -343,7 +343,7 @@
                 <&macro_wait_time 120>,
                 <&kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp ENTER>;
 
-            label = "APP_OUTLOOK";
+            label = "MACRO_APP_OUTLOOK";
         };
 
         macro_move_window: macro_move_window {
@@ -486,10 +486,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <350>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
             retro-tap;
-            require-prior-idle-ms = <80>;
+            require-prior-idle-ms = <50>;
         };
 
         lt_long_press: lt_long_press {
