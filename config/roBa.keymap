@@ -233,6 +233,12 @@
             require-prior-idle-ms = <300>;
             layers = <3>;
         };
+
+        combo_underscore {
+            bindings = <&kp LS(INTERNATIONAL_1)>;
+            key-positions = <31 32>;
+            layers = <0>;
+        };
     };
 
     macros {
