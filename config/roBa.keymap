@@ -262,11 +262,11 @@
             label = "MACRO_EMACS_K_CUT_TO_END";
         };
 
-        macro_mb2_e: macro_mkp_mb2_e {
+        macro_mb2_e: macro_mb2_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp MB2 &kp E &kp DOWN_ARROW>;
-            label = "MACRO_MKP_MB2_E";
+            label = "MACRO_MB2_E";
         };
 
         macro_app_teams: macro_app_teams {
@@ -302,7 +302,7 @@
             label = "MACRO_APP_EXCEL";
         };
 
-        macro_app_calculator: app_calculator {
+        macro_app_calculator: macro_app_calculator {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -310,7 +310,7 @@
                 <&macro_wait_time 120>,
                 <&kp C &kp A &kp L &kp C &kp ENTER>;
 
-            label = "APP_CALCULATOR";
+            label = "MACRO_APP_CALCULATOR";
         };
 
         macro_app_onenote: macro_app_onenote {
@@ -412,11 +412,11 @@
             label = "MACRO_CAPTURE";
         };
 
-        macro_ascii_type: macro_modtype {
+        macro_ascii_type: macro_ascii_type {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp INT_MUHENKAN &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_MODTYPE";
+            label = "MACRO_ASCII_TYPE";
         };
 
         macro_search_in_browser: macro_search_in_browser {
