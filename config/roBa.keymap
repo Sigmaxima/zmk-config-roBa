@@ -254,9 +254,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp ENTER>;
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp ENTER>;
 
             label = "MACRO_BROWSER";
         };
@@ -272,9 +272,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp C &kp A &kp L &kp C &kp ENTER>;
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp C &kp A &kp L &kp C &kp ENTER>;
 
             label = "MACRO_APP_CALCULATOR";
         };
@@ -283,9 +283,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp O &kp N &kp E &kp N &kp O &kp T &kp E &kp ENTER>;
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp O &kp N &kp E &kp N &kp O &kp T &kp E &kp ENTER>;
 
             label = "MACRO_APP_ONENOTE";
         };
@@ -294,9 +294,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp M &kp S &kp MINUS &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp M &kp S &kp MINUS &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
 
             label = "MACRO_APP_TEAMS";
         };
@@ -306,7 +306,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 120>,
+                <&macro_wait_time 200>,
                 <&kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp ENTER>;
 
             label = "MACRO_APP_OUTLOOK";
@@ -316,9 +316,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp W &kp I &kp N &kp W &kp O &kp R &kp D &kp ENTER>;
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp W &kp I &kp N &kp W &kp O &kp R &kp D &kp ENTER>;
 
             label = "MACRO_APP_WORD";
         };
@@ -327,9 +327,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp E &kp X &kp C &kp E &kp L &kp ENTER>;
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp E &kp X &kp C &kp E &kp L &kp ENTER>;
 
             label = "MACRO_APP_EXCEL";
         };
@@ -338,9 +338,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp P &kp O &kp W &kp E &kp R &kp P &kp N &kp T &kp ENTER>;
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp P &kp O &kp W &kp E &kp R &kp P &kp N &kp T &kp ENTER>;
 
             label = "MACRO_APP_POWERPOINT";
         };
@@ -349,9 +349,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp S &kp N &kp I &kp P &kp P &kp I &kp N &kp G &kp T &kp O &kp O &kp L &kp ENTER>;
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp S &kp N &kp I &kp P &kp P &kp I &kp N &kp G &kp T &kp O &kp O &kp L &kp ENTER>;
 
             label = "MACRO_CAPTURE";
         };
@@ -367,8 +367,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LA(SPACE)>,
-                <&macro_wait_time 80>,
+                <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
+                <&macro_wait_time 100>,
                 <&kp M &kp UP_ARROW &kp DOWN_ARROW>;
 
             label = "MACRO_MOVE_WINDOW";
@@ -378,8 +378,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LA(SPACE)>,
-                <&macro_wait_time 80>,
+                <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
+                <&macro_wait_time 100>,
                 <&kp S &kp LEFT_ARROW &kp UP_ARROW>;
 
             label = "MACRO_RESIZE_WINDOW_UL";
@@ -389,8 +389,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LA(SPACE)>,
-                <&macro_wait_time 80>,
+                <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
+                <&macro_wait_time 100>,
                 <&kp S &kp RIGHT &kp DOWN_ARROW>;
 
             label = "MACRO_RESIZE_WINDOWS_RD";
@@ -401,7 +401,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LC(C) &kp LG(R)>,
-                <&macro_wait_time 120>,
+                <&macro_wait_time 200>,
                 <&kp H &kp T &kp T &kp P &kp S &kp SQT &kp FSLH &kp FSLH &kp G &kp O &kp O &kp G &kp L &kp E &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H &kp LS(SLASH) &kp Q &kp LS(MINUS) &kp LC(V) &kp ENTER>;
 
             label = "MACRO_COPY_SEARCH_INTERNET";
@@ -426,12 +426,12 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(V)>,
-                <&macro_wait_time 2000>,
-                <&kp LCTRL &kp TAB>,
-                <&macro_wait_time 350>,
-                <&kp ENTER>,
                 <&macro_wait_time 1200>,
-                <&kp ENTER>;
+                <&kp LCTRL &kp TAB>,
+                <&macro_wait_time 600>,
+                <&kp LCTRL &kp ENTER>,
+                <&macro_wait_time 800>,
+                <&kp LCTRL &kp ENTER>;
 
             label = "MACRO_PASTE_PLANE_TEXT";
         };
@@ -439,14 +439,14 @@
         macro_insert_at_head: macro_insert_at_head {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kt LEFT_SHIFT &kp HOME &kt LEFT_SHIFT &kp LC(X) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE &kp LC(V)>;
+            bindings = <&kp INTERNATIONAL_5 &kt LEFT_SHIFT &kp HOME &kt LEFT_SHIFT &kp LC(X) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE &kp LC(V)>;
             label = "MACRO_INSERT_AT_HEAD";
         };
 
         macro_delete_at_head: macro_delete_at_head {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_SHIFT &kp HOME &kp RIGHT &kp RIGHT &kt LSHFT &kp LC(X) &kp BACKSPACE &kp BACKSPACE &kp LC(V)>;
+            bindings = <&kp INTERNATIONAL_5 &kt LEFT_SHIFT &kp HOME &kp RIGHT &kp RIGHT &kt LSHFT &kp LC(X) &kp BACKSPACE &kp BACKSPACE &kp LC(V)>;
             label = "MACRO_DELETE_AT_HEAD";
         };
     };
