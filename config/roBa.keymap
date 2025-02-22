@@ -426,21 +426,28 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(V)>,
-                <&macro_wait_time 1000>,
+                <&macro_wait_time 1300>,
                 <&kp TAB>,
-                <&macro_wait_time 200>,
-                <&kp ENTER>,
                 <&macro_wait_time 350>,
+                <&kp ENTER>,
+                <&macro_wait_time 1200>,
                 <&kp ENTER>;
 
             label = "MACRO_PASTE_PLANE_TEXT";
         };
 
         macro_insert_at_head: macro_insert_at_head {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kt LEFT_SHIFT &kp HOME &kt LEFT_SHIFT &kp LC(X) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE &kp LC(V)>;
+            label = "MACRO_INSERT_AT_HEAD";
+        };
+
+        macro_delete_at_head: macro_delete_at_head {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
-            label = "MACRO_INSERT_AT_HEAD";
+            bindings = <&kp HOME &kp DELETE &kp DELETE>;
+            label = "MACRO_DELETE_AT_HEAD";
         };
     };
 
@@ -562,6 +569,16 @@
             require-prior-idle-ms = <25>;
         };
 
+        mat_inset_at_head: mat_inset_at_head {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_INSET_AT_HEAD";
+            bindings = <&macro_insert_at_head>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
     };
 
     keymap {
@@ -589,8 +606,8 @@
 
         SYMBOLS {
             bindings = <
-&kp EXCLAMATION       &kp LS(N2)  &mt_tap_preferred LC(E) HASH  &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &kp EQUAL
-&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)          &kp LC(F)       &kp LS(EQUAL)  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_ascii_space SQT SQT       &kp LS(INTERNATIONAL_3)
+&kp EXCLAMATION       &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &kp EQUAL
+&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)          &kp LC(F)       &kp LS(EQUAL)  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_ascii_space SQT SQT       &mat_inset_at_head LS(INTERNATIONAL_3) LS(INTERNATIONAL_3)
 &mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)                     &kp LC(V)       &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET              &kp NUHS                       &mt RIGHT_SHIFT LS(SLASH)
 &trans                &trans      &trans                        &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &trans                                                                                             &kp LS(INT1)
             >;
@@ -600,10 +617,10 @@
 
         ARROW_NUM {
             bindings = <
-&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5                                                         &trans  &kp LC(PAGE_UP)  &kp UP_ARROW     &kp LC(PAGE_DOWN)  &kp ESC
-&mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0    &trans                                   &trans      &trans  &kp LEFT         &kp DOWN         &kp RIGHT          &kp RCTRL
-&mt LEFT_SHIFT KP_DIVIDE       &kp KP_ASTERISK                &kp KP_MINUS                   &kp KP_PLUS                    &mat_ascii_type_reverse DOT DOT  &mat_ascii_type LS(MINUS) LS(MINUS)      &trans      &trans  &kp HOME         &kp RIGHT_SHIFT  &kp END            &kp RIGHT_SHIFT
-&trans                         &trans                         &trans                         &kp LS(TAB)                    &kp TAB                          &trans                                   &kp DELETE  &trans                                                       &kp DELETE
+&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5                                                                    &trans  &kp LC(PAGE_UP)  &kp UP_ARROW     &kp LC(PAGE_DOWN)  &kp ESC
+&mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0    &trans                                   &macro_delete_at_head  &trans  &kp LEFT         &kp DOWN         &kp RIGHT          &kp RCTRL
+&mt LEFT_SHIFT KP_DIVIDE       &kp KP_ASTERISK                &kp KP_MINUS                   &kp KP_PLUS                    &mat_ascii_type_reverse DOT DOT  &mat_ascii_type LS(MINUS) LS(MINUS)      &kp DELETE             &trans  &kp HOME         &kp RIGHT_SHIFT  &kp END            &kp RIGHT_SHIFT
+&trans                         &trans                         &trans                         &kp LS(TAB)                    &kp TAB                          &trans                                   &kp DELETE             &trans                                                       &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
