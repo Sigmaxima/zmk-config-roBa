@@ -47,15 +47,15 @@
         };
 
         combo_tog_tenkeys {
-            bindings = <&tog 6>;
+            bindings = <&tog 7>;
             key-positions = <6 7 8>;
-            layers = <0 6>;
+            layers = <0 7>;
         };
 
         combo_tog_game_mode {
-            bindings = <&tog 7>;
+            bindings = <&tog 8>;
             key-positions = <1 2 3>;
-            layers = <0 7>;
+            layers = <0 8>;
         };
 
         combo_search_in_browser {
@@ -226,92 +226,6 @@
             bindings = <&macro_copy_search_internet>;
             key-positions = <30 32>;
             layers = <3>;
-        };
-
-        combo_indent {
-            bindings = <&kp LS(LA(RIGHT))>;
-            key-positions = <37 25>;
-            layers = <0>;
-        };
-
-        combo_outdent {
-            bindings = <&kp LS(LA(LEFT))>;
-            key-positions = <37 23 23 23 23>;
-            layers = <0>;
-        };
-
-        combo_ctrl_1 {
-            bindings = <&kp LC(N1)>;
-            key-positions = <0 37>;
-            layers = <0>;
-        };
-
-        combo_ctrl_2 {
-            bindings = <&kp LC(N2)>;
-            key-positions = <37 1>;
-            layers = <0>;
-        };
-
-        combo_ctrl_3 {
-            bindings = <&kp LC(N3)>;
-            key-positions = <37 2>;
-            layers = <0>;
-        };
-
-        combo_ctrl_4 {
-            bindings = <&kp LC(N4)>;
-            key-positions = <37 3>;
-            layers = <0>;
-        };
-
-        combo_ctrl_0 {
-            bindings = <&kp LC(N0)>;
-            key-positions = <37 4>;
-            layers = <0>;
-        };
-
-        combo_ctrl_alt_1 {
-            bindings = <&kp LC(LA(N1))>;
-            key-positions = <37 10>;
-            layers = <0>;
-        };
-
-        combo_ctrl_alt_2 {
-            bindings = <&kp LC(LA(N2))>;
-            key-positions = <37 11>;
-            layers = <0>;
-        };
-
-        combo_ctrl_alt_3 {
-            bindings = <&kp LC(LA(N3))>;
-            key-positions = <37 12>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-        };
-
-        combo_ctrl_alt_4 {
-            bindings = <&kp LC(LA(N4))>;
-            key-positions = <37 13>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-        };
-
-        combo_ctrl_alt_0 {
-            bindings = <&kp LC(LA(N0))>;
-            key-positions = <37 14>;
-            layers = <0>;
-        };
-
-        combo_dot_indent {
-            bindings = <&kp LC(PERIOD)>;
-            key-positions = <37 22>;
-            layers = <0>;
-        };
-
-        combo_num_indent {
-            bindings = <&kp LC(SLASH)>;
-            key-positions = <37 26>;
-            layers = <0>;
         };
     };
 
@@ -669,7 +583,7 @@
 &mt ESCAPE Q              &kp W                        &kp E                      &kp R                             &kp T                                                                                                               &kp Y                 &kp U                           &kp I               &kp O                         &kp MINUS
 &mt_long_press LCTRL A    &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                   &none                                    &mat_ascii_type_reverse LEFT_BRACKET LEFT_BRACKET  &kp H                 &mt_long_press RIGHT_CONTROL J  &lt_long_press 5 K  &mt_long_press RIGHT_SHIFT L  &mt_long_press RCTRL P
 &mt_balance LEFT_SHIFT Z  &kp X                        &kp C                      &kp V                             &kp B                   &mat_ascii_type LS(MINUS) LS(MINUS)      &mat_inset_at_head LS(N3) LS(N3)                   &kp N                 &kp M                           &kp COMMA           &kp DOT                       &mt_long_press RIGHT_SHIFT SLASH
-&kp LCTRL                 &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 2 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4         &kp BACKSPACE                                      &lt_to_layer_0 3 RET                                                                                    &mt_long_press RCTRL INT1
+&kp LCTRL                 &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 6 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4         &kp BACKSPACE                                      &lt_to_layer_0 3 RET                                                                                    &mt_long_press RCTRL INT1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -723,11 +637,22 @@
             bindings = <
 &kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                 &kp LG(LEFT)             &kp LC(PAGE_UP)  &none      &kp LC(PAGE_DOWN)  &kt LG(RIGHT_ARROW)
 &trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &trans                  &macro_resize_window_ul  &mkp MB1         &trans     &mkp MB2           &mat_resize_window_rd RCTRL RCTRL
-&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 10                        &trans                  &kp LC(T)                &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
+&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 11                        &trans                  &kp LC(T)                &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
 &trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                                         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
+        };
+
+        TEXT_EDIT {
+            bindings = <
+&kp LC(N1)      &kp LC(N2)        &kp LC(N3)      &kp LC(N4)         &kp LC(N0)                                     &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &kp EQUAL
+&kp LC(LA(N1))  &kp LC(LA(N2))    &kp LC(LA(N3))  &kp LC(LA(N4))     &kp LC(LA(N0))  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_ascii_space SQT SQT       &mat_inset_at_head LS(INTERNATIONAL_3) LS(INTERNATIONAL_3)
+&kp LC(PERIOD)  &kp LS(LA(LEFT))  &kp LS(LC(H))   &kp LA(LS(RIGHT))  &kp LC(SLASH)   &kp LS(LC(C))      &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET              &kp NUHS                       &mt RIGHT_SHIFT LS(SLASH)
+&trans          &trans            &trans          &trans             &trans          &kp LS(LC(M))      &kp DELETE  &trans                                                                                             &kp LS(INT1)
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(LS(PERIOD)) LC(LS(COMMA))>;
         };
 
         TEN_KEYS {
