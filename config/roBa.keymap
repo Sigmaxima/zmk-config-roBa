@@ -58,6 +58,46 @@
             layers = <0 7>;
         };
 
+        combo_search_in_browser {
+            bindings = <&macro_copy_search_in_app>;
+            key-positions = <31 32 30>;
+            require-prior-idle-ms = <300>;
+            layers = <3>;
+        };
+
+        combo_move_window {
+            bindings = <&macro_move_window>;
+            key-positions = <32 42>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_max_windows {
+            bindings = <&kp LG(UP_ARROW)>;
+            key-positions = <21 20>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_min_window {
+            bindings = <&kp LG(DOWN)>;
+            key-positions = <33 32>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_crtl_left {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <18 19>;
+            layers = <3>;
+        };
+
+        combo_ctrl_right {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <19 20>;
+            layers = <3>;
+        };
+
         combo_f2 {
             bindings = <&kp F2>;
             key-positions = <1 0>;
@@ -104,19 +144,6 @@
             layers = <0>;
         };
 
-        combo_max_windows {
-            bindings = <&kp LG(UP_ARROW)>;
-            key-positions = <21 20>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-        };
-
-        combo_min_window {
-            bindings = <&kp LG(DOWN)>;
-            key-positions = <33 32>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-        };
 
         combo_ctrl_z {
             bindings = <&kp LC(Z)>;
@@ -160,12 +187,6 @@
             layers = <0>;
         };
 
-        combo_move_window {
-            bindings = <&macro_move_window>;
-            key-positions = <32 42>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-        };
 
         combo_capslock {
             bindings = <&kp LS(CAPS)>;
@@ -209,17 +230,7 @@
             layers = <3>;
         };
 
-        combo_crtl_left {
-            bindings = <&kp LC(LEFT)>;
-            key-positions = <18 19>;
-            layers = <3>;
-        };
 
-        combo_ctrl_right {
-            bindings = <&kp LC(RIGHT)>;
-            key-positions = <19 20>;
-            layers = <3>;
-        };
 
         combo_indent {
             bindings = <&kp LS(LA(RIGHT))>;
@@ -233,12 +244,7 @@
             layers = <0>;
         };
 
-        combo_search_in_browser {
-            bindings = <&macro_copy_search_in_app>;
-            key-positions = <31 32 30>;
-            require-prior-idle-ms = <300>;
-            layers = <3>;
-        };
+
 
         combo_ctrl_1 {
             bindings = <&kp LC(N1)>;
