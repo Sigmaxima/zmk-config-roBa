@@ -472,6 +472,18 @@
             require-prior-idle-ms = <100>;
         };
 
+        mt_balance: mt_balance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_BALANCE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "balanced";
+            require-prior-idle-ms = <100>;
+            retro-tap;
+        };
+
         mt_long_press: mt_long_press {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_LONG_PRESS";
@@ -550,17 +562,6 @@
             require-prior-idle-ms = <25>;
         };
 
-        mt_balance: mt_balance {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_BALANCE";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "balanced";
-            require-prior-idle-ms = <100>;
-            retro-tap;
-        };
     };
 
     keymap {
