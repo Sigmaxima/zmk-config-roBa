@@ -426,8 +426,8 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(V)>,
-                <&macro_wait_time 1300>,
-                <&kp TAB>,
+                <&macro_wait_time 2000>,
+                <&kp LCTRL &kp TAB>,
                 <&macro_wait_time 350>,
                 <&kp ENTER>,
                 <&macro_wait_time 1200>,
@@ -446,7 +446,7 @@
         macro_delete_at_head: macro_delete_at_head {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp DELETE &kp DELETE>;
+            bindings = <&kt LEFT_SHIFT &kp HOME &kp RIGHT &kp RIGHT &kt LSHFT &kp LC(X) &kp BACKSPACE &kp BACKSPACE &kp LC(V)>;
             label = "MACRO_DELETE_AT_HEAD";
         };
     };
@@ -640,7 +640,7 @@
         SCROLL {
             bindings = <
 &kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                 &kp LG(LEFT)             &kp LC(PAGE_UP)  &none      &kp LC(PAGE_DOWN)  &kp LG(RIGHT_ARROW)
-&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &trans                  &macro_resize_window_ul  &mkp MB1         &trans     &mkp MB2           &mat_resize_window_rd 0 RCTRL
+&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &trans                  &macro_resize_window_ul  &mkp MB1         &trans     &mkp MB2           &mat_resize_window_rd RCTRL RCTRL
 &trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 10                        &trans                  &kp LC(T)                &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
 &trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                                         &trans
             >;
