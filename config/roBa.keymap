@@ -15,7 +15,7 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_mkp_mb1 {
+        combo_mb1 {
             bindings = <&mkp MB1>;
             key-positions = <18 19>;
             timeout-ms = <250>;
@@ -23,7 +23,7 @@
             require-prior-idle-ms = <120>;
         };
 
-        combo_mkb_mb2 {
+        combo_mb2 {
             bindings = <&mkp MB2>;
             key-positions = <20 19>;
             timeout-ms = <200>;
@@ -31,7 +31,7 @@
             require-prior-idle-ms = <200>;
         };
 
-        combo_mkp_mb3 {
+        combo_mb3 {
             bindings = <&mkp MB3>;
             key-positions = <18 20>;
             timeout-ms = <150>;
@@ -39,8 +39,8 @@
             require-prior-idle-ms = <250>;
         };
 
-        combo_mkb_mb2_e {
-            bindings = <&macro_mkp_mb2_e>;
+        combo_mb2_e {
+            bindings = <&macro_mb2_e>;
             key-positions = <20 21>;
             timeout-ms = <150>;
             layers = <4 5>;
@@ -58,41 +58,41 @@
             layers = <0 7>;
         };
 
-        kp_f2 {
+        combo_f2 {
             bindings = <&kp F2>;
             key-positions = <1 0>;
             layers = <0>;
             require-prior-idle-ms = <300>;
         };
 
-        macro_f3 {
+        combo_f3 {
             bindings = <&kp F3>;
             key-positions = <3 4>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
 
-        combo_kp_f5 {
+        combo_f5 {
             bindings = <&kp F5>;
             key-positions = <5 6>;
             layers = <0>;
             require-prior-idle-ms = <300>;
         };
 
-        combo_kp_f11 {
+        combo_f11 {
             bindings = <&kp F11>;
             key-positions = <8 9>;
             layers = <0>;
             require-prior-idle-ms = <300>;
         };
 
-        combo_kp_doublequate {
+        combo_doublequate {
             bindings = <&kp LS(N2)>;
             key-positions = <30 31>;
             layers = <0>;
         };
 
-        combo_kp_singlequate {
+        combo_singlequate {
             bindings = <&kp LS(N7)>;
             key-positions = <>;
             layers = <0>;
@@ -262,14 +262,14 @@
             label = "EMACS_K";
         };
 
-        macro_mkp_mb2_e: macro_mkp_mb2_e {
+        macro_mb2_e: macro_mkp_mb2_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp MB2 &kp E &kp DOWN_ARROW>;
             label = "MACRO_MKP_MB2_E";
         };
 
-        app_teams: app_teams {
+        macro_app_teams: app_teams {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -280,7 +280,7 @@
             label = "APP_TEAMS";
         };
 
-        app_word: app_word {
+        macro_app_word: app_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -291,7 +291,7 @@
             label = "APP_WORD";
         };
 
-        app_excel: app_excel {
+        macro_app_excel: app_excel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -302,7 +302,7 @@
             label = "APP_EXCEL";
         };
 
-        app_calculator: app_calculator {
+        macro_app_calculator: app_calculator {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -313,7 +313,7 @@
             label = "APP_CALCULATOR";
         };
 
-        app_onenote: app_onenote {
+        macro_app_onenote: macro_app_onenote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -321,10 +321,10 @@
                 <&macro_wait_time 120>,
                 <&kp O &kp N &kp E &kp N &kp O &kp T &kp E &kp ENTER>;
 
-            label = "APP_ONENOTE";
+            label = "MACRO_APP_ONENOTE";
         };
 
-        app_powerpoint: app_powerpoint {
+        macro_app_powerpoint: app_powerpoint {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -335,7 +335,7 @@
             label = "APP_POWERPOINT";
         };
 
-        app_outlook: app_outlook {
+        macro_app_outlook: app_outlook {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -564,10 +564,10 @@
 
         FUNCTION_APPLICATION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                &app_outlook  &app_onenote    &app_word       &app_excel  &app_powerpoint
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &macro_capture   &kp LG(E)     &kp C_PP        &kp C_PREVIOUS  &kp C_NEXT  &trans
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &app_calculator  &app_teams    &macro_browser  &kt C_STOP      &kp C_MUTE  &trans
-&trans   &trans   &trans   &trans  &trans   &trans      &trans           &trans                                                    &trans
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                      &macro_app_outlook  &macro_app_onenote  &macro_app_word  &macro_app_excel  &macro_app_powerpoint
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &macro_capture         &kp LG(E)           &kp C_PP            &kp C_PREVIOUS   &kp C_NEXT        &trans
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &macro_app_calculator  &macro_app_teams    &macro_browser      &kt C_STOP       &kp C_MUTE        &trans
+&trans   &trans   &trans   &trans  &trans   &trans      &trans                 &trans                                                                     &trans
             >;
         };
 
