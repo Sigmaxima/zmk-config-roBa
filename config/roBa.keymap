@@ -513,6 +513,17 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <100>;
         };
+
+        mat_resize_window_rd: mat_resize_window_rd {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_RESIZE_WINDOW_RD";
+            bindings = <&macro_resize_windows_rd>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
     };
 
     keymap {
@@ -551,10 +562,10 @@
 
         ARROW_NUM {
             bindings = <
-&macro_ascii_type N1      &macro_ascii_type N2  &macro_ascii_type N3  &macro_ascii_type N4  &macro_ascii_type N5                                              &macro_move_window        &kp LC(PAGE_UP)  &kp UP_ARROW     &kp LC(PAGE_DOWN)  &kp ESC
-&macro_ascii_type N6      &macro_ascii_type N7  &macro_ascii_type N8  &macro_ascii_type N9  &macro_ascii_type N0  &trans             &macro_resize_window_ul  &macro_resize_windows_rd  &kp LEFT         &kp DOWN         &kp RIGHT          &kp RCTRL
-&mt LEFT_SHIFT KP_DIVIDE  &kp KP_ASTERISK       &kp KP_MINUS          &kp KP_PLUS           &kp DOT               &kp LS(MINUS)      &kp LG(LEFT)             &kp LG(RIGHT)             &kp HOME         &kp RIGHT_SHIFT  &kp END            &kp RIGHT_SHIFT
-&trans                    &trans                &trans                &kp LS(TAB)           &kp TAB               &trans             &kp DELETE               &trans                                                                         &kp DELETE
+&macro_ascii_type N1      &macro_ascii_type N2  &macro_ascii_type N3  &macro_ascii_type N4  &macro_ascii_type N5                                 &trans  &kp LC(PAGE_UP)  &kp UP_ARROW     &kp LC(PAGE_DOWN)  &kp ESC
+&macro_ascii_type N6      &macro_ascii_type N7  &macro_ascii_type N8  &macro_ascii_type N9  &macro_ascii_type N0  &trans             &trans      &trans  &kp LEFT         &kp DOWN         &kp RIGHT          &kp RCTRL
+&mt LEFT_SHIFT KP_DIVIDE  &kp KP_ASTERISK       &kp KP_MINUS          &kp KP_PLUS           &kp DOT               &kp LS(MINUS)      &trans      &trans  &kp HOME         &kp RIGHT_SHIFT  &kp END            &kp RIGHT_SHIFT
+&trans                    &trans                &trans                &kp LS(TAB)           &kp TAB               &trans             &kp DELETE  &trans                                                       &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
@@ -573,10 +584,10 @@
 
         SCROLL {
             bindings = <
-&kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                  &macro_move_window        &kp LC(PAGE_UP)  &none      &kp LC(PAGE_DOWN)  &kp LC(T)
-&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &macro_resize_window_ul  &macro_resize_windows_rd  &mkp MB1         &trans     &mkp MB2           &kp RIGHT_CONTROL
-&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 10                        &kp LG(LEFT_ARROW)       &kp LG(RIGHT)             &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
-&trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))   &kp LC(LA(TAB))                                                          &trans
+&kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                 &kp LG(LEFT)             &kp LC(PAGE_UP)  &none      &kp LC(PAGE_DOWN)  &kp LG(RIGHT_ARROW)
+&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &trans                  &macro_resize_window_ul  &mkp MB1         &trans     &mkp MB2           &mat_resize_window_rd 0 RCTRL
+&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 10                        &trans                  &kp LC(T)                &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
+&trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                                         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
