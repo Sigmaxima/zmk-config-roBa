@@ -262,44 +262,22 @@
             label = "MACRO_EMACS_K_CUT_TO_END";
         };
 
+        macro_browser: macro_browser {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 120>,
+                <&kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp ENTER>;
+
+            label = "MACRO_BROWSER";
+        };
+
         macro_mb2_e: macro_mb2_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp MB2 &kp E &kp DOWN_ARROW>;
             label = "MACRO_MB2_E";
-        };
-
-        macro_app_teams: macro_app_teams {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp M &kp S &kp MINUS &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
-
-            label = "MACRO_APP_TEAMS";
-        };
-
-        macro_app_word: macro_app_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp W &kp I &kp N &kp W &kp O &kp R &kp D &kp ENTER>;
-
-            label = "MACRO_APP_WORD";
-        };
-
-        macro_app_excel: macro_app_excel {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp E &kp X &kp C &kp E &kp L &kp ENTER>;
-
-            label = "MACRO_APP_EXCEL";
         };
 
         macro_app_calculator: macro_app_calculator {
@@ -324,15 +302,15 @@
             label = "MACRO_APP_ONENOTE";
         };
 
-        macro_app_powerpoint: macro_app_powerpoint {
+        macro_app_teams: macro_app_teams {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
                 <&macro_wait_time 120>,
-                <&kp P &kp O &kp W &kp E &kp R &kp P &kp N &kp T &kp ENTER>;
+                <&kp M &kp S &kp MINUS &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
 
-            label = "MACRO_APP_POWERPOINT";
+            label = "MACRO_APP_TEAMS";
         };
 
         macro_app_outlook: macro_app_outlook {
@@ -344,6 +322,57 @@
                 <&kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp ENTER>;
 
             label = "MACRO_APP_OUTLOOK";
+        };
+
+        macro_app_word: macro_app_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 120>,
+                <&kp W &kp I &kp N &kp W &kp O &kp R &kp D &kp ENTER>;
+
+            label = "MACRO_APP_WORD";
+        };
+
+        macro_app_excel: macro_app_excel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 120>,
+                <&kp E &kp X &kp C &kp E &kp L &kp ENTER>;
+
+            label = "MACRO_APP_EXCEL";
+        };
+
+        macro_app_powerpoint: macro_app_powerpoint {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 120>,
+                <&kp P &kp O &kp W &kp E &kp R &kp P &kp N &kp T &kp ENTER>;
+
+            label = "MACRO_APP_POWERPOINT";
+        };
+
+        macro_capture: macro_capture {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 120>,
+                <&kp S &kp N &kp I &kp P &kp P &kp I &kp N &kp G &kp T &kp O &kp O &kp L &kp ENTER>;
+
+            label = "MACRO_CAPTURE";
+        };
+
+        macro_search_in_browser: macro_search_in_browser {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C) &kp LC(E) &kp LC(V) &kp ENTER>;
+            label = "MACRO_SEARCH_IN_BROWSER";
         };
 
         macro_move_window: macro_move_window {
@@ -390,40 +419,11 @@
             label = "MACRO_COPY_SEARCH";
         };
 
-        macro_browser: macro_browser {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp ENTER>;
-
-            label = "MACRO_BROWSER";
-        };
-
-        macro_capture: macro_capture {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LG(R)>,
-                <&macro_wait_time 120>,
-                <&kp S &kp N &kp I &kp P &kp P &kp I &kp N &kp G &kp T &kp O &kp O &kp L &kp ENTER>;
-
-            label = "MACRO_CAPTURE";
-        };
-
         macro_ascii_type: macro_ascii_type {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp INT_MUHENKAN &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MACRO_ASCII_TYPE";
-        };
-
-        macro_search_in_browser: macro_search_in_browser {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(C) &kp LC(E) &kp LC(V) &kp ENTER>;
-            label = "MACRO_SEARCH_IN_BROWSER";
         };
 
         macro_ascii_type_space: macro_ascii_type_space {
@@ -449,17 +449,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        mat_emacs: mat_emacs {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_EMACS";
-            bindings = <&macro_emacs_k_cut_to_end>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
         };
 
         scroll_up_down: scroll_up_down {
@@ -501,6 +490,17 @@
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <80>;
+        };
+
+        mat_emacs: mat_emacs {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_EMACS";
+            bindings = <&macro_emacs_k_cut_to_end>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
         };
 
         mat_ascii_type: mat_ascii_type {
