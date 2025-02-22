@@ -426,11 +426,11 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(V)>,
-                <&macro_wait_time 1200>,
-                <&kp LCTRL &kp TAB>,
                 <&macro_wait_time 600>,
+                <&kp LCTRL &kp TAB>,
+                <&macro_wait_time 350>,
                 <&kp LCTRL &kp ENTER>,
-                <&macro_wait_time 800>,
+                <&macro_wait_time 500>,
                 <&kp LCTRL &kp ENTER>;
 
             label = "MACRO_PASTE_PLANE_TEXT";
