@@ -239,7 +239,6 @@
             require-prior-idle-ms = <300>;
             layers = <3>;
         };
-
     };
 
     macros {
@@ -609,6 +608,8 @@
 &kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &macro_app_calculator  &macro_app_teams    &macro_browser      &kt C_STOP       &kp C_MUTE        &trans
 &trans   &trans   &trans   &trans  &trans   &trans      &trans                 &trans                                                                     &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         SYMBOLS {
