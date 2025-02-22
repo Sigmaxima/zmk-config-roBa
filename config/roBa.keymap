@@ -503,10 +503,10 @@
             require-prior-idle-ms = <100>;
         };
 
-        mat_ascii_type: mat_ascii_type {
+        mat_resize_window_rd: mat_resize_window_rd {
             compatible = "zmk,behavior-hold-tap";
-            label = "MAT_ASCII_TYPE";
-            bindings = <&macro_ascii_type>, <&kp>;
+            label = "MAT_RESIZE_WINDOW_RD";
+            bindings = <&kp>, <&macro_resize_windows_rd>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
@@ -514,10 +514,10 @@
             require-prior-idle-ms = <100>;
         };
 
-        mat_resize_window_rd: mat_resize_window_rd {
+        mat_ascii_type: mat_ascii_type {
             compatible = "zmk,behavior-hold-tap";
-            label = "MAT_RESIZE_WINDOW_RD";
-            bindings = <&kp>, <&macro_resize_windows_rd>;
+            label = "MAT_ASCII_TYPE";
+            bindings = <&macro_ascii_type>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
