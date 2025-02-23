@@ -661,7 +661,7 @@
         mama_onenote: mama_onenote {
             compatible = "zmk,behavior-hold-tap";
             label = "MAMA_ONENOTE";
-            bindings = <&macro_notepad>, <&macro_onenote_quicknote>;
+            bindings = <&macro_onenote>, <&macro_onenote_quicknote>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
