@@ -262,7 +262,7 @@
             label = "MACRO_MB2_E";
         };
 
-        macro_calculator: macro_app_calculator {
+        macro_calculator: macro_calculator {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -270,10 +270,10 @@
                 <&macro_wait_time 200>,
                 <&kp LCTRL &kp C &kp A &kp L &kp C &kp ENTER>;
 
-            label = "MACRO_APP_CALCULATOR";
+            label = "MACRO_CALCULATOR";
         };
 
-        macro_onenote: macro_app_onenote {
+        macro_onenote: macro_onenote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -281,10 +281,10 @@
                 <&macro_wait_time 200>,
                 <&kp LCTRL &kp O &kp N &kp E &kp N &kp O &kp T &kp E &kp ENTER>;
 
-            label = "MACRO_APP_ONENOTE";
+            label = "MACRO_ONENOTE";
         };
 
-        macro_teams: macro_app_teams {
+        macro_teams: macro_teams {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -292,10 +292,10 @@
                 <&macro_wait_time 200>,
                 <&kp LCTRL &kp M &kp S &kp MINUS &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
 
-            label = "MACRO_APP_TEAMS";
+            label = "MACRO_TEAMS";
         };
 
-        macro_outlook: macro_app_outlook {
+        macro_outlook: macro_outlook {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -303,10 +303,10 @@
                 <&macro_wait_time 200>,
                 <&kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp ENTER>;
 
-            label = "MACRO_APP_OUTLOOK";
+            label = "MACRO_OUTLOOK";
         };
 
-        macro_word: macro_app_word {
+        macro_word: macro_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -314,7 +314,7 @@
                 <&macro_wait_time 200>,
                 <&kp LCTRL &kp W &kp I &kp N &kp W &kp O &kp R &kp D &kp ENTER>;
 
-            label = "MACRO_APP_WORD";
+            label = "MACRO_WORD";
         };
 
         macro_excel: macro_app_excel {
@@ -328,7 +328,7 @@
             label = "MACRO_APP_EXCEL";
         };
 
-        macro_powerpoint: macro_app_powerpoint {
+        macro_powerpoint: macro_powerpoint {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -336,7 +336,7 @@
                 <&macro_wait_time 200>,
                 <&kp LCTRL &kp P &kp O &kp W &kp E &kp R &kp P &kp N &kp T &kp ENTER>;
 
-            label = "MACRO_APP_POWERPOINT";
+            label = "MACRO_POWERPOINT";
         };
 
         macro_capture: macro_capture {
