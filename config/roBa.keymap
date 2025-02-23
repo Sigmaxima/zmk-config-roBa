@@ -262,7 +262,7 @@
             label = "MACRO_MB2_E";
         };
 
-        macro_app_calculator: macro_app_calculator {
+        macro_calculator: macro_app_calculator {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -273,7 +273,7 @@
             label = "MACRO_APP_CALCULATOR";
         };
 
-        macro_app_onenote: macro_app_onenote {
+        macro_onenote: macro_app_onenote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -284,7 +284,7 @@
             label = "MACRO_APP_ONENOTE";
         };
 
-        macro_app_teams: macro_app_teams {
+        macro_teams: macro_app_teams {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -295,7 +295,7 @@
             label = "MACRO_APP_TEAMS";
         };
 
-        macro_app_outlook: macro_app_outlook {
+        macro_outlook: macro_app_outlook {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -306,7 +306,7 @@
             label = "MACRO_APP_OUTLOOK";
         };
 
-        macro_app_word: macro_app_word {
+        macro_word: macro_app_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -317,7 +317,7 @@
             label = "MACRO_APP_WORD";
         };
 
-        macro_app_excel: macro_app_excel {
+        macro_excel: macro_app_excel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -328,7 +328,7 @@
             label = "MACRO_APP_EXCEL";
         };
 
-        macro_app_powerpoint: macro_app_powerpoint {
+        macro_powerpoint: macro_app_powerpoint {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -591,10 +591,10 @@
 
         FUNCTION_APPLICATION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                      &macro_app_outlook  &macro_app_onenote  &macro_app_word  &macro_app_excel  &macro_app_powerpoint
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &macro_capture         &kp LG(E)           &kp C_PP            &kp C_PREVIOUS   &kp C_NEXT        &trans
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &macro_app_calculator  &macro_app_teams    &macro_browser      &kt C_STOP       &kp C_MUTE        &trans
-&trans   &trans   &trans   &trans  &trans   &trans      &trans                 &trans                                                                     &trans
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                  &macro_outlook  &macro_onenote  &macro_word     &macro_excel  &macro_powerpoint
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &macro_capture     &kp LG(E)       &kp C_PP        &kp C_PREVIOUS  &kp C_NEXT    &trans
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &macro_calculator  &macro_teams    &macro_browser  &kt C_STOP      &kp C_MUTE    &trans
+&trans   &trans   &trans   &trans  &trans   &trans      &trans             &trans                                                        &kp LA(LG(N))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
