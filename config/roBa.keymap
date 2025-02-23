@@ -383,6 +383,19 @@
             label = "MACRO_NOTEPAD";
         };
 
+        macro_hidemaru: macro_hidemaru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LC(C) &kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp H &kp I &kp D &kp E &kp M &kp A &kp R &kp U &kp ENTER>,
+                <&macro_wait_time 200>,
+                <&kp LC(V)>;
+
+            label = "MACRO_HIDEMARU";
+        };
+
         macro_audirvana: macro_audirvana {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -497,19 +510,6 @@
             #binding-cells = <0>;
             bindings = <&kp INTERNATIONAL_5 &kt LEFT_SHIFT &kp HOME &kp RIGHT &kp RIGHT &kt LSHFT &kp LC(X) &kp BACKSPACE &kp BACKSPACE &kp LC(V)>;
             label = "MACRO_DELETE_AT_HEAD";
-        };
-
-        macro_hidemaru: macro_hidemaru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LC(C) &kp INTERNATIONAL_5 &kp LG(R)>,
-                <&macro_wait_time 200>,
-                <&kp LCTRL &kp H &kp I &kp D &kp E &kp M &kp A &kp R &kp U &kp ENTER>,
-                <&macro_wait_time 200>,
-                <&kp LC(V)>;
-
-            label = "MACRO_HIDEMARU";
         };
     };
 
