@@ -718,10 +718,10 @@
 
         ARROW_NUM {
             bindings = <
-&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5                                                                    &trans  &kp LC(PAGE_UP)  &kp UP_ARROW     &kp LC(PAGE_DOWN)  &kp ESC
-&mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0    &trans                                   &macro_delete_at_head  &trans  &kp LEFT         &kp DOWN         &kp RIGHT          &kp RCTRL
-&mt LEFT_SHIFT KP_DIVIDE       &kp KP_ASTERISK                &kp KP_MINUS                   &kp KP_PLUS                    &mat_ascii_type_reverse DOT DOT  &mat_ascii_type LS(MINUS) LS(MINUS)      &kp DELETE             &trans  &kp HOME         &kp RIGHT_SHIFT  &kp END            &kp RIGHT_SHIFT
-&trans                         &trans                         &trans                         &kp LS(TAB)                    &kp TAB                          &trans                                   &kp DELETE             &trans                                                       &kp DELETE
+&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5                                                                    &trans  &kp LC(LS(TAB))  &kp UP_ARROW     &kp LC(TAB)  &kp ESC
+&mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0    &trans                                   &macro_delete_at_head  &trans  &kp LEFT         &kp DOWN         &kp RIGHT    &kp RCTRL
+&mt LEFT_SHIFT KP_DIVIDE       &kp KP_ASTERISK                &kp KP_MINUS                   &kp KP_PLUS                    &mat_ascii_type_reverse DOT DOT  &mat_ascii_type LS(MINUS) LS(MINUS)      &kp DELETE             &trans  &kp HOME         &kp RIGHT_SHIFT  &kp END      &kp RIGHT_SHIFT
+&trans                         &trans                         &trans                         &kp LS(TAB)                    &kp TAB                          &trans                                   &kp DELETE             &trans                                                 &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
@@ -740,10 +740,10 @@
 
         SCROLL {
             bindings = <
-&kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                 &kp LG(LEFT)             &kp LC(PAGE_UP)  &none      &kp LC(PAGE_DOWN)  &kt LG(RIGHT_ARROW)
-&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &trans                  &macro_resize_window_ul  &mkp MB1         &trans     &mkp MB2           &mat_resize_window_rd RCTRL RCTRL
-&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 11                        &trans                  &kp LC(T)                &mkp MB4         &kp LC(W)  &mkp MB5           &kp RIGHT_SHIFT
-&trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                                         &trans
+&kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                 &kp LG(LEFT)             &kp LC(LS(TAB))  &none      &kp LC(TAB)  &kt LG(RIGHT_ARROW)
+&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &trans                  &macro_resize_window_ul  &mkp MB1         &trans     &mkp MB2     &mat_resize_window_rd RCTRL RCTRL
+&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 11                        &trans                  &kp LC(T)                &mkp MB4         &kp LC(W)  &mkp MB5     &kp RIGHT_SHIFT
+&trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
