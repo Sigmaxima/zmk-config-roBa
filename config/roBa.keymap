@@ -498,7 +498,6 @@
             bindings = <&kp INTERNATIONAL_5 &kt LEFT_SHIFT &kp HOME &kp RIGHT &kp RIGHT &kt LSHFT &kp LC(X) &kp BACKSPACE &kp BACKSPACE &kp LC(V)>;
             label = "MACRO_DELETE_AT_HEAD";
         };
-
     };
 
     behaviors {
