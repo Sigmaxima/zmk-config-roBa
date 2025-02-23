@@ -373,7 +373,7 @@
         };
 
         macro_notepad: macro_notepad {
-            compatible = "zmk,behavior-mk,acro";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&kp INTERNATIONAL_5 &kp LG(R)>,
