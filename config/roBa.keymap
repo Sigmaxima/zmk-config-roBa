@@ -659,6 +659,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             require-prior-idle-ms = <50>;
+            hold-trigger-on-release;
         };
 
         mama_texteditor: mama_texteditor {
