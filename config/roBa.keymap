@@ -394,6 +394,17 @@
             label = "MACRO_AUDIRVANA";
         };
 
+        macro_todo: macro_todo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp T &kp O &kp D &kp O &kp ENTER>;
+
+            label = "MACRO_TODO";
+        };
+
         macro_copy_search_in_app: macro_copy_search_in_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -488,16 +499,6 @@
             label = "MACRO_DELETE_AT_HEAD";
         };
 
-        macro_todo: macro_todo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp INTERNATIONAL_5 &kp LG(R)>,
-                <&macro_wait_time 200>,
-                <&kp LCTRL &kp T &kp O &kp D &kp O &kp ENTER>;
-
-            label = "MACRO_TODO";
-        };
     };
 
     behaviors {
