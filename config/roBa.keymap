@@ -394,6 +394,16 @@
             label = "MACRO_AUDIRVANA";
         };
 
+        macro_todo: macro_todo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp T &kp O &kp D &kp O &kp ENTER>;
+
+            label = "MACRO_TODO";
+        };
         macro_copy_search_in_app: macro_copy_search_in_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -488,16 +498,6 @@
             label = "MACRO_DELETE_AT_HEAD";
         };
 
-        macro_todo: macro_todo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp INTERNATIONAL_5 &kp LG(R)>,
-                <&macro_wait_time 200>,
-                <&kp LCTRL &kp T &kp O &kp D &kp O &kp ENTER>;
-
-            label = "MACRO_TODO";
-        };
     };
 
     behaviors {
@@ -629,15 +629,6 @@
             require-prior-idle-ms = <100>;
         };
 
-        mama_music_apps: mama_music_apps {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAMA_MUSIC_APPS";
-            bindings = <&macro_audirvana>, <&macro_itunes>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-        };
-
         mat_onenote: mat_onenote {
             compatible = "zmk,behavior-hold-tap";
             label = "MAT_ONENOTE";
@@ -646,6 +637,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             require-prior-idle-ms = <50>;
+        };
+
+
+        mama_music_apps: mama_music_apps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAMA_MUSIC_APPS";
+            bindings = <&macro_audirvana>, <&macro_itunes>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
         };
     };
 
