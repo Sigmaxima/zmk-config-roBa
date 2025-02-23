@@ -394,6 +394,17 @@
             label = "MACRO_AUDIRVANA";
         };
 
+        macro_todo: macro_todo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp T &kp O &kp D &kp O &kp ENTER>;
+
+            label = "MACRO_TODO";
+        };
+
         macro_copy_search_in_app: macro_copy_search_in_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -486,17 +497,6 @@
             #binding-cells = <0>;
             bindings = <&kp INTERNATIONAL_5 &kt LEFT_SHIFT &kp HOME &kp RIGHT &kp RIGHT &kt LSHFT &kp LC(X) &kp BACKSPACE &kp BACKSPACE &kp LC(V)>;
             label = "MACRO_DELETE_AT_HEAD";
-        };
-
-        macro_todo: macro_todo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp INTERNATIONAL_5 &kp LG(R)>,
-                <&macro_wait_time 200>,
-                <&kp LCTRL &kp T &kp O &kp D &kp O &kp ENTER>;
-
-            label = "MACRO_TODO";
         };
     };
 
@@ -629,6 +629,16 @@
             require-prior-idle-ms = <100>;
         };
 
+        mat_onenote: mat_onenote {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_ONENOTE";
+            bindings = <&macro_onenote>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            require-prior-idle-ms = <50>;
+        };
+
         mama_music_apps: mama_music_apps {
             compatible = "zmk,behavior-hold-tap";
             label = "MAMA_MUSIC_APPS";
@@ -636,16 +646,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-        };
-
-        mat_onenote: mat_onenote {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_ONENOTE";
-            bindings = <&kp>, <&macro_onenote>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            require-prior-idle-ms = <50>;
         };
     };
 
@@ -665,10 +665,10 @@
 
         FUNCTION_APPLICATION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                        &macro_calculator  &macro_word               &macro_excel   &macro_powerpoint  &macro_capture
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans         &mama_music_apps 0 0  &kp C_MUTE         &kp LG(E)                 &macro_teams   &macro_outlook     &macro_browser
-&kp F11  &kp F12  &kp F13  &trans  &trans   &kp LG(N)      &kp C_PREVIOUS        &kp C_NEXT         &mat_onenote LA(LG(N)) 0  &macro_vscode  &macro_notepad     &macro_todo
-&trans   &trans   &trans   &trans  &trans   &trans         &kp C_STOP            &kp C_PLAY_PAUSE                                                               &macro_copy_search_internet
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                        &macro_calculator  &macro_word                &macro_excel   &macro_powerpoint  &macro_capture
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans         &mama_music_apps 0 0  &kp C_MUTE         &kp LG(E)                  &macro_teams   &macro_outlook     &macro_browser
+&kp F11  &kp F12  &kp F13  &trans  &trans   &kp LG(N)      &kp C_PREVIOUS        &kp C_NEXT         &mat_onenote LA LA(LG(N))  &macro_vscode  &macro_notepad     &macro_todo
+&trans   &trans   &trans   &trans  &trans   &trans         &kp C_STOP            &kp C_PLAY_PAUSE                                                                &macro_copy_search_internet
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
