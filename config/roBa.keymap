@@ -350,6 +350,49 @@
             label = "MACRO_CAPTURE";
         };
 
+        macro_itunes: macro_itunes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp I &kp T &kp U &kp N &kp E &kp S &kp ENTER>;
+
+            label = "MACRO_ITUNES";
+        };
+
+        macro_vscode: macro_vscode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp C &kp O &kp D &kp E &kp ENTER>;
+
+            label = "MACRO_VSCODE";
+        };
+
+        macro_notepad: macro_notepad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp N &kp O &kp T &kp E &kp P &kp A &kp D &kp ENTER>;
+
+            label = "MACRO_NOTEPAD";
+        };
+
+        macro_audirvana: macro_audirvana {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_5 &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp A &kp U &kp D &kp I &kp R &kp V &kp A &kp N &kp A &kp ENTER>;
+
+            label = "MACRO_AUDIRVANA";
+        };
         macro_copy_search_in_app: macro_copy_search_in_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -444,49 +487,6 @@
             label = "MACRO_DELETE_AT_HEAD";
         };
 
-        macro_itunes: macro_itunes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp INTERNATIONAL_5 &kp LG(R)>,
-                <&macro_wait_time 200>,
-                <&kp LCTRL &kp I &kp T &kp U &kp N &kp E &kp S &kp ENTER>;
-
-            label = "MACRO_ITUNES";
-        };
-
-        macro_vscode: macro_vscode {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp INTERNATIONAL_5 &kp LG(R)>,
-                <&macro_wait_time 200>,
-                <&kp LCTRL &kp C &kp O &kp D &kp E &kp ENTER>;
-
-            label = "MACRO_VSCODE";
-        };
-
-        macro_notepad: macro_notepad {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp INTERNATIONAL_5 &kp LG(R)>,
-                <&macro_wait_time 200>,
-                <&kp LCTRL &kp N &kp O &kp T &kp E &kp P &kp A &kp D &kp ENTER>;
-
-            label = "MACRO_NOTEPAD";
-        };
-
-        macro_audirvana: macro_audirvana {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp INTERNATIONAL_5 &kp LG(R)>,
-                <&macro_wait_time 200>,
-                <&kp LCTRL &kp A &kp U &kp D &kp I &kp R &kp V &kp A &kp N &kp A &kp ENTER>;
-
-            label = "MACRO_AUDIRVANA";
-        };
     };
 
     behaviors {
