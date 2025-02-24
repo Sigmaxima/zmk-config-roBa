@@ -277,7 +277,7 @@
         };
 
         combo_window_lists {
-            bindings = <&kp LA(LC(TAB))>;
+            bindings = <&kp LC(LA(TAB))>;
             key-positions = <17 21>;
             timeout-ms = <50>;
             require-prior-idle-ms = <200>;
