@@ -260,6 +260,14 @@
             key-positions = <30 32>;
             layers = <3>;
         };
+
+        combo_repop_window {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <32 42>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
     };
 
     macros {
