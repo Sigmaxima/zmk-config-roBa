@@ -129,7 +129,7 @@
 
         combo_window_lists {
             bindings = <&kp LC(LA(TAB))>;
-            key-positions = <17 21>;
+            key-positions = <29 33>;
             timeout-ms = <50>;
             require-prior-idle-ms = <200>;
             layers = <0>;
@@ -137,7 +137,7 @@
 
         combo_window_spin_move {
             bindings = <&kp LS(LG(LEFT))>;
-            key-positions = <29 33>;
+            key-positions = <5 9>;
             timeout-ms = <50>;
             require-prior-idle-ms = <200>;
             layers = <0>;
