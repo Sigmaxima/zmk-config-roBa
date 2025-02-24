@@ -73,6 +73,20 @@
             layers = <0>;
         };
 
+        combo_resize_windows_rd {
+            bindings = <&macro_resize_windows_rd>;
+            key-positions = <6 8 9>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
+        combo_resize_window_ul {
+            bindings = <&macro_resize_window_ul>;
+            key-positions = <6 8 5>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
         combo_max_windows {
             bindings = <&kp LG(UP_ARROW)>;
             key-positions = <21 20>;
@@ -84,6 +98,22 @@
         combo_min_window {
             bindings = <&kp LG(DOWN)>;
             key-positions = <33 32>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+            timeout-ms = <80>;
+        };
+
+        combo_right_window {
+            bindings = <&kp LG(RIGHT)>;
+            key-positions = <21 33>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+            timeout-ms = <80>;
+        };
+
+        combo_left_window {
+            bindings = <&kp LG(LEFT)>;
+            key-positions = <20 32>;
             require-prior-idle-ms = <300>;
             layers = <0>;
             timeout-ms = <80>;
@@ -230,36 +260,6 @@
             key-positions = <30 32>;
             layers = <3>;
         };
-
-        combo_resize_windows_rd {
-            bindings = <&macro_resize_windows_rd>;
-            key-positions = <6 8 9>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-        };
-
-        combo_resize_window_ul {
-            bindings = <&macro_resize_window_ul>;
-            key-positions = <6 8 5>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-        };
-
-        combo_right_window {
-            bindings = <&kp LG(RIGHT)>;
-            key-positions = <21 33>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-            timeout-ms = <80>;
-        };
-
-        combo_left_window {
-            bindings = <&kp LG(LEFT)>;
-            key-positions = <20 32>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-            timeout-ms = <80>;
-        };
     };
 
     macros {
@@ -276,7 +276,27 @@
             bindings = <&kt LEFT_SHIFT &kp END &kt LEFT_SHIFT &kp LC(X)>;
             label = "MACRO_EMACS_K_CUT_TO_END";
         };
+        macro_insert_at_head: macro_insert_at_head {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp INTERNATIONAL_5 &kt LEFT_SHIFT &kp HOME &kt LEFT_SHIFT &kp LC(X) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE &kp LC(V)>;
+            label = "MACRO_INSERT_AT_HEAD";
+        };
 
+        macro_delete_at_head: macro_delete_at_head {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INTERNATIONAL_5 &kt LEFT_SHIFT &kp HOME &kp RIGHT &kp RIGHT &kt LSHFT &kp LC(X) &kp BACKSPACE &kp BACKSPACE &kp LC(V)>;
+            label = "MACRO_DELETE_AT_HEAD";
+        };
+
+
+        macro_home_end_select: macro_home_end_select {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kt LEFT_SHIFT &macro_param_1to1 &kp MACRO_PLACEHOLDER &kt LEFT_SHIFT &kp LC(C)>;
+            label = "MACRO_HOME_END_SELECT";
+        };
         macro_browser: macro_browser {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -531,32 +551,14 @@
             label = "MACRO_PASTE_PLANE_TEXT";
         };
 
-        macro_insert_at_head: macro_insert_at_head {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp INTERNATIONAL_5 &kt LEFT_SHIFT &kp HOME &kt LEFT_SHIFT &kp LC(X) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE &kp LC(V)>;
-            label = "MACRO_INSERT_AT_HEAD";
-        };
 
-        macro_delete_at_head: macro_delete_at_head {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp INTERNATIONAL_5 &kt LEFT_SHIFT &kp HOME &kp RIGHT &kp RIGHT &kt LSHFT &kp LC(X) &kp BACKSPACE &kp BACKSPACE &kp LC(V)>;
-            label = "MACRO_DELETE_AT_HEAD";
-        };
+
 
         macro_onenote_quicknote: macro_onenote_quicknote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(LG(N))>;
             label = "MACRO_ONENOTE_QUICKNOTE";
-        };
-
-        macro_home_end_select: macro_home_end_select {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kt LEFT_SHIFT &macro_param_1to1 &kp MACRO_PLACEHOLDER &kt LEFT_SHIFT &kp LC(C)>;
-            label = "MACRO_HOME_END_SELECT";
         };
     };
 
@@ -689,6 +691,16 @@
             require-prior-idle-ms = <100>;
         };
 
+        mat_home_end_select: mat_home_end_select {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_HOME_END_SELECT";
+            bindings = <&macro_home_end_select>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
         mama_music_apps: mama_music_apps {
             compatible = "zmk,behavior-hold-tap";
             label = "MAMA_MUSIC_APPS";
@@ -719,16 +731,6 @@
             require-prior-idle-ms = <50>;
         };
 
-        mat_home_end_select: mat_home_end_select {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_HOME_END_SELECT";
-            bindings = <&macro_home_end_select>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-        };
     };
 
     keymap {
