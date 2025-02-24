@@ -127,6 +127,22 @@
             timeout-ms = <80>;
         };
 
+        combo_window_lists {
+            bindings = <&kp LC(LA(TAB))>;
+            key-positions = <17 21>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <200>;
+            layers = <0>;
+        };
+
+        combo_window_spin_move {
+            bindings = <&kp LS(LG(LEFT))>;
+            key-positions = <29 33>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <200>;
+            layers = <0>;
+        };
+
         combo_ctrl_left {
             bindings = <&kp LC(LEFT)>;
             key-positions = <18 19>;
@@ -272,22 +288,6 @@
         combo_ctrl_a {
             bindings = <&kp LC(A)>;
             key-positions = <0 10>;
-            require-prior-idle-ms = <200>;
-            layers = <0>;
-        };
-
-        combo_window_lists {
-            bindings = <&kp LC(LA(TAB))>;
-            key-positions = <17 21>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <200>;
-            layers = <0>;
-        };
-
-        combo_window_spin_move {
-            bindings = <&kp LS(LG(LEFT))>;
-            key-positions = <29 33>;
-            timeout-ms = <50>;
             require-prior-idle-ms = <200>;
             layers = <0>;
         };
