@@ -103,6 +103,14 @@
             timeout-ms = <80>;
         };
 
+        combo_repop_window {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <32 42>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
         combo_right_window {
             bindings = <&kp LG(RIGHT)>;
             key-positions = <21 33>;
@@ -259,14 +267,6 @@
             bindings = <&macro_copy_search_internet>;
             key-positions = <30 32>;
             layers = <3>;
-        };
-
-        combo_repop_window {
-            bindings = <&kp LA(TAB)>;
-            key-positions = <32 42>;
-            timeout-ms = <80>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
         };
     };
 
