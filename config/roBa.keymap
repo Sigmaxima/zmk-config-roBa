@@ -231,14 +231,14 @@
 
         combo_win_v {
             bindings = <&kp LG(V)>;
-            key-positions = <25 24>;
+            key-positions = <13 14>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
 
         combo_paste_plane_text {
-            bindings = <&macro_paste_plane_text>;
-            key-positions = <13 14>;
+            bindings = <&kp LS(LA(LC(P)))>;
+            key-positions = <24 25>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
@@ -573,11 +573,11 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(V)>,
-                <&macro_wait_time 800>,
+                <&macro_wait_time 600>,
                 <&kp LCTRL &kp TAB>,
-                <&macro_wait_time 300>,
+                <&macro_wait_time 250>,
                 <&kp LCTRL &kp ENTER>,
-                <&macro_wait_time 450>,
+                <&macro_wait_time 400>,
                 <&kp LCTRL &kp ENTER>;
 
             label = "MACRO_PASTE_PLANE_TEXT";
@@ -588,6 +588,13 @@
             #binding-cells = <0>;
             bindings = <&kp LA(LG(N))>;
             label = "MACRO_ONENOTE_QUICKNOTE";
+        };
+
+        macro_open_vscode: macro_open_vscode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2 &kp UP_ARROW &kp ENTER &kp C>;
+            label = "MACRO_OPEN_VSCODE";
         };
     };
 
@@ -737,7 +744,7 @@
             bindings = <&macro_audirvana>, <&macro_itunes>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
         };
 
         mama_onenote: mama_onenote {
@@ -746,7 +753,7 @@
             bindings = <&macro_onenote>, <&macro_onenote_quicknote>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
             require-prior-idle-ms = <50>;
             flavor = "tap-preferred";
         };
@@ -757,7 +764,17 @@
             bindings = <&macro_hidemaru>, <&macro_notepad>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
+            require-prior-idle-ms = <50>;
+        };
+
+        mama_vscode: mama_vscode {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAMA_VSCODE";
+            bindings = <&macro_open_vscode>, <&macro_vscode>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1000>;
             require-prior-idle-ms = <50>;
         };
     };
@@ -778,10 +795,10 @@
 
         FUNCTION_APPLICATION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                     &macro_calculator  &macro_word        &macro_excel   &macro_powerpoint     &macro_capture
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &mama_music_apps 0 0  &kp C_MUTE         &kp LG(E)          &macro_teams   &macro_outlook        &macro_browser
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &kp C_PREVIOUS        &kp C_NEXT         &mama_onenote 0 0  &macro_vscode  &mama_texteditor 0 0  &macro_todo
-&trans   &trans   &trans   &trans  &trans   &trans      &kp C_STOP            &kp C_PLAY_PAUSE                                                           &macro_copy_search_internet
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                     &macro_calculator  &macro_word        &macro_excel      &macro_powerpoint     &macro_capture
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &mama_music_apps 0 0  &kp C_MUTE         &kp LG(E)          &macro_teams      &macro_outlook        &macro_browser
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &kp C_PREVIOUS        &kp C_NEXT         &mama_onenote 0 0  &mama_vscode 0 0  &mama_texteditor 0 0  &macro_todo
+&trans   &trans   &trans   &trans  &trans   &trans      &kp C_STOP            &kp C_PLAY_PAUSE                                                              &macro_copy_search_internet
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -800,10 +817,10 @@
 
         ARROW_NUM {
             bindings = <
-&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5                                                                    &trans   &kp LC(PAGE_UP)                 &kp UP_ARROW     &kp LC(PAGE_DOWN)             &kp ESC
-&mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0    &trans                                   &macro_delete_at_head  &trans   &kp LEFT                        &kp DOWN         &kp RIGHT                     &kp RCTRL
-&mt LEFT_SHIFT KP_DIVIDE       &kp KP_ASTERISK                &kp KP_MINUS                   &kp KP_PLUS                    &mat_ascii_type_reverse DOT DOT  &mat_ascii_type LS(MINUS) LS(MINUS)      &kp DELETE             &kp TAB  &mat_home_end_select HOME HOME  &kp RIGHT_SHIFT  &mat_home_end_select END END  &kp RIGHT_SHIFT
-&trans                         &trans                         &trans                         &kp LS(TAB)                    &kp TAB                          &trans                                   &kp DELETE             &trans                                                                                  &kp DELETE
+&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5                                                                    &trans   &kp LC(PAGE_UP)                 &kp UP_ARROW    &kp LC(PAGE_DOWN)             &kp ESC
+&mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0    &trans                                   &macro_delete_at_head  &trans   &kp LEFT                        &kp DOWN        &kp RIGHT                     &kp RCTRL
+&mt LEFT_SHIFT KP_DIVIDE       &kp KP_ASTERISK                &kp KP_MINUS                   &kp KP_PLUS                    &mat_ascii_type_reverse DOT DOT  &mat_ascii_type LS(MINUS) LS(MINUS)      &kp DELETE             &kp TAB  &mat_home_end_select HOME HOME  &kp DOWN_ARROW  &mat_home_end_select END END  &kp RIGHT_SHIFT
+&trans                         &trans                         &trans                         &kp LS(TAB)                    &kp TAB                          &trans                                   &kp DELETE             &trans                                                                                 &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
@@ -822,10 +839,10 @@
 
         SCROLL {
             bindings = <
-&kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                 &kp LG(LEFT)             &kp LC(LS(TAB))  &none      &kp LC(TAB)  &kt LG(RIGHT_ARROW)
-&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &trans                  &macro_resize_window_ul  &mkp MB1         &trans     &mkp MB2     &mat_resize_window_rd RCTRL RCTRL
-&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 11                        &trans                  &kp LC(T)                &mkp MB4         &kp LC(W)  &mkp MB5     &kp RIGHT_SHIFT
-&trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                                   &trans
+&kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                 &trans           &kp LC(LS(TAB))  &none      &kp LC(TAB)  &trans
+&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &trans                  &trans           &mkp MB1         &trans     &mkp MB2     &kp RCTRL
+&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 11                        &trans                  &kp LC(T)        &mkp MB4         &kp LC(W)  &mkp MB5     &kp RIGHT_SHIFT
+&trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
