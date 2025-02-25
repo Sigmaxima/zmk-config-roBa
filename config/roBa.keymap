@@ -237,7 +237,7 @@
         };
 
         combo_paste_plane_text {
-            bindings = <&macro_plane_text_command>;
+            bindings = <&macro_paste_plane_text>;
             key-positions = <24 25>;
             require-prior-idle-ms = <300>;
             layers = <0>;
@@ -573,11 +573,11 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(V)>,
-                <&macro_wait_time 600>,
+                <&macro_wait_time 800>,
                 <&kp LCTRL &kp TAB>,
-                <&macro_wait_time 250>,
+                <&macro_wait_time 300>,
                 <&kp LCTRL &kp ENTER>,
-                <&macro_wait_time 400>,
+                <&macro_wait_time 450>,
                 <&kp LCTRL &kp ENTER>;
 
             label = "MACRO_PASTE_PLANE_TEXT";
@@ -593,14 +593,23 @@
         macro_open_vscode: macro_open_vscode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp MB2 &kp UP_ARROW &kp ENTER &kp C>;
+            bindings =
+                <&mkp MB2>,
+                <&macro_wait_time 600>,
+                <&kp UP_ARROW &kp ENTER>,
+                <&macro_wait_time 500>,
+                <&kp C>;
+
             label = "MACRO_OPEN_VSCODE";
         };
 
         macro_plane_text_command: macro_plane_text {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(P)))>, <&macro_wait_time 500>, <&kp LC(V)>;
+            bindings =
+                <&kp LS(LA(LC(P)))>,
+                <&macro_wait_time 1000>,
+                <&kp LC(V)>;
 
             label = "MACRO_PLANE_TEXT";
         };
