@@ -237,7 +237,7 @@
         };
 
         combo_paste_plane_text {
-            bindings = <&kp LS(LA(LC(P)))>;
+            bindings = <&macro_plane_text_command>;
             key-positions = <24 25>;
             require-prior-idle-ms = <300>;
             layers = <0>;
@@ -595,6 +595,14 @@
             #binding-cells = <0>;
             bindings = <&mkp MB2 &kp UP_ARROW &kp ENTER &kp C>;
             label = "MACRO_OPEN_VSCODE";
+        };
+
+        macro_plane_text_command: macro_plane_text {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(P)))>, <&macro_wait_time 500>, <&kp LC(V)>;
+
+            label = "MACRO_PLANE_TEXT";
         };
     };
 
