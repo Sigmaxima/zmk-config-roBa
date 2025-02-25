@@ -596,9 +596,9 @@
             bindings =
                 <&mkp MB2>,
                 <&macro_wait_time 600>,
-                <&kp UP_ARROW &kp ENTER>,
+                <&kp RCTRL &kp UP_ARROW &kp ENTER>,
                 <&macro_wait_time 500>,
-                <&kp C>;
+                <&kp RCTRL &kp C>;
 
             label = "MACRO_OPEN_VSCODE";
         };
