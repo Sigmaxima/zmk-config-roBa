@@ -20,7 +20,7 @@
             key-positions = <18 19>;
             timeout-ms = <300>;
             layers = <0 4 5>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <80>;
         };
 
         combo_mb2 {
@@ -28,7 +28,7 @@
             key-positions = <20 19>;
             timeout-ms = <200>;
             layers = <4 5 0>;
-            require-prior-idle-ms = <250>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_mb3 {
