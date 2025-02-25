@@ -245,28 +245,28 @@
 
         combo_capslock {
             bindings = <&kp LS(CAPS)>;
-            key-positions = <10 21>;
+            key-positions = <0 9>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
 
         combo_printscreen {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <0 9>;
+            key-positions = <34 42>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
 
         combo_teams_rich_textbox {
             bindings = <&kp LC(LS(X))>;
-            key-positions = <22 33>;
+            key-positions = <10 21>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
 
         combo_teams_mic {
             bindings = <&kp LS(LC(M))>;
-            key-positions = <34 42>;
+            key-positions = <>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
@@ -573,11 +573,11 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(V)>,
-                <&macro_wait_time 500>,
+                <&macro_wait_time 800>,
                 <&kp LCTRL &kp TAB>,
-                <&macro_wait_time 250>,
+                <&macro_wait_time 300>,
                 <&kp LCTRL &kp ENTER>,
-                <&macro_wait_time 400>,
+                <&macro_wait_time 450>,
                 <&kp LCTRL &kp ENTER>;
 
             label = "MACRO_PASTE_PLANE_TEXT";
@@ -789,10 +789,10 @@
 
         SYMBOLS {
             bindings = <
-&kp EXCLAMATION       &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR      &kp PERCENT                                   &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &kp EQUAL
-&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)          &kp LC(F)       &kp LS(EQUAL)  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_ascii_space SQT SQT       &mat_inset_at_head LS(INTERNATIONAL_3) LS(INTERNATIONAL_3)
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)                     &kp LC(V)       &kp LC(B)      &kp LG(V)          &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET              &kp NUHS                       &mt RIGHT_SHIFT LS(SLASH)
-&trans                &trans      &trans                        &kp LEFT_SHIFT  &trans         &kp LS(LC(M))      &kp DELETE  &trans                                                                                             &kp LS(INT1)
+&kp EXCLAMATION       &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR  &kp PERCENT                                   &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &kp EQUAL
+&kp LC(A)             &kp LC(S)   &kp LS(LEFT_BRACKET)          &kp LC(F)   &kp LS(EQUAL)  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_ascii_space SQT SQT       &mat_inset_at_head LS(INTERNATIONAL_3) LS(INTERNATIONAL_3)
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)   &kp LC(C)                     &kp LC(V)   &kp LC(B)      &kp LS(LC(M))      &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET              &kp NUHS                       &mt RIGHT_SHIFT LS(SLASH)
+&trans                &trans      &trans                        &trans      &trans         &trans             &kp DELETE  &trans                                                                                             &kp LS(INT1)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
