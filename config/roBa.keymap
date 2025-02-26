@@ -590,7 +590,7 @@
             label = "MACRO_ONENOTE_QUICKNOTE";
         };
 
-        macro_open_in_vscode: macro_open_vscode {
+        macro_open_in_vscode: macro_open_in_vscode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -600,18 +600,18 @@
                 <&macro_wait_time 350>,
                 <&kp RCTRL &kp C>;
 
-            label = "MACRO_OPEN_VSCODE";
+            label = "MACRO_OPEN_IN_VSCODE";
         };
 
-        macro_plane_text_command: macro_plane_text {
+        macro_plane_text_command: macro_plane_text_command {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(LA(LC(P)))>, <&macro_wait_time 300>, <&kp LC(V)>;
 
-            label = "MACRO_PLANE_TEXT";
+            label = "MACRO_PLANE_TEXT_COMMAND";
         };
 
-        macro_open_in_sharepoint: macro_open_sharepoint {
+        macro_open_in_sharepoint: macro_open_in_sharepoint {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -621,14 +621,14 @@
                 <&macro_wait_time 350>,
                 <&kp RCTRL &kp V &kp V &kp ENTER>;
 
-            label = "MACRO_OPEN_SHAREPOINT";
+            label = "MACRO_OPEN_IN_SHAREPOINT";
         };
 
-        macro_explorer: macro_open_explorer {
+        macro_explorer: macro_explorer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(E)>;
-            label = "MACRO_OPEN_EXPLORER";
+            label = "MACRO_EXPLORER";
         };
     };
 
