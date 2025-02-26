@@ -237,7 +237,7 @@
         };
 
         combo_paste_plane_text {
-            bindings = <&macro_plane_text_command>;
+            bindings = <&macro_plane_text>;
             key-positions = <24 25>;
             require-prior-idle-ms = <300>;
             layers = <0>;
@@ -568,7 +568,7 @@
             label = "MACRO_ASCII_TYPE_SPACE";
         };
 
-        macro_paste_plane_text: macro_paste_plane_text {
+        macro_plane_text: macro_plane_text {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -580,7 +580,7 @@
                 <&macro_wait_time 350>,
                 <&kp LCTRL &kp ENTER>;
 
-            label = "MACRO_PASTE_PLANE_TEXT";
+            label = "MACRO_PLANE_TEXT";
         };
 
         macro_onenote_quicknote: macro_onenote_quicknote {
