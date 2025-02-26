@@ -237,7 +237,7 @@
         };
 
         combo_paste_plane_text {
-            bindings = <&macro_paste_plane_text>;
+            bindings = <&macro_plane_text_command>;
             key-positions = <24 25>;
             require-prior-idle-ms = <300>;
             layers = <0>;
@@ -573,11 +573,11 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(V)>,
-                <&macro_wait_time 600>,
+                <&macro_wait_time 500>,
                 <&kp LCTRL &kp TAB>,
-                <&macro_wait_time 250>,
+                <&macro_wait_time 200>,
                 <&kp LCTRL &kp ENTER>,
-                <&macro_wait_time 450>,
+                <&macro_wait_time 350>,
                 <&kp LCTRL &kp ENTER>;
 
             label = "MACRO_PASTE_PLANE_TEXT";
