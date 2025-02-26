@@ -590,11 +590,11 @@
             label = "MACRO_ONENOTE_QUICKNOTE";
         };
 
-        macro_open_vscode: macro_open_vscode {
+        macro_open_in_vscode: macro_open_vscode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&mkp MB2>,
+                <&kp K_CMENU &kp RCTRL>,
                 <&macro_wait_time 600>,
                 <&kp RCTRL &kp UP_ARROW &kp ENTER>,
                 <&macro_wait_time 500>,
@@ -606,12 +606,29 @@
         macro_plane_text_command: macro_plane_text {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LS(LA(LC(P)))>,
-                <&macro_wait_time 1000>,
-                <&kp LC(V)>;
+            bindings = <&kp LS(LA(LC(P)))>, <&macro_wait_time 300>, <&kp LC(V)>;
 
             label = "MACRO_PLANE_TEXT";
+        };
+
+        macro_open_in_sharepoint: macro_open_sharepoint {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp K_CMENU &kp RCTRL>,
+                <&macro_wait_time 600>,
+                <&kp RCTRL &kp UP_ARROW &kp ENTER>,
+                <&macro_wait_time 500>,
+                <&kp RCTRL &kp V &kp V &kp ENTER>;
+
+            label = "MACRO_OPEN_SHAREPOINT";
+        };
+
+        macro_explorer: macro_open_explorer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(E)>;
+            label = "MACRO_OPEN_EXPLORER";
         };
     };
 
@@ -788,10 +805,20 @@
         mama_vscode: mama_vscode {
             compatible = "zmk,behavior-hold-tap";
             label = "MAMA_VSCODE";
-            bindings = <&macro_open_vscode>, <&macro_vscode>;
+            bindings = <&macro_open_in_vscode>, <&macro_vscode>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <1000>;
+            tapping-term-ms = <800>;
+            require-prior-idle-ms = <50>;
+        };
+
+        mama_explorer: mama_explorer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAMA_EXPLORER";
+            bindings = <&macro_open_in_sharepoint>, <&macro_explorer>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <800>;
             require-prior-idle-ms = <50>;
         };
     };
@@ -812,10 +839,10 @@
 
         FUNCTION_APPLICATION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                     &macro_calculator  &macro_word        &macro_excel      &macro_powerpoint     &macro_capture
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &mama_music_apps 0 0  &kp C_MUTE         &kp LG(E)          &macro_teams      &macro_outlook        &macro_browser
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &kp C_PREVIOUS        &kp C_NEXT         &mama_onenote 0 0  &mama_vscode 0 0  &mama_texteditor 0 0  &macro_todo
-&trans   &trans   &trans   &trans  &trans   &trans      &kp C_STOP            &kp C_PLAY_PAUSE                                                              &macro_copy_search_internet
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                     &macro_calculator  &macro_word         &macro_excel      &macro_powerpoint     &macro_capture
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &mama_music_apps 0 0  &kp C_MUTE         &mama_explorer 0 0  &macro_teams      &macro_outlook        &macro_browser
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &kp C_PREVIOUS        &kp C_NEXT         &mama_onenote 0 0   &mama_vscode 0 0  &mama_texteditor 0 0  &macro_todo
+&trans   &trans   &trans   &trans  &trans   &trans      &kp C_STOP            &kp C_PLAY_PAUSE                                                               &macro_copy_search_internet
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
