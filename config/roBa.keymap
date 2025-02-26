@@ -515,7 +515,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
-                <&macro_wait_time 100>,
+                <&macro_wait_time 150>,
                 <&kp M &kp UP_ARROW &kp DOWN_ARROW>;
 
             label = "MACRO_MOVE_WINDOW";
@@ -526,7 +526,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
-                <&macro_wait_time 100>,
+                <&macro_wait_time 150>,
                 <&kp S &kp LEFT_ARROW &kp UP_ARROW>;
 
             label = "MACRO_RESIZE_WINDOW_UL";
@@ -537,7 +537,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
-                <&macro_wait_time 100>,
+                <&macro_wait_time 150>,
                 <&kp S &kp RIGHT &kp DOWN_ARROW>;
 
             label = "MACRO_RESIZE_WINDOWS_RD";
@@ -573,9 +573,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(V)>,
-                <&macro_wait_time 800>,
+                <&macro_wait_time 600>,
                 <&kp LCTRL &kp TAB>,
-                <&macro_wait_time 300>,
+                <&macro_wait_time 250>,
                 <&kp LCTRL &kp ENTER>,
                 <&macro_wait_time 450>,
                 <&kp LCTRL &kp ENTER>;
@@ -595,9 +595,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp K_CMENU &kp RCTRL>,
-                <&macro_wait_time 600>,
-                <&kp RCTRL &kp UP_ARROW &kp ENTER>,
                 <&macro_wait_time 500>,
+                <&kp RCTRL &kp UP_ARROW &kp ENTER>,
+                <&macro_wait_time 350>,
                 <&kp RCTRL &kp C>;
 
             label = "MACRO_OPEN_VSCODE";
@@ -616,9 +616,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp K_CMENU &kp RCTRL>,
-                <&macro_wait_time 600>,
-                <&kp RCTRL &kp UP_ARROW &kp ENTER>,
                 <&macro_wait_time 500>,
+                <&kp RCTRL &kp UP_ARROW &kp ENTER>,
+                <&macro_wait_time 350>,
                 <&kp RCTRL &kp V &kp V &kp ENTER>;
 
             label = "MACRO_OPEN_SHAREPOINT";
