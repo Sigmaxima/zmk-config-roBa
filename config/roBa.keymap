@@ -66,6 +66,19 @@
             layers = <0>;
         };
 
+        combo_search {
+            bindings = <&macro_copy_search_internet>;
+            key-positions = <28 16>;
+            layers = <3>;
+        };
+
+        combo_paste_plane_text {
+            bindings = <&macro_plane_text>;
+            key-positions = <24 25>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+        };
+
         combo_move_window {
             bindings = <&macro_move_window>;
             key-positions = <6 8>;
@@ -236,11 +249,19 @@
             layers = <0>;
         };
 
-        combo_paste_plane_text {
-            bindings = <&macro_plane_text>;
-            key-positions = <24 25>;
-            require-prior-idle-ms = <300>;
+        combo_ctrl_a {
+            bindings = <&kp LC(A)>;
+            key-positions = <0 10>;
+            require-prior-idle-ms = <200>;
             layers = <0>;
+        }
+
+        combo_alt_f4 {
+            bindings = <&kp LA(F4)>;
+            key-positions = <9 42>;
+            layers = <0>;
+            require-prior-idle-ms = <1000>;
+            timeout-ms = <50>;
         };
 
         combo_capslock {
@@ -271,26 +292,6 @@
             layers = <0>;
         };
 
-        combo_alt_f4 {
-            bindings = <&kp LA(F4)>;
-            key-positions = <9 42>;
-            layers = <0>;
-            require-prior-idle-ms = <1000>;
-            timeout-ms = <50>;
-        };
-
-        combo_search {
-            bindings = <&macro_copy_search_internet>;
-            key-positions = <28 16>;
-            layers = <3>;
-        };
-
-        combo_ctrl_a {
-            bindings = <&kp LC(A)>;
-            key-positions = <0 10>;
-            require-prior-idle-ms = <200>;
-            layers = <0>;
-        };
     };
 
     macros {
