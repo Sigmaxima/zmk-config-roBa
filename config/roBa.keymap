@@ -573,11 +573,11 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(V)>,
-                <&macro_wait_time 500>,
+                <&macro_wait_time 450>,
                 <&kp LCTRL &kp TAB>,
-                <&macro_wait_time 200>,
+                <&macro_wait_time 150>,
                 <&kp LCTRL &kp ENTER>,
-                <&macro_wait_time 350>,
+                <&macro_wait_time 200>,
                 <&kp LCTRL &kp ENTER>;
 
             label = "MACRO_PLANE_TEXT";
@@ -595,9 +595,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp K_CMENU &kp RCTRL>,
-                <&macro_wait_time 500>,
+                <&macro_wait_time 400>,
                 <&kp RCTRL &kp UP_ARROW &kp ENTER>,
-                <&macro_wait_time 350>,
+                <&macro_wait_time 250>,
                 <&kp RCTRL &kp C>;
 
             label = "MACRO_OPEN_IN_VSCODE";
@@ -616,9 +616,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp K_CMENU &kp RCTRL>,
-                <&macro_wait_time 500>,
+                <&macro_wait_time 400>,
                 <&kp RCTRL &kp UP_ARROW &kp ENTER>,
-                <&macro_wait_time 350>,
+                <&macro_wait_time 250>,
                 <&kp RCTRL &kp V &kp V &kp ENTER>;
 
             label = "MACRO_OPEN_IN_SHAREPOINT";
