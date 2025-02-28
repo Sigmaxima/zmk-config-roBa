@@ -11,6 +11,8 @@
 
 &mt { quick-tap-ms = <300>; };
 
+&lt { tapping-term-ms = <180>; };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -20,7 +22,7 @@
             key-positions = <18 19>;
             timeout-ms = <300>;
             layers = <0 4 5>;
-            require-prior-idle-ms = <80>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_mb2 {
@@ -684,32 +686,10 @@
             require-prior-idle-ms = <120>;
         };
 
-        lt_long_press: lt_long_press {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_LONG_PRESS";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <80>;
-        };
-
         mat_emacs: mat_emacs {
             compatible = "zmk,behavior-hold-tap";
             label = "MAT_EMACS";
             bindings = <&macro_emacs_k_cut_to_end>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-        };
-
-        mat_resize_window_rd: mat_resize_window_rd {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_RESIZE_WINDOW_RD";
-            bindings = <&kp>, <&macro_resize_windows_rd>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
@@ -821,6 +801,16 @@
             tapping-term-ms = <800>;
             require-prior-idle-ms = <50>;
         };
+
+        lt_to_layer_0_qt: lt_to_layer_0_qt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_TO_LAYER_0_QT";
+            bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+        };
     };
 
     keymap {
@@ -828,10 +818,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q            &kp W                        &kp E                      &kp R                             &kp T                                                                                                               &kp Y                 &kp U                           &kp I               &kp O                         &kp MINUS
-&mt_long_press LCTRL A  &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                   &none                                    &mat_ascii_type_reverse LEFT_BRACKET LEFT_BRACKET  &kp H                 &mt_long_press RIGHT_CONTROL J  &lt_long_press 5 K  &mt_long_press RIGHT_SHIFT L  &mt_long_press RCTRL P
-&mt LEFT_SHIFT Z        &kp X                        &kp C                      &kp V                             &kp B                   &mat_ascii_type LS(MINUS) LS(MINUS)      &mat_inset_at_head LS(N3) LS(N3)                   &kp N                 &kp M                           &kp COMMA           &kp DOT                       &mt RIGHT_SHIFT SLASH
-&kp LCTRL               &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 6 INTERNATIONAL_5  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4         &kp BACKSPACE                                      &lt_to_layer_0 3 RET                                                                                    &mt_long_press RCTRL INT1
+&mt ESCAPE Q            &kp W                        &kp E                      &kp R                             &kp T                                                                                                                  &kp Y                 &kp U                           &kp I      &kp O                         &kp MINUS
+&mt_long_press LCTRL A  &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                      &none                                    &mat_ascii_type_reverse LEFT_BRACKET LEFT_BRACKET  &kp H                 &mt_long_press RIGHT_CONTROL J  &lt 5 K    &mt_long_press RIGHT_SHIFT L  &mt_long_press RCTRL P
+&mt LEFT_SHIFT Z        &kp X                        &kp C                      &kp V                             &kp B                      &mat_ascii_type LS(MINUS) LS(MINUS)      &mat_inset_at_head LS(N3) LS(N3)                   &kp N                 &kp M                           &kp COMMA  &kp DOT                       &mt RIGHT_SHIFT SLASH
+&kp LCTRL               &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 6 INTERNATIONAL_5  &lt_to_layer_0_qt 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4         &kp BACKSPACE                                      &lt_to_layer_0 3 RET                                                                           &mt_long_press RCTRL INT1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -872,10 +862,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &mkp MB3  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5     &mkp MB2  &kp RCTRL
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &kp RIGHT_SHIFT
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &kp RCTRL
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &kp RIGHT_SHIFT
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
