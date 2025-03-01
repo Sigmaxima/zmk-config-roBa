@@ -763,7 +763,8 @@
             bindings = <&macro_audirvana>, <&macro_itunes>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <400>;
+            flavor = "tap-preferred";
         };
 
         mama_onenote: mama_onenote {
@@ -772,7 +773,7 @@
             bindings = <&macro_onenote>, <&macro_onenote_quicknote>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <400>;
             require-prior-idle-ms = <50>;
             flavor = "tap-preferred";
         };
@@ -783,8 +784,9 @@
             bindings = <&macro_hidemaru>, <&macro_notepad>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <400>;
             require-prior-idle-ms = <50>;
+            flavor = "tap-preferred";
         };
 
         mama_vscode: mama_vscode {
@@ -793,8 +795,9 @@
             bindings = <&macro_open_in_vscode>, <&macro_vscode>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <800>;
+            tapping-term-ms = <400>;
             require-prior-idle-ms = <50>;
+            flavor = "tap-preferred";
         };
 
         mama_explorer: mama_explorer {
@@ -803,8 +806,9 @@
             bindings = <&macro_open_in_sharepoint>, <&macro_explorer>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <800>;
+            tapping-term-ms = <400>;
             require-prior-idle-ms = <50>;
+            flavor = "tap-preferred";
         };
 
         lt_holdprefferd_qt: lt_holdprefferd_qt {
@@ -814,7 +818,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <250>;
+            quick-tap-ms = <200>;
         };
     };
 
