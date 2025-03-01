@@ -303,6 +303,14 @@
             require-prior-idle-ms = <300>;
             layers = <0 3>;
         };
+
+        combo_triple_click {
+            bindings = <&macro_triple_click>;
+            key-positions = <19 17>;
+            timeout-ms = <300>;
+            require-prior-idle-ms = <50>;
+            layers = <0 4 5>;
+        };
     };
 
     macros {
@@ -648,6 +656,13 @@
             #binding-cells = <0>;
             bindings = <&kp HOME &kt LEFT_SHIFT &kp END &kt LEFT_SHIFT>;
             label = "MACRO_SELECT_LINE";
+        };
+
+        macro_triple_click: macro_triple_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1 &mkp MB1 &mkp MB1>;
+            label = "MACRO_TRIPLE_CLICK";
         };
     };
 
