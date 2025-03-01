@@ -674,6 +674,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MACRO_KP_LT";
         };
+
+        macro_mkp_lo: macro_mkp_lo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
+            label = "MACRO_MKP_LO";
+        };
     };
 
     behaviors {
@@ -896,10 +903,10 @@
 
         MOUSE {
             bindings = <
-&macro_kp_lo Q  &macro_kp_lo W  &macro_kp_lo E  &macro_kp_lo R  &macro_kp_lo T                                                          &macro_kp_lo Y    &macro_kp_lo U  &macro_kp_lo I      &macro_kp_lo O    &macro_kp_lo MINUS
-&macro_kp_lo A  &macro_kp_lo S  &macro_kp_lo D  &macro_kp_lo F  &macro_kp_lo G      &trans                      &macro_kp_lo LBKT       &macro_kp_lo H    &mkp MB1        &mo 5               &mkp MB2          &kp RCTRL
-&macro_kp_lo Z  &macro_kp_lo X  &macro_kp_lo C  &macro_kp_lo V  &macro_kp_lo B      &macro_kp_lo LS(MINUS)      &macro_kp_lo LS(N3)     &macro_kp_lo N    &macro_kp_lo M  &macro_kp_lo COMMA  &macro_kp_lo DOT  &kp RIGHT_SHIFT
-&trans          &trans          &trans          &trans          &macro_kp_lo SPACE  &trans                      &macro_kp_lo BACKSPACE  &macro_kp_lo RET                                                        &trans
+&macro_kp_lo Q  &macro_kp_lo W  &macro_kp_lo E  &macro_kp_lo R  &macro_kp_lo T                                                          &macro_kp_lo Y    &macro_kp_lo U     &macro_kp_lo I      &macro_kp_lo O     &macro_kp_lo MINUS
+&macro_kp_lo A  &macro_kp_lo S  &macro_kp_lo D  &macro_kp_lo F  &macro_kp_lo G      &trans                      &macro_kp_lo LBKT       &macro_kp_lo H    &macro_mkp_lo MB1  &mo 5               &macro_mkp_lo MB2  &kp RCTRL
+&macro_kp_lo Z  &macro_kp_lo X  &macro_kp_lo C  &macro_kp_lo V  &macro_kp_lo B      &macro_kp_lo LS(MINUS)      &macro_kp_lo LS(N3)     &macro_kp_lo N    &macro_kp_lo M     &macro_kp_lo COMMA  &macro_kp_lo DOT   &kp RIGHT_SHIFT
+&trans          &trans          &trans          &trans          &macro_kp_lo SPACE  &trans                      &macro_kp_lo BACKSPACE  &macro_kp_lo RET                                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
