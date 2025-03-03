@@ -871,15 +871,15 @@
         FUNCTION_APPLICATION {
             bindings = <
 &kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                     &macro_calculator  &macro_word         &macro_excel      &macro_powerpoint     &macro_capture
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &mama_music_apps 0 0  &kp C_MUTE         &mama_explorer 0 0  &macro_teams      &macro_outlook        &macro_browser
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &kp C_PREVIOUS        &kp C_NEXT         &mama_onenote 0 0   &mama_vscode 0 0  &mama_texteditor 0 0  &macro_todo
-&trans   &trans   &trans   &trans  &trans   &trans      &kp C_STOP            &kp C_PLAY_PAUSE                                                               &macro_copy_search_internet
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5   &trans      &mama_music_apps 0 0  &kp C_MUTE         &mama_explorer 0 0  &macro_teams      &macro_outlook        &macro_browser
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp C_PREVIOUS        &kp C_NEXT         &mama_onenote 0 0   &mama_vscode 0 0  &mama_texteditor 0 0  &macro_todo
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &kp C_STOP            &kp C_PLAY_PAUSE                                                               &macro_copy_search_internet
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        SYMBOLS {
+        NUM_SYMBOLS {
             bindings = <
 &kp EXCLAMATION                &kp LS(N2)                     &mat_inset_at_head HASH HASH   &kp DOLLAR                     &kp PERCENT                                                                     &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &kp EQUAL
 &mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5  &trans                               &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_ascii_space SQT SQT       &mat_inset_at_head LS(INTERNATIONAL_3) LS(INTERNATIONAL_3)
