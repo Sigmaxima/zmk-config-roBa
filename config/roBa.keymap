@@ -962,10 +962,10 @@
 
         TEXT_EDIT {
             bindings = <
-&kp LC(N1)      &kp LC(N2)        &kp LC(N3)      &kp LC(N4)         &kp LC(N0)                                     &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &kp EQUAL
-&kp LC(LA(N1))  &kp LC(LA(N2))    &kp LC(LA(N3))  &kp LC(LA(N4))     &kp LC(LA(N0))  &trans             &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_ascii_space SQT SQT       &mat_inset_at_head LS(INTERNATIONAL_3) LS(INTERNATIONAL_3)
-&kp LC(PERIOD)  &kp LS(LA(LEFT))  &kp LC(B)       &kp LA(LS(RIGHT))  &kp LC(SLASH)   &kp LS(LC(H))      &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET              &kp NUHS                       &mt RIGHT_SHIFT LS(SLASH)
-&kp LC(LS(C))   &kp LC(LA(N0))    &kp LS(LC(V))   &trans             &trans          &kp LS(LC(M))      &kp DELETE  &trans                                                                                             &kp LS(INT1)
+&kp LS(LA(UP))  &kp LC(N2)      &kp LC(N3)      &kp LC(N4)      &kp LC(N0)                                     &trans               &trans            &kp LS(LA(UP))    &trans             &trans
+&kp LC(LA(N1))  &kp LC(LA(N2))  &kp LC(LA(N3))  &kp LC(LA(N4))  &kp LC(LA(N0))  &trans             &trans      &macro_triple_click  &kp LS(LA(LEFT))  &kp LS(LA(DOWN))  &kp LS(LA(RIGHT))  &trans
+&trans          &trans          &kp LS(LC(C))   &kp LS(LC(V))   &kp LC(B)       &kp LS(LC(H))      &trans      &trans               &trans            &trans            &kp LC(DOT)        &kp LC(FSLH)
+&trans          &trans          &trans          &trans          &trans          &kp LS(LC(M))      &kp DELETE  &trans                                                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LS(PERIOD)) LC(LS(COMMA))>;
