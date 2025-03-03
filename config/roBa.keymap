@@ -870,10 +870,10 @@
 
         FUNCTION_APPLICATION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                     &macro_calculator  &macro_word         &macro_excel      &macro_powerpoint     &macro_capture
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5   &trans      &mama_music_apps 0 0  &kp C_MUTE         &mama_explorer 0 0  &macro_teams      &macro_outlook        &macro_browser
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans      &kp C_PREVIOUS        &kp C_NEXT         &mama_onenote 0 0   &mama_vscode 0 0  &mama_texteditor 0 0  &macro_todo
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans      &kp C_STOP            &kp C_PLAY_PAUSE                                                               &macro_copy_search_internet
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                            &macro_calculator  &macro_word         &macro_excel      &macro_powerpoint     &macro_capture
+&kp F1   &kp F2   &kp F3   &kp F4  &kp F5   &trans             &mama_music_apps 0 0  &kp C_MUTE         &mama_explorer 0 0  &macro_teams      &macro_outlook        &macro_browser
+&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &kp LG(LA(K))      &kp C_PREVIOUS        &kp C_NEXT         &mama_onenote 0 0   &mama_vscode 0 0  &mama_texteditor 0 0  &macro_todo
+&kp F11  &kp F12  &kp F13  &trans  &trans   &trans             &kp C_STOP            &kp C_PLAY_PAUSE                                                               &macro_copy_search_internet
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
