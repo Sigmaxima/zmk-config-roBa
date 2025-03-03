@@ -731,7 +731,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_wait_time 200>,
-                <&kp LG(TAB)>;
+                <&kp LA(TAB)>;
 
             label = "MACRO_BAT_AND_RETURN";
         };
