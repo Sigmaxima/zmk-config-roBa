@@ -681,6 +681,13 @@
             bindings = <&to 0 &macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
             label = "MACRO_MKP_LO";
         };
+
+        macro_cut_line: macro_cut_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kt LEFT_SHIFT &kp END &kp RIGHT &kt LEFT_SHIFT &kp LC(X)>;
+            label = "MACRO_CUT_LINE";
+        };
     };
 
     behaviors {
@@ -852,6 +859,29 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <200>;
         };
+
+        mama_serch: mama_serch {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAMA_SERCH";
+            bindings =
+                <&macro_copy_search_internet>,
+                <&macro_copy_search_in_app>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            flavor = "tap-preferred";
+        };
+
+        mat_cut_line: mat_cut_line {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_CUT_LINE";
+            bindings = <&macro_cut_line>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
     };
 
     keymap {
@@ -870,10 +900,10 @@
 
         FUNCTION_APPLICATION {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5                                            &macro_calculator  &macro_word         &macro_excel      &macro_powerpoint     &macro_capture
-&kp F1   &kp F2   &kp F3   &kp F4  &kp F5   &trans             &mama_music_apps 0 0  &kp C_MUTE         &mama_explorer 0 0  &macro_teams      &macro_outlook        &macro_browser
-&kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &kp LG(LA(K))      &kp C_PREVIOUS        &kp C_NEXT         &mama_onenote 0 0   &mama_vscode 0 0  &mama_texteditor 0 0  &macro_todo
-&kp F11  &kp F12  &kp F13  &trans  &trans   &trans             &kp C_STOP            &kp C_PLAY_PAUSE                                                               &macro_copy_search_internet
+&kp C_PREV  &kp C_STOP  &kp C_PP  &kp C_NEXT  &kp C_MUTE                                                     &macro_calculator            &macro_word         &macro_excel      &macro_powerpoint     &macro_capture
+&kp F1      &kp F2      &kp F3    &kp F4      &kp F5      &trans                       &mama_music_apps 0 0  &macro_copy_search_in_app    &mama_explorer 0 0  &macro_teams      &macro_outlook        &macro_browser
+&kp F6      &kp F7      &kp F8    &kp F9      &kp F10     &mt LG(LA(K)) LC(LS(M))      &trans                &macro_copy_search_internet  &mama_onenote 0 0   &mama_vscode 0 0  &mama_texteditor 0 0  &macro_todo
+&kp F11     &kp F12     &kp F13   &trans      &trans      &trans                       &kp LC(LA(LS(T)))     &kp LC(LA(LS(P)))                                                                        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -882,7 +912,7 @@
         NUM_SYMBOLS {
             bindings = <
 &kp EXCLAMATION                &kp LS(N2)                     &mat_inset_at_head HASH HASH   &kp DOLLAR                     &kp PERCENT                                                                     &kp LS(NUMBER_6)  &kp LS(N7)         &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &kp EQUAL
-&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5  &trans                               &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_ascii_space SQT SQT       &mat_inset_at_head LS(INTERNATIONAL_3) LS(INTERNATIONAL_3)
+&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5  &trans                               &kp MINUS   &kp RIGHT_BRACE   &kp PIPE           &mat_emacs 0 SEMI              &mat_cut_line 0 SQT            &mat_inset_at_head LS(INTERNATIONAL_3) LS(INTERNATIONAL_3)
 &mt LEFT_SHIFT N6              &mat_ascii_type N7 N7          &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0  &mat_ascii_type_reverse DOT DOT      &kp SLASH   &kp LS(SQT)       &kp LS(SEMICOLON)  &kp RIGHT_BRACKET              &kp NUHS                       &mt RIGHT_SHIFT LS(SLASH)
 &trans                         &trans                         &trans                         &trans                         &trans                         &trans                               &kp DELETE  &trans                                                                                             &kp LS(INT1)
             >;
@@ -892,10 +922,10 @@
 
         ARROW_NUM {
             bindings = <
-&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5                                                                    &trans   &kp LC(PAGE_UP)                 &kp UP_ARROW    &kp LC(PAGE_DOWN)             &kp ESC
-&mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0    &trans                                   &macro_delete_at_head  &trans   &kp LEFT                        &kp DOWN        &kp RIGHT                     &kp RCTRL
-&mt LEFT_SHIFT KP_DIVIDE       &kp KP_ASTERISK                &kp KP_MINUS                   &kp KP_PLUS                    &mat_ascii_type_reverse DOT DOT  &mat_ascii_type LS(MINUS) LS(MINUS)      &kp DELETE             &kp TAB  &mat_home_end_select HOME HOME  &kp DOWN_ARROW  &mat_home_end_select END END  &kp RIGHT_SHIFT
-&trans                         &trans                         &trans                         &kp LS(TAB)                    &kp TAB                          &trans                                   &kp DELETE             &trans                                                                                 &kp DELETE
+&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5                                                              &trans   &kp LC(PAGE_UP)                 &kp UP_ARROW    &kp LC(PAGE_DOWN)             &kp ESC
+&mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0    &trans                                   &mama_serch 0 0  &trans   &kp LEFT                        &kp DOWN        &kp RIGHT                     &kp RCTRL
+&mt LEFT_SHIFT KP_DIVIDE       &kp KP_ASTERISK                &kp KP_MINUS                   &kp KP_PLUS                    &mat_ascii_type_reverse DOT DOT  &mat_ascii_type LS(MINUS) LS(MINUS)      &kp DELETE       &kp TAB  &mat_home_end_select HOME HOME  &kp DOWN_ARROW  &mat_home_end_select END END  &kp RIGHT_SHIFT
+&trans                         &trans                         &trans                         &kp LS(TAB)                    &kp TAB                          &trans                                   &kp DELETE       &trans                                                                                 &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
