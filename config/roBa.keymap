@@ -699,14 +699,14 @@
         macro_text_color: macro_text_color {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(H) &kp F &kp C>;
+            bindings = <&kp LA(H) &kp F &kp C &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW>;
             label = "MACRO_TEXT_COLOR";
         };
 
         macro_text_align: macro_text_align {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LA(H) &kp F &kp A &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&kp LA(H) &kp A &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MACRO_TEXT_ALIGN";
         };
 
@@ -983,10 +983,10 @@
 
         TEXT_EDIT {
             bindings = <
-&kp LS(LA(UP))       &kp LC(N2)           &kp LC(N3)           &kp LC(N4)      &kp LC(N0)                                 &trans               &macro_text_deco U  &kp LS(LA(UP))      &macro_text_deco N  &trans
-&kp LC(LA(N1))       &kp LC(LA(N2))       &kp LC(LA(N3))       &kp LC(LA(N4))  &kp LC(LA(N0))  &trans             &trans  &macro_triple_click  &kp LS(LA(LEFT))    &kp LS(LA(DOWN))    &kp LS(LA(RIGHT))   &trans
-&trans               &trans               &kp LS(LC(C))        &kp LS(LC(V))   &kp LC(B)       &kp LS(LC(H))      &trans  &trans               &macro_text_color   &macro_text_deco H  &kp LC(DOT)         &kp LC(FSLH)
-&macro_text_align L  &macro_text_align C  &macro_text_align R  &trans          &trans          &trans             &trans  &trans                                                                           &trans
+&kp LC(N1)           &kp LC(N2)           &kp LC(N3)           &kp LC(N4)      &kp LC(N0)                                 &trans  &macro_text_deco U  &kp LS(LA(UP))      &macro_text_deco N  &trans
+&kp LC(LA(N1))       &kp LC(LA(N2))       &kp LC(LA(N3))       &kp LC(LA(N4))  &kp LC(LA(N0))  &trans             &trans  &trans  &kp LS(LA(LEFT))    &kp LS(LA(DOWN))    &kp LS(LA(RIGHT))   &trans
+&trans               &trans               &kp LS(LC(C))        &kp LS(LC(V))   &kp LC(B)       &kp LS(LC(H))      &trans  &trans  &macro_text_color   &macro_text_deco H  &kp LC(DOT)         &kp LC(FSLH)
+&macro_text_align L  &macro_text_align C  &macro_text_align R  &trans          &trans          &trans             &trans  &trans                                                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LS(PERIOD)) LC(LS(COMMA))>;
