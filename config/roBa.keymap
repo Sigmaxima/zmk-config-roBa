@@ -731,9 +731,9 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_wait_time 200>,
-                <&kt LEFT_ALT &kp TAB &kp LS(TAB) &kt LEFT_ALT>,
-                <&macro_wait_time 100>,
-                <&kp LC(V)>;
+                <&kt LEFT_ALT &kp TAB>,
+                <&macro_wait_time 200>,
+                <&kp LS(TAB) &kt LEFT_ALT>;
 
             label = "MACRO_BAT_AND_RETURN";
         };
