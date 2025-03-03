@@ -983,10 +983,10 @@
 
         TEXT_EDIT {
             bindings = <
-&kp LS(LA(UP))  &kp LC(N2)      &kp LC(N3)      &kp LC(N4)      &kp LC(N0)                                     &trans               &trans            &kp LS(LA(UP))    &trans             &trans
-&kp LC(LA(N1))  &kp LC(LA(N2))  &kp LC(LA(N3))  &kp LC(LA(N4))  &kp LC(LA(N0))  &trans             &trans      &macro_triple_click  &kp LS(LA(LEFT))  &kp LS(LA(DOWN))  &kp LS(LA(RIGHT))  &trans
-&trans          &trans          &kp LS(LC(C))   &kp LS(LC(V))   &kp LC(B)       &kp LS(LC(H))      &trans      &trans               &trans            &trans            &kp LC(DOT)        &kp LC(FSLH)
-&trans          &trans          &trans          &trans          &trans          &kp LS(LC(M))      &kp DELETE  &trans                                                                      &trans
+&kp LS(LA(UP))       &kp LC(N2)           &kp LC(N3)           &kp LC(N4)      &kp LC(N0)                                 &trans               &macro_text_deco U  &kp LS(LA(UP))      &macro_text_deco N  &trans
+&kp LC(LA(N1))       &kp LC(LA(N2))       &kp LC(LA(N3))       &kp LC(LA(N4))  &kp LC(LA(N0))  &trans             &trans  &macro_triple_click  &kp LS(LA(LEFT))    &kp LS(LA(DOWN))    &kp LS(LA(RIGHT))   &trans
+&trans               &trans               &kp LS(LC(C))        &kp LS(LC(V))   &kp LC(B)       &kp LS(LC(H))      &trans  &trans               &macro_text_color   &macro_text_deco H  &kp LC(DOT)         &kp LC(FSLH)
+&macro_text_align L  &macro_text_align C  &macro_text_align R  &trans          &trans          &trans             &trans  &trans                                                                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LS(PERIOD)) LC(LS(COMMA))>;
