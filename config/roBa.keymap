@@ -695,6 +695,27 @@
             bindings = <&kp LC(L) &kp LC(C)>;
             label = "MACRO_COPY_URL";
         };
+
+        macro_text_color: macro_text_color {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp F &kp C>;
+            label = "MACRO_TEXT_COLOR";
+        };
+
+        macro_text_align: macro_text_align {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LA(H) &kp F &kp A &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_TEXT_ALIGN";
+        };
+
+        macro_text_deco: macro_text_deco {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LA(H) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_TEXT_DECO";
+        };
     };
 
     behaviors {
