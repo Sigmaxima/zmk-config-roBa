@@ -47,8 +47,8 @@
             require-prior-idle-ms = <250>;
         };
 
-        combo_mb2_e {
-            bindings = <&macro_mb2_e>;
+        combo_savein_million {
+            bindings = <&macro_savein_million>;
             key-positions = <20 21>;
             timeout-ms = <300>;
             layers = <4 5>;
@@ -314,6 +314,14 @@
             require-prior-idle-ms = <50>;
             layers = <0 4 5>;
         };
+
+        combo_savein_takane {
+            bindings = <&macro_savein_takane>;
+            key-positions = <32 33>;
+            timeout-ms = <300>;
+            require-prior-idle-ms = <100>;
+            layers = <4 5>;
+        };
     };
 
     macros {
@@ -363,11 +371,11 @@
             label = "MACRO_BROWSER";
         };
 
-        macro_mb2_e: macro_mb2_e {
+        macro_savein_million: macro_savein_million {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp MB2 &kp E &kp DOWN_ARROW>;
-            label = "MACRO_MB2_E";
+            label = "MACRO_SAVEIN_MILLION";
         };
 
         macro_calculator: macro_calculator {
@@ -726,6 +734,13 @@
                 <&kp LG(TAB)>;
 
             label = "MACRO_BAT_AND_RETURN";
+        };
+
+        macro_savein_takane: macro_savein_takane {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+            label = "MACRO_SAVEIN_TAKANE";
         };
     };
 
