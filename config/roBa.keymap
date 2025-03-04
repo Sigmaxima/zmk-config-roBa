@@ -937,6 +937,16 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <100>;
         };
+
+        bt_clear_or_clear_all: bt_clear_or_clear_all {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_CLEAR_OR_CLEAR_ALL";
+            bindings = <&bt>, <&bt>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <5000>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -999,10 +1009,10 @@
 
         SCROLL {
             bindings = <
-&kp LA(F4)  &kp LG(LS(LEFT))  &kp LG(UP_ARROW)    &kp LG(LS(RIGHT))        &kp LG(D)                                                                 &trans               &kp LC(LS(TAB))  &none      &kp LC(TAB)  &trans
-&trans      &kp LG(LEFT)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT)            &trans              &trans                        &trans                  &macro_triple_click  &mkp MB1         &trans     &mkp MB2     &kp RCTRL
-&trans      &trans            &kp LG(TAB)         &trans                   &trans              &mo 11                        &trans                  &kp LC(T)            &mkp MB4         &kp LC(W)  &mkp MB5     &kp RIGHT_SHIFT
-&trans      &trans            &trans              &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                               &trans
+&bt BT_SEL 0  &bt BT_SEL 1             &bt BT_SEL 2        &bt BT_SEL 3              &bt BT_SEL 4                                                                              &trans               &kp LC(LS(TAB))  &none      &kp LC(TAB)  &trans
+&trans        &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd  &trans              &trans                                        &trans                  &macro_triple_click  &mkp MB1         &trans     &mkp MB2     &kp RCTRL
+&trans        &trans                   &trans              &trans                    &trans              &bt_clear_or_clear_all BT_CLR_ALL BT_CLR      &trans                  &kp LC(T)            &mkp MB4         &kp LC(W)  &mkp MB5     &kp RIGHT_SHIFT
+&mo 11        &trans                   &trans              &macro_resize_window_ul   &macro_move_window  &macro_resize_windows_rd                      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
