@@ -214,15 +214,17 @@
         combo_ctrl_z {
             bindings = <&kp LC(Z)>;
             key-positions = <22 23>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <100>;
             layers = <0>;
+            timeout-ms = <300>;
         };
 
         combo_ctrl_x {
             bindings = <&kp LC(X)>;
             key-positions = <23 24>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <100>;
             layers = <0>;
+            timeout-ms = <300>;
         };
 
         combo_ctrl_c {
@@ -235,22 +237,25 @@
         combo_ctrl_v {
             bindings = <&kp LC(V)>;
             key-positions = <12 13>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <100>;
             layers = <0>;
+            timeout-ms = <300>;
         };
 
         combo_win_v {
             bindings = <&kp LG(V)>;
             key-positions = <13 14>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <100>;
             layers = <0>;
+            timeout-ms = <300>;
         };
 
         combo_paste_plain_text {
             bindings = <&macro_plain_text>;
             key-positions = <24 25>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <200>;
             layers = <0>;
+            timeout-ms = <200>;
         };
 
         combo_capslock {
@@ -319,6 +324,14 @@
 
         combo_savein_takane {
             bindings = <&macro_savein_takane>;
+            key-positions = <8 9>;
+            timeout-ms = <300>;
+            require-prior-idle-ms = <100>;
+            layers = <4 5>;
+        };
+
+        combo_savein_multi {
+            bindings = <&macro_savein_miki>;
             key-positions = <32 33>;
             timeout-ms = <300>;
             require-prior-idle-ms = <100>;
@@ -732,6 +745,13 @@
             bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
             label = "MACRO_SAVEIN_TAKANE";
         };
+
+        macro_savein_miki: macro_savein_miki {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+            label = "MACRO_SAVEIN_MIKI";
+        };
     };
 
     behaviors {
@@ -1007,7 +1027,7 @@
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
-        SCROLL {
+        BT_SCROLL {
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1             &bt BT_SEL 2        &bt BT_SEL 3              &bt BT_SEL 4                                                                              &trans               &kp LC(LS(TAB))  &none      &kp LC(TAB)  &trans
 &trans        &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd  &trans              &trans                                        &trans                  &macro_triple_click  &mkp MB1         &trans     &mkp MB2     &kp RCTRL
