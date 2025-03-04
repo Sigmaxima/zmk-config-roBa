@@ -9,12 +9,13 @@
 
 &mt {
     quick-tap-ms = <220>;
-    tapping-term-ms = <180>;
+    tapping-term-ms = <250>;
+    require-prior-idle-ms = <50>;
 };
 
 &lt {
-    tapping-term-ms = <180>;
-    require-prior-idle-ms = <50>;
+    tapping-term-ms = <200>;
+    require-prior-idle-ms = <80>;
 };
 
 / {
@@ -260,7 +261,7 @@
 
         combo_capslock {
             bindings = <&kp LS(CAPS)>;
-            key-positions = <0 9>;
+            key-positions = <21 10>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
@@ -274,7 +275,7 @@
 
         combo_teams_rich_textbox {
             bindings = <&kp LC(LS(X))>;
-            key-positions = <10 21>;
+            key-positions = <9 0>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
@@ -999,7 +1000,7 @@
             bindings = <
 &trans                         &trans                         &trans                         &trans                         &trans                                                                                           &trans   &kp LC(PAGE_UP)                 &kp UP_ARROW  &kp LC(PAGE_DOWN)             &kp ESC
 &mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5  &trans                                     &mama_serch 0 0        &trans   &kp LEFT                        &kp DOWN      &kp RIGHT                     &kp RCTRL
-&mt LEFT_SHIFT N6              &mat_ascii_type_reverse N7 N7  &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0  &mat_ascii_type_reverse PERIOD PERIOD      &macro_delete_at_head  &kp TAB  &mat_home_end_select HOME HOME  &kp RSHIFT    &mat_home_end_select END END  &kp RIGHT_SHIFT
+&mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0  &mat_ascii_type_reverse PERIOD PERIOD      &macro_delete_at_head  &kp TAB  &mat_home_end_select HOME HOME  &kp RSHIFT    &mat_home_end_select END END  &kp RIGHT_SHIFT
 &kp SLASH                      &kp MINUS                      &kp LS(SQT)                    &kp LS(TAB)                    &kp TAB                        &trans                                     &kp DELETE             &trans                                                                               &kp DELETE
             >;
 
