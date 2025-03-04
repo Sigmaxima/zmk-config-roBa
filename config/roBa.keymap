@@ -346,6 +346,18 @@
             require-prior-idle-ms = <100>;
             layers = <4 5>;
         };
+
+        combo_clear_bt {
+            bindings = <&bt BT_CLR>;
+            key-positions = <10 14>;
+            layers = <5>;
+        };
+
+        combo_clear_all_bt {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <22 27>;
+            layers = <5>;
+        };
     };
 
     macros {
@@ -1042,10 +1054,10 @@
 
         BT_SCROLL {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1             &bt BT_SEL 2        &bt BT_SEL 3              &bt BT_SEL 4                                                              &trans               &kp LC(LS(TAB))  &kp LA(UP_ARROW)  &kp LC(TAB)  &trans
-&trans        &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd  &trans              &trans                        &trans                  &macro_triple_click  &mkp MB1         &trans            &mkp MB2     &kp RCTRL
-&trans        &trans                   &trans              &trans                    &trans              &bt BT_CLR                    &trans                  &kp LC(T)            &mkp MB4         &kp LC(W)         &mkp MB5     &kp RIGHT_SHIFT
-&mo 11        &trans                   &bt BT_CLR_ALL      &macro_resize_window_ul   &macro_move_window  &macro_resize_windows_rd      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                                      &trans
+&bt BT_SEL 0  &bt BT_SEL 1             &bt BT_SEL 2        &bt BT_SEL 3              &bt BT_SEL 4                                                        &trans               &kp LC(LS(TAB))  &kp LA(UP_ARROW)  &kp LC(TAB)  &trans
+&trans        &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd  &kp LG(D)            &trans                 &trans                  &macro_triple_click  &mkp MB1         &trans            &mkp MB2     &kp RCTRL
+&trans        &trans                   &trans              &trans                    &trans               &trans                 &trans                  &kp LC(T)            &mkp MB4         &kp LC(W)         &mkp MB5     &kp RIGHT_SHIFT
+&trans        &trans                   &trans              &trans                    &kp LC(LA(LS(TAB)))  &kp LS(LG(RIGHT))      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
@@ -1099,15 +1111,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        CONFIG {
-            bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans      &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                          &bt BT_CLR_ALL
             >;
         };
     };
