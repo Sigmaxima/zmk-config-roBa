@@ -636,14 +636,6 @@
             label = "MACRO_OPEN_IN_VSCODE";
         };
 
-        macro_plane_text_command: macro_plane_text_command {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(P)))>, <&macro_wait_time 300>, <&kp LC(V)>;
-
-            label = "MACRO_PLANE_TEXT_COMMAND";
-        };
-
         macro_open_in_sharepoint: macro_open_in_sharepoint {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
