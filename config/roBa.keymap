@@ -246,7 +246,7 @@
             layers = <0>;
         };
 
-        combo_paste_plane_text {
+        combo_paste_plain_text {
             bindings = <&macro_plain_text>;
             key-positions = <24 25>;
             require-prior-idle-ms = <300>;
