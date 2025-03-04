@@ -325,15 +325,23 @@
 
         combo_savein_takane {
             bindings = <&macro_savein_takane>;
-            key-positions = <8 9>;
+            key-positions = <20 9>;
             timeout-ms = <300>;
             require-prior-idle-ms = <100>;
             layers = <4 5>;
         };
 
-        combo_savein_multi {
+        combo_savein_miki {
             bindings = <&macro_savein_miki>;
-            key-positions = <32 33>;
+            key-positions = <33 20>;
+            timeout-ms = <300>;
+            require-prior-idle-ms = <100>;
+            layers = <4 5>;
+        };
+
+        combo_multi {
+            bindings = <&macro_multi>;
+            key-positions = <33 32>;
             timeout-ms = <300>;
             require-prior-idle-ms = <100>;
             layers = <4 5>;
@@ -752,6 +760,20 @@
             #binding-cells = <0>;
             bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
             label = "MACRO_SAVEIN_MIKI";
+        };
+
+        macro_multi: macro_multi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+            label = "MACRO_MULTI";
+        };
+
+        macro_mb2_down: macro_mb2_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+            label = "MACRO_MB2_DOWN";
         };
     };
 
