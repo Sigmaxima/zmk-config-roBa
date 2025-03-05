@@ -324,14 +324,14 @@
 
         combo_savein_takane {
             bindings = <&macro_savein_takane>;
-            key-positions = <20 9>;
+            key-positions = <9 8>;
             timeout-ms = <500>;
             layers = <4 5>;
         };
 
         combo_savein_miki {
             bindings = <&macro_savein_miki>;
-            key-positions = <33 20>;
+            key-positions = <9 21>;
             timeout-ms = <500>;
             layers = <4 5>;
         };
