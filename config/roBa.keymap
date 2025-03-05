@@ -332,7 +332,7 @@
         combo_savein_miki {
             bindings = <&macro_savein_miki>;
             key-positions = <33 20>;
-            timeout-ms = <50>;
+            timeout-ms = <500>;
             layers = <4 5>;
         };
 
