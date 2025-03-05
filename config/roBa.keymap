@@ -614,7 +614,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LC(C) &kp LG(R)>,
+                <&kp LC(C) &kp INT_MUHENKAN &kp LG(R)>,
                 <&macro_wait_time 200>,
                 <&kp H &kp T &kp T &kp P &kp S &kp SQT &kp FSLH &kp FSLH &kp G &kp O &kp O &kp G &kp L &kp E &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H &kp LS(SLASH) &kp Q &kp LS(MINUS) &kp LC(V) &kp ENTER>;
 
@@ -812,7 +812,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <50>;
         };
