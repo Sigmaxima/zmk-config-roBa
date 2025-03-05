@@ -406,7 +406,11 @@
         macro_savein_million: macro_savein_million {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp MB2 &kp E &kp DOWN_ARROW>;
+            bindings =
+                <&mkp MB2>,
+                <&macro_wait_time 50>,
+                <&kp E &kp DOWN_ARROW>;
+
             label = "MACRO_SAVEIN_MILLION";
         };
 
@@ -731,21 +735,33 @@
         macro_text_color: macro_text_color {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(H) &kp F &kp C &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN>;
+            bindings =
+                <&kp LA(H)>,
+                <&macro_wait_time 50>,
+                <&kp F &kp C &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN>;
+
             label = "MACRO_TEXT_COLOR";
         };
 
         macro_text_align: macro_text_align {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LA(H) &kp A &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&kp LA(H)>,
+                <&macro_wait_time 50>,
+                <&kp A &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
             label = "MACRO_TEXT_ALIGN";
         };
 
         macro_text_deco: macro_text_deco {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LA(H) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&kp LA(H)>,
+                <&macro_wait_time 50>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
             label = "MACRO_TEXT_DECO";
         };
 
@@ -759,21 +775,33 @@
         macro_savein_takane: macro_savein_takane {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+            bindings =
+                <&mkp MB2>,
+                <&macro_wait_time 50>,
+                <&kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+
             label = "MACRO_SAVEIN_TAKANE";
         };
 
         macro_savein_miki: macro_savein_miki {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+            bindings =
+                <&mkp MB2>,
+                <&macro_wait_time 50>,
+                <&kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+
             label = "MACRO_SAVEIN_MIKI";
         };
 
         macro_savein_multi: macro_savein_multi {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+            bindings =
+                <&mkp MB2>,
+                <&macro_wait_time 50>,
+                <&kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+
             label = "MACRO_SAVEIN_MULTI";
         };
     };
@@ -988,10 +1016,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q                    &kp W                        &kp E                      &kp R                             &kp T                                                                                                                    &kp Y                 &kp U                           &kp I        &kp O                         &kp MINUS
-&mt_long_press LCTRL A          &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                        &none                                    &mat_ascii_type_reverse LEFT_BRACKET LEFT_BRACKET  &kp H                 &mt_long_press RIGHT_CONTROL J  &lt 5 K      &mt_long_press RIGHT_SHIFT L  &mt_long_press RCTRL P
-&mt_tap_preferred LEFT_SHIFT Z  &kp X                        &kp C                      &kp V                             &kp B                        &mat_ascii_type LS(MINUS) LS(MINUS)      &mat_inset_at_head LS(N3) LS(N3)                   &kp N                 &kp M                           &lt 4 COMMA  &kp DOT                       &mt RIGHT_SHIFT SLASH
-&kp LCTRL                       &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 6 INTERNATIONAL_5  &lt_holdprefferd_qt 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4         &lt_holdprefferd_qt 7 BACKSPACE                    &lt_to_layer_0 3 RET                                                                             &mt_long_press RCTRL INT1
+&mt ESCAPE Q                    &kp W                        &kp E                      &kp R                             &kp T                                                                                                                    &kp Y                 &kp U                           &kp I      &kp O                         &kp MINUS
+&mt_long_press LCTRL A          &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                        &none                                    &mat_ascii_type_reverse LEFT_BRACKET LEFT_BRACKET  &kp H                 &mt_long_press RIGHT_CONTROL J  &lt 5 K    &mt_long_press RIGHT_SHIFT L  &mt_long_press RCTRL P
+&mt_tap_preferred LEFT_SHIFT Z  &kp X                        &kp C                      &kp V                             &kp B                        &mat_ascii_type LS(MINUS) LS(MINUS)      &mat_inset_at_head LS(N3) LS(N3)                   &kp N                 &kp M                           &kp COMMA  &kp DOT                       &mt RIGHT_SHIFT SLASH
+&kp LCTRL                       &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 6 INTERNATIONAL_5  &lt_holdprefferd_qt 2 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4         &lt_holdprefferd_qt 7 BACKSPACE                    &lt_to_layer_0 3 RET                                                                           &mt_long_press RCTRL INT1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
