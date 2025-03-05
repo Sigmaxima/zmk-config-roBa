@@ -331,14 +331,14 @@
 
         combo_savein_miki {
             bindings = <&macro_savein_miki>;
-            key-positions = <30 20 21>;
+            key-positions = <42 41>;
             timeout-ms = <500>;
             layers = <4 5>;
         };
 
         combo_multi {
             bindings = <&macro_savein_multi>;
-            key-positions = <33 32 30>;
+            key-positions = <42 40>;
             timeout-ms = <300>;
             layers = <4 5>;
         };
