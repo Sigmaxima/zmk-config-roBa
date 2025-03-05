@@ -49,7 +49,7 @@
         combo_savein_million {
             bindings = <&macro_savein_million>;
             key-positions = <20 21>;
-            timeout-ms = <500>;
+            timeout-ms = <300>;
             layers = <4 5>;
         };
 
@@ -337,9 +337,9 @@
         };
 
         combo_multi {
-            bindings = <&macro_multi>;
+            bindings = <&macro_savein_multi>;
             key-positions = <33 32>;
-            timeout-ms = <500>;
+            timeout-ms = <300>;
             layers = <4 5>;
         };
 
@@ -770,18 +770,11 @@
             label = "MACRO_SAVEIN_MIKI";
         };
 
-        macro_multi: macro_multi {
+        macro_savein_multi: macro_savein_multi {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
-            label = "MACRO_MULTI";
-        };
-
-        macro_mb2_down: macro_mb2_down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB2 &kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
-            label = "MACRO_MB2_DOWN";
+            label = "MACRO_SAVEIN_MULTI";
         };
     };
 
