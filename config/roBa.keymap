@@ -1094,8 +1094,8 @@
         TEN_KEYS {
             bindings = <
 &trans        &kp N7     &kp N8        &kp N9  &trans                               &kp FSLH     &kp N7  &kp N8  &kp N9  &kp MINUS
-&trans        &kp N4     &kp N5        &kp N6  &kp UP    &trans      &kp LS(MINUS)  &kp LS(SQT)  &kp N4  &kp N5  &kp N7  &kp LS(SEMICOLON)
-&kp LS(PLUS)  &kp LSHFT  &kp LS(PLUS)  &kp N3  &kp DOWN  &trans      &kp BSPC       &kp DOT      &kp N1  &kp N2  &kp N3  &kp RET
+&trans        &kp N4     &kp N5        &kp N6  &kp UP    &trans      &kp LS(MINUS)  &kp LS(SQT)  &kp N4  &kp N5  &kp N6  &kp LS(SEMICOLON)
+&kp LS(PLUS)  &kp LSHFT  &kp LS(PLUS)  &kp N3  &kp DOWN  &trans      &kp DOT        &kp N0       &kp N1  &kp N2  &kp N3  &kp RET
 &trans        &kp N0     &kp DOT       &trans  &trans    &trans      &trans         &kp N0                               &kp DOT
             >;
 
