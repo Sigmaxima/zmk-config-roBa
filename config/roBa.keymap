@@ -811,6 +811,20 @@
             bindings = <&kp RIGHT_BRACKET &kp NUHS &kp LEFT>;
             label = "MACRO_BRACKETS";
         };
+
+        macro_brace: macro_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACE &kp PIPE &kp LEFT>;
+            label = "MACRO_BRACE";
+        };
+
+        macro_parenthesis: macro_parenthesis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8) &kp LS(N9) &kp LEFT>;
+            label = "MACRO_PARENTHESIS";
+        };
     };
 
     behaviors {
