@@ -42,7 +42,7 @@
             bindings = <&mkp MB3>;
             key-positions = <18 20>;
             timeout-ms = <250>;
-            layers = <0 4>;
+            layers = <0 4 5>;
             require-prior-idle-ms = <200>;
         };
 
@@ -50,7 +50,7 @@
             bindings = <&macro_savein_million>;
             key-positions = <20 21>;
             timeout-ms = <300>;
-            layers = <8 8>;
+            layers = <5>;
         };
 
         combo_tog_tenkeys {
@@ -319,40 +319,40 @@
             key-positions = <19 17>;
             timeout-ms = <300>;
             require-prior-idle-ms = <50>;
-            layers = <0 8 8>;
+            layers = <0 4 5>;
         };
 
         combo_savein_takane {
             bindings = <&macro_savein_takane>;
             key-positions = <32 33>;
             timeout-ms = <500>;
-            layers = <8 8>;
+            layers = <5>;
         };
 
         combo_savein_miki {
             bindings = <&macro_savein_miki>;
             key-positions = <42 41>;
             timeout-ms = <500>;
-            layers = <8 8>;
+            layers = <5>;
         };
 
         combo_multi {
             bindings = <&macro_savein_multi>;
             key-positions = <42 40>;
             timeout-ms = <300>;
-            layers = <8 8>;
+            layers = <5>;
         };
 
         combo_clear_bt {
             bindings = <&bt BT_CLR>;
             key-positions = <10 14>;
-            layers = <8>;
+            layers = <5>;
         };
 
         combo_clear_all_bt {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <22 27>;
-            layers = <8>;
+            layers = <5>;
         };
     };
 
