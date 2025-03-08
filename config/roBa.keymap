@@ -14,8 +14,8 @@
 };
 
 &lt {
-    tapping-term-ms = <200>;
-    require-prior-idle-ms = <80>;
+    tapping-term-ms = <140>;
+    require-prior-idle-ms = <50>;
 };
 
 / {
@@ -1055,12 +1055,12 @@
             >;
         };
 
-        NUM_SYMBOLS {
+        NUM_BAR_SYMBOLS {
             bindings = <
-&kp EXCLAMATION                &kp LS(N2)                     &mat_inset_at_head HASH HASH   &kp DOLLAR                     &kp PERCENT                                                                               &kp LS(NUMBER_6)               &kp LS(N7)                     &mat_ascii_type LS(N8) LS(N8)  &mat_ascii_type LS(N9) LS(N9)  &kp EQUAL
-&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5  &trans                               &kp LS(LEFT_BRACKET)  &mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_emacs 0 N8                &mat_cut_line 0 N9             &mat_ascii_type_reverse N0 N0
-&mt LEFT_SHIFT N6              &mat_ascii_type N7 N7          &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0  &mat_ascii_type_reverse DOT DOT      &kp SLASH             &kp LS(RIGHT_BRACE)            &kp PIPE                       &kp RIGHT_BRACKET              &kp NUHS                       &mat_ascii_type_reverse DOT DOT
-&kp SLASH                      &kp MINUS                      &kp LS(SQT)                    &kp LS(SEMICOLON)              &trans                         &kp LS(MINUS)                        &kp DELETE            &trans                                                                                                                      &kp LS(INT1)
+&kp EXCLAMATION                &kp LS(N2)                     &mat_inset_at_head HASH HASH   &kp DOLLAR                     &kp PERCENT                                                                               &kp LS(NUMBER_6)               &kp LS(N7)                     &macro_parenthesis  &kp LS(N9)                       &kp EQUAL
+&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5  &trans                               &kp LS(LEFT_BRACKET)  &mat_ascii_type_reverse N6 N6  &mat_ascii_type_reverse N7 N7  &mat_emacs 0 N8     &mat_cut_line 0 N9               &mat_ascii_type_reverse N0 N0
+&mt LEFT_SHIFT N6              &mat_ascii_type N7 N7          &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0  &mat_ascii_type_reverse DOT DOT      &macro_brace          &kp LS(RIGHT_BRACE)            &macro_brackets                &kp NUHS            &mat_ascii_type_reverse DOT DOT  &trans
+&kp SLASH                      &kp MINUS                      &kp LS(SQT)                    &kp LS(SEMICOLON)              &trans                         &kp LS(MINUS)                        &kp DELETE            &trans                                                                                                             &kp LS(INT1)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
