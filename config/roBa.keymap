@@ -357,6 +357,34 @@
             label = "TO_LAYER_0";
         };
 
+        macro_triple_click: macro_triple_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1 &mkp MB1 &mkp MB1>;
+            label = "MACRO_TRIPLE_CLICK";
+        };
+
+        macro_brackets: macro_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET &kp NUHS &kp LEFT>;
+            label = "MACRO_BRACKETS";
+        };
+
+        macro_brace: macro_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACE &kp PIPE &kp LEFT>;
+            label = "MACRO_BRACE";
+        };
+
+        macro_parenthesis: macro_parenthesis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8) &kp LS(N9) &kp LEFT>;
+            label = "MACRO_PARENTHESIS";
+        };
+
         macro_emacs_k_cut_to_end: macro_emacs_k_cut_to_end {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -394,17 +422,6 @@
                 <&kp LCTRL &kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp ENTER>;
 
             label = "MACRO_BROWSER";
-        };
-
-        macro_savein_million: macro_savein_million {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&mkp MB2>,
-                <&macro_wait_time 50>,
-                <&kp E &kp DOWN_ARROW>;
-
-            label = "MACRO_SAVEIN_MILLION";
         };
 
         macro_calculator: macro_calculator {
@@ -690,13 +707,6 @@
             label = "MACRO_SELECT_LINE";
         };
 
-        macro_triple_click: macro_triple_click {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1 &mkp MB1 &mkp MB1>;
-            label = "MACRO_TRIPLE_CLICK";
-        };
-
         macro_kp_lo: macro_kp_lt {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -765,6 +775,17 @@
             label = "MACRO_BAT_AND_RETURN";
         };
 
+        macro_savein_million: macro_savein_million {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&mkp MB2>,
+                <&macro_wait_time 50>,
+                <&kp E &kp DOWN_ARROW>;
+
+            label = "MACRO_SAVEIN_MILLION";
+        };
+
         macro_savein_takane: macro_savein_takane {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -798,26 +819,6 @@
             label = "MACRO_SAVEIN_MULTI";
         };
 
-        macro_brackets: macro_brackets {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACKET &kp NUHS &kp LEFT>;
-            label = "MACRO_BRACKETS";
-        };
-
-        macro_brace: macro_brace {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACE &kp PIPE &kp LEFT>;
-            label = "MACRO_BRACE";
-        };
-
-        macro_parenthesis: macro_parenthesis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N8) &kp LS(N9) &kp LEFT>;
-            label = "MACRO_PARENTHESIS";
-        };
     };
 
     behaviors {
