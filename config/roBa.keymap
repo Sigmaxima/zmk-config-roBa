@@ -248,8 +248,9 @@
         combo_capslock {
             bindings = <&kp LS(CAPS)>;
             key-positions = <21 10>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <200>;
             layers = <0>;
+            timeout-ms = <300>;
         };
 
         combo_printscreen {
