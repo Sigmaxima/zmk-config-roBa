@@ -911,10 +911,32 @@
             require-prior-idle-ms = <120>;
         };
 
+        mat_select_line: mat_select_line {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_SELECT_LINE";
+            bindings = <&macro_select_line>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
+
         mat_emacs: mat_emacs {
             compatible = "zmk,behavior-hold-tap";
             label = "MAT_EMACS";
             bindings = <&macro_emacs_k_cut_to_end>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
+
+        mat_cut_line: mat_cut_line {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_CUT_LINE";
+            bindings = <&macro_cut_line>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
@@ -1053,27 +1075,6 @@
             flavor = "tap-preferred";
         };
 
-        mat_cut_line: mat_cut_line {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_CUT_LINE";
-            bindings = <&macro_cut_line>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-        };
-
-        mat_select_line: mat_select_line {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_SELECT_LINE";
-            bindings = <&macro_select_line>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-        };
     };
 
     keymap {
