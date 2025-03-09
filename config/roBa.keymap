@@ -360,7 +360,7 @@
         to_layer_1: to_layer_1 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_1";
         };
 
@@ -825,7 +825,6 @@
 
             label = "MACRO_SAVEIN_MULTI";
         };
-
     };
 
     behaviors {
@@ -1040,8 +1039,6 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <100>;
         };
-
-
     };
 
     keymap {
