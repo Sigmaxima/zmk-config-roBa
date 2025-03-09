@@ -63,7 +63,6 @@
             key-positions = <6 8>;
             require-prior-idle-ms = <300>;
             layers = <0>;
-            timeout-ms = <300>;
         };
 
         combo_mouse_window_rd {
@@ -71,7 +70,6 @@
             key-positions = <6 9>;
             require-prior-idle-ms = <300>;
             layers = <0>;
-            timeout-ms = <300>;
         };
 
         combo_mouse_window_ul {
@@ -79,7 +77,6 @@
             key-positions = <8 5>;
             require-prior-idle-ms = <300>;
             layers = <0>;
-            timeout-ms = <300>;
         };
 
         combo_max_windows {
@@ -87,7 +84,7 @@
             key-positions = <20 21>;
             require-prior-idle-ms = <300>;
             layers = <0>;
-            timeout-ms = <80>;
+            timeout-ms = <150>;
         };
 
         combo_min_window {
@@ -95,13 +92,12 @@
             key-positions = <33 32>;
             require-prior-idle-ms = <300>;
             layers = <0>;
-            timeout-ms = <80>;
+            timeout-ms = <150>;
         };
 
         combo_repop_window {
             bindings = <&kp LA(TAB)>;
             key-positions = <32 42>;
-            timeout-ms = <200>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
@@ -111,7 +107,6 @@
             key-positions = <30 33>;
             require-prior-idle-ms = <300>;
             layers = <0>;
-            timeout-ms = <200>;
         };
 
         combo_snap_left_window {
@@ -119,13 +114,11 @@
             key-positions = <29 32>;
             require-prior-idle-ms = <300>;
             layers = <0>;
-            timeout-ms = <200>;
         };
 
         combo_window_list_right {
             bindings = <&kp LC(LS(LA(TAB)))>;
             key-positions = <17 20>;
-            timeout-ms = <200>;
             require-prior-idle-ms = <200>;
             layers = <0>;
         };
@@ -141,7 +134,6 @@
         combo_window_spin_move {
             bindings = <&kp LS(LG(LEFT))>;
             key-positions = <21 17>;
-            timeout-ms = <200>;
             require-prior-idle-ms = <200>;
             layers = <0>;
         };
@@ -355,8 +347,6 @@
             bindings = <&mat_inset_at_head LS(N3) LS(N3)>;
             key-positions = <30 32>;
             layers = <0>;
-            timeout-ms = <350>;
-            require-prior-idle-ms = <50>;
         };
 
         combo_brace {
