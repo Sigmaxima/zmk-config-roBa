@@ -122,6 +122,14 @@
             timeout-ms = <200>;
         };
 
+        combo_window_list_right {
+            bindings = <&kp LC(LS(LA(TAB)))>;
+            key-positions = <17 20>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <200>;
+            layers = <0>;
+        };
+
         combo_window_list_left {
             bindings = <&kp LC(LA(TAB))>;
             key-positions = <18 21>;
@@ -364,14 +372,6 @@
         macro_parenthesis {
             bindings = <&macro_parenthesis>;
             key-positions = <6 7>;
-            layers = <0>;
-        };
-
-        combo_window_list_right {
-            bindings = <&kp LC(LS(LA(TAB)))>;
-            key-positions = <17 20>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <200>;
             layers = <0>;
         };
     };
