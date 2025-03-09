@@ -1028,6 +1028,38 @@
             require-prior-idle-ms = <100>;
         };
 
+        mat_brace: mat_brace {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_BRACE";
+            bindings = <&macro_brace>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
+
+        mat_bracket: mat_bracket {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_BRACKET";
+            bindings = <&macro_brackets>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
+
+        mat_parenthesis: mat_parenthesis {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_PARENTHESIS";
+            bindings = <&macro_parenthesis>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
         mama_music_apps: mama_music_apps {
             compatible = "zmk,behavior-hold-tap";
             label = "MAMA_MUSIC_APPS";
@@ -1092,39 +1124,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
-        };
-
-        mat_brace: mat_brace {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_BRACE";
-            bindings = <&macro_brace>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-        };
-
-        mat_bracket: mat_bracket {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_BRACKET";
-            bindings = <&macro_brackets>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-        };
-
-        mat_parenthesis: mat_parenthesis {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_PARENTHESIS";
-            bindings = <&macro_parenthesis>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
         };
     };
 
