@@ -68,7 +68,7 @@
 
         combo_resize_windows_rd {
             bindings = <&macro_resize_windows_rd>;
-            key-positions = <42 40>;
+            key-positions = <6 9>;
             require-prior-idle-ms = <300>;
             layers = <0>;
             timeout-ms = <300>;
@@ -76,7 +76,7 @@
 
         combo_resize_window_ul {
             bindings = <&macro_resize_window_ul>;
-            key-positions = <42 41>;
+            key-positions = <8 5>;
             require-prior-idle-ms = <300>;
             layers = <0>;
             timeout-ms = <300>;
@@ -106,25 +106,25 @@
             layers = <0>;
         };
 
-        combo_right_window {
+        combo_snap_right_window {
             bindings = <&kp LG(RIGHT)>;
-            key-positions = <9 21>;
+            key-positions = <30 33>;
             require-prior-idle-ms = <300>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
-        combo_left_window {
+        combo_snap_left_window {
             bindings = <&kp LG(LEFT)>;
-            key-positions = <21 33>;
+            key-positions = <29 32>;
             require-prior-idle-ms = <300>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
-        combo_window_lists {
+        combo_window_lists_left {
             bindings = <&kp LC(LA(TAB))>;
-            key-positions = <29 33>;
+            key-positions = <18 21>;
             timeout-ms = <200>;
             require-prior-idle-ms = <200>;
             layers = <0>;
@@ -132,7 +132,7 @@
 
         combo_window_spin_move {
             bindings = <&kp LS(LG(LEFT))>;
-            key-positions = <5 9>;
+            key-positions = <21 17>;
             timeout-ms = <200>;
             require-prior-idle-ms = <200>;
             layers = <0>;
@@ -247,7 +247,7 @@
 
         combo_capslock {
             bindings = <&kp LS(CAPS)>;
-            key-positions = <21 10>;
+            key-positions = <0 34>;
             require-prior-idle-ms = <200>;
             layers = <0>;
             timeout-ms = <300>;
@@ -262,7 +262,7 @@
 
         combo_teams_rich_textbox {
             bindings = <&kp LC(LS(X))>;
-            key-positions = <9 0>;
+            key-positions = <10 21>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
@@ -364,6 +364,14 @@
         macro_parenthesis {
             bindings = <&macro_parenthesis>;
             key-positions = <6 7>;
+            layers = <0>;
+        };
+
+        combo_window_lists_right {
+            bindings = <&kp LC(LA(LS(TAB)))>;
+            key-positions = <17 20>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <200>;
             layers = <0>;
         };
     };
@@ -1060,6 +1068,7 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <100>;
         };
+
         mama_music_apps: mama_music_apps {
             compatible = "zmk,behavior-hold-tap";
             label = "MAMA_MUSIC_APPS";
