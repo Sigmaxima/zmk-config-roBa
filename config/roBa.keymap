@@ -58,24 +58,24 @@
             layers = <0 9>;
         };
 
-        combo_move_window {
-            bindings = <&macro_move_window>;
+        combo_mouse_move_window {
+            bindings = <&macro_mouse_move_window>;
             key-positions = <6 8>;
             require-prior-idle-ms = <300>;
             layers = <0>;
             timeout-ms = <300>;
         };
 
-        combo_resize_windows_rd {
-            bindings = <&macro_resize_windows_rd>;
+        combo_mouse_window_rd {
+            bindings = <&macro_mouse_window_rd>;
             key-positions = <6 9>;
             require-prior-idle-ms = <300>;
             layers = <0>;
             timeout-ms = <300>;
         };
 
-        combo_resize_window_ul {
-            bindings = <&macro_resize_window_ul>;
+        combo_mouse_window_ul {
+            bindings = <&macro_mouse_window_ul>;
             key-positions = <8 5>;
             require-prior-idle-ms = <300>;
             layers = <0>;
@@ -656,7 +656,7 @@
             label = "MACRO_COPY_SEARCH_IN_APP";
         };
 
-        macro_move_window: macro_move_window {
+        macro_mouse_move_window: macro_mouse_move_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -664,10 +664,10 @@
                 <&macro_wait_time 150>,
                 <&kp M &kp UP_ARROW &kp DOWN_ARROW>;
 
-            label = "MACRO_MOVE_WINDOW";
+            label = "MACRO_MOUSE_MOVE_WINDOW";
         };
 
-        macro_resize_window_ul: macro_resize_window_ul {
+        macro_mouse_window_ul: macro_mouse_window_ul {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -675,10 +675,10 @@
                 <&macro_wait_time 150>,
                 <&kp S &kp LEFT_ARROW &kp UP_ARROW>;
 
-            label = "MACRO_RESIZE_WINDOW_UL";
+            label = "MACRO_MOUSE_WINDOW_UL";
         };
 
-        macro_resize_windows_rd: macro_resize_windows_rd {
+        macro_mouse_window_rd: macro_mouse_window_rd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -686,7 +686,7 @@
                 <&macro_wait_time 150>,
                 <&kp S &kp RIGHT &kp DOWN_ARROW>;
 
-            label = "MACRO_RESIZE_WINDOWS_RD";
+            label = "MACRO_MOUSE_WINDOW_RD";
         };
 
         macro_copy_search_internet: macro_copy_search_internet {
@@ -1194,10 +1194,10 @@
 
         BT_SCROLL {
             bindings = <
-&macro_bt_0_to 0  &macro_bt_1_to 0         &macro_bt_2_to 1    &macro_bt_3_to 0          &macro_bt_4_to 0                                                    &macro_resize_window_ul  &kp LC(LS(TAB))  &macro_move_window  &kp LC(TAB)  &macro_resize_windows_rd
-&trans            &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd  &kp LG(D)            &trans                 &kp LS(LG(RIGHT))       &macro_triple_click      &mkp MB1         &trans              &mkp MB2     &kp RCTRL
-&to 0             &to 1                    &to 11              &trans                    &trans               &trans                 &kp LS(LG(LEFT_ARROW))  &kp LC(T)                &mkp MB4         &kp LC(W)           &mkp MB5     &kp RIGHT_SHIFT
-&trans            &trans                   &trans              &trans                    &kp LC(LA(LS(TAB)))  &kp LS(LG(RIGHT))      &kp LC(LS(LA(TAB)))     &kp LC(LA(TAB))                                                            &trans
+&macro_bt_0_to 0  &macro_bt_1_to 0        &macro_bt_2_to 1          &macro_bt_3_to 0        &macro_bt_4_to 0                                                    &macro_mouse_window_ul  &kp LC(LS(TAB))  &macro_mouse_move_window  &kp LC(TAB)  &macro_mouse_window_rd
+&trans            &macro_mouse_window_ul  &macro_mouse_move_window  &macro_mouse_window_rd  &kp LG(D)            &trans                 &kp LS(LG(RIGHT))       &macro_triple_click     &mkp MB1         &trans                    &mkp MB2     &kp RCTRL
+&to 0             &to 1                   &to 11                    &trans                  &trans               &trans                 &kp LS(LG(LEFT_ARROW))  &kp LC(T)               &mkp MB4         &kp LC(W)                 &mkp MB5     &kp RIGHT_SHIFT
+&trans            &trans                  &trans                    &trans                  &kp LC(LA(LS(TAB)))  &kp LS(LG(RIGHT))      &kp LC(LS(LA(TAB)))     &kp LC(LA(TAB))                                                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
