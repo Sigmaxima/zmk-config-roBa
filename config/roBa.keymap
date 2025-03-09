@@ -399,11 +399,25 @@
             label = "MACRO_PARENTHESIS";
         };
 
+        macro_select_line: macro_select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kt LEFT_SHIFT &kp END &kt LEFT_SHIFT>;
+            label = "MACRO_SELECT_LINE";
+        };
+
         macro_emacs_k_cut_to_end: macro_emacs_k_cut_to_end {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt LEFT_SHIFT &kp END &kt LEFT_SHIFT &kp LC(X)>;
             label = "MACRO_EMACS_K_CUT_TO_END";
+        };
+
+        macro_cut_line: macro_cut_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kt LEFT_SHIFT &kp END &kp RIGHT &kt LEFT_SHIFT &kp LC(X)>;
+            label = "MACRO_CUT_LINE";
         };
 
         macro_insert_at_head: macro_insert_at_head {
@@ -425,6 +439,20 @@
             #binding-cells = <1>;
             bindings = <&kt LEFT_SHIFT &macro_param_1to1 &kp MACRO_PLACEHOLDER &kt LEFT_SHIFT &kp LC(C)>;
             label = "MACRO_HOME_END_SELECT";
+        };
+
+        macro_ascii_type: macro_ascii_type {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp INT_MUHENKAN &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_ASCII_TYPE";
+        };
+
+        macro_ascii_type_space: macro_ascii_type_space {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp INT_MUHENKAN &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE>;
+            label = "MACRO_ASCII_TYPE_SPACE";
         };
 
         macro_browser: macro_browser {
@@ -645,19 +673,6 @@
             label = "MACRO_COPY_SEARCH_INTERNET";
         };
 
-        macro_ascii_type: macro_ascii_type {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp INT_MUHENKAN &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_ASCII_TYPE";
-        };
-
-        macro_ascii_type_space: macro_ascii_type_space {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp INT_MUHENKAN &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE>;
-            label = "MACRO_ASCII_TYPE_SPACE";
-        };
 
         macro_plain_text: macro_plain_text {
             compatible = "zmk,behavior-macro";
@@ -714,12 +729,6 @@
             label = "MACRO_EXPLORER";
         };
 
-        macro_select_line: macro_select_line {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp HOME &kt LEFT_SHIFT &kp END &kt LEFT_SHIFT>;
-            label = "MACRO_SELECT_LINE";
-        };
 
         macro_kp_lo: macro_kp_lt {
             compatible = "zmk,behavior-macro-one-param";
@@ -733,13 +742,6 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
             label = "MACRO_MKP_LO";
-        };
-
-        macro_cut_line: macro_cut_line {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp HOME &kt LEFT_SHIFT &kp END &kp RIGHT &kt LEFT_SHIFT &kp LC(X)>;
-            label = "MACRO_CUT_LINE";
         };
 
         macro_copy_url: macro_copy_url {
