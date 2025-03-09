@@ -46,13 +46,6 @@
             require-prior-idle-ms = <200>;
         };
 
-        combo_savein_million {
-            bindings = <&macro_savein_million>;
-            key-positions = <20 21>;
-            timeout-ms = <300>;
-            layers = <5>;
-        };
-
         combo_tog_tenkeys {
             bindings = <&tog 8>;
             key-positions = <6 7 8>;
@@ -63,14 +56,6 @@
             bindings = <&tog 9>;
             key-positions = <1 2 3>;
             layers = <0 9>;
-        };
-
-        combo_search_in_browser {
-            bindings = <&macro_copy_search_in_app>;
-            key-positions = <28 16>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-            timeout-ms = <300>;
         };
 
         combo_move_window {
@@ -151,6 +136,14 @@
             timeout-ms = <200>;
             require-prior-idle-ms = <200>;
             layers = <0>;
+        };
+
+        combo_search_in_browser {
+            bindings = <&macro_copy_search_in_app>;
+            key-positions = <28 16>;
+            require-prior-idle-ms = <300>;
+            layers = <0>;
+            timeout-ms = <300>;
         };
 
         combo_ctrl_left {
@@ -309,6 +302,13 @@
             layers = <0 4 5>;
         };
 
+        combo_savein_million {
+            bindings = <&macro_savein_million>;
+            key-positions = <20 21>;
+            timeout-ms = <300>;
+            layers = <5>;
+        };
+
         combo_savein_takane {
             bindings = <&macro_savein_takane>;
             key-positions = <32 33>;
@@ -357,11 +357,25 @@
             label = "TO_LAYER_0";
         };
 
+        to_layer_1: to_layer_1 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_1";
+        };
+
         macro_triple_click: macro_triple_click {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp MB1 &mkp MB1 &mkp MB1>;
             label = "MACRO_TRIPLE_CLICK";
+        };
+
+        macro_bat_and_return: macro_bat_and_return {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_BAT_AND_RETURN";
         };
 
         macro_brackets: macro_brackets {
@@ -768,13 +782,6 @@
             label = "MACRO_TEXT_DECO";
         };
 
-        macro_bat_and_return: macro_bat_and_return {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_BAT_AND_RETURN";
-        };
-
         macro_savein_million: macro_savein_million {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -819,12 +826,6 @@
             label = "MACRO_SAVEIN_MULTI";
         };
 
-        to_layer_1: to_layer_1 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_1";
-        };
     };
 
     behaviors {
@@ -832,6 +833,15 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        lt_to_layer_1: lt_to_layer_1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_TO_LAYER_1";
+            bindings = <&mo>, <&to_layer_1>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1031,14 +1041,7 @@
             require-prior-idle-ms = <100>;
         };
 
-        lt_to_layer_1: lt_to_layer_1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_TO_LAYER_1";
-            bindings = <&mo>, <&to_layer_1>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
     };
 
     keymap {
