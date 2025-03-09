@@ -68,7 +68,7 @@
 
         combo_resize_windows_rd {
             bindings = <&macro_resize_windows_rd>;
-            key-positions = <29 28>;
+            key-positions = <42 40>;
             require-prior-idle-ms = <300>;
             layers = <0>;
             timeout-ms = <300>;
@@ -76,7 +76,7 @@
 
         combo_resize_window_ul {
             bindings = <&macro_resize_window_ul>;
-            key-positions = <17 16>;
+            key-positions = <42 41>;
             require-prior-idle-ms = <300>;
             layers = <0>;
             timeout-ms = <300>;
@@ -1136,8 +1136,8 @@
             bindings = <
 &macro_bt_0_to 0  &macro_bt_1_to 0         &macro_bt_2_to 1    &macro_bt_3_to 0          &macro_bt_4_to 0                                                    &trans               &kp LC(LS(TAB))  &kp LA(UP_ARROW)  &kp LC(TAB)  &trans
 &trans            &macro_resize_window_ul  &macro_move_window  &macro_resize_windows_rd  &kp LG(D)            &trans                 &trans                  &macro_triple_click  &mkp MB1         &trans            &mkp MB2     &kp RCTRL
-&to 0             &to 1                    &trans              &trans                    &trans               &trans                 &trans                  &kp LC(T)            &mkp MB4         &kp LC(W)         &mkp MB5     &kp RIGHT_SHIFT
-&trans            &trans                   &trans              &trans                    &kp LC(LA(LS(TAB)))  &kp LS(LG(RIGHT))      &kp LS(LG(LEFT_ARROW))  &kp LC(LA(TAB))                                                      &trans
+&to 0             &to 1                    &trans              &trans                    &trans               &trans                 &kp LS(LG(LEFT_ARROW))  &kp LC(T)            &mkp MB4         &kp LC(W)         &mkp MB5     &kp RIGHT_SHIFT
+&trans            &trans                   &trans              &trans                    &kp LC(LA(LS(TAB)))  &kp LS(LG(RIGHT))      &kp LC(LS(LA(TAB)))     &kp LC(LA(TAB))                                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
@@ -1196,7 +1196,7 @@
             >;
         };
 
-        Apps {
+        APPLICATION {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
