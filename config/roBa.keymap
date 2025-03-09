@@ -1034,7 +1034,7 @@
         lt_to_layer_1: lt_to_layer_1 {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_TO_LAYER_1";
-            bindings = <&mo>, <&lt_to_layer_1>;
+            bindings = <&mo>, <&to_layer_1>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1057,10 +1057,10 @@
 
         APPLE {
             bindings = <
-&trans                     &trans     &trans  &trans                     &trans                                      &trans             &trans                      &trans  &trans  &trans
-&mt_long_press LEFT_GUI A  &trans     &trans  &mt_long_press LEFT_GUI F  &trans  &trans                      &trans  &trans             &mt_long_press RIGHT_GUI J  &trans  &trans  &mt_long_press RIGHT_GUI P
-&trans                     &trans     &trans  &trans                     &trans  &trans                      &trans  &trans             &trans                      &trans  &trans  &trans
-&kp LEFT_GUI               &kp LCTRL  &trans  &to_layer_1 LANGUAGE_2     &trans  &to_layer_1 LANGUAGE_1      &trans  &to_layer_1 ENTER                                              &mt_long_press RIGHT_GUI INTERNATIONAL_1
+&trans                     &trans     &trans  &trans                     &trans                              &trans                  &trans                      &trans  &trans  &trans
+&mt_long_press LEFT_GUI A  &trans     &trans  &mt_long_press LEFT_GUI F  &trans  &trans              &trans  &trans                  &mt_long_press RIGHT_GUI J  &trans  &trans  &mt_long_press RIGHT_GUI P
+&trans                     &trans     &trans  &trans                     &trans  &trans              &trans  &trans                  &trans                      &trans  &trans  &trans
+&kp LEFT_GUI               &kp LCTRL  &trans  &kp LANGUAGE_2             &trans  &kp LANGUAGE_1      &trans  &lt_to_layer_1 3 ENTER                                              &mt_long_press RIGHT_GUI INTERNATIONAL_1
             >;
         };
 
