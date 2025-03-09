@@ -881,6 +881,16 @@
             tapping-term-ms = <200>;
         };
 
+        lt_holdprefferd_qt: lt_holdprefferd_qt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_HOLDPREFFERD_QT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+        };
+
         scroll_up_down: scroll_up_down {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "SCROLL_UP_DOWN";
@@ -1051,16 +1061,6 @@
             tapping-term-ms = <400>;
             require-prior-idle-ms = <50>;
             flavor = "tap-preferred";
-        };
-
-        lt_holdprefferd_qt: lt_holdprefferd_qt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_HOLDPREFFERD_QT";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <200>;
         };
 
         mama_serch: mama_serch {
