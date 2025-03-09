@@ -351,7 +351,7 @@
 
         combo_brace {
             bindings = <&macro_brace>;
-            key-positions = <28 29>;
+            key-positions = <29 30>;
             layers = <0>;
         };
 
