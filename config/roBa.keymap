@@ -188,7 +188,7 @@
 
         combo_doublequate {
             bindings = <&kp LS(N2)>;
-            key-positions = <30 31>;
+            key-positions = <17 18>;
             layers = <0>;
         };
 
@@ -345,6 +345,24 @@
         combo_macro_sharp {
             bindings = <&mat_inset_at_head LS(N3) LS(N3)>;
             key-positions = <30 32>;
+            layers = <0>;
+        };
+
+        combo_brace {
+            bindings = <&macro_brace>;
+            key-positions = <28 29>;
+            layers = <0>;
+        };
+
+        macro_bracket {
+            bindings = <&macro_brackets>;
+            key-positions = <30 31>;
+            layers = <0>;
+        };
+
+        macro_parenthesis {
+            bindings = <&macro_parenthesis>;
+            key-positions = <6 7>;
             layers = <0>;
         };
     };
