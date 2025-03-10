@@ -188,7 +188,7 @@
 
         combo_doublequate {
             bindings = <&kp LS(N2)>;
-            key-positions = <17 18>;
+            key-positions = <30 31>;
             layers = <0>;
         };
 
@@ -1130,10 +1130,10 @@
 
         NUM_BAR_SYMBOLS {
             bindings = <
-&kp EXCLAMATION                &kp LS(N2)                     &mat_inset_at_head HASH HASH   &kp DOLLAR                     &kp PERCENT                                                                                   &kp LS(NUMBER_6)               &mat_parenthesis 0 LS(N7)     &kp LS(N8)       &kp LS(N9)                       &kp LS(EQUAL)
-&mat_ascii_type_reverse N1 N1  &mat_ascii_type_reverse N2 N2  &mat_ascii_type_reverse N3 N3  &mat_ascii_type_reverse N4 N4  &mat_ascii_type_reverse N5 N5  &trans                               &kp LS(MINUS)             &mat_ascii_type_reverse N6 N6  &mat_select_line 0 N7         &mat_emacs 0 N8  &mat_cut_line 0 N9               &mat_ascii_type_reverse N0 N0
-&mt LEFT_SHIFT N6              &mat_ascii_type N7 N7          &mat_ascii_type_reverse N8 N8  &mat_ascii_type_reverse N9 N9  &mat_ascii_type_reverse N0 N0  &mat_ascii_type_reverse DOT DOT      &mat_brace 0 RIGHT_BRACE  &kp PIPE                       &mat_bracket 0 RIGHT_BRACKET  &kp NUHS         &mat_ascii_type_reverse DOT DOT  &trans
-&kp SLASH                      &kp MINUS                      &kp LS(SQT)                    &kp LS(SEMICOLON)              &trans                         &kp LS(INTERNATIONAL_3)              &kp DELETE                &trans                                                                                                         &kp INT1
+&kp EXCLAMATION        &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR         &kp PERCENT                                                               &kp LS(NUMBER_6)  &kp LS(N7)                    &mat_parenthesis 0 LS(N8)  &kp LS(N9)                       &kp LS(EQUAL)
+&kp N1                 &kp N2      &kp N3                        &kp N4             &kp N5             &trans                       &kp LS(MINUS)             &kp N6            &mat_select_line 0 N7         &mat_emacs 0 N8            &mat_cut_line 0 N9               &kp N0
+&mt LEFT_SHIFT LC(N6)  &kp LC(X)   &kp LC(C)                     &kp LC(V)          &macro_plain_text  &kp EQUAL                    &mat_brace 0 RIGHT_BRACE  &kp PIPE          &mat_bracket 0 RIGHT_BRACKET  &kp NUHS                   &mat_ascii_type_reverse DOT DOT  &trans
+&kp SLASH              &kp MINUS   &kp LS(SQT)                   &kp LS(SEMICOLON)  &trans             &kp LS(INTERNATIONAL_3)      &kp DELETE                &trans                                                                                                      &kp INT1
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
