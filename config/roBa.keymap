@@ -60,7 +60,7 @@
 
         combo_mouse_move_window {
             bindings = <&macro_mouse_move_window>;
-            key-positions = <6 8>;
+            key-positions = <5 9>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
@@ -262,7 +262,7 @@
 
         combo_teams_rich_textbox {
             bindings = <&kp LC(LS(X))>;
-            key-positions = <10 21>;
+            key-positions = <0 9>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
