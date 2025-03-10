@@ -1163,10 +1163,10 @@
 
         BT_SCROLL {
             bindings = <
-&macro_bt_0_to 0  &macro_bt_1_to 0        &macro_bt_2_to 1          &macro_bt_3_to 0        &macro_bt_4_to 0                                                    &macro_mouse_window_ul  &kp LC(LS(TAB))  &macro_mouse_move_window  &kp LC(TAB)  &macro_mouse_window_rd
-&trans            &macro_mouse_window_ul  &macro_mouse_move_window  &macro_mouse_window_rd  &kp LG(D)            &trans                 &kp LS(LG(RIGHT))       &macro_triple_click     &mkp MB1         &trans                    &mkp MB2     &kp RCTRL
-&to 0             &to 1                   &to 11                    &trans                  &trans               &trans                 &kp LS(LG(LEFT_ARROW))  &kp LC(T)               &mkp MB4         &kp LC(W)                 &mkp MB5     &kp RIGHT_SHIFT
-&trans            &trans                  &trans                    &trans                  &kp LC(LA(LS(TAB)))  &kp LS(LG(RIGHT))      &kp LC(LS(LA(TAB)))     &kp LC(LA(TAB))                                                                 &trans
+&trans            &trans            &trans            &trans            &trans                                                              &trans               &trans    &trans     &trans    &trans
+&trans            &trans            &trans            &trans            &trans               &trans                 &kp LS(LG(RIGHT))       &macro_triple_click  &mkp MB1  &trans     &mkp MB2  &trans
+&macro_bt_0_to 0  &macro_bt_1_to 0  &macro_bt_2_to 1  &macro_bt_3_to 0  &macro_bt_4_to 0     &trans                 &kp LS(LG(LEFT_ARROW))  &kp LC(T)            &mkp MB4  &kp LC(W)  &mkp MB5  &trans
+&to 0             &to 1             &to 11            &trans            &kp LC(LA(LS(TAB)))  &kp LS(LG(RIGHT))      &kp LC(LS(LA(TAB)))     &kp LC(LA(TAB))                                     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(MINUS))>;
