@@ -13,10 +13,7 @@
     require-prior-idle-ms = <50>;
 };
 
-&lt {
-    tapping-term-ms = <140>;
-    require-prior-idle-ms = <50>;
-};
+&lt { require-prior-idle-ms = <100>; };
 
 / {
     combos {
