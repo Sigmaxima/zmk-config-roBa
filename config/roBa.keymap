@@ -395,7 +395,7 @@
         macro_select_line: macro_select_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kt LEFT_SHIFT &kp END &kt LEFT_SHIFT>;
+            bindings = <&kp HOME &kt LEFT_SHIFT &kp END &kt LEFT_SHIFT &kp LC(C)>;
             label = "MACRO_SELECT_LINE";
         };
 
@@ -860,6 +860,27 @@
             bindings = <&kp K &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MACRO_K_HELPER";
         };
+
+        macro_doubleclick: macro_doubleclick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1 &mkp MB1>;
+            label = "MACRO_DOUBLECLICK";
+        };
+
+        macro_mb1: macro_mb1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1>;
+            label = "MACRO_MB1";
+        };
+
+        macro_mb2: macro_mb2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2>;
+            label = "MACRO_MB2";
+        };
     };
 
     behaviors {
@@ -1131,6 +1152,39 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <100>;
         };
+
+        mat_doubleclick: mat_doubleclick {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_DOUBLECLICK";
+            bindings = <&macro_doubleclick>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
+
+        mat_mb1: mat_mb1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_MB1";
+            bindings = <&macro_mb1>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
+
+        mat_mb2: mat_mb2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_MB2";
+            bindings = <&macro_mb2>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
     };
 
     keymap {
@@ -1138,10 +1192,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q                 &kp W                        &kp E                      &kp R                             &kp T                                                                                                                 &kp Y                 &kp U                           &mt LS(N8) I             &mt LS(N9) O                  &kp MINUS
-&mt_long_press LCTRL A       &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                        &none                                 &mat_ascii_type_reverse LEFT_BRACKET LEFT_BRACKET  &mat_tripleclick 0 H  &mt_long_press RIGHT_CONTROL J  &lt 5 K                  &mt_long_press RIGHT_SHIFT L  &mt_long_press RCTRL P
-&mt_long_press LEFT_SHIFT Z  &kp X                        &kp C                      &kp V                             &kp B                        &kp SEMI                              &kp SQT                                            &kp N                 &kp M                           &mt RIGHT_BRACKET COMMA  &mt NON_US_HASH DOT           &mt RIGHT_SHIFT SLASH
-&kp LCTRL                    &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 7 INTERNATIONAL_5  &lt_holdprefferd_qt 2 SPACE  &lt_to_layer_0 6 INTERNATIONAL_4      &kp BACKSPACE                                      &lt_to_layer_0 3 RET                                                                                         &mo 4
+&mt ESCAPE Q                 &kp W                        &kp E                      &kp R                             &kp T                                                                                                                 &kp Y                       &mat_tripleclick 0 U  &mt LS(N8) I             &mt LS(N9) O         &kp MINUS
+&mt_long_press LCTRL A       &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &kp G                        &none                                 &mat_ascii_type_reverse LEFT_BRACKET LEFT_BRACKET  &mat_doubleclick 0 H        &mat_mb1 0 J          &lt 5 K                  &mat_mb2 0 L         &mt_long_press RCTRL P
+&mt_long_press LEFT_SHIFT Z  &kp X                        &kp C                      &kp V                             &kp B                        &kp SEMI                              &mat_home_end_select HOME SQT                      &mat_home_end_select END N  &mat_select_line 0 M  &mt RIGHT_BRACKET COMMA  &mt NON_US_HASH DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL                    &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 7 INTERNATIONAL_5  &lt_holdprefferd_qt 2 SPACE  &lt_to_layer_0 6 INTERNATIONAL_4      &kp BACKSPACE                                      &lt_to_layer_0 3 RET                                                                            &mo 4
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
