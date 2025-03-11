@@ -1146,10 +1146,10 @@
 
         NUM_BAR_SYMBOLS {
             bindings = <
-&kp EXCLAMATION        &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR         &kp PERCENT                                                               &kp LS(NUMBER_6)  &kp LS(N7)                    &mat_parenthesis 0 LS(N8)  &kp LS(N9)                       &kp LS(EQUAL)
-&kp N1                 &kp N2      &kp N3                        &kp N4             &kp N5             &trans                       &kp LS(MINUS)             &kp N6            &mat_select_line 0 N7         &mat_emacs 0 N8            &mat_cut_line 0 N9               &kp N0
-&mt LEFT_SHIFT LC(N6)  &kp LC(X)   &kp LC(C)                     &kp LC(V)          &macro_plain_text  &kp EQUAL                    &mat_brace 0 RIGHT_BRACE  &kp PIPE          &mat_bracket 0 RIGHT_BRACKET  &kp NUHS                   &mat_ascii_type_reverse DOT DOT  &trans
-&kp SLASH              &kp MINUS   &kp LS(SQT)                   &kp LS(SEMICOLON)  &trans             &kp LS(INTERNATIONAL_3)      &kp DELETE                &trans                                                                                                      &kp INT1
+&kp EXCLAMATION        &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR         &kp PERCENT                                                               &kp LS(NUMBER_6)          &kp LS(N7)             &mat_parenthesis 0 LS(N8)     &kp LS(N9)           &kp LS(EQUAL)
+&kp N1                 &kp N2      &kp N3                        &kp N4             &kp N5             &trans                       &kp DOT                   &kp N6                    &mat_select_line 0 N7  &mat_emacs 0 N8               &mat_cut_line 0 N9   &kp N0
+&mt LEFT_SHIFT LC(N6)  &kp LC(X)   &kp LC(C)                     &kp LC(V)          &macro_plain_text  &kp EQUAL                    &mat_brace 0 RIGHT_BRACE  &mat_brace 0 RIGHT_BRACE  &kp PIPE               &mat_bracket 0 RIGHT_BRACKET  &mt DOT NON_US_HASH  &trans
+&kp SLASH              &kp MINUS   &kp LS(SQT)                   &kp LS(SEMICOLON)  &trans             &kp LS(INTERNATIONAL_3)      &kp DELETE                &trans                                                                                              &kp INT1
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
