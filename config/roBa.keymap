@@ -1155,7 +1155,7 @@
             bindings = <&macro_triple_click>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <100>;
         };
@@ -1166,7 +1166,7 @@
             bindings = <&macro_doubleclick>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <100>;
         };
@@ -1177,9 +1177,9 @@
             bindings = <&macro_mb1>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <80>;
         };
 
         mat_mb2: mat_mb2 {
@@ -1188,7 +1188,7 @@
             bindings = <&macro_mb2>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <100>;
         };
@@ -1199,7 +1199,7 @@
             bindings = <&macro_mb4>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <100>;
         };
