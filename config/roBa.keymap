@@ -1184,7 +1184,7 @@
             bindings = <&macro_mb1>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <130>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <150>;
         };
