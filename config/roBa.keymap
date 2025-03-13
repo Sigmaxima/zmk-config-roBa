@@ -59,28 +59,28 @@
             bindings = <&macro_mouse_move_window>;
             key-positions = <5 9>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <3>;
         };
 
         combo_mouse_window_rd {
             bindings = <&macro_mouse_window_rd>;
             key-positions = <6 9>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <3>;
         };
 
         combo_mouse_window_ul {
             bindings = <&macro_mouse_window_ul>;
             key-positions = <8 5>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <3>;
         };
 
         combo_max_windows {
             bindings = <&kp LG(UP_ARROW)>;
             key-positions = <20 21>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <3>;
             timeout-ms = <150>;
         };
 
@@ -88,7 +88,7 @@
             bindings = <&kp LG(DOWN)>;
             key-positions = <33 32>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <3>;
             timeout-ms = <150>;
         };
 
@@ -96,43 +96,28 @@
             bindings = <&kp LA(TAB)>;
             key-positions = <32 42>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <3>;
         };
 
         combo_snap_right_window {
             bindings = <&kp LG(RIGHT)>;
             key-positions = <30 33>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <3>;
         };
 
         combo_snap_left_window {
             bindings = <&kp LG(LEFT)>;
             key-positions = <29 32>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
-        };
-
-        combo_window_list_right {
-            bindings = <&kp LC(LS(LA(TAB)))>;
-            key-positions = <17 20>;
-            require-prior-idle-ms = <200>;
-            layers = <0>;
-        };
-
-        combo_window_list_left {
-            bindings = <&kp LC(LA(TAB))>;
-            key-positions = <18 21>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <200>;
-            layers = <0>;
+            layers = <3>;
         };
 
         combo_window_spin_move {
             bindings = <&kp LS(LG(LEFT))>;
             key-positions = <21 17>;
             require-prior-idle-ms = <200>;
-            layers = <0>;
+            layers = <3>;
         };
 
         combo_search_in_browser {
