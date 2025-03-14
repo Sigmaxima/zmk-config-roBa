@@ -1184,9 +1184,9 @@
             bindings = <&macro_mb1>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>;
         };
 
         mat_mb2: mat_mb2 {
@@ -1219,7 +1219,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <200>;
         };
 
         td_j_mb1: td_j_mb1 {
