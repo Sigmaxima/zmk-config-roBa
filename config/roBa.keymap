@@ -80,7 +80,7 @@
             bindings = <&kp LG(UP_ARROW)>;
             key-positions = <20 21>;
             require-prior-idle-ms = <300>;
-            layers = <3>;
+            layers = <3 2 4>;
             timeout-ms = <150>;
         };
 
@@ -88,7 +88,7 @@
             bindings = <&kp LG(DOWN)>;
             key-positions = <33 32>;
             require-prior-idle-ms = <300>;
-            layers = <3>;
+            layers = <3 2 4>;
             timeout-ms = <150>;
         };
 
@@ -96,7 +96,7 @@
             bindings = <&kp LA(TAB)>;
             key-positions = <32 42>;
             require-prior-idle-ms = <300>;
-            layers = <3>;
+            layers = <3 2 4>;
         };
 
         combo_snap_right_window {
@@ -297,7 +297,7 @@
             bindings = <&macro_savein_takane>;
             key-positions = <32 33>;
             timeout-ms = <500>;
-            layers = <5>;
+            layers = <5 2>;
         };
 
         combo_savein_miki {
@@ -870,14 +870,14 @@
         macro_mb4: macro_mb4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp MB5>;
+            bindings = <&mkp MB4>;
             label = "MACRO_MB4";
         };
 
         macro_mb5: macro_mb5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp MB4>;
+            bindings = <&mkp MB5>;
             label = "MACRO_MB5";
         };
 
