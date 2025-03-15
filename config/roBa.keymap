@@ -27,6 +27,14 @@
             require-prior-idle-ms = <20>;
         };
 
+        combo_triple_click {
+            bindings = <&macro_tripleclick>;
+            key-positions = <19 17>;
+            timeout-ms = <300>;
+            require-prior-idle-ms = <50>;
+            layers = <0 4 5>;
+        };
+
         combo_mb2 {
             bindings = <&mkp MB2>;
             key-positions = <20 19>;
@@ -278,13 +286,6 @@
             layers = <0>;
         };
 
-        combo_triple_click {
-            bindings = <&macro_tripleclick>;
-            key-positions = <19 17>;
-            timeout-ms = <300>;
-            require-prior-idle-ms = <50>;
-            layers = <0 4 5>;
-        };
 
         combo_savein_million {
             bindings = <&macro_savein_million>;
@@ -926,6 +927,97 @@
             require-prior-idle-ms = <50>;
         };
 
+        lt_tappreffered_qt: lt_tappreffered_qt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_TAPPREFFERED_QT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <50>;
+            flavor = "tap-preferred";
+        };
+
+        td_j_mb1: td_j_mb1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_J_MB1";
+            #binding-cells = <0>;
+            bindings =
+                <&mat_mb1 0 J>,
+                <&macro_doubleclick>,
+                <&macro_tripleclick>,
+                <&macro_quadrupleclick>;
+
+            tapping-term-ms = <300>;
+        };
+
+        mat_tripleclick: mat_tripleclick {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_TRIPLECLICK";
+            bindings = <&macro_tripleclick>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <200>;
+        };
+
+        mat_doubleclick: mat_doubleclick {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_DOUBLECLICK";
+            bindings = <&macro_doubleclick>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <200>;
+        };
+
+        mat_mb1: mat_mb1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_MB1";
+            bindings = <&macro_mb1>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <200>;
+        };
+
+        mat_mb2: mat_mb2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_MB2";
+            bindings = <&macro_mb2>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <200>;
+        };
+
+        mat_mb4: mat_mb4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_MB4";
+            bindings = <&macro_mb4>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <200>;
+        };
+
+        mat_mb5: mat_mb5 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_MB5";
+            bindings = <&macro_mb5>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <200>;
+        };
+
         scroll_up_down: scroll_up_down {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "SCROLL_UP_DOWN";
@@ -1142,97 +1234,6 @@
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <200>;
-        };
-
-        lt_tappreffered_qt: lt_tappreffered_qt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_TAPPREFFERED_QT";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <50>;
-            flavor = "tap-preferred";
-        };
-
-        mat_tripleclick: mat_tripleclick {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_TRIPLECLICK";
-            bindings = <&macro_tripleclick>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
-        };
-
-        mat_doubleclick: mat_doubleclick {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_DOUBLECLICK";
-            bindings = <&macro_doubleclick>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
-        };
-
-        mat_mb1: mat_mb1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_MB1";
-            bindings = <&macro_mb1>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
-        };
-
-        mat_mb2: mat_mb2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_MB2";
-            bindings = <&macro_mb2>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
-        };
-
-        mat_mb4: mat_mb4 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_MB4";
-            bindings = <&macro_mb4>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
-        };
-
-        mat_mb5: mat_mb5 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_MB5";
-            bindings = <&macro_mb5>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
-        };
-
-        td_j_mb1: td_j_mb1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_J_MB1";
-            #binding-cells = <0>;
-            bindings =
-                <&mat_mb1 0 J>,
-                <&macro_doubleclick>,
-                <&macro_tripleclick>,
-                <&macro_quadrupleclick>;
-
-            tapping-term-ms = <300>;
         };
     };
 
