@@ -24,15 +24,15 @@
             key-positions = <18 19>;
             timeout-ms = <450>;
             layers = <0 4 5 1>;
-            require-prior-idle-ms = <20>;
+            require-prior-idle-ms = <80>;
         };
 
         combo_triple_click {
             bindings = <&macro_tripleclick>;
             key-positions = <19 17>;
             timeout-ms = <300>;
-            require-prior-idle-ms = <50>;
-            layers = <0 4 5>;
+            require-prior-idle-ms = <80>;
+            layers = <0 4 5 1>;
         };
 
         combo_mb2 {
@@ -65,30 +65,30 @@
 
         combo_mouse_move_window {
             bindings = <&macro_mouse_move_window>;
-            key-positions = <5 9>;
+            key-positions = <6 8>;
             require-prior-idle-ms = <300>;
-            layers = <3>;
+            layers = <3 2 4 5>;
         };
 
         combo_mouse_window_rd {
             bindings = <&macro_mouse_window_rd>;
-            key-positions = <6 9>;
+            key-positions = <9 8>;
             require-prior-idle-ms = <300>;
-            layers = <3>;
+            layers = <3 2 4 5>;
         };
 
         combo_mouse_window_ul {
             bindings = <&macro_mouse_window_ul>;
-            key-positions = <8 5>;
+            key-positions = <5 6>;
             require-prior-idle-ms = <300>;
-            layers = <3>;
+            layers = <3 2 5 4>;
         };
 
         combo_max_windows {
             bindings = <&kp LG(UP_ARROW)>;
             key-positions = <20 21>;
             require-prior-idle-ms = <300>;
-            layers = <3 2 4>;
+            layers = <3 2>;
             timeout-ms = <150>;
         };
 
@@ -96,7 +96,7 @@
             bindings = <&kp LG(DOWN)>;
             key-positions = <33 32>;
             require-prior-idle-ms = <300>;
-            layers = <3 2 4>;
+            layers = <3 2>;
             timeout-ms = <150>;
         };
 
@@ -104,21 +104,21 @@
             bindings = <&kp LA(TAB)>;
             key-positions = <32 42>;
             require-prior-idle-ms = <300>;
-            layers = <3 2 4>;
+            layers = <3 2>;
         };
 
         combo_snap_right_window {
             bindings = <&kp LG(RIGHT)>;
-            key-positions = <30 33>;
+            key-positions = <9 21>;
             require-prior-idle-ms = <300>;
-            layers = <3>;
+            layers = <3 2>;
         };
 
         combo_snap_left_window {
             bindings = <&kp LG(LEFT)>;
-            key-positions = <29 32>;
+            key-positions = <5 17>;
             require-prior-idle-ms = <300>;
-            layers = <3>;
+            layers = <3 2>;
         };
 
         combo_window_spin_move {
@@ -286,7 +286,6 @@
             layers = <0>;
         };
 
-
         combo_savein_million {
             bindings = <&macro_savein_million>;
             key-positions = <20 21>;
@@ -343,7 +342,6 @@
             label = "TO_LAYER_1";
         };
 
-
         macro_bt_0_to: macro_bt_0_to {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -378,7 +376,8 @@
             bindings = <&bt BT_SEL 4 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
             label = "MACRO_BT_4_TO";
         };
-       macro_j_helper: macro_j_helper {
+
+        macro_j_helper: macro_j_helper {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp J &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
@@ -392,19 +391,20 @@
             label = "MACRO_K_HELPER";
         };
 
-
         macro_doubleclick: macro_doubleclick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp MB1 &mkp MB1>;
             label = "MACRO_DOUBLECLICK";
         };
+
         macro_tripleclick: macro_tripleclick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp MB1 &mkp MB1 &mkp MB1>;
             label = "MACRO_TRIPLECLICK";
         };
+
         macro_quadrupleclick: macro_quadrupleclick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -980,6 +980,7 @@
             retro-tap;
             require-prior-idle-ms = <120>;
         };
+
         mat_doubleclick: mat_doubleclick {
             compatible = "zmk,behavior-hold-tap";
             label = "MAT_DOUBLECLICK";
