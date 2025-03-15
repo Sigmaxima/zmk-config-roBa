@@ -343,6 +343,48 @@
             label = "TO_LAYER_1";
         };
 
+
+        macro_bt_0_to: macro_bt_0_to {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&bt BT_SEL 0 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            label = "MACRO_BT_0_TO";
+        };
+
+        macro_bt_1_to: macro_bt_1_to {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&bt BT_SEL 1 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            label = "MACRO_BT_1_TO";
+        };
+
+        macro_bt_2_to: macro_bt_2_to {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&bt BT_SEL 2 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            label = "MACRO_BT_2_TO";
+        };
+
+        macro_bt_3_to: macro_bt_3_to {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&bt BT_SEL 3 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            label = "MACRO_BT_3_TO";
+        };
+
+        macro_bt_4_to: macro_bt_4_to {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&bt BT_SEL 4 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            label = "MACRO_BT_4_TO";
+        };
+       macro_j_helper: macro_j_helper {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp J &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_J_HELPER";
+        };
+
         macro_k_helper: macro_k_helper {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -350,12 +392,6 @@
             label = "MACRO_K_HELPER";
         };
 
-       macro_j_helper: macro_j_helper {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp J &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_J_HELPER";
-        };
 
         macro_doubleclick: macro_doubleclick {
             compatible = "zmk,behavior-macro";
@@ -857,41 +893,6 @@
                 <&kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
 
             label = "MACRO_SAVEIN_MULTI";
-        };
-
-        macro_bt_0_to: macro_bt_0_to {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&bt BT_SEL 0 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
-            label = "MACRO_BT_0_TO";
-        };
-
-        macro_bt_1_to: macro_bt_1_to {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&bt BT_SEL 1 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
-            label = "MACRO_BT_1_TO";
-        };
-
-        macro_bt_2_to: macro_bt_2_to {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&bt BT_SEL 2 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
-            label = "MACRO_BT_2_TO";
-        };
-
-        macro_bt_3_to: macro_bt_3_to {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&bt BT_SEL 3 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
-            label = "MACRO_BT_3_TO";
-        };
-
-        macro_bt_4_to: macro_bt_4_to {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&bt BT_SEL 4 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
-            label = "MACRO_BT_4_TO";
         };
     };
 
