@@ -67,21 +67,21 @@
             bindings = <&macro_mouse_move_window>;
             key-positions = <6 8>;
             require-prior-idle-ms = <300>;
-            layers = <3 2 4 5>;
+            layers = <3 2 4>;
         };
 
         combo_mouse_window_rd {
             bindings = <&macro_mouse_window_rd>;
-            key-positions = <9 8>;
+            key-positions = <8 7>;
             require-prior-idle-ms = <300>;
-            layers = <3 2 4 5>;
+            layers = <3 2 4>;
         };
 
         combo_mouse_window_ul {
             bindings = <&macro_mouse_window_ul>;
-            key-positions = <5 6>;
+            key-positions = <6 7>;
             require-prior-idle-ms = <300>;
-            layers = <3 2 5 4>;
+            layers = <3 2 4>;
         };
 
         combo_max_windows {
@@ -109,14 +109,14 @@
 
         combo_snap_right_window {
             bindings = <&kp LG(RIGHT)>;
-            key-positions = <21 33>;
+            key-positions = <9 8>;
             require-prior-idle-ms = <300>;
             layers = <3 2>;
         };
 
         combo_snap_left_window {
             bindings = <&kp LG(LEFT)>;
-            key-positions = <20 32>;
+            key-positions = <5 6>;
             require-prior-idle-ms = <300>;
             layers = <3 2>;
         };
