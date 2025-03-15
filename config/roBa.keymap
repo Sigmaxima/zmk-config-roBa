@@ -950,6 +950,35 @@
             tapping-term-ms = <300>;
         };
 
+        scroll_up_down: scroll_up_down {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "SCROLL_UP_DOWN";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+        };
+
+        mt_tap_preferred: mt_tap_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_TAP_PREFERRED";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <50>;
+        };
+
+        mt_long_press: mt_long_press {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_LONG_PRESS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            retro-tap;
+            require-prior-idle-ms = <120>;
+        };
         mat_doubleclick: mat_doubleclick {
             compatible = "zmk,behavior-hold-tap";
             label = "MAT_DOUBLECLICK";
@@ -1014,36 +1043,6 @@
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <200>;
-        };
-
-        scroll_up_down: scroll_up_down {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "SCROLL_UP_DOWN";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
-        };
-
-        mt_tap_preferred: mt_tap_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_TAP_PREFERRED";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <50>;
-        };
-
-        mt_long_press: mt_long_press {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_LONG_PRESS";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
-            retro-tap;
-            require-prior-idle-ms = <120>;
         };
 
         mat_select_line: mat_select_line {
