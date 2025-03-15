@@ -297,7 +297,7 @@
             bindings = <&macro_savein_takane>;
             key-positions = <32 33>;
             timeout-ms = <500>;
-            layers = <5 2>;
+            layers = <5>;
         };
 
         combo_savein_miki {
