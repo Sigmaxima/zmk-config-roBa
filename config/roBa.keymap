@@ -343,11 +343,65 @@
             label = "TO_LAYER_1";
         };
 
+        macro_k_helper: macro_k_helper {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp K &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_K_HELPER";
+        };
+
+       macro_j_helper: macro_j_helper {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp J &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_J_HELPER";
+        };
+
+        macro_doubleclick: macro_doubleclick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1 &mkp MB1>;
+            label = "MACRO_DOUBLECLICK";
+        };
         macro_tripleclick: macro_tripleclick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp MB1 &mkp MB1 &mkp MB1>;
             label = "MACRO_TRIPLECLICK";
+        };
+        macro_quadrupleclick: macro_quadrupleclick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1>;
+            label = "MACRO_QUADRUPLECLICK";
+        };
+
+        macro_mb1: macro_mb1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1>;
+            label = "MACRO_MB1";
+        };
+
+        macro_mb2: macro_mb2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2>;
+            label = "MACRO_MB2";
+        };
+
+        macro_mb4: macro_mb4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB4>;
+            label = "MACRO_MB4";
+        };
+
+        macro_mb5: macro_mb5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB5>;
+            label = "MACRO_MB5";
         };
 
         macro_bat_and_return: macro_bat_and_return {
@@ -839,62 +893,6 @@
             bindings = <&bt BT_SEL 4 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
             label = "MACRO_BT_4_TO";
         };
-
-        macro_k_helper: macro_k_helper {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp K &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_K_HELPER";
-        };
-
-        macro_doubleclick: macro_doubleclick {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1 &mkp MB1>;
-            label = "MACRO_DOUBLECLICK";
-        };
-
-        macro_mb1: macro_mb1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1>;
-            label = "MACRO_MB1";
-        };
-
-        macro_mb2: macro_mb2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB2>;
-            label = "MACRO_MB2";
-        };
-
-        macro_mb4: macro_mb4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB4>;
-            label = "MACRO_MB4";
-        };
-
-        macro_mb5: macro_mb5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB5>;
-            label = "MACRO_MB5";
-        };
-
-        macro_j_helper: macro_j_helper {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp J &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_J_HELPER";
-        };
-
-        macro_quadrupleclick: macro_quadrupleclick {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1>;
-            label = "MACRO_QUADRUPLECLICK";
-        };
     };
 
     behaviors {
@@ -952,10 +950,10 @@
             tapping-term-ms = <300>;
         };
 
-        mat_tripleclick: mat_tripleclick {
+        mat_doubleclick: mat_doubleclick {
             compatible = "zmk,behavior-hold-tap";
-            label = "MAT_TRIPLECLICK";
-            bindings = <&macro_tripleclick>, <&kp>;
+            label = "MAT_DOUBLECLICK";
+            bindings = <&macro_doubleclick>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -963,10 +961,10 @@
             require-prior-idle-ms = <200>;
         };
 
-        mat_doubleclick: mat_doubleclick {
+        mat_tripleclick: mat_tripleclick {
             compatible = "zmk,behavior-hold-tap";
-            label = "MAT_DOUBLECLICK";
-            bindings = <&macro_doubleclick>, <&kp>;
+            label = "MAT_TRIPLECLICK";
+            bindings = <&macro_tripleclick>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
