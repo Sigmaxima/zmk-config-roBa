@@ -296,20 +296,20 @@
         combo_savein_takane {
             bindings = <&macro_savein_takane>;
             key-positions = <32 33>;
-            timeout-ms = <500>;
+            timeout-ms = <300>;
             layers = <5>;
         };
 
         combo_savein_miki {
             bindings = <&macro_savein_miki>;
-            key-positions = <42 41>;
-            timeout-ms = <500>;
+            key-positions = <42 32>;
+            timeout-ms = <300>;
             layers = <5>;
         };
 
         combo_multi {
             bindings = <&macro_savein_multi>;
-            key-positions = <42 40>;
+            key-positions = <8 9>;
             timeout-ms = <300>;
             layers = <5>;
         };
@@ -330,7 +330,7 @@
             bindings = <&kp LC(LA(TAB))>;
             key-positions = <32 31>;
             require-prior-idle-ms = <200>;
-            layers = <3 2 4>;
+            layers = <2 3 4>;
         };
 
         combo_select_window_left {
