@@ -62,72 +62,6 @@
             key-positions = <1 2 3>;
             layers = <0 9>;
         };
-
-        combo_mouse_move_window {
-            bindings = <&macro_mouse_move_window>;
-            key-positions = <6 8>;
-            require-prior-idle-ms = <300>;
-            layers = <3 2 4 0>;
-        };
-
-        combo_mouse_window_rd {
-            bindings = <&macro_mouse_window_rd>;
-            key-positions = <8 7>;
-            require-prior-idle-ms = <300>;
-            layers = <3 2 4>;
-        };
-
-        combo_mouse_window_ul {
-            bindings = <&macro_mouse_window_ul>;
-            key-positions = <6 7>;
-            require-prior-idle-ms = <300>;
-            layers = <3 2 4>;
-        };
-
-        combo_max_windows {
-            bindings = <&kp LG(UP_ARROW)>;
-            key-positions = <20 21>;
-            require-prior-idle-ms = <300>;
-            layers = <0 2 3>;
-            timeout-ms = <150>;
-        };
-
-        combo_min_window {
-            bindings = <&kp LG(DOWN)>;
-            key-positions = <33 32>;
-            require-prior-idle-ms = <300>;
-            layers = <0 2 3>;
-            timeout-ms = <150>;
-        };
-
-        combo_repop_window {
-            bindings = <&kp LA(TAB)>;
-            key-positions = <21 33>;
-            require-prior-idle-ms = <300>;
-            layers = <3 2 4>;
-        };
-
-        combo_snap_right_window {
-            bindings = <&kp LG(RIGHT)>;
-            key-positions = <9 8>;
-            require-prior-idle-ms = <300>;
-            layers = <3 2>;
-        };
-
-        combo_snap_left_window {
-            bindings = <&kp LG(LEFT)>;
-            key-positions = <5 6>;
-            require-prior-idle-ms = <300>;
-            layers = <3 2>;
-        };
-
-        combo_window_spin_move {
-            bindings = <&kp LS(LG(LEFT))>;
-            key-positions = <32 30>;
-            require-prior-idle-ms = <200>;
-            layers = <0 3 4>;
-        };
-
         combo_search_in_browser {
             bindings = <&macro_copy_search_in_app>;
             key-positions = <28 16>;
@@ -220,6 +154,13 @@
             timeout-ms = <300>;
         };
 
+        combo_ctrl_a {
+            bindings = <&kp LC(A)>;
+            key-positions = <0 10>;
+            require-prior-idle-ms = <200>;
+            layers = <0>;
+        };
+
         combo_win_v {
             bindings = <&kp LG(V)>;
             key-positions = <13 14>;
@@ -273,17 +214,69 @@
             timeout-ms = <250>;
         };
 
-        combo_search {
-            bindings = <&macro_copy_search_internet>;
-            key-positions = <28 16>;
-            layers = <3>;
+        combo_mouse_move_window {
+            bindings = <&macro_mouse_move_window>;
+            key-positions = <6 8>;
+            require-prior-idle-ms = <300>;
+            layers = <3 2 4 0>;
         };
 
-        combo_ctrl_a {
-            bindings = <&kp LC(A)>;
-            key-positions = <0 10>;
+        combo_mouse_window_rd {
+            bindings = <&macro_mouse_window_rd>;
+            key-positions = <8 7>;
+            require-prior-idle-ms = <300>;
+            layers = <3 2 4>;
+        };
+
+        combo_mouse_window_ul {
+            bindings = <&macro_mouse_window_ul>;
+            key-positions = <6 7>;
+            require-prior-idle-ms = <300>;
+            layers = <3 2 4>;
+        };
+
+        combo_max_windows {
+            bindings = <&kp LG(UP_ARROW)>;
+            key-positions = <20 21>;
+            require-prior-idle-ms = <300>;
+            layers = <0 2 3>;
+            timeout-ms = <150>;
+        };
+
+        combo_min_window {
+            bindings = <&kp LG(DOWN)>;
+            key-positions = <33 32>;
+            require-prior-idle-ms = <300>;
+            layers = <0 2 3>;
+            timeout-ms = <150>;
+        };
+
+        combo_repop_window {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <21 33>;
+            require-prior-idle-ms = <300>;
+            layers = <3 2 4>;
+        };
+
+        combo_snap_right_window {
+            bindings = <&kp LG(RIGHT)>;
+            key-positions = <9 8>;
+            require-prior-idle-ms = <300>;
+            layers = <3 2>;
+        };
+
+        combo_snap_left_window {
+            bindings = <&kp LG(LEFT)>;
+            key-positions = <5 6>;
+            require-prior-idle-ms = <300>;
+            layers = <3 2>;
+        };
+
+        combo_window_spin_move {
+            bindings = <&kp LS(LG(LEFT))>;
+            key-positions = <32 30>;
             require-prior-idle-ms = <200>;
-            layers = <0>;
+            layers = <0 3 4>;
         };
 
         combo_savein_million {
@@ -314,18 +307,6 @@
             layers = <5>;
         };
 
-        combo_clear_bt {
-            bindings = <&bt BT_CLR>;
-            key-positions = <10 14>;
-            layers = <5>;
-        };
-
-        combo_clear_all_bt {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <22 27>;
-            layers = <5>;
-        };
-
         combo_select_window_right {
             bindings = <&kp LC(LA(TAB))>;
             key-positions = <32 31>;
@@ -338,6 +319,24 @@
             key-positions = <31 30>;
             require-prior-idle-ms = <200>;
             layers = <3 2 4>;
+        };
+
+        combo_search {
+            bindings = <&macro_copy_search_internet>;
+            key-positions = <28 16>;
+            layers = <3>;
+        };
+
+        combo_clear_bt {
+            bindings = <&bt BT_CLR>;
+            key-positions = <10 14>;
+            layers = <5>;
+        };
+
+        combo_clear_all_bt {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <22 27>;
+            layers = <5>;
         };
     };
 
