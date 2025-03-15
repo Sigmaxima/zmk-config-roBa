@@ -62,6 +62,7 @@
             key-positions = <1 2 3>;
             layers = <0 9>;
         };
+
         combo_search_in_browser {
             bindings = <&macro_copy_search_in_app>;
             key-positions = <28 16>;
@@ -295,14 +296,14 @@
 
         combo_savein_miki {
             bindings = <&macro_savein_miki>;
-            key-positions = <42 32>;
+            key-positions = <42 41>;
             timeout-ms = <300>;
             layers = <5>;
         };
 
         combo_multi {
             bindings = <&macro_savein_multi>;
-            key-positions = <42 41>;
+            key-positions = <42 40>;
             timeout-ms = <300>;
             layers = <5>;
         };
