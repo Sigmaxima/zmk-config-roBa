@@ -952,19 +952,6 @@
             flavor = "tap-preferred";
         };
 
-        td_j_mb1: td_j_mb1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_J_MB1";
-            #binding-cells = <0>;
-            bindings =
-                <&mat_mb1 0 J>,
-                <&macro_doubleclick>,
-                <&macro_tripleclick>,
-                <&macro_quadrupleclick>;
-
-            tapping-term-ms = <300>;
-        };
-
         scroll_up_down: scroll_up_down {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "SCROLL_UP_DOWN";
