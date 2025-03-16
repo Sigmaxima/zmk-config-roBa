@@ -37,7 +37,7 @@
 
         combo_mb2 {
             bindings = <&mkp MB2>;
-            key-positions = <>;
+            key-positions = <19 20>;
             timeout-ms = <250>;
             layers = <0 5 4 1>;
             require-prior-idle-ms = <100>;
@@ -45,7 +45,7 @@
 
         combo_mb3 {
             bindings = <&mkp MB3>;
-            key-positions = <32 31 30>;
+            key-positions = <18 20>;
             timeout-ms = <250>;
             layers = <0 4 5>;
             require-prior-idle-ms = <200>;
@@ -53,7 +53,7 @@
 
         combo_tog_tenkeys {
             bindings = <&tog 10>;
-            key-positions = <18 20>;
+            key-positions = <6 7 8>;
             layers = <0 10>;
         };
 
