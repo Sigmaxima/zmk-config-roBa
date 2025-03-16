@@ -21,7 +21,7 @@
 
         combo_mb1 {
             bindings = <&mkp MB1>;
-            key-positions = <>;
+            key-positions = <18 19>;
             timeout-ms = <450>;
             layers = <0 4 5 1>;
             require-prior-idle-ms = <80>;
@@ -1273,8 +1273,8 @@
             bindings = <&mkp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <20>;
-            require-prior-idle-ms = <750>;
+            tapping-term-ms = <100>;
+            require-prior-idle-ms = <2000>;
         };
     };
 
