@@ -811,18 +811,18 @@
             label = "MACRO_EXPLORER";
         };
 
-        macro_kp_lo: macro_kp_lt {
+        macro_kp_togoff_layer: macro_kp_togoff_layer {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_KP_LT";
+            bindings = <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_KP_TOGOFF_LAYER";
         };
 
-        macro_mkp_lo: macro_mkp_lo {
+        macro_mkp_togoff_layer: macro_mkp_togoff_layer {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
-            label = "MACRO_MKP_LO";
+            bindings = <&tog 4 &macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
+            label = "MACRO_MKP_TOGOFF_LAYER";
         };
 
         macro_copy_url: macro_copy_url {
@@ -1257,6 +1257,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        lt_togoff_layer: lt_togoff_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_TOGOFF_LAYER";
+            bindings = <&mo>, <&macro_kp_togoff_layer>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -1306,10 +1315,10 @@
 
         MOUSE {
             bindings = <
-&macro_kp_lo Q  &macro_kp_lo W  &macro_kp_lo E  &macro_kp_lo R  &macro_kp_lo T                                                      &macro_kp_lo Y  &macro_kp_lo U  &macro_kp_lo I  &macro_kp_lo O  &macro_kp_lo MINUS
-&macro_kp_lo A  &macro_kp_lo S  &macro_kp_lo D  &macro_kp_lo F  &macro_kp_lo G  &trans                      &macro_kp_lo LBKT       &macro_kp_lo H  &mkp MB1        &mo 5           &mkp MB2        &kp RCTRL
-&macro_kp_lo Z  &macro_kp_lo X  &macro_kp_lo C  &macro_kp_lo V  &macro_kp_lo B  &macro_kp_lo LS(MINUS)      &macro_kp_lo LS(N3)     &macro_kp_lo N  &mkp MB4        &kp RCTRL       &mkp MB5        &kp RIGHT_SHIFT
-&trans          &trans          &trans          &trans          &trans          &trans                      &macro_kp_lo BACKSPACE  &lt 3 RETURN                                                    &trans
+&macro_kp_togoff_layer Q  &macro_kp_togoff_layer W  &macro_kp_togoff_layer E  &macro_kp_togoff_layer R  &macro_kp_togoff_layer T                                                                          &macro_kp_togoff_layer Y  &macro_kp_togoff_layer U  &macro_kp_togoff_layer I  &macro_kp_togoff_layer O  &macro_kp_togoff_layer MINUS
+&macro_kp_togoff_layer A  &macro_kp_togoff_layer S  &macro_kp_togoff_layer D  &macro_kp_togoff_layer F  &macro_kp_togoff_layer G  &trans                                &macro_kp_togoff_layer LBKT       &macro_kp_togoff_layer H  &mkp MB1                  &mo 5                     &mkp MB2                  &kp RCTRL
+&macro_kp_togoff_layer Z  &macro_kp_togoff_layer X  &macro_kp_togoff_layer C  &macro_kp_togoff_layer V  &macro_kp_togoff_layer B  &macro_kp_togoff_layer LS(MINUS)      &macro_kp_togoff_layer LS(N3)     &macro_kp_togoff_layer N  &mkp MB4                  &kp RCTRL                 &mkp MB5                  &kp RIGHT_SHIFT
+&trans                    &trans                    &trans                    &trans                    &trans                    &trans                                &macro_kp_togoff_layer BACKSPACE  &lt 3 RETURN                                                                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
