@@ -1333,7 +1333,7 @@
 
         NUM_ARROW {
             bindings = <
-&trans          &mat_home_end_select HOME HOME  &macro_select_line  &mat_home_end_select END END  &macro_emacs_k_cut_to_end                             &kp LC(T)         &mt LC(LS(TAB)) LC(PAGE_UP)     &kp UP_ARROW  &mt LC(TAB) LC(PAGE_DOWN)     &kp ESC
+&trans          &mat_home_end_select HOME HOME  &macro_select_line  &mat_home_end_select END END  &macro_emacs_k_cut_to_end                             &kp LC(T)         &mt LC(PG_UP) LC(LS(TAB))       &kp UP_ARROW  &mt LC(PAGE_DOWN) LC(TAB)     &kp ESC
 &kp LCTRL       &kp LEFT_SHIFT                  &kp LEFT_ALT        &kp LCTRL                     &kp LEFT_GUI               &trans      &kp PG_UP      &kp TAB           &kp LEFT                        &kp DOWN      &kp RIGHT                     &kp RCTRL
 &kp LEFT_SHIFT  &trans                          &trans              &trans                        &trans                     &trans      &kp PAGE_DOWN  &kp LA(UP_ARROW)  &mat_home_end_select HOME HOME  &kp RSHIFT    &mat_home_end_select END END  &kp RIGHT_SHIFT
 &trans          &trans                          &trans              &kp LS(TAB)                   &kp TAB                    &trans      &kp DELETE     &trans                                                                                        &kp TAB
