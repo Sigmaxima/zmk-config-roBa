@@ -24,14 +24,14 @@
             key-positions = <18 19>;
             timeout-ms = <450>;
             layers = <0 4 5 1>;
-            require-prior-idle-ms = <80>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_triple_click {
             bindings = <&macro_tripleclick>;
             key-positions = <19 17>;
             timeout-ms = <300>;
-            require-prior-idle-ms = <80>;
+            require-prior-idle-ms = <500>;
             layers = <0 4 5 1>;
         };
 
@@ -40,7 +40,7 @@
             key-positions = <20 19>;
             timeout-ms = <250>;
             layers = <0 5 4 1>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <350>;
         };
 
         combo_mb3 {
