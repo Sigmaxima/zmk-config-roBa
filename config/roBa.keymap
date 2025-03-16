@@ -1328,10 +1328,10 @@
 
         FUNCTION_APP_MEDIA {
             bindings = <
-&macro_capture   &macro_todo  &macro_outlook  &macro_teams  &mama_onenote 0 0                                                     &macro_word         &macro_excel      &macro_powerpoint  &mama_vscode 0 0  &mama_texteditor 0 0
-&kp F1           &kp F2       &kp F3          &kp F4        &kp F5             &trans                       &macro_calculator     &kp F6              &kp F7            &kp F8             &kp F9            &kp F10
-&kp F11          &kp F12      &kp F13         &trans        &trans             &mt LG(LA(K)) LC(LS(M))      &mama_music_apps 0 0  &kp C_STOP          &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp C_NEXT        &kp C_MUTE
-&kp PRINTSCREEN  &trans       &trans          &trans        &trans             &trans                       &macro_copy_url       &mama_explorer 0 0                                                         &macro_browser
+&macro_capture   &macro_teams  &macro_outlook  &macro_browser  &macro_copy_url                                                     &macro_word        &macro_excel      &macro_powerpoint  &mama_vscode 0 0  &mama_texteditor 0 0
+&kp F1           &kp F2        &kp F3          &kp F4          &kp F5           &trans                       &macro_calculator     &kp F6             &kp F7            &kp F8             &kp F9            &kp F10
+&kp F11          &kp F12       &kp F13         &trans          &trans           &mt LG(LA(K)) LC(LS(M))      &mama_music_apps 0 0  &kp C_STOP         &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp C_NEXT        &kp C_MUTE
+&kp PRINTSCREEN  &trans        &trans          &trans          &trans           &trans                       &mama_explorer 0 0    &mama_onenote 0 0                                                         &macro_todo
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
