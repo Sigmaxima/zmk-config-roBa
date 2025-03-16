@@ -1016,9 +1016,9 @@
             bindings = <&macro_mb1>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <120>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <300>;
         };
 
         mat_mb2: mat_mb2 {
@@ -1029,7 +1029,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <350>;
         };
 
         mat_mb4: mat_mb4 {
@@ -1040,7 +1040,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <350>;
         };
 
         mat_mb5: mat_mb5 {
@@ -1051,7 +1051,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <350>;
         };
 
         mat_select_line: mat_select_line {
