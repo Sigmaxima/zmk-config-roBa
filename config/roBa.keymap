@@ -1315,10 +1315,10 @@
 
         MOUSE {
             bindings = <
-&macro_kp_togoff_layer Q  &macro_kp_togoff_layer W  &macro_kp_togoff_layer E  &macro_kp_togoff_layer R  &macro_kp_togoff_layer T                                                                          &macro_kp_togoff_layer Y  &macro_kp_togoff_layer U  &macro_kp_togoff_layer I  &macro_kp_togoff_layer O  &macro_kp_togoff_layer MINUS
-&macro_kp_togoff_layer A  &macro_kp_togoff_layer S  &macro_kp_togoff_layer D  &macro_kp_togoff_layer F  &macro_kp_togoff_layer G  &trans                                &macro_kp_togoff_layer LBKT       &macro_kp_togoff_layer H  &mkp MB1                  &mo 5                     &mkp MB2                  &kp RCTRL
-&macro_kp_togoff_layer Z  &macro_kp_togoff_layer X  &macro_kp_togoff_layer C  &macro_kp_togoff_layer V  &macro_kp_togoff_layer B  &macro_kp_togoff_layer LS(MINUS)      &macro_kp_togoff_layer LS(N3)     &macro_kp_togoff_layer N  &mkp MB4                  &kp RCTRL                 &mkp MB5                  &kp RIGHT_SHIFT
-&trans                    &trans                    &trans                    &trans                    &trans                    &trans                                &macro_kp_togoff_layer BACKSPACE  &lt 3 RETURN                                                                                            &trans
+&macro_kp_togoff_layer Q  &macro_kp_togoff_layer W  &macro_kp_togoff_layer E  &macro_kp_togoff_layer R         &macro_kp_togoff_layer T                                                                            &macro_kp_togoff_layer Y   &macro_kp_togoff_layer U  &macro_kp_togoff_layer I      &macro_kp_togoff_layer O     &macro_kp_togoff_layer MINUS
+&macro_kp_togoff_layer A  &macro_kp_togoff_layer S  &macro_kp_togoff_layer D  &macro_kp_togoff_layer F         &macro_kp_togoff_layer G  &trans                                  &macro_kp_togoff_layer LBKT       &macro_kp_togoff_layer H   &mkp MB1                  &mo 5                         &macro_mkp_togoff_layer MB2  &kp RCTRL
+&macro_kp_togoff_layer Z  &macro_kp_togoff_layer X  &macro_kp_togoff_layer C  &macro_kp_togoff_layer V         &macro_kp_togoff_layer B  &macro_kp_togoff_layer SEMI             &macro_kp_togoff_layer SQT        &macro_kp_togoff_layer N   &mkp MB4                  &macro_kp_togoff_layer COMMA  &mkp MB5                     &kp RIGHT_SHIFT
+&trans                    &trans                    &trans                    &lt_togoff_layer 7 INT_MUHENKAN  &lt_togoff_layer 2 SPACE  &lt_togoff_layer 6 INTERNATIONAL_4      &macro_kp_togoff_layer BACKSPACE  &lt_togoff_layer 3 RETURN                                                                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
