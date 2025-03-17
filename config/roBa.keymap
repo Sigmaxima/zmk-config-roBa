@@ -27,14 +27,6 @@
             require-prior-idle-ms = <80>;
         };
 
-        combo_triple_click {
-            bindings = <&macro_tripleclick>;
-            key-positions = <>;
-            timeout-ms = <300>;
-            require-prior-idle-ms = <80>;
-            layers = <0 4 11 1>;
-        };
-
         combo_mb2 {
             bindings = <&mkp MB2>;
             key-positions = <19 20>;
@@ -186,23 +178,9 @@
             timeout-ms = <300>;
         };
 
-        combo_printscreen {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-        };
-
         combo_teams_rich_textbox {
             bindings = <&kp LC(LS(X))>;
             key-positions = <0 9>;
-            require-prior-idle-ms = <300>;
-            layers = <0>;
-        };
-
-        combo_teams_mic {
-            bindings = <&kp LS(LC(M))>;
-            key-positions = <>;
             require-prior-idle-ms = <300>;
             layers = <0>;
         };
@@ -347,7 +325,7 @@
         };
 
         combo_mo_scroll {
-            bindings = <&mo 11>;
+            bindings = <&mo 5>;
             key-positions = <31 32>;
             layers = <0>;
             timeout-ms = <500>;
@@ -1378,10 +1356,10 @@
 
         BT_TEN_KEYS {
             bindings = <
-&trans        &kp N7  &kp N8        &kp N9  &trans                               &kp FSLH     &kp N7  &kp N8  &kp N9  &kp MINUS
-&trans        &kp N4  &kp N5        &kp N6  &kp UP    &trans      &kp LS(MINUS)  &kp LS(SQT)  &kp N4  &kp N5  &kp N6  &kp LS(SEMICOLON)
-&kp LS(PLUS)  &kp N1  &kp NUMBER_2  &kp N3  &kp DOWN  &trans      &kp DOT        &kp N0       &kp N1  &kp N2  &kp N3  &kp DOT
-&trans        &kp N0  &kp DOT       &kp N0  &kp N0    &trans      &trans         &kp N0                               &kp DOT
+&macro_bt_0_to 0  &macro_bt_1_to 0  &macro_bt_2_to 1  &macro_bt_3_to 0  &macro_bt_4_to 0                             &kp FSLH     &kp N7  &kp N8  &kp N9  &kp MINUS
+&to 0             &to 1             &trans            &trans            &trans            &trans      &kp LS(MINUS)  &kp LS(SQT)  &kp N4  &kp N5  &kp N6  &kp LS(SEMICOLON)
+&trans            &trans            &trans            &trans            &trans            &trans      &kp DOT        &kp N0       &kp N1  &kp N2  &kp N3  &kp DOT
+&trans            &trans            &trans            &trans            &trans            &trans      &trans         &kp N0                               &kp DOT
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
