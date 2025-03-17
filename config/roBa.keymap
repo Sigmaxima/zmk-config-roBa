@@ -287,14 +287,14 @@
 
         combo_savein_takane {
             bindings = <&macro_savein_takane>;
-            key-positions = <5 6>;
+            key-positions = <16 17>;
             timeout-ms = <300>;
             layers = <6>;
         };
 
         combo_savein_miki {
             bindings = <&macro_savein_miki>;
-            key-positions = <29 30>;
+            key-positions = <29 28>;
             timeout-ms = <300>;
             layers = <5>;
         };
@@ -1251,7 +1251,7 @@
             bindings = <
 &mt ESCAPE Q                 &mat_home_end_select HOME W  &mat_select_line 0 E       &mat_home_end_select END R        &mat_emacs 0 T                                                                              &mt_tap_preferred HOME Y         &mt_tap_preferred END U   &mt_tap_preferred LS(N8) I         &mt_tap_preferred LS(N9) O  &kp MINUS
 &mt_long_press LCTRL A       &mt_long_press LEFT_SHIFT S  &mt_long_press LEFT_ALT D  &mt_long_press LEFT_CONTROL F     &mt_long_press LEFT_GUI G    &none                                 &mat_mb5 0 LEFT_BRACKET  &mt_tap_preferred RIGHT_BRACE H  &mt_tap_preferred PIPE J  &mt_tap_preferred RIGHT_BRACKET K  &mt_tap_preferred NUHS L    &mt_long_press RCTRL P
-&mt_long_press LEFT_SHIFT Z  &kp X                        &kp C                      &kp V                             &kp B                        &lt 9 SEMI                            &mat_mb4 0 SQT           &mat_tripleclick 0 N             &mat_doubleclick 0 M      &mkp MB1                           &mkp MB2                    &mt RIGHT_SHIFT SLASH
+&mt_long_press LEFT_SHIFT Z  &kp X                        &kp C                      &kp V                             &kp B                        &lt 9 SEMI                            &mat_mb4 0 SQT           &mat_tripleclick 0 N             &mat_doubleclick 0 M      &mkp MB1                           &mt_kp_mkp MB2 DOT          &mt RIGHT_SHIFT SLASH
 &kp LCTRL                    &kp LEFT_WIN                 &kp LEFT_ALT               &lt_to_layer_0 8 INTERNATIONAL_5  &lt_holdprefferd_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE            &lt_to_layer_0 6 RET                                                                                                      &mo 5
             >;
 
