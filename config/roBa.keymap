@@ -316,7 +316,6 @@
             bindings = <&mo 5>;
             key-positions = <31 32>;
             layers = <0>;
-            timeout-ms = <500>;
         };
     };
 
@@ -1239,8 +1238,8 @@
             bindings = <&mkp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            require-prior-idle-ms = <2000>;
+            tapping-term-ms = <130>;
+            require-prior-idle-ms = <200>;
         };
     };
 
