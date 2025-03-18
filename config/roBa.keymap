@@ -317,6 +317,12 @@
             key-positions = <31 32>;
             layers = <0>;
         };
+
+        combo_clear_all_profiles {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <34 36>;
+            layers = <9>;
+        };
     };
 
     macros {
@@ -1346,7 +1352,7 @@
 &macro_bt_0_to 0  &macro_bt_1_to 0  &macro_bt_2_to 1  &macro_bt_3_to 0  &macro_bt_4_to 0                             &kp FSLH     &kp N7  &kp N8  &kp N9  &kp MINUS
 &to 0             &to 1             &trans            &trans            &trans            &trans      &kp LS(MINUS)  &kp LS(SQT)  &kp N4  &kp N5  &kp N6  &kp LS(SEMICOLON)
 &trans            &trans            &trans            &trans            &trans            &trans      &kp DOT        &kp N0       &kp N1  &kp N2  &kp N3  &kp DOT
-&trans            &trans            &trans            &trans            &trans            &trans      &trans         &kp N0                               &kp DOT
+&bt BT_CLR        &trans            &trans            &trans            &trans            &trans      &trans         &kp N0                               &kp DOT
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
