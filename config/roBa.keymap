@@ -317,6 +317,13 @@
             key-positions = <34 36>;
             layers = <9>;
         };
+
+        combo_scroll {
+            bindings = <&mo 5>;
+            key-positions = <32 31>;
+            layers = <0>;
+            timeout-ms = <50>;
+        };
     };
 
     macros {
@@ -1191,7 +1198,7 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mat_tappref LS(COMMA) Y    &mat_tappref LS(DOT) U  &mat_tappref LS(N8) I         &mat_tappref LS(N9) O   &kp MINUS
+&mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mat_tappref LS(COMMA) Y    &mat_tappref LS(DOT) U  &mat_tappref LS(N8) I         &mat_tappref LS(N9) O   &lt_holdpref_qt 5 MINUS
 &mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G      &none                                 &mat_mb MB5 LEFT_BRACKET  &mat_tappref RIGHT_BRACE H  &mat_tappref PIPE J     &mat_tappref RIGHT_BRACKET K  &mat_tappref NUHS L     &mt_long RCTRL P
 &mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 SEMI                            &mat_mb MB4 SQT           &mat_mb MB3 N               &mat_mb MB2 M           &mkp MB1                      &mat_tappref DOT COMMA  &mt RIGHT_SHIFT SLASH
 &kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT          &lt_to_layer_0 8 INTERNATIONAL_5  &lt_holdpref_qt 6 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE             &lt_to_layer_0 5 RET                                                                                      &lt_layer 5 9
