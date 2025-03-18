@@ -23,7 +23,7 @@
             bindings = <&mkp MB1>;
             key-positions = <18 19>;
             timeout-ms = <450>;
-            layers = <0 4 11 1>;
+            layers = <0 4 1 9>;
             require-prior-idle-ms = <80>;
         };
 
@@ -1192,8 +1192,8 @@
         default_layer {
             bindings = <
 &mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mat_tappref LS(COMMA) Y    &mat_tappref LS(DOT) U  &mat_tappref LS(N8) I         &mat_tappref LS(N9) O   &kp MINUS
-&mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G      &none                                 &mat_mb MB4 LEFT_BRACKET  &mat_tappref RIGHT_BRACE H  &mat_tappref PIPE J     &mat_tappref RIGHT_BRACKET K  &mat_tappref NUHS L     &mt_long RCTRL P
-&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 SEMI                            &mat_mb MB5 SQT           &mat_mb MB3 N               &mat_mb MB2 M           &mkp MB1                      &mat_tappref COMMA DOT  &mt RIGHT_SHIFT SLASH
+&mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G      &none                                 &mat_mb MB5 LEFT_BRACKET  &mat_tappref RIGHT_BRACE H  &mat_tappref PIPE J     &mat_tappref RIGHT_BRACKET K  &mat_tappref NUHS L     &mt_long RCTRL P
+&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 SEMI                            &mat_mb MB4 SQT           &mat_mb MB3 N               &mat_mb MB2 M           &mkp MB1                      &mat_tappref DOT COMMA  &mt RIGHT_SHIFT SLASH
 &kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT          &lt_to_layer_0 8 INTERNATIONAL_5  &lt_holdpref_qt 7 SPACE  &lt_to_layer_0 8 INTERNATIONAL_4      &kp BACKSPACE             &lt_to_layer_0 5 RET                                                                                      &lt_layer 5 9
             >;
 
@@ -1286,10 +1286,10 @@
 
         BT_TEN_KEYS {
             bindings = <
-&macro_bt_0_to 0  &macro_bt_1_to 0  &macro_bt_2_to 1  &macro_bt_3_to 0  &macro_bt_4_to 0                             &kp FSLH     &kp N7  &kp N8  &kp N9  &kp MINUS
-&to 0             &to 1             &trans            &trans            &trans            &trans      &kp LS(MINUS)  &kp LS(SQT)  &kp N4  &kp N5  &kp N6  &kp LS(SEMICOLON)
-&trans            &trans            &trans            &trans            &trans            &trans      &kp DOT        &kp N0       &kp N1  &kp N2  &kp N3  &kp DOT
-&bt BT_CLR        &trans            &trans            &trans            &trans            &trans      &trans         &kp N0                               &kp DOT
+&macro_bt_0_to 0  &macro_bt_1_to 0  &macro_bt_2_to 1  &macro_bt_3_to 0  &macro_bt_4_to 0                             &kp LS(SQT)   &kp N7  &kp N8  &kp N9  &kp TAB
+&to 0             &to 1             &trans            &trans            &trans            &trans      &kp LS(SLASH)  &kp MINUS     &kp N4  &kp N5  &kp N6  &kp ENTER
+&trans            &trans            &trans            &trans            &trans            &trans      &kp SQT        &kp LS(SEMI)  &kp N1  &kp N2  &kp N3  &kp DOT
+&bt BT_CLR        &trans            &trans            &trans            &trans            &trans      &trans         &kp N0                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
