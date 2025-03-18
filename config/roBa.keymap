@@ -1320,7 +1320,7 @@
 &kp EXCLAMATION       &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR    &kp PERCENT                                          &kp LS(NUMBER_6)          &kp LS(N7)             &mat_parenthesis 0 LS(N8)  &kp LS(N9)          &kp LS(EQUAL)
 &kp N1                &kp N2      &kp N3                        &kp N4        &kp N5       &trans         &kp DOT                  &kp N6                    &mat_select_line 0 N7  &mat_emacs 0 N8            &mat_cut_line 0 N9  &kp N0
 &mt LEFT_SHIFT SLASH  &kp MINUS   &kp LS(SQT)                   &kp LS(SEMI)  &kp DOT      &kp EQUAL      &kp LS(INTERNATIONAL_3)  &mat_brace 0 RIGHT_BRACE  &kp PIPE               &mt LS(COMMA) COMMA        &mt LS(PERIOD) DOT  &trans
-&trans                &trans      &trans                        &trans        &trans       &trans         &kp DELETE               &trans                                                                                          &kp INT1
+&trans                &trans      &kp LEFT_ALT                  &trans        &trans       &trans         &kp DELETE               &trans                                                                                          &kp INT1
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
@@ -1331,7 +1331,7 @@
 &trans          &mat_home_end_select HOME HOME  &macro_select_line  &mat_home_end_select END END  &macro_emacs_k_cut_to_end                             &mt LC(LS(T)) LC(T)  &mt LC(PG_UP) LC(LS(TAB))       &kp UP_ARROW  &mt LC(PAGE_DOWN) LC(TAB)     &kp ESC
 &kp LCTRL       &kp LEFT_SHIFT                  &kp LEFT_ALT        &kp LCTRL                     &kp LEFT_GUI               &trans      &kp PG_UP      &kp TAB              &kp LEFT                        &kp DOWN      &kp RIGHT                     &kp RCTRL
 &kp LEFT_SHIFT  &trans                          &trans              &trans                        &trans                     &trans      &kp PAGE_DOWN  &kp LA(UP_ARROW)     &mat_home_end_select HOME HOME  &kp RSHIFT    &mat_home_end_select END END  &kp RIGHT_SHIFT
-&trans          &trans                          &trans              &kp LS(TAB)                   &kp TAB                    &trans      &kp DELETE     &trans                                                                                           &kp LC(W)
+&trans          &trans                          &kp LEFT_ALT        &kp LS(TAB)                   &kp TAB                    &trans      &kp DELETE     &trans                                                                                           &kp LC(W)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
