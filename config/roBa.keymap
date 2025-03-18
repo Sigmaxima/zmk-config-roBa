@@ -66,13 +66,13 @@
         combo_ctrl_left {
             bindings = <&kp LC(LEFT)>;
             key-positions = <18 19>;
-            layers = <6>;
+            layers = <5>;
         };
 
         combo_ctrl_right {
             bindings = <&kp LC(RIGHT)>;
             key-positions = <19 20>;
-            layers = <6>;
+            layers = <5>;
         };
 
         combo_f2 {
@@ -196,7 +196,7 @@
             bindings = <&macro_mouse_move_window>;
             key-positions = <6 8>;
             require-prior-idle-ms = <300>;
-            layers = <6 5 4 0>;
+            layers = <5 7 4 0>;
             timeout-ms = <200>;
         };
 
@@ -204,7 +204,7 @@
             bindings = <&macro_mouse_window_rd>;
             key-positions = <8 7>;
             require-prior-idle-ms = <300>;
-            layers = <6 5 4>;
+            layers = <5 7 4>;
             timeout-ms = <200>;
         };
 
@@ -212,7 +212,7 @@
             bindings = <&macro_mouse_window_ul>;
             key-positions = <6 7>;
             require-prior-idle-ms = <300>;
-            layers = <6 5 4>;
+            layers = <5 7 4>;
             timeout-ms = <200>;
         };
 
@@ -244,7 +244,7 @@
             bindings = <&kp LG(RIGHT)>;
             key-positions = <9 8>;
             require-prior-idle-ms = <300>;
-            layers = <6>;
+            layers = <5>;
             timeout-ms = <200>;
         };
 
@@ -252,7 +252,7 @@
             bindings = <&kp LG(LEFT)>;
             key-positions = <5 6>;
             require-prior-idle-ms = <300>;
-            layers = <6>;
+            layers = <5>;
             timeout-ms = <200>;
         };
 
@@ -260,7 +260,7 @@
             bindings = <&kp LS(LG(LEFT))>;
             key-positions = <32 30>;
             require-prior-idle-ms = <200>;
-            layers = <0 6 4>;
+            layers = <0 5 4>;
             timeout-ms = <150>;
         };
 
@@ -268,35 +268,35 @@
             bindings = <&kp LC(LA(TAB))>;
             key-positions = <32 31>;
             require-prior-idle-ms = <200>;
-            layers = <6>;
+            layers = <5>;
         };
 
         combo_select_window_left {
             bindings = <&kp LC(LS(LA(TAB)))>;
             key-positions = <31 30>;
             require-prior-idle-ms = <200>;
-            layers = <6>;
+            layers = <5>;
         };
 
         combo_savein_million {
             bindings = <&macro_savein_million>;
             key-positions = <17 18>;
             timeout-ms = <300>;
-            layers = <6>;
+            layers = <5>;
         };
 
         combo_savein_takane {
             bindings = <&macro_savein_takane>;
             key-positions = <16 17>;
             timeout-ms = <300>;
-            layers = <6>;
+            layers = <5>;
         };
 
         combo_savein_miki {
             bindings = <&macro_savein_miki>;
             key-positions = <29 28>;
             timeout-ms = <300>;
-            layers = <5>;
+            layers = <7>;
         };
 
         combo_multi {
@@ -309,7 +309,7 @@
         combo_search {
             bindings = <&macro_copy_search_internet>;
             key-positions = <16 28>;
-            layers = <6>;
+            layers = <5>;
         };
 
         combo_clear_all_profiles {
@@ -865,6 +865,13 @@
             bindings = <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
             label = "MACRO_MB";
         };
+
+        macro_kp: macro_kp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_KP";
+        };
     };
 
     behaviors {
@@ -919,12 +926,12 @@
         mt_tappref: mt_tappref {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_TAPPREF";
-            bindings = <&kp>, <&kp>;
+            bindings = <&macro_kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <60>;
         };
 
         mt_long: mt_long {
@@ -1168,6 +1175,15 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <200>;
         };
+
+        lt_layer: lt_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_LAYER";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -1175,10 +1191,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mt_tappref HOME Y    &mt_tappref END U     &mt_tappref LS(N8) I           &mt_tappref LS(N9) O  &lt 5 MINUS
-&mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G      &none                                 &mat_mb MB4 LEFT_BRACKET  &mat_mb MB2 H         &mat_mb MB1 J         &mt_tappref RIGHT_BRACKET K    &mt_tappref NUHS L    &mt_long RCTRL P
-&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 SEMI                            &mat_mb MB5 SQT           &mat_mb MB3 N         &mat_doubleclick 0 M  &mt_tappref RIGHT_BRACE COMMA  &mt_tappref PIPE DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL              &kp LEFT_WIN                 &mkp MB1              &lt_to_layer_0 8 INTERNATIONAL_5  &lt_holdpref_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE             &lt_to_layer_0 6 RET                                                                             &mkp MB1
+&mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mt_tappref LS(COMMA) Y    &mt_tappref LS(DOT) U  &mt_tappref LS(N8) I         &mt_tappref LS(N9) O   &kp MINUS
+&mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G      &none                                 &mat_mb MB4 LEFT_BRACKET  &mt_tappref RIGHT_BRACE H  &mt_tappref PIPE J     &mt_tappref RIGHT_BRACKET K  &mt_tappref NUHS L     &mt_long RCTRL P
+&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 SEMI                            &mat_mb MB5 SQT           &mat_mb MB3 N              &mat_mb MB2 M          &mkp MB1                     &mt_tappref COMMA DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT          &lt_to_layer_0 8 INTERNATIONAL_5  &lt_holdpref_qt 7 SPACE  &lt_to_layer_0 8 INTERNATIONAL_4      &kp BACKSPACE             &lt_to_layer_0 5 RET                                                                                  &lt_layer 5 8
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -1189,7 +1205,7 @@
 &trans               &trans     &trans  &trans               &trans                                           &trans                  &trans  &trans  &trans  &trans
 &mt_long LEFT_GUI A  &trans     &trans  &mt_long LEFT_GUI F  &trans  &trans                           &trans  &trans                  &trans  &trans  &trans  &mt_long RIGHT_GUI P
 &trans               &trans     &trans  &trans               &trans  &trans                           &trans  &trans                  &trans  &trans  &trans  &trans
-&kp LEFT_GUI         &kp LCTRL  &trans  &kp LANGUAGE_2       &trans  &lt_to_layer_1 9 LANGUAGE_1      &trans  &lt_to_layer_1 6 ENTER                          &trans
+&kp LEFT_GUI         &kp LCTRL  &trans  &kp LANGUAGE_2       &trans  &lt_to_layer_1 9 LANGUAGE_1      &trans  &lt_to_layer_1 5 ENTER                          &trans
             >;
         };
 
@@ -1198,7 +1214,7 @@
 &kp CAPS   &kp Q    &kp W         &kp E  &kp R                                 &trans                &trans  &trans  &trans  &trans
 &kp TAB    &kp A    &kp S         &kp D  &kp F      &trans      &trans         &trans                &trans  &kp K   &trans  &trans
 &kp LSHFT  &kp Z    &kp X         &kp C  &kp V      &kp G       &kp DELETE     &trans                &trans  &trans  &trans  &trans
-&kp LCTRL  &kp ESC  &kp LEFT_ALT  &mo 5  &kp SPACE  &kp B       &kp BACKSPACE  &lt_to_layer_0 6 RET                          &trans
+&kp LCTRL  &kp ESC  &kp LEFT_ALT  &mo 7  &kp SPACE  &kp B       &kp BACKSPACE  &lt_to_layer_0 5 RET                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -1218,10 +1234,21 @@
 &macro_kp_togoff_layer Q  &macro_kp_togoff_layer W  &macro_kp_togoff_layer E  &macro_kp_togoff_layer R            &macro_kp_togoff_layer T                                                                            &macro_kp_togoff_layer Y  &macro_kp_togoff_layer U  &macro_kp_togoff_layer I      &macro_kp_togoff_layer O     &macro_kp_togoff_layer MINUS
 &macro_kp_togoff_layer A  &macro_kp_togoff_layer S  &macro_kp_togoff_layer D  &macro_kp_togoff_layer F            &macro_kp_togoff_layer G  &trans                                  &macro_kp_togoff_layer LBKT       &macro_kp_togoff_layer H  &mkp MB1                  &mo 11                        &macro_mkp_togoff_layer MB2  &kp RCTRL
 &macro_kp_togoff_layer Z  &macro_kp_togoff_layer X  &macro_kp_togoff_layer C  &macro_kp_togoff_layer V            &macro_kp_togoff_layer B  &macro_kp_togoff_layer SEMI             &macro_kp_togoff_layer SQT        &macro_kp_togoff_layer N  &mkp MB4                  &macro_kp_togoff_layer COMMA  &mkp MB5                     &kp RIGHT_SHIFT
-&trans                    &trans                    &trans                    &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 5 SPACE  &lt_togoff_layer 7 INTERNATIONAL_4      &macro_kp_togoff_layer BACKSPACE  &lt_togoff_layer 6 RET                                                                                         &trans
+&trans                    &trans                    &trans                    &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 7 SPACE  &lt_togoff_layer 8 INTERNATIONAL_4      &macro_kp_togoff_layer BACKSPACE  &lt_togoff_layer 5 RET                                                                                         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+        };
+
+        MODKEY_ARROW {
+            bindings = <
+&trans          &mat_home_end_select HOME HOME  &macro_select_line  &mat_home_end_select END END  &macro_emacs_k_cut_to_end                             &mt_tappref LC(LS(T)) LC(T)  &mt_tappref LC(PG_UP) LC(LS(TAB))  &kp UP_ARROW  &mt_tappref LC(PAGE_DOWN) LC(TAB)  &mt_tappref LC(W) ESC
+&kp LCTRL       &kp LEFT_SHIFT                  &kp LEFT_ALT        &kp LCTRL                     &kp LEFT_GUI               &trans      &kp PG_UP      &kp TAB                      &kp LEFT                           &kp DOWN      &kp RIGHT                          &kp RCTRL
+&kp LEFT_SHIFT  &trans                          &trans              &trans                        &trans                     &trans      &kp PAGE_DOWN  &kp LA(UP_ARROW)             &mat_home_end_select HOME HOME     &kp RSHIFT    &mat_home_end_select END END       &kp RIGHT_SHIFT
+&trans          &trans                          &trans              &kp LS(TAB)                   &kp TAB                    &trans      &kp DELETE     &trans                                                                                                           &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
         };
 
         NUM_BAR_SYMBOLS_SCROLL {
@@ -1229,18 +1256,7 @@
 &kp EXCLAMATION       &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR    &kp PERCENT                                          &kp LS(NUMBER_6)          &kp LS(N7)             &mat_parenthesis 0 LS(N8)  &kp LS(N9)          &kp LS(EQUAL)
 &kp N1                &kp N2      &kp N3                        &kp N4        &kp N5       &trans         &kp DOT                  &kp N6                    &mat_select_line 0 N7  &mat_emacs 0 N8            &mat_cut_line 0 N9  &kp N0
 &mt LEFT_SHIFT SLASH  &kp MINUS   &kp LS(SQT)                   &kp LS(SEMI)  &kp DOT      &kp EQUAL      &kp LS(INTERNATIONAL_3)  &mat_brace 0 RIGHT_BRACE  &kp PIPE               &mt LS(COMMA) COMMA        &mt LS(PERIOD) DOT  &trans
-&trans                &trans      &kp LEFT_ALT                  &trans        &trans       &trans         &kp DELETE               &trans                                                                                          &kp INT1
-            >;
-
-            sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
-        };
-
-        MODKEY_ARROW {
-            bindings = <
-&trans          &mat_home_end_select HOME HOME  &macro_select_line  &mat_home_end_select END END  &macro_emacs_k_cut_to_end                             &mt LC(LS(T)) LC(T)  &mt LC(PG_UP) LC(LS(TAB))       &kp UP_ARROW  &mt LC(PAGE_DOWN) LC(TAB)     &kp ESC
-&kp LCTRL       &kp LEFT_SHIFT                  &kp LEFT_ALT        &kp LCTRL                     &kp LEFT_GUI               &trans      &kp PG_UP      &kp TAB              &kp LEFT                        &kp DOWN      &kp RIGHT                     &kp RCTRL
-&kp LEFT_SHIFT  &trans                          &trans              &trans                        &trans                     &trans      &kp PAGE_DOWN  &kp LA(UP_ARROW)     &mat_home_end_select HOME HOME  &kp RSHIFT    &mat_home_end_select END END  &kp RIGHT_SHIFT
-&trans          &trans                          &kp LEFT_ALT        &kp LS(TAB)                   &kp TAB                    &trans      &kp DELETE     &trans                                                                                           &kp LC(W)
+&trans                &trans      &trans                        &trans        &trans       &trans         &kp DELETE               &trans                                                                                          &kp INT1
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
