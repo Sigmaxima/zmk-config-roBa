@@ -1237,7 +1237,7 @@
         MOUSE {
             bindings = <
 &macro_togoff Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &macro_togoff Y         &macro_togoff U  &macro_togoff I  &macro_togoff O  &macro_togoff MINUS
-&trans           &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &macro_togoff LBKT       &macro_togoff H         &mkp MB1         &macro_togoff K  &mkp MB2         &kp RCTRL
+&trans           &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &macro_togoff LBKT       &macro_togoff H         &mkp MB1         &macro_togoff K  &macro_togoff L  &kp RCTRL
 &trans           &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &macro_togoff SEMI                      &macro_togoff SQT        &macro_togoff N         &macro_togoff M  &mkp MB1         &mkp MB2         &kp RIGHT_SHIFT
 &trans           &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 7 SPACE  &lt_togoff_layer 8 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                     &trans
             >;
