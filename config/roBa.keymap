@@ -43,13 +43,13 @@
         combo_tog_tenkeys {
             bindings = <&tog 9>;
             key-positions = <6 7 8>;
-            layers = <0 9>;
+            layers = <0 9 1 2 4>;
         };
 
         combo_tog_game_mode {
             bindings = <&tog 2>;
             key-positions = <1 2 3>;
-            layers = <0 3>;
+            layers = <0 3 4>;
         };
 
         combo_search_in_browser {
@@ -75,7 +75,7 @@
         combo_f2 {
             bindings = <&kp F2>;
             key-positions = <1 0>;
-            layers = <0>;
+            layers = <0 1 4>;
             require-prior-idle-ms = <300>;
         };
 
@@ -83,13 +83,13 @@
             bindings = <&kp F3>;
             key-positions = <3 4>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <0 1 4>;
         };
 
         combo_f5 {
             bindings = <&kp F5>;
             key-positions = <5 6>;
-            layers = <0>;
+            layers = <0 1 4>;
             require-prior-idle-ms = <300>;
             timeout-ms = <120>;
         };
@@ -104,20 +104,20 @@
         combo_doublequate {
             bindings = <&kp LS(N2)>;
             key-positions = <30 31>;
-            layers = <0>;
+            layers = <0 1 4>;
         };
 
         combo_underscore {
             bindings = <&kp LS(INTERNATIONAL_1)>;
             key-positions = <32 33>;
-            layers = <0>;
+            layers = <0 1 4>;
         };
 
         combo_ctrl_z {
             bindings = <&kp LC(Z)>;
             key-positions = <22 23>;
             require-prior-idle-ms = <100>;
-            layers = <0>;
+            layers = <0 4>;
             timeout-ms = <300>;
         };
 
@@ -125,7 +125,7 @@
             bindings = <&kp LC(X)>;
             key-positions = <23 24>;
             require-prior-idle-ms = <100>;
-            layers = <0>;
+            layers = <0 4>;
             timeout-ms = <300>;
         };
 
@@ -133,14 +133,14 @@
             bindings = <&kp LC(C)>;
             key-positions = <11 12>;
             require-prior-idle-ms = <200>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         combo_ctrl_v {
             bindings = <&kp LC(V)>;
             key-positions = <12 13>;
             require-prior-idle-ms = <100>;
-            layers = <0>;
+            layers = <0 4>;
             timeout-ms = <300>;
         };
 
@@ -148,14 +148,14 @@
             bindings = <&kp LC(A)>;
             key-positions = <0 10>;
             require-prior-idle-ms = <200>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         combo_win_v {
             bindings = <&kp LG(V)>;
             key-positions = <13 14>;
             require-prior-idle-ms = <100>;
-            layers = <0>;
+            layers = <0 4>;
             timeout-ms = <300>;
         };
 
@@ -163,7 +163,7 @@
             bindings = <&macro_plain_text>;
             key-positions = <24 25>;
             require-prior-idle-ms = <200>;
-            layers = <0>;
+            layers = <0 4>;
             timeout-ms = <200>;
         };
 
@@ -171,7 +171,7 @@
             bindings = <&kp LS(CAPS)>;
             key-positions = <0 34>;
             require-prior-idle-ms = <200>;
-            layers = <0>;
+            layers = <0 1 4>;
             timeout-ms = <300>;
         };
 
@@ -179,14 +179,14 @@
             bindings = <&kp LC(LS(X))>;
             key-positions = <0 9>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         combo_alt_f4 {
             bindings = <&kp LA(F4)>;
             key-positions = <9 42>;
             layers = <0>;
-            require-prior-idle-ms = <800>;
+            require-prior-idle-ms = <500>;
         };
 
         combo_mouse_move_window {
@@ -217,7 +217,7 @@
             bindings = <&kp LG(UP_ARROW)>;
             key-positions = <8 9>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <0 4>;
             timeout-ms = <150>;
         };
 
@@ -225,7 +225,7 @@
             bindings = <&kp LG(DOWN)>;
             key-positions = <21 20>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <0 4>;
             timeout-ms = <150>;
         };
 
@@ -233,14 +233,14 @@
             bindings = <&kp LA(TAB)>;
             key-positions = <21 9>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <0 4>;
             timeout-ms = <200>;
         };
 
         combo_snap_right_window {
             bindings = <&kp LG(RIGHT)>;
             key-positions = <9 8>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <100>;
             layers = <6>;
             timeout-ms = <200>;
         };
@@ -248,7 +248,7 @@
         combo_snap_left_window {
             bindings = <&kp LG(LEFT)>;
             key-positions = <5 6>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <100>;
             layers = <6>;
             timeout-ms = <200>;
         };
@@ -256,7 +256,7 @@
         combo_window_spin_move {
             bindings = <&kp LS(LG(LEFT))>;
             key-positions = <32 30>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <300>;
             layers = <0 6 4>;
             timeout-ms = <150>;
         };
@@ -318,8 +318,9 @@
         combo_scroll {
             bindings = <&mo 5>;
             key-positions = <32 31>;
-            layers = <0>;
-            timeout-ms = <150>;
+            layers = <0 1 4>;
+            timeout-ms = <220>;
+            require-prior-idle-ms = <50>;
         };
     };
 
@@ -1235,10 +1236,10 @@
 
         MOUSE {
             bindings = <
-&macro_togoff Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &macro_togoff Y         &macro_togoff U  &macro_togoff I  &macro_togoff O    &macro_togoff MINUS
-&trans           &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &macro_togoff LBKT       &macro_togoff H         &macro_togoff J  &macro_togoff K  &macro_togoff L    &kp RCTRL
-&trans           &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &macro_togoff SEMI                      &macro_togoff SQT        &macro_togoff N         &macro_togoff M  &mkp MB1         &macro_togoff DOT  &kp RIGHT_SHIFT
-&trans           &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 7 SPACE  &lt_togoff_layer 8 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                       &trans
+&macro_togoff Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &macro_togoff Y         &macro_togoff U  &macro_togoff I  &macro_togoff O  &macro_togoff MINUS
+&trans           &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &macro_togoff LBKT       &macro_togoff H         &mkp MB1         &macro_togoff K  &mkp MB2         &kp RCTRL
+&trans           &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &macro_togoff SEMI                      &macro_togoff SQT        &macro_togoff N         &macro_togoff M  &mkp MB1         &mkp MB2         &kp RIGHT_SHIFT
+&trans           &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 7 SPACE  &lt_togoff_layer 8 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
