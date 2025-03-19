@@ -1247,10 +1247,10 @@
 
         MOUSE {
             bindings = <
-&mat_togoff ESCAPE Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &mat_togoff LS(COMMA) Y    &mat_togoff LS(PERIOD) U  &mat_togoff LS(N8) I         &mat_togoff LS(O) O        &macro_togoff MINUS
+&mat_togoff ESCAPE Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &mat_togoff LS(COMMA) Y    &mat_togoff LS(PERIOD) U  &mat_togoff LS(N8) I         &mat_togoff LS(O) O        &lt_togoff_layer 5 MINUS
 &trans                &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &trans                   &mat_togoff RIGHT_BRACE H  &mkp MB1                  &mat_togoff RIGHT_BRACKET K  &mat_togoff NON_US_HASH L  &kp RCTRL
 &trans                &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &macro_togoff DEL                       &trans                   &mat_togoff SEMI N         &mat_togoff SQT M         &mkp MB1                     &mkp MB2                   &kp RIGHT_SHIFT
-&trans                &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 7 SPACE  &lt_togoff_layer 8 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                                                       &trans
+&trans                &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 5 SPACE  &lt_togoff_layer 7 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
