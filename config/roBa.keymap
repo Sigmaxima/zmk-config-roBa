@@ -1189,6 +1189,17 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        mat_togoff: mat_togoff {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAT_TOGOFF";
+            bindings = <&macro_togoff>, <&macro_togoff>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <60>;
+        };
     };
 
     keymap {
@@ -1198,7 +1209,7 @@
             bindings = <
 &mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mat_tappref LS(COMMA) Y    &mat_tappref LS(DOT) U  &mat_tappref LS(N8) I         &mat_tappref LS(N9) O  &lt_holdpref_qt 5 MINUS
 &mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G      &none                                 &mat_mb MB5 LEFT_BRACKET  &mat_tappref RIGHT_BRACE H  &mat_tappref PIPE J     &mat_tappref RIGHT_BRACKET K  &mat_tappref NUHS L    &mt_long RCTRL P
-&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 SEMI                            &mat_mb MB4 SQT           &mat_mb MB3 N               &mat_mb MB2 M           &kp COMMA                     &mat_mb MB2 DOT        &mt RIGHT_SHIFT SLASH
+&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 SEMI                            &mat_mb MB4 SQT           &mat_mb MB3 N               &mat_mb MB2 M           &mat_mb MB1 COMMA             &mat_mb MB2 DOT        &mt RIGHT_SHIFT SLASH
 &kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT          &lt_to_layer_0 8 INTERNATIONAL_5  &lt_holdpref_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE             &lt_to_layer_0 6 RET                                                                                     &mo 5
             >;
 
@@ -1236,10 +1247,10 @@
 
         MOUSE {
             bindings = <
-&macro_togoff Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &macro_togoff Y         &macro_togoff U  &macro_togoff I  &macro_togoff O  &macro_togoff MINUS
-&trans           &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &macro_togoff LBKT       &macro_togoff H         &mkp MB1         &macro_togoff K  &macro_togoff L  &kp RCTRL
-&trans           &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &macro_togoff SEMI                      &macro_togoff SQT        &macro_togoff N         &macro_togoff M  &mkp MB1         &mkp MB2         &kp RIGHT_SHIFT
-&trans           &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 7 SPACE  &lt_togoff_layer 8 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                     &trans
+&mat_togoff ESCAPE Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &mat_togoff LS(COMMA) Y    &mat_togoff LS(PERIOD) U  &mat_togoff LS(N8) I         &mat_togoff LS(O) O        &macro_togoff MINUS
+&trans                &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &trans                   &mat_togoff RIGHT_BRACE H  &mkp MB1                  &mat_togoff RIGHT_BRACKET K  &mat_togoff NON_US_HASH L  &kp RCTRL
+&trans                &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &macro_togoff SEMI                      &trans                   &macro_togoff N            &macro_togoff M           &mkp MB1                     &mkp MB2                   &kp RIGHT_SHIFT
+&trans                &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 7 SPACE  &lt_togoff_layer 8 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
