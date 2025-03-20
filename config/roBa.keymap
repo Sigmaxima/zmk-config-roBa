@@ -1227,7 +1227,7 @@
             bindings = <
 &mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mat_tappref LS(COMMA) Y    &mat_tappref LS(DOT) U       &mat_tappref LS(N8) I         &mat_tappref LS(N9) O  &lt_holdpref_qt 5 MINUS
 &mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G      &none                                 &mat_mb MB5 LEFT_BRACKET  &mat_tappref RIGHT_BRACE H  &mat_tappref PIPE J          &mat_tappref RIGHT_BRACKET K  &mat_tappref NUHS L    &mt_long RCTRL P
-&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 DEL                             &mat_mb MB4 LS(N3)        &mat_tappref SEMI N         &mat_tappref SINGLE_QUOTE M  &mat_mb MB1 COMMA             &mat_mb MB2 DOT        &mt RIGHT_SHIFT SLASH
+&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 INT1                            &mat_mb MB4 LS(N3)        &mat_tappref SEMI N         &mat_tappref SINGLE_QUOTE M  &mat_mb MB1 COMMA             &mat_mb MB2 DOT        &mt RIGHT_SHIFT SLASH
 &kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT          &lt_to_layer_0 8 INTERNATIONAL_5  &lt_holdpref_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE             &lt_to_layer_0 6 RET                                                                                          &mo 5
             >;
 
@@ -1267,7 +1267,7 @@
             bindings = <
 &mat_togoff ESCAPE Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &mat_togoff LS(COMMA) Y    &mat_togoff LS(PERIOD) U  &mat_togoff LS(N8) I         &mat_togoff LS(O) O        &lt_togoff_layer 5 MINUS
 &trans                &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &trans                   &mat_togoff RIGHT_BRACE H  &mat_togoff PIPE J        &mat_togoff RIGHT_BRACKET K  &mat_togoff NON_US_HASH L  &kp RCTRL
-&trans                &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &macro_togoff DEL                       &trans                   &mat_togoff SEMI N         &mat_togoff SQT M         &mkp MB1                     &mkp MB2                   &kp RIGHT_SHIFT
+&trans                &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &macro_togoff INTERNATIONAL_1           &trans                   &mat_togoff SEMI N         &mat_togoff SQT M         &mkp MB1                     &mkp MB2                   &kp RIGHT_SHIFT
 &trans                &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 5 SPACE  &lt_togoff_layer 7 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                                                       &trans
             >;
 
@@ -1298,10 +1298,10 @@
 
         FUNCTION_APP_MEDIA {
             bindings = <
-&macro_capture   &macro_teams  &macro_outlook  &macro_browser  &macro_copy_url                                          &macro_word        &macro_excel      &macro_powerpoint  &mama_vscode 0 0  &mama_editor 0 0
-&kp F1           &kp F2        &kp F3          &kp F4          &kp F5                   &trans      &macro_calculator   &kp F6             &kp F7            &kp F8             &kp F9            &kp F10
-&kp F11          &kp F12       &kp F13         &trans          &mt LG(LA(T)) LC(LS(M))  &trans      &mama_music 0 0     &kp C_STOP         &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp C_NEXT        &kp C_MUTE
-&kp PRINTSCREEN  &trans        &trans          &trans          &trans                   &trans      &mama_explorer 0 0  &mama_onenote 0 0                                                         &macro_todo
+&macro_capture   &macro_teams  &macro_outlook    &macro_browser  &macro_copy_url                                                   &macro_word        &macro_excel  &macro_powerpoint  &mama_vscode 0 0  &mama_editor 0 0
+&kp F1           &kp F2        &kp F3            &kp F4          &kp F5           &trans                       &macro_calculator   &kp F6             &kp F7        &kp F8             &kp F9            &kp F10
+&kp C_STOP       &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT      &kp C_MUTE       &mt LG(LA(T)) LC(LS(M))      &mama_music 0 0     &kp F11            &kp F12       &trans             &trans            &trans
+&kp PRINTSCREEN  &trans        &trans            &trans          &trans           &trans                       &mama_explorer 0 0  &mama_onenote 0 0                                                     &macro_todo
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
