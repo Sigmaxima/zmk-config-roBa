@@ -35,9 +35,9 @@
 
         combo_mb3 {
             bindings = <&mkp MB3>;
-            key-positions = <18 20>;
+            key-positions = <30 32>;
             timeout-ms = <250>;
-            layers = <4>;
+            layers = <4 0 1>;
         };
 
         combo_tog_tenkeys {
@@ -255,7 +255,7 @@
 
         combo_window_spin_move {
             bindings = <&kp LS(LG(LEFT))>;
-            key-positions = <32 30>;
+            key-positions = <20 18>;
             require-prior-idle-ms = <300>;
             layers = <0 6 4>;
             timeout-ms = <150>;
