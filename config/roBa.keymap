@@ -887,9 +887,9 @@
             tapping-term-ms = <200>;
         };
 
-        lt_holdpref_qt: lt_holdpref_qt {
+        lt_hold_qt: lt_hold_qt {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_HOLDPREF_QT";
+            label = "LT_HOLD_QT";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -898,9 +898,9 @@
             require-prior-idle-ms = <50>;
         };
 
-        lt_tappref_qt: lt_tappref_qt {
+        lt_tap_qt: lt_tap_qt {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_TAPPREF_QT";
+            label = "LT_TAP_QT";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -910,16 +910,9 @@
             flavor = "tap-preferred";
         };
 
-        scroll_up_down: scroll_up_down {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "SCROLL_UP_DOWN";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
-        };
-
-        mat_tappref: mat_tappref {
+        mt_tap_norepeat: mt_tap_norepeat {
             compatible = "zmk,behavior-hold-tap";
-            label = "MAT_TAPPREF";
+            label = "MT_TAP_NOREPEAT";
             bindings = <&macro_kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -938,28 +931,6 @@
             flavor = "tap-preferred";
             retro-tap;
             require-prior-idle-ms = <120>;
-        };
-
-        mat_doubleclick: mat_doubleclick {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_DOUBLECLICK";
-            bindings = <&macro_doubleclick>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
-        };
-
-        mat_tripleclick: mat_tripleclick {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_TRIPLECLICK";
-            bindings = <&macro_tripleclick>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
         };
 
         mat_select_line: mat_select_line {
@@ -1217,10 +1188,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mat_tappref LS(COMMA) Y    &mat_tappref LS(DOT) U       &mat_tappref LS(N8) I         &mat_tappref LS(N9) O  &kp MINUS
-&mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G      &none                                 &mat_mb MB5 LEFT_BRACKET  &mat_tappref RIGHT_BRACE H  &mat_tappref PIPE J          &mat_tappref RIGHT_BRACKET K  &mat_tappref NUHS L    &mt_long RCTRL P
-&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 INT1                            &mat_mb MB4 LS(N3)        &mat_tappref SEMI N         &mat_tappref SINGLE_QUOTE M  &mat_mb MB1 COMMA             &lt_holdpref_qt 5 DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT          &lt_to_layer_0 8 INTERNATIONAL_5  &lt_holdpref_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE             &lt_to_layer_0 6 RET                                                                                          &mo 5
+&mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                       &mt_tap_norepeat LS(COMMA) Y    &mt_tap_norepeat LS(DOT) U       &mt_tap_norepeat LS(N8) I         &mt_tap_norepeat LS(N9) O  &kp MINUS
+&mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G  &none                                 &mat_mb MB5 LEFT_BRACKET  &mt_tap_norepeat RIGHT_BRACE H  &mt_tap_norepeat PIPE J          &mt_tap_norepeat RIGHT_BRACKET K  &mt_tap_norepeat NUHS L    &mt_long RCTRL P
+&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                &lt 9 INT1                            &mat_mb MB4 LS(N3)        &mt_tap_norepeat SEMI N         &mt_tap_norepeat SINGLE_QUOTE M  &mat_mb MB1 COMMA                 &lt_hold_qt 5 DOT          &mt RIGHT_SHIFT SLASH
+&kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT          &lt_to_layer_0 8 INTERNATIONAL_5  &lt_hold_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE             &lt_to_layer_0 6 RET                                                                                                          &mo 5
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -1279,10 +1250,10 @@
 
         MODKEY_ARROW {
             bindings = <
-&macro_ctrl_k_kp LC(N1)  &macro_ctrl_k_kp LC(N2)  &macro_ctrl_k_kp LC(N3)  &macro_ctrl_k_kp LC(N4)  &macro_ctrl_k_kp LC(J)                                   &mat_tappref LC(LS(T)) LC(T)  &mat_tappref LC(PG_UP) LC(LS(TAB))  &kp UP_ARROW                &mat_tappref LC(PAGE_DOWN) LC(TAB)  &macro_kp LC(W)
-&kp LA(LS(N1))           &kp LA(LS(N2))           &kp LA(LS(N3))           &kp LA(LS(N4))           &kp LA(LS(N0))          &trans            &kp PG_UP      &kp TAB                       &kp LEFT                            &kp DOWN                    &kp RIGHT                           &kp RCTRL
-&kp LEFT_SHIFT           &trans                   &trans                   &trans                   &trans                  &trans            &kp PAGE_DOWN  &kp LA(UP_ARROW)              &mat_home_end_select HOME HOME      &mat_selecct_line_none 0 0  &mat_home_end_select END END        &kp RIGHT_SHIFT
-&trans                   &trans                   &trans                   &kp LS(TAB)              &kp TAB                 &kp LEFT_WIN      &kp DELETE     &trans                                                                                                                            &kp ESCAPE
+&macro_ctrl_k_kp LC(N1)  &macro_ctrl_k_kp LC(N2)  &macro_ctrl_k_kp LC(N3)  &macro_ctrl_k_kp LC(N4)  &macro_ctrl_k_kp LC(J)                                   &mt_tap_norepeat LC(LS(T)) LC(T)  &mt_tap_norepeat LC(PG_UP) LC(LS(TAB))  &kp UP_ARROW                &mt_tap_norepeat LC(PAGE_DOWN) LC(TAB)  &macro_kp LC(W)
+&kp LA(LS(N1))           &kp LA(LS(N2))           &kp LA(LS(N3))           &kp LA(LS(N4))           &kp LA(LS(N0))          &trans            &kp PG_UP      &kp TAB                           &kp LEFT                                &kp DOWN                    &kp RIGHT                               &kp RCTRL
+&kp LEFT_SHIFT           &trans                   &trans                   &trans                   &trans                  &trans            &kp PAGE_DOWN  &kp LA(UP_ARROW)                  &mat_home_end_select HOME HOME          &mat_selecct_line_none 0 0  &mat_home_end_select END END            &kp RIGHT_SHIFT
+&trans                   &trans                   &trans                   &kp LS(TAB)              &kp TAB                 &kp LEFT_WIN      &kp DELETE     &trans                                                                                                                                        &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
