@@ -1159,7 +1159,7 @@
 &mt ESCAPE Q           &mat_home_end_select HOME W  &sc_sel_line 0 E     &mat_home_end_select END R        &sc_emacs 0 T                                                                     &mt_norepeat LS(COMMA) Y    &mt_norepeat LS(DOT) U       &mt_norepeat LS(N8) I         &mt_norepeat LS(N9) O  &kp MINUS
 &mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D  &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G  &none                                 &mmb MB5 LEFT_BRACKET  &mt_norepeat RIGHT_BRACE H  &mt_norepeat PIPE J          &mt_norepeat RIGHT_BRACKET K  &mt_norepeat NUHS L    &mt_long RCTRL P
 &mt_long LEFT_SHIFT Z  &kp X                        &kp C                &kp V                             &kp B                &lt 9 INT1                            &mmb MB4 LS(N3)        &mt_norepeat SEMI N         &mt_norepeat SINGLE_QUOTE M  &mmb MB1 COMMA                &lt_hold_qt 5 DOT      &mt RIGHT_SHIFT SLASH
-&kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT         &lt_to_layer_0 8 INTERNATIONAL_5  &lt_hold_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE          &lt_to_layer_0 6 RET                                                                                          &mo 5
+&kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT         &lt_to_layer_0 8 INTERNATIONAL_5  &lt_hold_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE          &lt_to_layer_0 6 RET                                                                                          &lt_layer 5 9
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
