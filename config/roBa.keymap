@@ -319,8 +319,8 @@
             bindings = <&mo 5>;
             key-positions = <32 31>;
             layers = <0 1 4>;
-            timeout-ms = <80>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <80>;
         };
     };
 
@@ -1227,7 +1227,7 @@
             bindings = <
 &mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mat_tappref LS(COMMA) Y    &mat_tappref LS(DOT) U       &mat_tappref LS(N8) I         &mat_tappref LS(N9) O  &lt_holdpref_qt 5 MINUS
 &mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G      &none                                 &mat_mb MB5 LEFT_BRACKET  &mat_tappref RIGHT_BRACE H  &mat_tappref PIPE J          &mat_tappref RIGHT_BRACKET K  &mat_tappref NUHS L    &mt_long RCTRL P
-&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 INT1                            &mat_mb MB4 LS(N3)        &mat_tappref SEMI N         &mat_tappref SINGLE_QUOTE M  &mat_mb MB1 COMMA             &mat_mb MB2 DOT        &mt RIGHT_SHIFT SLASH
+&mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 INT1                            &mat_mb MB4 LS(N3)        &mat_tappref SEMI N         &mat_tappref SINGLE_QUOTE M  &mat_mb MB1 COMMA             &lt_holdpref_qt 5 DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT          &lt_to_layer_0 8 INTERNATIONAL_5  &lt_holdpref_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE             &lt_to_layer_0 6 RET                                                                                          &mo 5
             >;
 
@@ -1278,7 +1278,7 @@
             bindings = <
 &kp EXCLAMATION       &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR    &kp PERCENT                                          &kp LS(NUMBER_6)  &kp LS(N7)             &mat_parenthesis 0 LS(N8)  &kp LS(N9)          &kp LS(EQUAL)
 &kp N1                &kp N2      &kp N3                        &kp N4        &kp N5       &trans         &kp DOT                  &kp N6            &mat_select_line 0 N7  &mat_emacs 0 N8            &mat_cut_line 0 N9  &kp N0
-&mt LEFT_SHIFT SLASH  &kp MINUS   &kp LS(SQT)                   &kp LS(SEMI)  &kp EQUAL    &kp MINUS      &kp LS(INTERNATIONAL_3)  &mkp MB3          &kp RCTRL              &mt LS(COMMA) COMMA        &mt LS(PERIOD) DOT  &trans
+&mt LEFT_SHIFT SLASH  &kp MINUS   &kp LS(SQT)                   &kp LS(SEMI)  &kp EQUAL    &kp MINUS      &kp LS(INTERNATIONAL_3)  &mkp MB3          &kp RCTRL              &mkp MB1                   &mt LS(PERIOD) DOT  &trans
 &trans                &trans      &trans                        &trans        &trans       &trans         &kp DELETE               &trans                                                                                  &kp INT1
             >;
 
