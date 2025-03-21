@@ -1149,6 +1149,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        mkp_togoff: mkp_togoff {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MKP_TOGOFF";
+            bindings = <&mkp>, <&macro_mkp_togoff>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <50>;
+            quick-tap-ms = <500>;
+        };
     };
 
     keymap {
@@ -1198,7 +1208,7 @@
             bindings = <
 &mt_togoff ESCAPE Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &mt_togoff LS(COMMA) Y    &mt_togoff LS(PERIOD) U  &mt_togoff LS(N8) I         &mt_togoff LS(O) O        &macro_togoff MINUS
 &trans               &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &trans                   &mt_togoff RIGHT_BRACE H  &mt_togoff PIPE J        &mt_togoff RIGHT_BRACKET K  &mt_togoff NON_US_HASH L  &trans
-&trans               &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &mo 9                                   &trans                   &mt_togoff SEMI N         &mt_togoff SQT M         &mkp MB1                    &lt_togoff_mkp 5 MB2      &kp RIGHT_SHIFT
+&trans               &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &mo 9                                   &trans                   &mt_togoff SEMI N         &mt_togoff SQT M         &mkp_togoff MB1 MB1         &lt_togoff_mkp 5 MB2      &kp RIGHT_SHIFT
 &trans               &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 5 SPACE  &lt_togoff_layer 7 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                                                   &trans
             >;
 
