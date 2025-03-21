@@ -811,11 +811,11 @@
             label = "MACRO_SAVEIN_MULTI";
         };
 
-        macro_mb: macro_mb {
+        macro_mkp: macro_mkp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
-            label = "MACRO_MB";
+            label = "MACRO_MKP";
         };
 
         macro_kp: macro_kp {
@@ -1102,7 +1102,7 @@
         mmb: mmb {
             compatible = "zmk,behavior-hold-tap";
             label = "MMB";
-            bindings = <&macro_mb>, <&kp>;
+            bindings = <&macro_mkp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -1136,7 +1136,7 @@
             bindings = <&macro_select_line>, <&none>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <400>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <200>;
         };
