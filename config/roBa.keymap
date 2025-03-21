@@ -363,34 +363,6 @@
             label = "MACRO_K_HELPER";
         };
 
-        macro_doubleclick: macro_doubleclick {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1 &mkp MB1>;
-            label = "MACRO_DOUBLECLICK";
-        };
-
-        macro_tripleclick: macro_tripleclick {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1 &mkp MB1 &mkp MB1>;
-            label = "MACRO_TRIPLECLICK";
-        };
-
-        macro_quadrupleclick: macro_quadrupleclick {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1>;
-            label = "MACRO_QUADRUPLECLICK";
-        };
-
-        macro_bat_and_return: macro_bat_and_return {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_BAT_AND_RETURN";
-        };
-
         macro_brackets: macro_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -419,11 +391,11 @@
             label = "MACRO_SELECT_LINE";
         };
 
-        macro_emacs_k_cut_to_end: macro_emacs_k_cut_to_end {
+        macro_emacs_k_cut: macro_emacs_k_cut {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt LEFT_SHIFT &kp END &kt LEFT_SHIFT &kp LC(X)>;
-            label = "MACRO_EMACS_K_CUT_TO_END";
+            label = "MACRO_EMACS_K_CUT";
         };
 
         macro_cut_line: macro_cut_line {
@@ -947,7 +919,7 @@
         sc_emacs: sc_emacs {
             compatible = "zmk,behavior-hold-tap";
             label = "SC_EMACS";
-            bindings = <&macro_emacs_k_cut_to_end>, <&kp>;
+            bindings = <&macro_emacs_k_cut>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
@@ -1169,14 +1141,13 @@
             require-prior-idle-ms = <200>;
         };
 
-        lt_holdpref_mkp: lt_holdpref_mkp {
+        lt_togoff_mkp: lt_togoff_mkp {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_HOLDPREF_MKP";
-            bindings = <&mo>, <&mkp>;
+            label = "LT_TOGOFF_MKP";
+            bindings = <&macro_mo_togoff>, <&macro_mkp_togoff>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            require-prior-idle-ms = <200>;
+            tapping-term-ms = <150>;
         };
     };
 
@@ -1225,9 +1196,9 @@
 
         MOUSE {
             bindings = <
-&mt_togoff ESCAPE Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &mt_togoff LS(COMMA) Y    &mt_togoff LS(PERIOD) U  &mt_togoff LS(N8) I         &mt_togoff LS(O) O        &lt_togoff_layer 5 MINUS
-&trans               &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &trans                   &mt_togoff RIGHT_BRACE H  &mt_togoff PIPE J        &mt_togoff RIGHT_BRACKET K  &mt_togoff NON_US_HASH L  &kp RCTRL
-&trans               &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &mo 9                                   &trans                   &mt_togoff SEMI N         &mt_togoff SQT M         &mkp MB1                    &lt_holdpref_mkp 5 MB2    &kp RIGHT_SHIFT
+&mt_togoff ESCAPE Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &mt_togoff LS(COMMA) Y    &mt_togoff LS(PERIOD) U  &mt_togoff LS(N8) I         &mt_togoff LS(O) O        &macro_togoff MINUS
+&trans               &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &trans                   &mt_togoff RIGHT_BRACE H  &mt_togoff PIPE J        &mt_togoff RIGHT_BRACKET K  &mt_togoff NON_US_HASH L  &trans
+&trans               &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &mo 9                                   &trans                   &mt_togoff SEMI N         &mt_togoff SQT M         &mkp MB1                    &lt_togoff_mkp 5 MB2      &kp RIGHT_SHIFT
 &trans               &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 5 SPACE  &lt_togoff_layer 7 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                                                   &trans
             >;
 
