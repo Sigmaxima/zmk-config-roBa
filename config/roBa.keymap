@@ -19,20 +19,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_mb1 {
-            bindings = <&mkp MB1>;
-            key-positions = <18 19>;
-            timeout-ms = <450>;
-            layers = <4>;
-        };
-
-        combo_mb2 {
-            bindings = <&mkp MB2>;
-            key-positions = <19 20>;
-            timeout-ms = <250>;
-            layers = <4>;
-        };
-
         combo_mb3 {
             bindings = <&mkp MB3>;
             key-positions = <30 32>;
@@ -57,7 +43,7 @@
             key-positions = <28 16>;
             require-prior-idle-ms = <300>;
             layers = <0>;
-            timeout-ms = <300>;
+            timeout-ms = <150>;
         };
 
         combo_ctrl_left {
@@ -77,6 +63,7 @@
             key-positions = <1 0>;
             layers = <0 1 4>;
             require-prior-idle-ms = <300>;
+            timeout-ms = <150>;
         };
 
         combo_f3 {
@@ -90,14 +77,6 @@
             bindings = <&kp F5>;
             key-positions = <5 6>;
             layers = <0 1 4>;
-            require-prior-idle-ms = <300>;
-            timeout-ms = <120>;
-        };
-
-        combo_f11 {
-            bindings = <&kp F11>;
-            key-positions = <>;
-            layers = <0>;
             require-prior-idle-ms = <300>;
         };
 
@@ -126,14 +105,15 @@
             key-positions = <23 24>;
             require-prior-idle-ms = <100>;
             layers = <0 4>;
-            timeout-ms = <300>;
+            timeout-ms = <200>;
         };
 
         combo_ctrl_c {
             bindings = <&kp LC(C)>;
             key-positions = <11 12>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <100>;
             layers = <0 4>;
+            timeout-ms = <150>;
         };
 
         combo_ctrl_v {
@@ -141,7 +121,7 @@
             key-positions = <12 13>;
             require-prior-idle-ms = <100>;
             layers = <0 4>;
-            timeout-ms = <300>;
+            timeout-ms = <150>;
         };
 
         combo_ctrl_a {
@@ -149,6 +129,7 @@
             key-positions = <0 10>;
             require-prior-idle-ms = <200>;
             layers = <0 4>;
+            timeout-ms = <150>;
         };
 
         combo_win_v {
@@ -156,7 +137,7 @@
             key-positions = <13 14>;
             require-prior-idle-ms = <100>;
             layers = <0 4>;
-            timeout-ms = <300>;
+            timeout-ms = <150>;
         };
 
         combo_paste_plain_text {
@@ -164,36 +145,36 @@
             key-positions = <24 25>;
             require-prior-idle-ms = <200>;
             layers = <0 4>;
-            timeout-ms = <200>;
+            timeout-ms = <150>;
         };
 
         combo_capslock {
             bindings = <&kp LS(CAPS)>;
             key-positions = <0 34>;
-            require-prior-idle-ms = <200>;
             layers = <0 1 4>;
-            timeout-ms = <300>;
+            timeout-ms = <150>;
         };
 
         combo_teams_rich_textbox {
             bindings = <&kp LC(LS(X))>;
             key-positions = <0 9>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <150>;
             layers = <0 4>;
+            timeout-ms = <150>;
         };
 
         combo_alt_f4 {
             bindings = <&kp LA(F4)>;
             key-positions = <9 42>;
             layers = <0>;
-            require-prior-idle-ms = <500>;
+            require-prior-idle-ms = <400>;
         };
 
         combo_mouse_move_window {
             bindings = <&macro_mouse_move_window>;
             key-positions = <6 8>;
             require-prior-idle-ms = <300>;
-            layers = <6 7 4 0>;
+            layers = <6 4>;
             timeout-ms = <200>;
         };
 
@@ -201,7 +182,7 @@
             bindings = <&macro_mouse_window_rd>;
             key-positions = <8 7>;
             require-prior-idle-ms = <300>;
-            layers = <6 7 4>;
+            layers = <6 4>;
             timeout-ms = <200>;
         };
 
@@ -209,7 +190,7 @@
             bindings = <&macro_mouse_window_ul>;
             key-positions = <6 7>;
             require-prior-idle-ms = <300>;
-            layers = <6 7 4>;
+            layers = <6 4>;
             timeout-ms = <200>;
         };
 
@@ -257,7 +238,7 @@
             bindings = <&kp LS(LG(LEFT))>;
             key-positions = <20 18>;
             require-prior-idle-ms = <300>;
-            layers = <0 6 4>;
+            layers = <6 4>;
             timeout-ms = <150>;
         };
 
@@ -285,21 +266,21 @@
         combo_savein_takane {
             bindings = <&macro_savein_takane>;
             key-positions = <29 30>;
-            timeout-ms = <300>;
+            timeout-ms = <150>;
             layers = <6>;
         };
 
         combo_savein_miki {
             bindings = <&macro_savein_miki>;
             key-positions = <17 16>;
-            timeout-ms = <300>;
+            timeout-ms = <150>;
             layers = <6>;
         };
 
         combo_multi {
             bindings = <&macro_savein_multi>;
             key-positions = <29 28>;
-            timeout-ms = <300>;
+            timeout-ms = <150>;
             layers = <6>;
         };
 
@@ -307,20 +288,14 @@
             bindings = <&macro_copy_search_internet>;
             key-positions = <16 28>;
             layers = <6>;
+            timeout-ms = <150>;
         };
 
         combo_clear_all_profiles {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <34 36>;
             layers = <9>;
-        };
-
-        combo_scroll {
-            bindings = <&mo 5>;
-            key-positions = <>;
-            layers = <0 1 4>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <80>;
+            require-prior-idle-ms = <200>;
         };
     };
 
@@ -1235,7 +1210,7 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mat_tappref LS(COMMA) Y    &mat_tappref LS(DOT) U       &mat_tappref LS(N8) I         &mat_tappref LS(N9) O  &lt_holdpref_qt 5 MINUS
+&mt ESCAPE Q           &mat_home_end_select HOME W  &mat_select_line 0 E  &mat_home_end_select END R        &mat_emacs 0 T                                                                           &mat_tappref LS(COMMA) Y    &mat_tappref LS(DOT) U       &mat_tappref LS(N8) I         &mat_tappref LS(N9) O  &kp MINUS
 &mt_long LCTRL A       &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D   &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G      &none                                 &mat_mb MB5 LEFT_BRACKET  &mat_tappref RIGHT_BRACE H  &mat_tappref PIPE J          &mat_tappref RIGHT_BRACKET K  &mat_tappref NUHS L    &mt_long RCTRL P
 &mt_long LEFT_SHIFT Z  &kp X                        &kp C                 &kp V                             &kp B                    &lt 9 INT1                            &mat_mb MB4 LS(N3)        &mat_tappref SEMI N         &mat_tappref SINGLE_QUOTE M  &mat_mb MB1 COMMA             &lt_holdpref_qt 5 DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL              &kp LEFT_WIN                 &kp LEFT_ALT          &lt_to_layer_0 8 INTERNATIONAL_5  &lt_holdpref_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE             &lt_to_layer_0 6 RET                                                                                          &mo 5
