@@ -831,6 +831,22 @@
 
             label = "MACRO_MO_TOGOFF";
         };
+
+        macro_dclickable_togoff: macro_dclickable_togoff {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&macro_wait_time 350>,
+                <&tog 4>;
+
+            label = "MACRO_DCLICKABLE_TOGOFF";
+        };
     };
 
     behaviors {
@@ -1211,10 +1227,10 @@
 
         NUM_BAR_SYMBOLS_SCROLL {
             bindings = <
-&kp EXCLAMATION       &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR    &kp PERCENT                                          &kp LS(NUMBER_6)  &kp LS(N7)         &sc_parenthesis 0 LS(N8)  &kp LS(N9)          &kp LS(EQUAL)
-&kp N1                &kp N2      &kp N3                        &kp N4        &kp N5       &trans         &kp DOT                  &kp N6            &sc_sel_line 0 N7  &sc_emacs 0 N8            &sc_cut_line 0 N9   &kp N0
-&mt LEFT_SHIFT SLASH  &kp MINUS   &kp LS(SQT)                   &kp LS(SEMI)  &kp EQUAL    &kp MINUS      &kp LS(INTERNATIONAL_3)  &mkp MB3          &kp RCTRL          &mkp MB1                  &mt LS(PERIOD) DOT  &trans
-&trans                &trans      &trans                        &trans        &trans       &trans         &kp DELETE               &trans                                                                             &kp INT1
+&kp EXCLAMATION       &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR    &kp PERCENT                                          &kp LS(NUMBER_6)  &kp LS(N7)         &sc_parenthesis 0 LS(N8)      &kp LS(N9)          &kp LS(EQUAL)
+&kp N1                &kp N2      &kp N3                        &kp N4        &kp N5       &trans         &kp DOT                  &kp N6            &sc_sel_line 0 N7  &sc_emacs 0 N8                &sc_cut_line 0 N9   &kp N0
+&mt LEFT_SHIFT SLASH  &kp MINUS   &kp LS(SQT)                   &kp LS(SEMI)  &kp EQUAL    &kp MINUS      &kp LS(INTERNATIONAL_3)  &mkp MB3          &kp RCTRL          &macro_dclickable_togoff MB1  &mt LS(PERIOD) DOT  &trans
+&trans                &trans      &trans                        &trans        &trans       &trans         &kp DELETE               &trans                                                                                 &kp INT1
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
