@@ -314,11 +314,11 @@
             label = "TO_LAYER_1";
         };
 
-        macro_bt_0_to: macro_bt_0_to {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&bt BT_SEL 0 &macro_param_1to1 &to MACRO_PLACEHOLDER>;
-            label = "MACRO_BT_0_TO";
+        macro_bt: macro_bt {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
+            label = "MACRO_BT";
         };
 
         macro_bt_1_to: macro_bt_1_to {
@@ -1255,10 +1255,10 @@
 
         BT_TEN_KEYS {
             bindings = <
-&macro_bt_0_to 0  &macro_bt_1_to 0  &macro_bt_2_to 1  &macro_bt_3_to 0  &macro_bt_4_to 0                             &kp LS(SQT)   &kp N7  &kp N8  &kp N9  &kp TAB
-&to 0             &to 1             &trans            &trans            &trans            &trans      &kp LS(SLASH)  &kp MINUS     &kp N4  &kp N5  &kp N6  &kp ENTER
-&trans            &trans            &trans            &trans            &trans            &trans      &kp SQT        &kp LS(SEMI)  &kp N1  &kp N2  &kp N3  &kp DOT
-&bt BT_CLR        &trans            &trans            &trans            &trans            &trans      &trans         &kp N0                                &trans
+&macro_bt 0 0  &macro_bt 1 0  &macro_bt 2 1  &macro_bt 3 0  &macro_bt 4 0                             &kp LS(SQT)   &kp N7  &kp N8  &kp N9  &kp TAB
+&to 0          &to 1          &trans         &trans         &trans         &trans      &kp LS(SLASH)  &kp MINUS     &kp N4  &kp N5  &kp N6  &kp ENTER
+&trans         &trans         &trans         &trans         &trans         &trans      &kp SQT        &kp LS(SEMI)  &kp N1  &kp N2  &kp N3  &kp DOT
+&bt BT_CLR     &trans         &trans         &trans         &trans         &trans      &trans         &kp N0                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
