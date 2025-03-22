@@ -835,10 +835,7 @@
         macro_mo_togoff: macro_mo_togoff {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings =
-                <&tog 4 &macro_param_1to1 &mo MACRO_PLACEHOLDER>,
-                <&macro_press>;
-
+            bindings = <&tog 4 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
             label = "MACRO_MO_TOGOFF";
         };
     };
