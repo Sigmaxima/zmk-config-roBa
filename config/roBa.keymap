@@ -835,7 +835,14 @@
         macro_mo_togoff: macro_mo_togoff {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&tog 4 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
+            bindings =
+                <&tog 4>,
+                <&macro_press>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>;
+
             label = "MACRO_MO_TOGOFF";
         };
     };
@@ -1093,7 +1100,7 @@
         lt_togoff_layer: lt_togoff_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_TOGOFF_LAYER";
-            bindings = <&mo>, <&macro_togoff>;
+            bindings = <&macro_mo_togoff>, <&macro_togoff>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1144,7 +1151,7 @@
         lt_togoff_mkp: lt_togoff_mkp {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_TOGOFF_MKP";
-            bindings = <&mo>, <&macro_mkp_togoff>;
+            bindings = <&macro_mo_togoff>, <&macro_mkp_togoff>;
 
             #binding-cells = <2>;
             tapping-term-ms = <120>;
