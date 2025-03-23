@@ -317,6 +317,55 @@
             label = "MACRO_BT";
         };
 
+        macro_mouse_move_window: macro_mouse_move_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
+                <&macro_wait_time 150>,
+                <&kp M &kp UP_ARROW &kp DOWN_ARROW>;
+
+            label = "MACRO_MOUSE_MOVE_WINDOW";
+        };
+
+        macro_mouse_window_ul: macro_mouse_window_ul {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
+                <&macro_wait_time 150>,
+                <&kp S &kp LEFT_ARROW &kp UP_ARROW>;
+
+            label = "MACRO_MOUSE_WINDOW_UL";
+        };
+
+        macro_mouse_window_rd: macro_mouse_window_rd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
+                <&macro_wait_time 150>,
+                <&kp S &kp RIGHT &kp DOWN_ARROW>;
+
+            label = "MACRO_MOUSE_WINDOW_RD";
+        };
+
+        macro_plain_text: macro_plain_text {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(V)>,
+                <&macro_wait_time 450>,
+                <&kp LCTRL &kp TAB>,
+                <&macro_wait_time 150>,
+                <&kp LCTRL &kp ENTER>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp ENTER>;
+
+            label = "MACRO_PLAIN_TEXT";
+        };
+
+
         macro_brackets: macro_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -676,54 +725,6 @@
             label = "MACRO_COPY_SEARCH_IN_APP";
         };
 
-        macro_mouse_move_window: macro_mouse_move_window {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
-                <&macro_wait_time 150>,
-                <&kp M &kp UP_ARROW &kp DOWN_ARROW>;
-
-            label = "MACRO_MOUSE_MOVE_WINDOW";
-        };
-
-        macro_mouse_window_ul: macro_mouse_window_ul {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
-                <&macro_wait_time 150>,
-                <&kp S &kp LEFT_ARROW &kp UP_ARROW>;
-
-            label = "MACRO_MOUSE_WINDOW_UL";
-        };
-
-        macro_mouse_window_rd: macro_mouse_window_rd {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp INTERNATIONAL_5 &kp LA(SPACE)>,
-                <&macro_wait_time 150>,
-                <&kp S &kp RIGHT &kp DOWN_ARROW>;
-
-            label = "MACRO_MOUSE_WINDOW_RD";
-        };
-
-        macro_plain_text: macro_plain_text {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LG(V)>,
-                <&macro_wait_time 450>,
-                <&kp LCTRL &kp TAB>,
-                <&macro_wait_time 150>,
-                <&kp LCTRL &kp ENTER>,
-                <&macro_wait_time 200>,
-                <&kp LCTRL &kp ENTER>;
-
-            label = "MACRO_PLAIN_TEXT";
-        };
-
         macro_onenote_quicknote: macro_onenote_quicknote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -810,22 +811,15 @@
     };
 
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
+        mmb: mmb {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            label = "MMB";
+            bindings = <&macro_mkp_tap>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
-        };
-
-        lt_to_layer_1: lt_to_layer_1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_TO_LAYER_1";
-            bindings = <&mo>, <&to_layer_1>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
         };
 
         lt_hold_qt: lt_hold_qt {
@@ -874,6 +868,87 @@
             require-prior-idle-ms = <120>;
         };
 
+        togoff: togoff {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOGOFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
+
+        sl_short: sl_short {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SL_SHORT";
+            bindings = <&mo>;
+            #binding-cells = <1>;
+            release-after-ms = <400>;
+            quick-release;
+        };
+
+        lt_layer: lt_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_LAYER";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        lt_togoff: lt_togoff {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_TOGOFF";
+            bindings = <&macro_mo_togoff>, <&macro_kp_togoff>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        mt_togoff: mt_togoff {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_TOGOFF";
+            bindings = <&macro_kp_togoff>, <&macro_kp_togoff>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <60>;
+        };
+
+        lt_mkp_togoff: lt_mkp_togoff {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_MKP_TOGOFF";
+            bindings = <&macro_mo_togoff>, <&macro_mkp_togoff_sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <120>;
+        };
+
+        lt_layer_togoff: lt_layer_togoff {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_LAYER_TOGOFF";
+            bindings = <&macro_mo_togoff>, <&macro_togoff_tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+        };
+
+        lt_to_layer_1: lt_to_layer_1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_TO_LAYER_1";
+            bindings = <&mo>, <&to_layer_1>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+        };
+
         sc_sel_line: sc_sel_line {
             compatible = "zmk,behavior-hold-tap";
             label = "SC_SEL_LINE";
@@ -881,6 +956,16 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <200>;
+        };
+        sc_sel_line_none: sc_sel_line_none {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SC_SEL_LINE_NONE";
+            bindings = <&macro_select_line>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <200>;
         };
@@ -958,6 +1043,16 @@
             flavor = "tap-preferred";
         };
 
+        sc_gt_lt: sc_gt_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SC_GT_LT";
+            bindings = <&macro_gt_lt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
         ap_music: ap_music {
             compatible = "zmk,behavior-hold-tap";
             label = "AP_MUSIC";
@@ -1023,101 +1118,6 @@
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <200>;
-        };
-
-        lt_togoff: lt_togoff {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_TOGOFF";
-            bindings = <&macro_mo_togoff>, <&macro_kp_togoff>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        mmb: mmb {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MMB";
-            bindings = <&macro_mkp_tap>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <150>;
-        };
-
-        lt_layer: lt_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_LAYER";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        mt_togoff: mt_togoff {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_TOGOFF";
-            bindings = <&macro_kp_togoff>, <&macro_kp_togoff>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <60>;
-        };
-
-        sc_sel_line_none: sc_sel_line_none {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SC_SEL_LINE_NONE";
-            bindings = <&macro_select_line>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <400>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
-        };
-
-        lt_mkp_togoff: lt_mkp_togoff {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_MKP_TOGOFF";
-            bindings = <&macro_mo_togoff>, <&macro_mkp_togoff_sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <120>;
-        };
-
-        togoff: togoff {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "TOGOFF";
-            #binding-cells = <1>;
-            toggle-mode = "off";
-        };
-
-        lt_layer_togoff: lt_layer_togoff {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_LAYER_TOGOFF";
-            bindings = <&macro_mo_togoff>, <&macro_togoff_tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        sc_gt_lt: sc_gt_lt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SC_GT_LT";
-            bindings = <&macro_gt_lt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-        };
-
-        sl_short: sl_short {
-            compatible = "zmk,behavior-sticky-key";
-            label = "SL_SHORT";
-            bindings = <&mo>;
-            #binding-cells = <1>;
-            release-after-ms = <400>;
-            quick-release;
         };
     };
 
