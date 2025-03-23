@@ -296,18 +296,18 @@
             label = "TO_LAYER_1";
         };
 
-        macro_mkp: macro_mkp {
+        macro_mkp_tap: macro_mkp_tap {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
-            label = "MACRO_MKP";
+            label = "MACRO_MKP_TAP";
         };
 
-        macro_kp: macro_kp {
+        macro_kp_tap: macro_kp_tap {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_KP";
+            label = "MACRO_KP_TAP";
         };
 
         macro_bt: macro_bt {
@@ -324,11 +324,11 @@
             label = "MACRO_BRACKETS";
         };
 
-        macro_brace: macro_brace {
+        macro_braces: macro_braces {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_BRACE &kp PIPE &kp LEFT>;
-            label = "MACRO_BRACE";
+            label = "MACRO_BRACES";
         };
 
         macro_parenthesis: macro_parenthesis {
@@ -669,7 +669,6 @@
             label = "MACRO_COPY_SEARCH_INTERNET";
         };
 
-
         macro_copy_search_in_app: macro_copy_search_in_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -855,7 +854,7 @@
         mt_norepeat: mt_norepeat {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_NOREPEAT";
-            bindings = <&macro_kp>, <&kp>;
+            bindings = <&macro_kp_tap>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -932,7 +931,7 @@
         sc_brace: sc_brace {
             compatible = "zmk,behavior-hold-tap";
             label = "SC_BRACE";
-            bindings = <&macro_brace>, <&kp>;
+            bindings = <&macro_braces>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -1038,7 +1037,7 @@
         mmb: mmb {
             compatible = "zmk,behavior-hold-tap";
             label = "MMB";
-            bindings = <&macro_mkp>, <&kp>;
+            bindings = <&macro_mkp_tap>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -1189,7 +1188,7 @@
 
         FOLD_ARROW {
             bindings = <
-&macro_ctrl_k_kp LC(N1)  &macro_ctrl_k_kp LC(N2)  &macro_ctrl_k_kp LC(N3)  &macro_ctrl_k_kp LC(N4)  &macro_ctrl_k_kp LC(J)                                           &mt_norepeat LC(LS(T)) LC(T)  &mt_norepeat LC(PG_UP) LC(LS(TAB))  &kp UP_ARROW           &mt_norepeat LC(PAGE_DOWN) LC(TAB)  &macro_kp LC(W)
+&macro_ctrl_k_kp LC(N1)  &macro_ctrl_k_kp LC(N2)  &macro_ctrl_k_kp LC(N3)  &macro_ctrl_k_kp LC(N4)  &macro_ctrl_k_kp LC(J)                                           &mt_norepeat LC(LS(T)) LC(T)  &mt_norepeat LC(PG_UP) LC(LS(TAB))  &kp UP_ARROW           &mt_norepeat LC(PAGE_DOWN) LC(TAB)  &macro_kp_tap LC(W)
 &kp LA(LS(N1))           &kp LA(LS(N2))           &kp LA(LS(N3))           &kp LA(LS(N4))           &kp LA(LS(N0))          &trans                    &kp PG_UP      &kp TAB                       &kp LEFT                            &kp DOWN               &kp RIGHT                           &kp RCTRL
 &kp LEFT_SHIFT           &trans                   &trans                   &trans                   &trans                  &sc_sel_cut_line 0 0      &kp PAGE_DOWN  &kp LA(UP_ARROW)              &mat_home_end_select HOME HOME      &sc_sel_line_none 0 0  &mat_home_end_select END END        &kp RIGHT_SHIFT
 &trans                   &trans                   &trans                   &kp LS(TAB)              &kp TAB                 &kp LEFT_WIN              &kp DELETE     &trans                                                                                                                       &kp ESCAPE
