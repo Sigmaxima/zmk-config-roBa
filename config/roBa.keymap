@@ -903,48 +903,14 @@
             require-prior-idle-ms = <200>;
         };
 
-        sc_cut_line: sc_cut_line {
+        sc_sel_cut_line: sc_sel_cut_line {
             compatible = "zmk,behavior-hold-tap";
-            label = "SC_CUT_LINE";
-            bindings = <&macro_cut_line>, <&kp>;
+            label = "SC_SEL_CUT_LINE";
+            bindings = <&macro_cut_line>, <&macro_select_line>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
-        };
-
-        mat_ascii_type: mat_ascii_type {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_ASCII_TYPE";
-            bindings = <&macro_ascii_type>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-        };
-
-        mat_ascii_space: mat_ascii_space {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_ASCII_SPACE";
-            bindings = <&macro_ascii_type_space>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-        };
-
-        mat_ascii_type_reverse: mat_ascii_type_reverse {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAT_ASCII_TYPE_REVERSE";
-            bindings = <&kp>, <&macro_ascii_type>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <80>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <25>;
         };
 
         mat_inset_at_head: mat_inset_at_head {
@@ -1126,17 +1092,6 @@
             tapping-term-ms = <120>;
         };
 
-        mkp_togoff: mkp_togoff {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MKP_TOGOFF";
-            bindings = <&mkp>, <&macro_mkp_togoff_sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <60>;
-            quick-tap-ms = <350>;
-            flavor = "tap-preferred";
-        };
-
         togoff: togoff {
             compatible = "zmk,behavior-toggle-layer";
             label = "TOGOFF";
@@ -1240,10 +1195,10 @@
 
         FOLD_ARROW {
             bindings = <
-&macro_ctrl_k_kp LC(N1)  &macro_ctrl_k_kp LC(N2)  &macro_ctrl_k_kp LC(N3)  &macro_ctrl_k_kp LC(N4)  &macro_ctrl_k_kp LC(J)                                   &mt_norepeat LC(LS(T)) LC(T)  &mt_norepeat LC(PG_UP) LC(LS(TAB))  &kp UP_ARROW           &mt_norepeat LC(PAGE_DOWN) LC(TAB)  &macro_kp LC(W)
-&kp LA(LS(N1))           &kp LA(LS(N2))           &kp LA(LS(N3))           &kp LA(LS(N4))           &kp LA(LS(N0))          &trans            &kp PG_UP      &kp TAB                       &kp LEFT                            &kp DOWN               &kp RIGHT                           &kp RCTRL
-&kp LEFT_SHIFT           &trans                   &trans                   &trans                   &trans                  &trans            &kp PAGE_DOWN  &kp LA(UP_ARROW)              &mat_home_end_select HOME HOME      &sc_sel_line_none 0 0  &mat_home_end_select END END        &kp RIGHT_SHIFT
-&trans                   &trans                   &trans                   &kp LS(TAB)              &kp TAB                 &kp LEFT_WIN      &kp DELETE     &trans                                                                                                                       &kp ESCAPE
+&macro_ctrl_k_kp LC(N1)  &macro_ctrl_k_kp LC(N2)  &macro_ctrl_k_kp LC(N3)  &macro_ctrl_k_kp LC(N4)  &macro_ctrl_k_kp LC(J)                                           &mt_norepeat LC(LS(T)) LC(T)  &mt_norepeat LC(PG_UP) LC(LS(TAB))  &kp UP_ARROW           &mt_norepeat LC(PAGE_DOWN) LC(TAB)  &macro_kp LC(W)
+&kp LA(LS(N1))           &kp LA(LS(N2))           &kp LA(LS(N3))           &kp LA(LS(N4))           &kp LA(LS(N0))          &trans                    &kp PG_UP      &kp TAB                       &kp LEFT                            &kp DOWN               &kp RIGHT                           &kp RCTRL
+&kp LEFT_SHIFT           &trans                   &trans                   &trans                   &trans                  &sc_sel_cut_line 0 0      &kp PAGE_DOWN  &kp LA(UP_ARROW)              &mat_home_end_select HOME HOME      &sc_sel_line_none 0 0  &mat_home_end_select END END        &kp RIGHT_SHIFT
+&trans                   &trans                   &trans                   &kp LS(TAB)              &kp TAB                 &kp LEFT_WIN              &kp DELETE     &trans                                                                                                                       &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
