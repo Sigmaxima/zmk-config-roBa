@@ -879,7 +879,7 @@
             label = "SL_SHORT";
             bindings = <&mo>;
             #binding-cells = <1>;
-            release-after-ms = <180>;
+            release-after-ms = <200>;
             quick-release;
         };
 
