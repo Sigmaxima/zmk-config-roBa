@@ -9,7 +9,7 @@
 
 &mt {
     quick-tap-ms = <220>;
-    tapping-term-ms = <250>;
+    tapping-term-ms = <220>;
     require-prior-idle-ms = <50>;
 };
 
@@ -1119,6 +1119,18 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <200>;
         };
+
+        mt_z: mt_z {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_Z";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <220>;
+            require-prior-idle-ms = <180>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -1126,10 +1138,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &mat_home_end_select HOME W  &sc_sel_line 0 E     &mat_home_end_select END R        &sc_emacs 0 T                                                                     &mt_norepeat LS(COMMA) Y    &mt_norepeat LS(DOT) U       &mt_norepeat LS(N8) I         &mt_norepeat LS(N9) O  &kp MINUS
-&mt_long LCTRL A  &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D  &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G  &none                                 &mmb MB5 LEFT_BRACKET  &mt_norepeat RIGHT_BRACE H  &mt_norepeat PIPE J          &mt_norepeat RIGHT_BRACKET K  &mt_norepeat NUHS L    &mt_long RCTRL P
-&mt LEFT_SHIFT Z  &kp X                        &kp C                &kp V                             &kp B                &lt 9 INT1                            &mmb MB4 LS(N3)        &mt_norepeat SEMI N         &mt_norepeat SINGLE_QUOTE M  &mmb MB1 COMMA                &lt_hold_qt 5 DOT      &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN                 &kp LEFT_ALT         &lt_to_layer_0 8 INTERNATIONAL_5  &lt_hold_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE          &lt_to_layer_0 6 RET                                                                                          &lt_layer 5 9
+&mt ESCAPE Q        &mat_home_end_select HOME W  &sc_sel_line 0 E     &mat_home_end_select END R        &sc_emacs 0 T                                                                     &mt_norepeat LS(COMMA) Y    &mt_norepeat LS(DOT) U       &mt_norepeat LS(N8) I         &mt_norepeat LS(N9) O  &kp MINUS
+&mt_long LCTRL A    &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D  &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G  &none                                 &mmb MB5 LEFT_BRACKET  &mt_norepeat RIGHT_BRACE H  &mt_norepeat PIPE J          &mt_norepeat RIGHT_BRACKET K  &mt_norepeat NUHS L    &mt_long RCTRL P
+&mt_z LEFT_SHIFT Z  &kp X                        &kp C                &kp V                             &kp B                &lt 9 INT1                            &mmb MB4 LS(N3)        &mt_norepeat SEMI N         &mt_norepeat SINGLE_QUOTE M  &mmb MB1 COMMA                &lt_hold_qt 5 DOT      &mt RIGHT_SHIFT SLASH
+&kp LCTRL           &kp LEFT_WIN                 &kp LEFT_ALT         &lt_to_layer_0 8 INTERNATIONAL_5  &lt_hold_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE          &lt_to_layer_0 6 RET                                                                                          &lt_layer 5 9
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -1177,10 +1189,10 @@
 
         NUM_BAR_SYMBOLS_SCROLL {
             bindings = <
-&kp EXCLAMATION       &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR    &kp PERCENT                                          &sc_gt_lt 0 LS(N6)  &kp LS(N7)  &sc_parenthesis 0 LS(N8)  &kp LS(N9)          &kp LS(EQUAL)
-&kp N1                &kp N2      &kp N3                        &kp N4        &kp N5       &trans         &kp DOT                  &sc_brace 0 N6      &kp N7      &sc_bracket 0 N8          &kp N9              &kp N0
-&mt LEFT_SHIFT SLASH  &kp MINUS   &kp LS(SQT)                   &kp LS(SEMI)  &kp EQUAL    &kp MINUS      &kp LS(INTERNATIONAL_3)  &mkp MB3            &kp RCTRL   &mkp MB1                  &mt LS(PERIOD) DOT  &trans
-&trans                &trans      &trans                        &trans        &trans       &trans         &kp DELETE               &trans                                                                        &kp INT1
+&kp EXCLAMATION         &kp LS(N2)  &mat_inset_at_head HASH HASH  &kp DOLLAR    &kp PERCENT                                          &sc_gt_lt 0 LS(N6)  &kp LS(N7)  &sc_parenthesis 0 LS(N8)  &kp LS(N9)          &kp LS(EQUAL)
+&kp N1                  &kp N2      &kp N3                        &kp N4        &kp N5       &trans         &kp DOT                  &sc_brace 0 N6      &kp N7      &sc_bracket 0 N8          &kp N9              &kp N0
+&mt_z LEFT_SHIFT SLASH  &kp MINUS   &kp LS(SQT)                   &kp LS(SEMI)  &kp EQUAL    &kp MINUS      &kp LS(INTERNATIONAL_3)  &mkp MB3            &kp RCTRL   &mkp MB1                  &mt LS(PERIOD) DOT  &trans
+&trans                  &trans      &trans                        &trans        &trans       &trans         &kp DELETE               &trans                                                                        &kp INT1
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
