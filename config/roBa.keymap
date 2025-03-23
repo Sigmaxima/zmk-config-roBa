@@ -365,7 +365,6 @@
             label = "MACRO_PLAIN_TEXT";
         };
 
-
         macro_brackets: macro_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -880,7 +879,7 @@
             label = "SL_SHORT";
             bindings = <&mo>;
             #binding-cells = <1>;
-            release-after-ms = <400>;
+            release-after-ms = <700>;
             quick-release;
         };
 
@@ -959,6 +958,7 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <200>;
         };
+
         sc_sel_line_none: sc_sel_line_none {
             compatible = "zmk,behavior-hold-tap";
             label = "SC_SEL_LINE_NONE";
