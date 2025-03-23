@@ -653,17 +653,17 @@
             label = "MACRO_EXPLORER";
         };
 
-        macro_togoff: macro_togoff {
+        macro_kp_togoff: macro_kp_togoff {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&tog 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_TOGOFF";
+            bindings = <&togoff 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_KP_TOGOFF";
         };
 
         macro_mkp_togoff: macro_mkp_togoff {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&tog 4 &macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
+            bindings = <&togoff 4 &macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
             label = "MACRO_MKP_TOGOFF";
         };
 
@@ -776,7 +776,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&tog 4>,
+                <&togoff 4>,
                 <&macro_press>,
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
@@ -1040,7 +1040,7 @@
         lt_togoff_layer: lt_togoff_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_TOGOFF_LAYER";
-            bindings = <&macro_mo_togoff>, <&macro_togoff>;
+            bindings = <&macro_mo_togoff>, <&macro_kp_togoff>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1069,7 +1069,7 @@
         mt_togoff: mt_togoff {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_TOGOFF";
-            bindings = <&macro_togoff>, <&macro_togoff>;
+            bindings = <&macro_kp_togoff>, <&macro_kp_togoff>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -1106,6 +1106,13 @@
             tapping-term-ms = <60>;
             quick-tap-ms = <350>;
             flavor = "tap-preferred";
+        };
+
+        togoff: togoff {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOGOFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
         };
     };
 
@@ -1154,10 +1161,10 @@
 
         MOUSE {
             bindings = <
-&mt_togoff ESCAPE Q  &macro_togoff W  &macro_togoff E  &macro_togoff R                     &macro_togoff T                                                                            &mt_togoff LS(COMMA) Y    &mt_togoff LS(PERIOD) U  &mt_togoff LS(N8) I         &mt_togoff LS(O) O        &macro_togoff MINUS
-&trans               &macro_togoff S  &macro_togoff D  &macro_togoff F                     &macro_togoff G           &trans                                  &trans                   &mt_togoff RIGHT_BRACE H  &mt_togoff PIPE J        &mt_togoff RIGHT_BRACKET K  &mt_togoff NON_US_HASH L  &trans
-&trans               &macro_togoff X  &macro_togoff C  &macro_togoff V                     &macro_togoff B           &mo 9                                   &trans                   &mt_togoff SEMI N         &mt_togoff SQT M         &mkp MB1                    &lt_togoff_mkp 5 MB2      &kp RIGHT_SHIFT
-&trans               &trans           &trans           &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 5 SPACE  &lt_togoff_layer 7 INTERNATIONAL_4      &macro_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                                                   &trans
+&mt_togoff ESCAPE Q  &macro_kp_togoff W  &macro_kp_togoff E  &macro_kp_togoff R                  &macro_kp_togoff T                                                                            &mt_togoff LS(COMMA) Y    &mt_togoff LS(PERIOD) U  &mt_togoff LS(N8) I         &mt_togoff LS(O) O        &macro_kp_togoff MINUS
+&trans               &macro_kp_togoff S  &macro_kp_togoff D  &macro_kp_togoff F                  &macro_kp_togoff G        &trans                                  &trans                      &mt_togoff RIGHT_BRACE H  &mt_togoff PIPE J        &mt_togoff RIGHT_BRACKET K  &mt_togoff NON_US_HASH L  &trans
+&trans               &macro_kp_togoff X  &macro_kp_togoff C  &macro_kp_togoff V                  &macro_kp_togoff B        &mo 9                                   &trans                      &mt_togoff SEMI N         &mt_togoff SQT M         &mkp MB1                    &lt_togoff_mkp 5 MB2      &kp RIGHT_SHIFT
+&trans               &trans              &trans              &lt_togoff_layer 8 INTERNATIONAL_5  &lt_togoff_layer 5 SPACE  &lt_togoff_layer 7 INTERNATIONAL_4      &macro_kp_togoff BACKSPACE  &lt_togoff_layer 6 RET                                                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
