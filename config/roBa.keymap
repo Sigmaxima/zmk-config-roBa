@@ -792,6 +792,20 @@
             bindings = <&togoff 4 &macro_param_1to1 &tog MACRO_PLACEHOLDER>;
             label = "MACRO_TOGOFF_TOG";
         };
+
+        macro_mkp_togoff_sl: macro_mkp_togoff_sl {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&togoff 4>,
+                <&macro_press>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER &sl 4>;
+
+            label = "MACRO_MKP_TOGOFF_SL";
+        };
     };
 
     behaviors {
@@ -1098,7 +1112,7 @@
         lt_mkp_togoff: lt_mkp_togoff {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_MKP_TOGOFF";
-            bindings = <&macro_mo_togoff>, <&macro_mkp_togoff>;
+            bindings = <&macro_mo_togoff>, <&macro_mkp_togoff_sl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <120>;
@@ -1107,7 +1121,7 @@
         mkp_togoff: mkp_togoff {
             compatible = "zmk,behavior-hold-tap";
             label = "MKP_TOGOFF";
-            bindings = <&mkp>, <&macro_mkp_togoff>;
+            bindings = <&mkp>, <&macro_mkp_togoff_sl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <60>;
@@ -1179,7 +1193,7 @@
             bindings = <
 &mt_togoff ESCAPE Q  &macro_kp_togoff W  &macro_kp_togoff E  &macro_kp_togoff R            &macro_kp_togoff T                                                                &mt_togoff LS(COMMA) Y    &mt_togoff LS(PERIOD) U  &mt_togoff LS(N8) I         &mt_togoff LS(O) O        &macro_kp_togoff MINUS
 &trans               &macro_kp_togoff S  &macro_kp_togoff D  &macro_kp_togoff F            &macro_kp_togoff G  &trans                            &trans                      &mt_togoff RIGHT_BRACE H  &mt_togoff PIPE J        &mt_togoff RIGHT_BRACKET K  &mt_togoff NON_US_HASH L  &trans
-&trans               &macro_kp_togoff X  &macro_kp_togoff C  &macro_kp_togoff V            &macro_kp_togoff B  &mo 9                             &trans                      &mt_togoff SEMI N         &mt_togoff SQT M         &mkp MB1                    &lt_mkp_togoff 5 MB2      &kp RIGHT_SHIFT
+&trans               &macro_kp_togoff X  &macro_kp_togoff C  &macro_kp_togoff V            &macro_kp_togoff B  &macro_mo_togoff 9                &trans                      &mt_togoff SEMI N         &mt_togoff SQT M         &mkp MB1                    &lt_mkp_togoff 5 MB2      &kp RIGHT_SHIFT
 &trans               &trans              &trans              &lt_togoff 8 INTERNATIONAL_5  &lt_togoff 5 SPACE  &lt_togoff 7 INTERNATIONAL_4      &macro_kp_togoff BACKSPACE  &lt_togoff 6 RET                                                                                         &lt_layer_togoff 5 9
             >;
 
