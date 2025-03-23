@@ -296,6 +296,20 @@
             label = "TO_LAYER_1";
         };
 
+        macro_mkp: macro_mkp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
+            label = "MACRO_MKP";
+        };
+
+        macro_kp: macro_kp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_KP";
+        };
+
         macro_bt: macro_bt {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
@@ -322,6 +336,20 @@
             #binding-cells = <0>;
             bindings = <&kp LS(N8) &kp LS(N9) &kp LEFT>;
             label = "MACRO_PARENTHESIS";
+        };
+
+        macro_gt_lt: macro_gt_lt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(COMMA) &kp LS(PERIOD) &kp LEFT>;
+            label = "MACRO_GT_LT";
+        };
+
+        macro_home_end_select: macro_home_end_select {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kt LEFT_SHIFT &macro_param_1to1 &kp MACRO_PLACEHOLDER &kt LEFT_SHIFT &kp LC(C)>;
+            label = "MACRO_HOME_END_SELECT";
         };
 
         macro_select_line: macro_select_line {
@@ -359,13 +387,6 @@
             label = "MACRO_DELETE_AT_HEAD";
         };
 
-        macro_home_end_select: macro_home_end_select {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kt LEFT_SHIFT &macro_param_1to1 &kp MACRO_PLACEHOLDER &kt LEFT_SHIFT &kp LC(C)>;
-            label = "MACRO_HOME_END_SELECT";
-        };
-
         macro_ascii_type: macro_ascii_type {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -373,11 +394,101 @@
             label = "MACRO_ASCII_TYPE";
         };
 
-        macro_ascii_type_space: macro_ascii_type_space {
+        macro_kp_togoff: macro_kp_togoff {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp INT_MUHENKAN &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE>;
-            label = "MACRO_ASCII_TYPE_SPACE";
+            bindings = <&togoff 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_KP_TOGOFF";
+        };
+
+        macro_mkp_togoff: macro_mkp_togoff {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&togoff 4 &macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
+            label = "MACRO_MKP_TOGOFF";
+        };
+
+        macro_copy_url: macro_copy_url {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(L) &kp LC(C) &kp ESCAPE>;
+            label = "MACRO_COPY_URL";
+        };
+
+        macro_text_color: macro_text_color {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LA(H)>,
+                <&macro_wait_time 50>,
+                <&kp F &kp C &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN>;
+
+            label = "MACRO_TEXT_COLOR";
+        };
+
+        macro_text_align: macro_text_align {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&kp LA(H)>,
+                <&macro_wait_time 50>,
+                <&kp A &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "MACRO_TEXT_ALIGN";
+        };
+
+        macro_text_deco: macro_text_deco {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&kp LA(H)>,
+                <&macro_wait_time 50>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "MACRO_TEXT_DECO";
+        };
+
+        macro_ctrl_k_kp: macro_ctrl_k_ctrl {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LC(K) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_CTRL_K_CTRL";
+        };
+
+        macro_mo_togoff: macro_mo_togoff {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&togoff 4>,
+                <&macro_press>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>;
+
+            label = "MACRO_MO_TOGOFF";
+        };
+
+        macro_togoff_tog: macro_togoff_tog {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&togoff 4 &macro_param_1to1 &tog MACRO_PLACEHOLDER>;
+            label = "MACRO_TOGOFF_TOG";
+        };
+
+        macro_mkp_togoff_sl: macro_mkp_togoff_sl {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&sl_short 4>;
+
+            label = "MACRO_MKP_TOGOFF_SL";
         };
 
         macro_browser: macro_browser {
@@ -547,6 +658,18 @@
             label = "MACRO_TODO";
         };
 
+        macro_copy_search_internet: macro_copy_search_internet {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LC(C) &kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp LCTRL &kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp G &kp O &kp O &kp G &kp L &kp E &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H &kp LS(SLASH) &kp Q &kp LS(MINUS) &kp LC(V) &kp ENTER>;
+
+            label = "MACRO_COPY_SEARCH_INTERNET";
+        };
+
+
         macro_copy_search_in_app: macro_copy_search_in_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -585,17 +708,6 @@
                 <&kp S &kp RIGHT &kp DOWN_ARROW>;
 
             label = "MACRO_MOUSE_WINDOW_RD";
-        };
-
-        macro_copy_search_internet: macro_copy_search_internet {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LC(C) &kp LG(R)>,
-                <&macro_wait_time 200>,
-                <&kp LCTRL &kp H &kp T &kp T &kp P &kp SQT &kp FSLH &kp FSLH &kp G &kp O &kp O &kp G &kp L &kp E &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H &kp LS(SLASH) &kp Q &kp LS(MINUS) &kp LC(V) &kp ENTER>;
-
-            label = "MACRO_COPY_SEARCH_INTERNET";
         };
 
         macro_plain_text: macro_plain_text {
@@ -653,60 +765,6 @@
             label = "MACRO_EXPLORER";
         };
 
-        macro_kp_togoff: macro_kp_togoff {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&togoff 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_KP_TOGOFF";
-        };
-
-        macro_mkp_togoff: macro_mkp_togoff {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&togoff 4 &macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
-            label = "MACRO_MKP_TOGOFF";
-        };
-
-        macro_copy_url: macro_copy_url {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(L) &kp LC(C) &kp ESCAPE>;
-            label = "MACRO_COPY_URL";
-        };
-
-        macro_text_color: macro_text_color {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LA(H)>,
-                <&macro_wait_time 50>,
-                <&kp F &kp C &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN>;
-
-            label = "MACRO_TEXT_COLOR";
-        };
-
-        macro_text_align: macro_text_align {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&kp LA(H)>,
-                <&macro_wait_time 50>,
-                <&kp A &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "MACRO_TEXT_ALIGN";
-        };
-
-        macro_text_deco: macro_text_deco {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&kp LA(H)>,
-                <&macro_wait_time 50>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "MACRO_TEXT_DECO";
-        };
-
         macro_savein_million: macro_savein_million {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -749,70 +807,6 @@
                 <&kp E &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
 
             label = "MACRO_SAVEIN_MULTI";
-        };
-
-        macro_mkp: macro_mkp {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
-            label = "MACRO_MKP";
-        };
-
-        macro_kp: macro_kp {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_KP";
-        };
-
-        macro_ctrl_k_kp: macro_ctrl_k_ctrl {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp LC(K) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_CTRL_K_CTRL";
-        };
-
-        macro_mo_togoff: macro_mo_togoff {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&togoff 4>,
-                <&macro_press>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>;
-
-            label = "MACRO_MO_TOGOFF";
-        };
-
-        macro_togoff_tog: macro_togoff_tog {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&togoff 4 &macro_param_1to1 &tog MACRO_PLACEHOLDER>;
-            label = "MACRO_TOGOFF_TOG";
-        };
-
-        macro_mkp_togoff_sl: macro_mkp_togoff_sl {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&sl_short 4>;
-
-            label = "MACRO_MKP_TOGOFF_SL";
-        };
-
-        macro_gt_lt: macro_gt_lt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(COMMA) &kp LS(PERIOD) &kp LEFT>;
-            label = "MACRO_GT_LT";
         };
     };
 
