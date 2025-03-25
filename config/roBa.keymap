@@ -816,7 +816,7 @@
             bindings = <&macro_mkp_tap>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <150>;
         };
@@ -850,7 +850,7 @@
             bindings = <&macro_kp_tap>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <60>;
         };
@@ -954,9 +954,9 @@
             bindings = <&macro_select_line>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <60>;
         };
 
         sc_sel_line_none: sc_sel_line_none {
@@ -967,7 +967,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
         };
 
         sc_emacs: sc_emacs {
@@ -976,9 +975,9 @@
             bindings = <&macro_emacs_k_cut>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <60>;
         };
 
         sc_sel_cut_line: sc_sel_cut_line {
@@ -987,8 +986,9 @@
             bindings = <&macro_cut_line>, <&macro_select_line>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
+            require-prior-idle-ms = <60>;
         };
 
         mat_inset_at_head: mat_inset_at_head {
@@ -1010,7 +1010,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
         };
 
         sc_brace: sc_brace {
