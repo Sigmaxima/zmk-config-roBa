@@ -1179,7 +1179,7 @@
             bindings = <
 &mt_togoff ESCAPE Q  &macro_kp_togoff W  &macro_kp_togoff E  &macro_kp_togoff R            &macro_kp_togoff T                                                                &mt_togoff LS(COMMA) Y    &mt_togoff LS(PERIOD) U  &mt_togoff LS(N8) I         &mt_togoff LS(N9) O       &macro_kp_togoff MINUS
 &trans               &macro_kp_togoff S  &macro_kp_togoff D  &macro_kp_togoff F            &macro_kp_togoff G  &trans                            &trans                      &mt_togoff RIGHT_BRACE H  &mt_togoff PIPE J        &mt_togoff RIGHT_BRACKET K  &mt_togoff NON_US_HASH L  &trans
-&trans               &macro_kp_togoff X  &macro_kp_togoff C  &macro_kp_togoff V            &macro_kp_togoff B  &macro_mo_togoff 9                &trans                      &mt_togoff SEMI N         &mt_togoff SQT M         &mkp MB1                    &lt_mkp_togoff 5 MB2      &kp RIGHT_SHIFT
+&trans               &macro_kp_togoff X  &macro_kp_togoff C  &macro_kp_togoff V            &macro_kp_togoff B  &macro_mo_togoff 9                &trans                      &mt_togoff SEMI N         &mt_togoff SQT M         &mkp MB1                    &lt_mkp_togoff 5 MB2      &trans
 &trans               &trans              &trans              &lt_togoff 8 INTERNATIONAL_5  &lt_togoff 5 SPACE  &lt_togoff 7 INTERNATIONAL_4      &macro_kp_togoff BACKSPACE  &lt_togoff 6 RET                                                                                         &trans
             >;
 
