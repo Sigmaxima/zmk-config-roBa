@@ -1137,7 +1137,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <50>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <1200>;
+            require-prior-idle-ms = <1000>;
         };
 
         lt_scroll: lt_scroll {
@@ -1147,7 +1147,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <50>;
-            require-prior-idle-ms = <1200>;
+            require-prior-idle-ms = <750>;
         };
     };
 
