@@ -1206,7 +1206,7 @@
 &trans               &trans     &trans  &trans               &trans                                           &trans                  &trans  &trans  &trans  &trans
 &mt_long LEFT_GUI A  &trans     &trans  &mt_long LEFT_GUI F  &trans  &trans                           &trans  &trans                  &trans  &trans  &trans  &mt_long RIGHT_GUI P
 &trans               &trans     &trans  &trans               &trans  &trans                           &trans  &trans                  &trans  &trans  &trans  &trans
-&kp LEFT_GUI         &kp LCTRL  &trans  &kp LANGUAGE_2       &trans  &lt_to_layer_1 7 LANGUAGE_1      &trans  &lt_to_layer_1 6 ENTER                          &trans
+&kp LEFT_GUI         &kp LCTRL  &trans  &kp LANGUAGE_2       &trans  &lt_to_layer_1 7 LANGUAGE_1      &trans  &lt_to_layer_1 6 ENTER                          &kp LANG_ZENKAKUHANKAKU
             >;
         };
 
