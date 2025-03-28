@@ -1287,10 +1287,10 @@
 
         BT_TEN_KEYS {
             bindings = <
-&macro_bt 0 0  &macro_bt 1 0  &macro_bt 2 1  &macro_bt 3 0  &macro_bt 4 0                             &kp LS(SQT)   &kp N7  &kp N8  &kp N9  &kp TAB
-&to 0          &to 1          &trans         &trans         &trans         &trans      &kp LS(SLASH)  &kp MINUS     &kp N4  &kp N5  &kp N6  &kp ENTER
-&trans         &trans         &trans         &trans         &trans         &trans      &kp SQT        &kp LS(SEMI)  &kp N1  &kp N2  &kp N3  &kp DOT
-&bt BT_CLR     &trans         &trans         &trans         &trans         &trans      &trans         &kp N0                                &trans
+&macro_bt 0 0  &macro_bt 1 0  &macro_bt 2 1  &macro_bt 3 0  &macro_bt 4 0                           &kp SQT       &kp N7  &kp N8  &kp N9  &kp TAB
+&to 0          &to 1          &trans         &trans         &trans         &trans      &kp SLASH    &kp MINUS     &kp N4  &kp N5  &kp N6  &kp ENTER
+&trans         &trans         &trans         &trans         &trans         &trans      &kp LS(SQT)  &kp LS(SEMI)  &kp N1  &kp N2  &kp N3  &kp DOT
+&bt BT_CLR     &trans         &trans         &trans         &trans         &trans      &trans       &kp N0                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
