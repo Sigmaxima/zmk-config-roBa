@@ -1184,7 +1184,7 @@
 &mt ESCAPE Q        &mat_home_end_select HOME W  &sc_sel_line 0 E     &mat_home_end_select END R        &sc_emacs 0 T                                                                     &mt_norepeat LS(COMMA) Y    &mt_norepeat LS(DOT) U       &mt_norepeat LS(N8) I         &mt_norepeat LS(N9) O  &kp MINUS
 &mt_long LCTRL A    &mt_long LEFT_SHIFT S        &mt_long LEFT_ALT D  &mt_long LEFT_CONTROL F           &mt_long LEFT_GUI G  &none                                 &mmb MB5 LEFT_BRACKET  &mt_norepeat RIGHT_BRACE H  &mt_norepeat PIPE J          &mt_norepeat RIGHT_BRACKET K  &mt_norepeat NUHS L    &mt_long RCTRL P
 &mt_z LEFT_SHIFT Z  &kp X                        &kp C                &kp V                             &kp B                &lt 9 INT1                            &mmb MB4 LS(N3)        &mt_norepeat SEMI N         &mt_norepeat SINGLE_QUOTE M  &mmb_short_hold MB1 COMMA     &lt_scroll 5 DOT       &mt RIGHT_SHIFT SLASH
-&kp LCTRL           &kp LEFT_WIN                 &kp LEFT_ALT         &lt_to_layer_0 8 INTERNATIONAL_5  &lt_hold_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE          &lt_to_layer_0 6 RET                                                                                          &macro_ctrl_scroll 5
+&kp LCTRL           &kp LEFT_WIN                 &kp LEFT_ALT         &lt_to_layer_0 8 INTERNATIONAL_5  &lt_hold_qt 5 SPACE  &lt_to_layer_0 7 INTERNATIONAL_4      &kp BACKSPACE          &lt_to_layer_0 6 RET                                                                                          &kp LANG_ZENKAKUHANKAKU
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -1243,10 +1243,10 @@
 
         FOLD_ARROW {
             bindings = <
-&macro_ctrl_k_kp LC(N1)  &macro_ctrl_k_kp LC(N2)  &macro_ctrl_k_kp LC(N3)  &macro_ctrl_k_kp LC(N4)  &macro_ctrl_k_kp LC(J)                                        &mt_norepeat LC(LS(T)) LC(T)  &mt_norepeat LC(PAGE_UP) LC(LS(TAB))  &kp UP_ARROW           &mt_norepeat LC(PAGE_DOWN) LC(TAB)  &mt_norepeat LC(W) ESCAPE
-&kp LA(LS(N1))           &kp LA(LS(N2))           &kp LA(LS(N3))           &kp LA(LS(N4))           &kp LA(LS(N0))          &trans                    &kp PG_UP   &kp TAB                       &kp LEFT                              &kp DOWN               &kp RIGHT                           &kp RCTRL
-&kp LEFT_SHIFT           &trans                   &trans                   &trans                   &trans                  &sc_sel_cut_line 0 0      &kp PG_DN   &kp LA(UP_ARROW)              &mat_home_end_select HOME HOME        &sc_sel_line_none 0 0  &mat_home_end_select END END        &kp RIGHT_SHIFT
-&trans                   &trans                   &trans                   &kp LS(TAB)              &kp TAB                 &kp LEFT_WIN              &kp DELETE  &trans                                                                                                                         &kp DEL
+&macro_ctrl_k_kp LC(N1)  &macro_ctrl_k_kp LC(N2)  &macro_ctrl_k_kp LC(N3)  &macro_ctrl_k_kp LC(N4)  &macro_ctrl_k_kp LC(J)                                          &mt_norepeat LC(LS(T)) LC(T)  &mt_norepeat LC(PAGE_UP) LC(LS(TAB))  &kp UP_ARROW           &mt_norepeat LC(PAGE_DOWN) LC(TAB)  &mt_norepeat LC(W) ESCAPE
+&kp LA(LS(N1))           &kp LA(LS(N2))           &kp LA(LS(N3))           &kp LA(LS(N4))           &kp LA(LS(N0))          &trans                    &kp PG_UP     &kp TAB                       &kp LEFT                              &kp DOWN               &kp RIGHT                           &kp RCTRL
+&kp LEFT_SHIFT           &trans                   &trans                   &trans                   &trans                  &sc_sel_cut_line 0 0      &kp DEL       &kp LA(UP_ARROW)              &mat_home_end_select HOME HOME        &sc_sel_line_none 0 0  &mat_home_end_select END END        &kp RIGHT_SHIFT
+&trans                   &trans                   &trans                   &kp LS(TAB)              &kp TAB                 &kp LEFT_WIN              &kp LEFT_WIN  &trans                                                                                                                         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
@@ -1254,10 +1254,10 @@
 
         FUNCTION_APP_MEDIA {
             bindings = <
-&macro_capture   &macro_teams  &macro_outlook    &macro_browser  &macro_copy_url                                                  &macro_word      &macro_excel  &macro_powerpoint  &ap_vscode 0 0  &ap_editor 0 0
-&kp F1           &kp F2        &kp F3            &kp F4          &kp F5           &trans                       &macro_calculator  &kp F6           &kp F7        &kp F8             &kp F9          &kp F10
-&kp C_STOP       &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT      &kp C_MUTE       &mt LG(LA(T)) LC(LS(M))      &ap_music 0 0      &kp F11          &kp F12       &trans             &trans          &trans
-&kp PRINTSCREEN  &trans        &trans            &trans          &trans           &trans                       &ap_explorer 0 0   &ap_onenote 0 0                                                   &macro_todo
+&macro_capture   &macro_teams  &macro_outlook    &macro_browser  &macro_copy_url                                                  &macro_word       &macro_excel  &macro_powerpoint  &ap_vscode 0 0  &ap_editor 0 0
+&kp F1           &kp F2        &kp F3            &kp F4          &kp F5           &trans                       &macro_calculator  &kp F6            &kp F7        &kp F8             &kp F9          &kp F10
+&kp C_STOP       &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT      &kp C_MUTE       &mt LG(LA(T)) LC(LS(M))      &ap_music 0 0      &kp F11           &kp F12       &trans             &trans          &trans
+&kp PRINTSCREEN  &trans        &trans            &trans          &trans           &trans                       &ap_onenote 0 0    &ap_explorer 0 0                                                   &macro_todo
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
