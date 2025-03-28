@@ -1243,10 +1243,10 @@
 
         FOLD_ARROW {
             bindings = <
-&macro_ctrl_k_kp LC(N1)  &macro_ctrl_k_kp LC(N2)  &macro_ctrl_k_kp LC(N3)  &macro_ctrl_k_kp LC(N4)  &macro_ctrl_k_kp LC(J)                                          &mt_norepeat LC(LS(T)) LC(T)  &mt_norepeat LC(PAGE_UP) LC(LS(TAB))  &kp UP_ARROW           &mt_norepeat LC(PAGE_DOWN) LC(TAB)  &mt_norepeat LC(W) ESCAPE
-&kp LA(LS(N1))           &kp LA(LS(N2))           &kp LA(LS(N3))           &kp LA(LS(N4))           &kp LA(LS(N0))          &trans                    &kp PG_UP     &kp TAB                       &kp LEFT                              &kp DOWN               &kp RIGHT                           &kp RCTRL
-&kp LEFT_SHIFT           &trans                   &trans                   &trans                   &trans                  &sc_sel_cut_line 0 0      &kp DEL       &kp LA(UP_ARROW)              &mat_home_end_select HOME HOME        &sc_sel_line_none 0 0  &mat_home_end_select END END        &kp RIGHT_SHIFT
-&trans                   &trans                   &trans                   &kp LS(TAB)              &kp TAB                 &kp LEFT_WIN              &kp LEFT_WIN  &trans                                                                                                                         &trans
+&macro_ctrl_k_kp LC(N1)  &macro_ctrl_k_kp LC(N2)  &macro_ctrl_k_kp LC(N3)  &macro_ctrl_k_kp LC(N4)  &macro_ctrl_k_kp LC(J)                                             &mt_norepeat LC(LS(T)) LC(T)  &mt_norepeat LC(PAGE_UP) LC(LS(TAB))  &kp UP_ARROW           &mt_norepeat LC(PAGE_DOWN) LC(TAB)  &mt_norepeat LC(W) ESCAPE
+&kp LA(LS(N1))           &kp LA(LS(N2))           &kp LA(LS(N3))           &kp LA(LS(N4))           &kp LA(LS(N0))          &trans                    &kp TAB          &kp LEFT_WIN                  &kp LEFT                              &kp DOWN               &kp RIGHT                           &kp RCTRL
+&kp LEFT_SHIFT           &trans                   &trans                   &trans                   &trans                  &sc_sel_cut_line 0 0      &kp DEL          &kp LA(UP_ARROW)              &mat_home_end_select HOME HOME        &sc_sel_line_none 0 0  &mat_home_end_select END END        &kp RIGHT_SHIFT
+&trans                   &trans                   &trans                   &kp LS(TAB)              &kp TAB                 &kp LEFT_WIN              &kp RIGHT_SHIFT  &trans                                                                                                                         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
