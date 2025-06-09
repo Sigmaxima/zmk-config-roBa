@@ -1226,10 +1226,10 @@
 
         GAME_TRACKBALL {
             bindings = <
-&kp CAPS   &kp Q    &kp W         &kp E  &kp R                                 &trans                &trans  &trans  &trans  &trans
-&kp TAB    &kp A    &kp S         &kp D  &kp F      &trans      &trans         &trans                &trans  &kp K   &trans  &trans
-&kp LSHFT  &kp Z    &kp X         &kp C  &kp V      &kp G       &kp DELETE     &trans                &trans  &trans  &trans  &trans
-&kp LCTRL  &kp ESC  &kp LEFT_ALT  &mo 7  &kp SPACE  &kp B       &kp BACKSPACE  &lt_to_layer_0 6 RET                          &trans
+&kp CAPS   &kp Q    &kp W         &kp E  &kp R                            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&kp TAB    &kp A    &kp S         &kp D  &kp F      &trans      &trans    &trans        &trans        &kp K         &trans        &trans
+&kp LSHFT  &kp Z    &kp X         &kp C  &kp V      &kp G       &mkp MB5  &mkp MB4      &mo 5         &mkp MB1      &mkp MB2      &mkp MB3
+&kp LCTRL  &kp ESC  &kp LEFT_ALT  &mo 7  &kp SPACE  &kp B       &mkp MB2  &mkp MB1                                                &mo 5
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
